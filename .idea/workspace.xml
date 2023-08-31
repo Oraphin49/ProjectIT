@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Project:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/config/HibernateConf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/config/SpringMvcDispatcherServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AlumniController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AwardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/ResearchgrantController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/WebHomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/AlumniDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/AlumniDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Academic_Ranks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Alumni.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Award.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Education_histiry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/News.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/News_image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Personnel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Research_grant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AlumniService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AlumniServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/persistence.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Nav_Admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Plan.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/access-denied.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/check.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_badges.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_breadcrumbs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_button-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_carousel.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_close.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_code.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_component-animations.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_dropdowns.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_input-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_jumbotron.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_media.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_mixins.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_modals.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_navbar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_navs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_normalize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_pager.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_popovers.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_print.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_progress-bars.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_responsive-embed.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_responsive-utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_scaffolding.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_tables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_thumbnails.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_tooltip.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_type.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_variables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/04962b1e3895a4eee848e2ebf140c6c1b64635d8/_wells.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/09c1aa963cb1a0bf38285781bf728f26d5d2cc22/bootstrap.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/09c1aa963cb1a0bf38285781bf728f26d5d2cc22/style.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/0c3b5a333a6bda59dc7a96197cb554adebd4d1e5/bootstrap.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/0c3b5a333a6bda59dc7a96197cb554adebd4d1e5/style.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_background-variant.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_border-radius.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_center-block.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_clearfix.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_gradients.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_grid-framework.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_hide-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_image.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_nav-divider.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_nav-vertical-align.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_opacity.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_progress-bar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_reset-filter.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_reset-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_resize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_responsive-visibility.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_size.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_tab-focus.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_table-row.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_text-emphasis.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_text-overflow.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e50764208f1e565bd9176a9de89875ffab7e74b/_vendor-prefixes.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_badges.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_breadcrumbs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_button-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_carousel.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_close.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_code.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_component-animations.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_dropdowns.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_input-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_jumbotron.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_media.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_mixins.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_modals.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_navbar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_navs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_normalize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_pager.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_popovers.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_print.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_progress-bars.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_responsive-embed.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_responsive-utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_scaffolding.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_tables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_thumbnails.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_tooltip.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_type.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_variables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/1e815ade0dfead4871783b208da963a93c1a5225/_wells.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2ae5533a51b5fb3df508ab95e1b3a6bdbb2bfdec/bootstrap.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2ae5533a51b5fb3df508ab95e1b3a6bdbb2bfdec/style.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_badges.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_breadcrumbs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_button-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_carousel.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_close.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_code.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_component-animations.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_dropdowns.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_input-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_jumbotron.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_media.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_mixins.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_modals.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_navbar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_navs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_normalize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_pager.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_popovers.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_print.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_progress-bars.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_responsive-embed.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_responsive-utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_scaffolding.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_tables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_thumbnails.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_tooltip.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_type.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_variables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/2c67409d92723997c9ff06b44f290a073c411aa1/_wells.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_background-variant.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_border-radius.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_center-block.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_clearfix.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_gradients.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_grid-framework.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_hide-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_image.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_nav-divider.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_nav-vertical-align.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_opacity.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_progress-bar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_reset-filter.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_reset-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_resize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_responsive-visibility.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_size.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_tab-focus.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_table-row.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_text-emphasis.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_text-overflow.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/415941c42fd5847903ca7306a3a52c93f8cfd679/_vendor-prefixes.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/58dbe6a5c4db3bbf4fd18816c27b307a123ce5d6/bootstrap.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/58dbe6a5c4db3bbf4fd18816c27b307a123ce5d6/style.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_background-variant.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_border-radius.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_center-block.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_clearfix.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_gradients.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_grid-framework.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_hide-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_image.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_nav-divider.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_nav-vertical-align.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_opacity.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_progress-bar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_reset-filter.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_reset-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_resize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_responsive-visibility.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_size.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_tab-focus.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_table-row.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_text-emphasis.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_text-overflow.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/5eb556d5a00dcbbf901c06b7afc837095ecb083c/_vendor-prefixes.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/6a78a57942c3f715a8846b54bf75a0ae39033de1/bootstrap.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/6a78a57942c3f715a8846b54bf75a0ae39033de1/style.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7a1c9bde44e01efda1b911a40a5b7ec377e53d63/bootstrap.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7a1c9bde44e01efda1b911a40a5b7ec377e53d63/style.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_badges.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_breadcrumbs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_button-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_carousel.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_close.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_code.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_component-animations.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_dropdowns.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_input-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_jumbotron.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_media.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_mixins.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_modals.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_navbar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_navs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_normalize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_pager.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_popovers.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_print.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_progress-bars.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_responsive-embed.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_responsive-utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_scaffolding.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_tables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_thumbnails.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_tooltip.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_type.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_variables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/7e804b122c3f9bacd4ba59adff9b5fda36a3022a/_wells.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_background-variant.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_border-radius.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_center-block.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_clearfix.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_gradients.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_grid-framework.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_hide-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_image.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_nav-divider.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_nav-vertical-align.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_opacity.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_progress-bar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_reset-filter.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_reset-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_resize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_responsive-visibility.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_size.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_tab-focus.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_table-row.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_text-emphasis.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_text-overflow.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/9c4759ebd15047582d05cec3698f7b5be277a74e/_vendor-prefixes.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_badges.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_breadcrumbs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_button-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_carousel.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_close.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_code.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_component-animations.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_dropdowns.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_input-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_jumbotron.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_media.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_mixins.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_modals.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_navbar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_navs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_normalize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_pager.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_popovers.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_print.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_progress-bars.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_responsive-embed.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_responsive-utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_scaffolding.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_tables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_thumbnails.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_tooltip.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_type.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_variables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/bb2c70704e0a1721c40db53387eab7ce7f528f3a/_wells.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_background-variant.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_border-radius.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_center-block.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_clearfix.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_gradients.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_grid-framework.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_hide-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_image.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_nav-divider.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_nav-vertical-align.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_opacity.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_progress-bar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_reset-filter.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_reset-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_resize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_responsive-visibility.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_size.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_tab-focus.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_table-row.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_text-emphasis.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_text-overflow.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/c7e6f53d21d7f4ebdcfc410467885584b0a38ec4/_vendor-prefixes.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_background-variant.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_border-radius.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_center-block.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_clearfix.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_gradients.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_grid-framework.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_hide-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_image.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_nav-divider.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_nav-vertical-align.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_opacity.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_progress-bar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_reset-filter.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_reset-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_resize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_responsive-visibility.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_size.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_tab-focus.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_table-row.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_text-emphasis.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_text-overflow.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d8b96d88509b57bdda1ff4af365f83189f4667f4/_vendor-prefixes.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_background-variant.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_border-radius.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_center-block.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_clearfix.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_gradients.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_grid-framework.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_hide-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_image.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_nav-divider.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_nav-vertical-align.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_opacity.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_progress-bar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_reset-filter.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_reset-text.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_resize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_responsive-visibility.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_size.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_tab-focus.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_table-row.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_text-emphasis.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_text-overflow.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/d9254896e0fdcdd123890971b60ea8a909060773/_vendor-prefixes.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_badges.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_breadcrumbs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_button-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_carousel.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_close.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_code.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_component-animations.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_dropdowns.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_input-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_jumbotron.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_media.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_mixins.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_modals.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_navbar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_navs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_normalize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_pager.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_popovers.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_print.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_progress-bars.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_responsive-embed.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_responsive-utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_scaffolding.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_tables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_thumbnails.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_tooltip.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_type.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_variables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/e1a09978a1f4acf3af18a2305a98149fd0bb616d/_wells.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/f45119a46d86c8f73e6182b11f9f0b0336825602/bootstrap.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/f45119a46d86c8f73e6182b11f9f0b0336825602/style.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_alerts.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_badges.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_breadcrumbs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_button-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_buttons.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_carousel.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_close.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_code.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_component-animations.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_dropdowns.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_forms.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_grid.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_input-groups.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_jumbotron.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_labels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_list-group.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_media.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_mixins.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_modals.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_navbar.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_navs.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_normalize.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_pager.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_pagination.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_panels.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_popovers.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_print.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_progress-bars.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_responsive-embed.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_responsive-utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_scaffolding.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_tables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_thumbnails.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_tooltip.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_type.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_utilities.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_variables.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/.sass-cache/fc7dd43831aff9ca34a90268081c0141d5c48c8f/_wells.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/add-alumni.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/add_news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/alumni.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/flexslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/icomoon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/list_manage_alumni.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/list_manage_news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listalumni.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnews.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/nav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/themify-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/view_personnel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/viewalumnidetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/viewnewsdetaail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/bootstrap/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/bootstrap/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/bootstrap/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/icomoon/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/icomoon/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/icomoon/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/icomoon/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/themify-icons/themify.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/themify-icons/themify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/themify-icons/themify.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/themify-icons/themify.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/Bannerh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/C Banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/G.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/ba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/banner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/banner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/banner3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/bookmark-plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/dustbin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/email (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/employee (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/nn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/office-building (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/padlock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/telephone-call (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/watcharin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.countTo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.easing.1.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.flexslider-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.stellar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/magnific-popup-options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/modernizr-2.6.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/jquery-3.5.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/itsci/TestCrypt.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2QHGjoKEHWv9V8LpeDyN3UW9XeF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/IdeaProjects/Project/src/main/webapp/assets/image&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;9e727fdd3aec8274f46685441900280d&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="it_sci.dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\image" />
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP\News" />
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\js" />
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\style" />
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\stlye" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP\Alumni" />
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP\News" />
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets" />
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP" />
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="it_sci.dao" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it_sci.controller" />
+      <recent name="config" />
+      <recent name="model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.64">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="itsci.TestCrypt" />
+      <module name="Project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.64" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.64" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Project:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Project_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="87e1ab4d-4903-4aa0-8c9f-256ee7afa3b8" />
+        <option name="HTTP_PORT" value="8081" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54046" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Project:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.64" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="" />
+      <created>1685003234825</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685003234825</updated>
+      <workItem from="1685003236271" duration="1192000" />
+      <workItem from="1685005576118" duration="2689000" />
+      <workItem from="1685008304688" duration="571000" />
+      <workItem from="1685021552411" duration="124000" />
+      <workItem from="1685021804393" duration="9478000" />
+      <workItem from="1685514373978" duration="3449000" />
+      <workItem from="1685602597819" duration="43555000" />
+      <workItem from="1685727175028" duration="45047000" />
+      <workItem from="1686022558133" duration="2990000" />
+      <workItem from="1686215994511" duration="15614000" />
+      <workItem from="1686541857833" duration="34183000" />
+      <workItem from="1686714863984" duration="7555000" />
+      <workItem from="1686723750919" duration="19021000" />
+      <workItem from="1686801645089" duration="7186000" />
+      <workItem from="1687185887747" duration="4785000" />
+      <workItem from="1687321910860" duration="638000" />
+      <workItem from="1687322561347" duration="212000" />
+      <workItem from="1687322782443" duration="7362000" />
+      <workItem from="1688131531132" duration="55028000" />
+      <workItem from="1689045960336" duration="3688000" />
+      <workItem from="1689055786217" duration="9384000" />
+      <workItem from="1689399293296" duration="2575000" />
+      <workItem from="1689498352975" duration="25076000" />
+      <workItem from="1689740198518" duration="8750000" />
+      <workItem from="1689783888822" duration="7903000" />
+      <workItem from="1690090170655" duration="2573000" />
+      <workItem from="1690269140637" duration="5729000" />
+      <workItem from="1690360105299" duration="13153000" />
+      <workItem from="1690386222117" duration="15633000" />
+      <workItem from="1690900951484" duration="11544000" />
+      <workItem from="1690954807671" duration="1190000" />
+      <workItem from="1691068248109" duration="27391000" />
+      <workItem from="1691471013044" duration="15617000" />
+      <workItem from="1691594225026" duration="6349000" />
+      <workItem from="1691906443580" duration="18336000" />
+      <workItem from="1692082129200" duration="4050000" />
+      <workItem from="1692090023839" duration="11359000" />
+      <workItem from="1692114549212" duration="838000" />
+      <workItem from="1692116051805" duration="1327000" />
+      <workItem from="1692154627213" duration="2486000" />
+      <workItem from="1692159408085" duration="1229000" />
+      <workItem from="1692185984825" duration="1157000" />
+      <workItem from="1692203041580" duration="14000" />
+      <workItem from="1692252468950" duration="1050000" />
+      <workItem from="1692601818443" duration="495000" />
+      <workItem from="1692603155300" duration="11730000" />
+      <workItem from="1692759554236" duration="1032000" />
+      <workItem from="1692945407138" duration="14205000" />
+      <workItem from="1693025217934" duration="6829000" />
+      <workItem from="1693113435784" duration="10213000" />
+      <workItem from="1693192879948" duration="13330000" />
+      <workItem from="1693296777424" duration="792000" />
+      <workItem from="1693401943065" duration="5730000" />
+      <workItem from="1693488815024" duration="1278000" />
+      <workItem from="1693491337174" duration="350000" />
+      <workItem from="1693502677410" duration="1480000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

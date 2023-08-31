@@ -1,0 +1,34 @@
+.p{
+    font-size: 16px;
+    color: black;
+}
+.p1{
+    font-size: 16px;
+    color: #fff;
+    float: left;
+    margin-left: 30px;
+    background-color: #4f4f4f;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.pp{
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.img{
+    float: left;
+    margin-left: 50px;
+}
+.page{
+    border: 1px solid black;
+    border-radius: 10px;
+    float: left;
+   margin-left: 20%;
+    padding: 5px;
+}
+.page2{
+    margin-left: 100px;
+}

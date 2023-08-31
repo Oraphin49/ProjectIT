@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Login.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Plan.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/View_alumni_detail.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layout/nav.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layout" />
+      </map>
+    </option>
+  </component>
+</project>

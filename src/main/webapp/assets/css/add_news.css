@@ -1,0 +1,65 @@
+/* เพิ่มรูปแบบเสริมสำหรับตัวแบบฟอร์ม */
+.news-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: Kanit;
+}
+
+.news-form input[type="text"],
+.news-form input[type="date"],
+.news-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: Kanit;
+}
+
+.news-form textarea {
+    height: 150px;
+}
+
+.news-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: Kanit;
+}
+
+.news-form input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+    font-family: Kanit;
+}
+
+.news-form input[type="cancel"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: Kanit;
+}
+
+.news-form input[type="cencel"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+    font-family: Kanit;
+}
+

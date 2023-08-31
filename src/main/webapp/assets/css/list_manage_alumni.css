@@ -1,0 +1,63 @@
+table {
+    border-collapse: collapse;
+    width: 90%;
+    font-family: Kanit;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #707070;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.button1 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #ffffff;
+    border: none;
+    color: #111111;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    width: 125px;
+    border: 2px solid #aa1818;
+    float: right;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 40%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    font-family: Kanit;
+    float: left;
+    margin-left: 500px;
+
+}
