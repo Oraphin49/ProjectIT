@@ -1,77 +1,62 @@
-
-.card{
-    width:200px;
-    height: 250px;
-    /*margin-top: 20px;*/
-    /*margin-left: 50px;*/
-    padding: 3px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    margin: 20px 20px 20px 50px;
-    border-radius: 0px 0px 10px 10px;
-
+.card {
+    background-color: #EFECEC;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
-.card-text{
+
+.card-title {
+    font-family: "Kanit";
+    margin: 0;
+}
+
+.card-text {
     color: black;
     font-family: "Kanit";
 }
 
-.alum_img{
-    display: inline-block;
-    margin-right: 30px;
-}
-
-.card-body{
-    display: inline-block;
-}
 .button1 {
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
     transition-duration: 0.4s;
     cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 2px solid #771111;
+    background-color: #771111;
     border-radius: 5px;
     font-family: Kanit;
-
 }
 
 .button1:hover {
     background-color: #CD3333;
-    color: white;
 }
-.top_content{
+
+.top_content {
     margin-top: 30px;
+    text-align: center;
 }
+
 #searchInput {
     background-position: 10px 12px;
     background-repeat: no-repeat;
-    width: 60%;
+    width: 100%;
     font-size: 16px;
     padding: 12px 20px 12px 40px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
     font-family: Kanit;
-    float: left;
-    margin-left: 500px;
-}
-.block_alumni{
-    display: inline-block;
-    /*float: left;*/
 }
 
-p{
-    color: black;
-    font-size: 10px;
+.block_alumni {
+    margin: 0 auto;
+    max-width: 300px;
 }
 
-.card:hover {
-    transform: scale(1.1); /* ปรับขนาดขององค์ประกอบเมื่อ hover */
-    /* เพิ่มการเปลี่ยนแปลงอื่นๆ ตามความต้องการ */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

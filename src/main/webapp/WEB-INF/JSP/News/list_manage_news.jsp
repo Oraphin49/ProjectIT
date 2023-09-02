@@ -25,7 +25,7 @@
     <img src="${pageContext.request.contextPath}/assets/image/bookmark-plus.png" style="width: 30px; "></button></a>
 <br><br><br>
 <c:forEach var="news" items="${list_manage_news}">
-    <div class="block_manage_news" data-name="${news.newsname}">
+    <div class="block_manage_news" data-name="${news.newsname} ${news.category} ${news.date}">
         <div class="news-container" >
             <img class="news-image" src="${pageContext.request.contextPath}/assets/image/news1.jpg">
             <div class="news-details" >

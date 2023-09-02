@@ -63,8 +63,20 @@
     margin-left: 500px;
     float: left;
 }
-.block_alumni{
+.block_alumni {
     display: inline-block;
-    /*float: left;*/
+    width: 300px; /* ปรับขนาดของบล็อกตามต้องการ */
+    height: auto; /* สูงจะปรับตามเนื้อหา */
+    margin: 20px; /* ปรับระยะห่าง */
+    background-color: #EFECEC;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Kanit";
 }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 

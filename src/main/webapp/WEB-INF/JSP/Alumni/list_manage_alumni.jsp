@@ -57,9 +57,7 @@
             <td><a href="${pageContext.request.contextPath}/alumni/${alumni.id}/update"><img src="${pageContext.request.contextPath}/assets/image/edit.png" style="width: 20px"></a></td>
             <td><a href="${pageContext.request.contextPath}/alumni/${alumni.id}/delete"><img src="${pageContext.request.contextPath}/assets/image/dustbin.png" style="width: 20px"></a></td>
         </tr>
-        <tr>
-            <td colspan="7"><hr></td>
-        </tr>
+
     </c:forEach>
 </table>
 <footer>
@@ -69,18 +67,24 @@
 <script>
     function search() {
         var input = document.getElementById("searchInput").value.toLowerCase();
-        var blocks = document.getElementsByClassName("block_alumni");
+        var rows = document.querySelectorAll(".block_alumni");
+        var table = document.querySelector("table");
 
-        for (var i = 0; i < blocks.length; i++) {
-            var block = blocks[i];
-            var text = block.getAttribute("data-name").toLowerCase();
+        // ซ่อนทั้งตารางก่อนที่จะทำการค้นหา
+        table.style.display = "none";
 
-            if (text.includes(input)) {
-                block.style.display = "block";
+        rows.forEach(function(row) {
+            var rowData = row.getAttribute("data-name").toLowerCase();
+            if (rowData.includes(input)) {
+                row.style.display = "table-row"; // แสดงแถว
             } else {
-                block.style.display = "none";
+                row.style.display = "none"; // ซ่อนแถว
             }
-        }
+        });
+
+        // แสดงตารางอีกครั้งหลังจากทำการค้นหา
+        table.style.display = "table";
     }
 </script>
+
 </html>

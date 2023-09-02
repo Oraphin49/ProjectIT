@@ -9,7 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="create controller" />
+    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="controller">
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AcademicRanksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AcademicRanksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AwardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AwardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/EducationhistiryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/EducationhistiryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/ResearchgrantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/ResearchgrantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/list_manage_alumni.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/list_manage_alumni.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/listalumni.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listalumni.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/listnews.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnews.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +44,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3a82a964-8099-4573-8276-5cbac89a4c7b" />
+        <option name="url" value="https://github.com/Oraphin49/ProjectIT.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
@@ -272,7 +301,8 @@
       <workItem from="1693507292383" duration="193000" />
       <workItem from="1693507592947" duration="169000" />
       <workItem from="1693508202500" duration="71000" />
-      <workItem from="1693578782764" duration="714000" />
+      <workItem from="1693578782764" duration="2620000" />
+      <workItem from="1693628649571" duration="14225000" />
     </task>
     <task id="LOCAL-00001" summary="create controller">
       <created>1693579426903</created>
@@ -281,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693579426903</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="controller">
+      <created>1693579934498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693579934499</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +326,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="create controller" />
+    <MESSAGE value="controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller" />
   </component>
 </project>

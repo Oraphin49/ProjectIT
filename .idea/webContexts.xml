@@ -11,6 +11,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Login.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel" />

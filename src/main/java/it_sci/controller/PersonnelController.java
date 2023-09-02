@@ -58,12 +58,7 @@ public class PersonnelController {
         model.addAttribute("ar_detail",personnelService.getAcademicRanks());
         return "JSP/Personnel/Add_Personnel";
     }
-    @GetMapping("/news")
-    public String shoeNews(Model model) {
-//        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
-        //model.addAttribute("list_alumni",alumniService.getAlumni());
-        return "JSP/News";
-    }
+
     @PostMapping(path="/save_personnnel")
     public String saveAddPersonnel(@RequestParam Map<String, String> allReqParams) throws ParseException {
         String personnelid = allReqParams.get("id");

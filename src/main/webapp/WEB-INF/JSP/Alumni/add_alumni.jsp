@@ -41,7 +41,14 @@
         <select name="position" id="position" class="form-control">
           <option value="Programmer">Programmer</option>
           <option value="SA">SA</option>
-          <option value="SA">Tester</option>
+          <option value="SA">Software Tester</option>
+          <option value="Developer">Developer</option>
+          <option value="Software Engineer">Software Engineer</option>
+          <option value="Data Scientist">Data Scientist</option>
+          <option value="Data Engineer">Data Engineer</option>
+          <option value="UX,UI">UX,UI </option>
+          <option value="full stack developer">full stack developer</option>
+          <option value="อื่นๆ">อื่นๆ</option>
         </select>
       </div>
       <div class="form-group">

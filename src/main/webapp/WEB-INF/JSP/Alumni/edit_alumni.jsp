@@ -43,7 +43,14 @@
         <select name="position" id="position" class="form-control">
           <option value="Programmer" ${alumni.position == 'Programmer' ?  'selected' : ''}>Programmer</option>
           <option value="SA" ${alumni.position == 'SA' ?  'selected' : ''}>SA</option>
-          <option value="Tester" ${alumni.position == 'Tester' ?  'selected' : ''}>Tester</option>
+          <option value="Software Tester" ${alumni.position == 'Software Tester' ?  'selected' : ''}>Software Tester</option>
+          <option value="Developer" ${alumni.position == 'Developer' ?  'selected' : ''}>Developer</option>
+          <option value="Software Engineer" ${alumni.position == 'Software Engineer' ? 'selected' : ''}>Software Engineer</option>
+          <option value="Data Scientist" ${alumni.position == 'Data Scientist' ?  'selected' : ''}>Data Scientist</option>
+          <option value="Data Engineer" ${alumni.position == 'Data Engineer' ?  'selected' : ''}>Data Engineer</option>
+          <option value="UX,UI" ${alumni.position == 'UX,UI' ?  'selected' : ''}>UX,UI</option>
+          <option value="full stack developer" ${alumni.position == 'full stack developer' ?  'selected' : ''}>full stack developer</option>
+          <option value="อื่นๆ" ${alumni.position == 'อื่นๆ' ?  'selected' : ''}>อื่นๆ</option>
         </select>
       </div>
       <div class="form-group">
