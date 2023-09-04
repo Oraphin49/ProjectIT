@@ -73,6 +73,12 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
+    public void SavePersonnelResearch(Research_grant research_grant) {
+        personnelDao.SavePersonnelResearch(research_grant);
+    }
+
+    @Override
+    @Transactional
     public void updatePersonnel(Personnel personnel ) {
         personnelDao.updatePersonnel(personnel);
     }
@@ -101,8 +107,12 @@ public class PersonnelServiceImpl implements PersonnelService {
         personnelDao.removePersonnelEducation(id);
     }
 
+    @Override
+    @Transactional
+    public void removePersonnelResearch(long id) { personnelDao.removePersonnelResearch(id);}
 
-    }
+
+}
 
 
 

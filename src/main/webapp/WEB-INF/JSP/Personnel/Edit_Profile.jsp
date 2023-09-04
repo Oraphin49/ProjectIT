@@ -60,6 +60,11 @@
             <br><input type="text" id="scolarlink" name="scolarlink" value="${personnel_detail.scolarlink}"></p>
         <p id="telephone"><strong>phone</strong><br>
             <input type="text" id="phone" name="email" value="${personnel_detail.phone}"></p>
+        <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Work Experience</p>
+            <p><input type="text" id="work" name="work" value="${personnel_detail.workexperience}"></p>
+        <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Expertise</p>
+        <p><input type="text" id="expertise" name="expertise" value="${personnel_detail.expertise}"></p>
+
     </div>
     <div id="info-cards">
         <div class="card">
@@ -91,20 +96,28 @@
             </ul>
         </div>
         <div class="card">
-            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Work Experience</p>
-            <ul>
-
-                <p><input type="text" id="work" name="work" value="${personnel_detail.workexperience}"></p>
-            </ul>
-        </div>
-        <div class="card">
             <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Research Grants</p>
             <ul>
                 <c:forEach var="rgd" items="${research_grant_detail}">
-                    <li>${rgd.researchgrantname} ${rgd.researchgrantyear} <input type="button" value="ยกเลิก"></li>
+                    <li>${rgd.researchgrantname} ${rgd.researchgrantyear}
 <%--                    <p><input type="text" id="grantname" name="grantname" value=" ${rgd.researchgrantname}"><br></p>--%>
 <%--                    <p><input type="text" id="grantyear" name="grantyear" value=" ${rgd.researchgrantyear}"><br></p>--%>
+                    <input type="button" value="ลบ"
+                           onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${rgd.id}/remove'; return false; }"
+                           class="cancel-button"/></li><br>
+
                 </c:forEach>
+                <hr>
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_research_add" method="POST">
+                    <table>
+                        <tr>
+                            <td>ชื่อทุน : <input name="research_name" id="research_name"></td>
+                            <td>ปีที่ได้รับทุน : <input name="research_year" id="research_year"></td>
+                        </tr>
+                            <td><input type="submit" value="เพิ่ม"></td>
+                        </tr>
+                    </table>
+                </form>
             </ul>
         </div>
         <div class="card">
@@ -115,13 +128,6 @@
 <%--                    <p><input type="text" id="award_name" name="award_name" value=" ${award.name}"><br></p>--%>
 <%--                    <p><input type="text" id="year" name="year" value=" ${award.year}"><br></p>--%>
                 </c:forEach>
-            </ul>
-        </div>
-        <div class="card">
-            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Expertise</p>
-            <ul>
-
-                <p><input type="text" id="expertise" name="expertise" value="${personnel_detail.expertise}"></p>
             </ul>
         </div>
     </div>

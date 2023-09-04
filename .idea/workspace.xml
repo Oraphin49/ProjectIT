@@ -9,40 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/config/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="update edit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/config/SpringMvcDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/config/SpringMvcDispatcherServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AcademicRanksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AcademicRanksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AwardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AwardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/EducationhistiryController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/ResearchgrantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/ResearchgrantController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Education_histiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Education_histiry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Research_grant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Research_grant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/animate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/flexslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/flexslider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/icomoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/icomoon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/magnific-popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/owl.carousel.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/owl.theme.default.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/owl.theme.default.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/themify-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/themify-icons.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,7 +299,7 @@
       <workItem from="1693628649571" duration="14225000" />
       <workItem from="1693658462216" duration="7683000" />
       <workItem from="1693729932629" duration="6568000" />
-      <workItem from="1693799023871" duration="17964000" />
+      <workItem from="1693799023871" duration="22827000" />
     </task>
     <task id="LOCAL-00001" summary="create controller">
       <created>1693579426903</created>
@@ -347,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693658528973</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update edit">
+      <created>1693847311035</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693847311035</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,6 +339,7 @@
     <MESSAGE value="create controller" />
     <MESSAGE value="controller" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="update edit" />
   </component>
 </project>

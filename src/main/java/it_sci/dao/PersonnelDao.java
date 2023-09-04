@@ -21,7 +21,10 @@ public interface PersonnelDao {
     void SavePersonnel(Personnel personnel);
 
     void SavePersonnelEducation(Education_histiry education_histiry);
+    void SavePersonnelResearch(Research_grant research_grant);
     void removePersonnelEducation(long id);
+
+    void removePersonnelResearch(long id);
     void updatePersonnel(Personnel personnel);
     void updateAward(Award award);
 

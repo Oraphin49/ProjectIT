@@ -85,12 +85,28 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
+    public void SavePersonnelResearch(Research_grant research_grant) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(research_grant);
+    }
+
+
+    @Override
     public void removePersonnelEducation(long id) {
         Session session = sessionFactory.getCurrentSession();
         Query<Education_histiry> query = session.createQuery("FROM Education_histiry e WHERE e.id =: aId", Education_histiry.class);
         query.setParameter("aId",id);
         Education_histiry education_histiry = query.getSingleResult();
         session.remove(education_histiry);
+    }
+
+    @Override
+    public void removePersonnelResearch(long id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Research_grant> query = session.createQuery("FROM Research_grant r WHERE r.id =: rId", Research_grant.class);
+        query.setParameter("rId",id);
+        Research_grant research_grant = query.getSingleResult();
+        session.remove(research_grant);
     }
 
     @Override

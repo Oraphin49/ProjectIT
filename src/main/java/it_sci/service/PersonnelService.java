@@ -23,6 +23,9 @@ public interface PersonnelService {
 
     void SavePersonnel(Personnel personnel);
     void SavePersonnelEducation(Education_histiry education_histiry);
+
+    void SavePersonnelResearch(Research_grant research_grant);
+
     void updatePersonnel(Personnel personnel);
 
     void updateAward(Award award);
@@ -31,4 +34,6 @@ public interface PersonnelService {
 
     void updateResearch_grant(Research_grant research_grant);
     void removePersonnelEducation(long id);
+
+    void removePersonnelResearch(long id);
 }

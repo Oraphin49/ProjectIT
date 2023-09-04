@@ -101,4 +101,20 @@ public class PersonnelController {
         personnelService.removePersonnelEducation(id);
         return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
     }
+
+    @PostMapping(path="/{p_id}/save_research_add")
+    public String saveAddPersonnel(@RequestParam Map<String, String> allReqParams, @PathVariable String p_id) throws ParseException {
+        String research_name = allReqParams.get("research_name");
+        String research_year = allReqParams.get("research_year");
+        Personnel personnel = personnelService.getPersonnelById(p_id);
+        Research_grant research_grant = new Research_grant(research_name,research_year,personnel);
+        personnelService.SavePersonnelResearch(research_grant);
+        return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
+    }
+    @GetMapping("/{p_id}/{id}/remove")
+    public String removePersonnelResearch(@PathVariable("id") long id,
+                                           @PathVariable String p_id) {
+        personnelService.removePersonnelResearch(id);
+        return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
+    }
 }
