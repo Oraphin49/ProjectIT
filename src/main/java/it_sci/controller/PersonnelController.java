@@ -27,7 +27,7 @@ public class PersonnelController {
 
     @GetMapping("/{id}/view_personnel_detail")
     public String ShowPersonnelDetail(@PathVariable("id") String id, Model model) {
-        Personnel personnel = personnelService.getPersonnel(id);
+        Personnel personnel = personnelService.getPersonnelById(id);
         List<Award> award = personnelService.getAward(id);
         List<Education_histiry>  education_histiry = personnelService.getEducationHistiry(id);
         List<Research_grant> research_grant = personnelService.getResearchGrant(id);
@@ -40,7 +40,7 @@ public class PersonnelController {
 
     @GetMapping("/{id}/edit_personnel_detail")
     public String ShowFormEditPersonnelDetail(@PathVariable("id") String id, Model model) {
-        Personnel personnel = personnelService.getPersonnel(id);
+        Personnel personnel = personnelService.getPersonnelById(id);
         List<Award> award = personnelService.getAward(id);
         List<Education_histiry>  education_histiry = personnelService.getEducationHistiry(id);
         List<Research_grant> research_grant = personnelService.getResearchGrant(id);
@@ -81,34 +81,24 @@ public class PersonnelController {
         return "redirect:/";
     }
 
-
-    @GetMapping("/{id}/update")
-    public String isEditPersonnel(@PathVariable("id") String id, Model model) {
-        Personnel personnel = personnelService.getPersonnel(id);
-//        model.addAttribute("title", "แก้ไข" + title);
-//        model.addAttribute("categories", categoryService.getCategories());
-        model.addAttribute("personnel", personnel);
-        return "JSP/Personnel/Edit_Profile";
+    @PostMapping(path="/{p_id}/save_education_add")
+    public String saveAddPersonal(@RequestParam Map<String, String> allReqParams,
+                                  @PathVariable String p_id) throws ParseException {
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String education_name = allReqParams.get("education_name");
+        String major_name = allReqParams.get("major_name");
+        String university_name = allReqParams.get("university_name");
+        String country_name = allReqParams.get("country_name");
+        String educationyear = allReqParams.get("educationyear");
+        Personnel personnel = personnelService.getPersonnelById(p_id);
+        Education_histiry education_histiry = new Education_histiry(education_name,major_name,university_name,educationyear,country_name,personnel);
+        personnelService.SavePersonnelEducation(education_histiry);
+        return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
     }
-
-    @PostMapping(path = "/{id}/edit/save")
-    public String saveEditProfile(@RequestParam Map<String, String> allReqParams, @PathVariable String id) throws ParseException {
-        Personnel personnel =personnelService.getPersonnel(id);
-        if (personnel != null) {
-            personnel.setId(allReqParams.get("id"));
-            personnel.setFirstname(allReqParams.get("firstname"));
-            personnel.setLastname(allReqParams.get("lastname"));
-            personnel.setPosition(allReqParams.get("position"));
-            personnel.setPhone(allReqParams.get("phone"));
-            personnel.setImage(allReqParams.get("image"));
-            personnel.setScolarlink(allReqParams.get("scolarlink"));
-            personnel.setDescription(allReqParams.get("description"));
-            personnel.setExpertise(allReqParams.get("expertise"));
-            personnel.setWorkexperience(allReqParams.get("workexperience"));
-            personnel.setEmail(allReqParams.get("email"));
-
-            personnelService.updatePersonnel(personnel);
-        }
-        return "redirect:/";
+    @GetMapping("/{p_id}/{id}/delete")
+    public String removePersonnelEducation(@PathVariable("id") long id,
+                                           @PathVariable String p_id) {
+        personnelService.removePersonnelEducation(id);
+        return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
     }
 }

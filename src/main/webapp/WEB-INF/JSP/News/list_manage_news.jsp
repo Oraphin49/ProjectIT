@@ -17,7 +17,7 @@
 <br>
 <h2 align="center" style="color: #aa1818">รายการข่าว</h2>
 <br>
-<div >
+<div>
     <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="Search for names.." title="Type in a name">
 </div>
 <br>

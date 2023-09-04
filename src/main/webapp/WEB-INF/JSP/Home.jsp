@@ -17,22 +17,22 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/animate.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/animate.css">
     <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/icomoon.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/icomoon.css">
     <!-- Themify Icons-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/themify-icons.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/bootstrap.css">
     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/magnific-popup.css">
     <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/owl.carousel.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/owl.theme.default.min.css">
     <!-- Flexslider -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/flexslider.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/flexslider.css">
     <!-- Theme style  -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/style.css">
 
     <!-- Modernizr JS -->
     <script src="${pageContext.request.contextPath}/assets/js/modernizr-2.6.2.min.js"></script>

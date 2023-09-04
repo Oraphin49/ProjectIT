@@ -1,5 +1,7 @@
 package it_sci.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -8,7 +10,9 @@ import javax.validation.constraints.NotNull;
 public class Education_histiry {
     @Id
     @Column(name = "educationid",length = 10)
-    private String id;
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+    private long id;
 
     @Column(name = "educationname",nullable = false,length = 50)
     private String firstname;
@@ -33,11 +37,20 @@ public class Education_histiry {
 
     }
 
-    public String getId() {
+    public Education_histiry(String firstname, String major, String university, String educationyear, String country, Personnel personnel) {
+        this.firstname = firstname;
+        this.major = major;
+        this.university = university;
+        this.educationyear = educationyear;
+        this.country = country;
+        this.personnel = personnel;
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 

@@ -18,6 +18,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Plan.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/View_alumni_detail.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layout/nav.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layout" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/footer.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts" />
       </map>
     </option>
   </component>

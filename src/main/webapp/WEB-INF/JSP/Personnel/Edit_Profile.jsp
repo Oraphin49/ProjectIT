@@ -1,8 +1,12 @@
+<%@ page import="it_sci.model.Personnel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Edit Profile</title>
 </head>
+    <%
+    Personnel personnel = (Personnel) session.getAttribute("personnel");
+%>
 <body>
 <nav>
     <jsp:include page="/WEB-INF/JSP/Personnel/nav_personnel.jsp"/>
@@ -62,13 +66,28 @@
             <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Education</p>
             <ul>
                 <c:forEach var="ehd" items="${education_history_detail}">
-                    <p><input type="text" id="ename" name="name" value=" ${ehd.firstname}"></p>
-                    <p><input type="text" id="major" name="major" value=" ${ehd.major}"></p>
-                    <p><input type="text" id="university" name="university" value=" ${ehd.university}"></p>
-                    <p><input type="text" id="country" name="country" value=" ${ehd.country}"></p>
-                    <p><input type="text" id="educationyear" name="educationyear" value=" ${ehd.educationyear}"></p>
+                    <li>${ehd.firstname} ${ehd.major} ${ehd.university} ${ehd.country} ${ehd.educationyear}
+                        <input type="button" value="ลบ"
+                               onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${ehd.id}/delete'; return false; }"
+                               class="cancel-button"/></li><br>
                 </c:forEach>
-
+                <hr>
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_education_add" method="POST">
+                    <table>
+                        <tr>
+                            <td>ระดับการศึกษา : <input name="education_name" id="education_name"></td>
+                            <td>สาขา : <input name="major_name" id="major_name"></td>
+                        </tr>
+                        <tr>
+                            <td>มหาลัย : <input name="university_name" id="university_name"></td>
+                            <td>จังหวัด : <input name="country_name" id="country_name"></td>
+                        </tr>
+                        <tr>
+                            <td>ปีที่จบ : <input name="educationyear" id="educationyear"></td>
+                            <td><input type="submit" value="เพิ่ม"></td>
+                        </tr>
+                    </table>
+                </form>
             </ul>
         </div>
         <div class="card">
@@ -82,7 +101,9 @@
             <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Research Grants</p>
             <ul>
                 <c:forEach var="rgd" items="${research_grant_detail}">
-                    <p><input type="text" id="grantname" name="grantname" value=" ${rgd.researchgrantname}"><br></p>
+                    <li>${rgd.researchgrantname} ${rgd.researchgrantyear} <input type="button" value="ยกเลิก"></li>
+<%--                    <p><input type="text" id="grantname" name="grantname" value=" ${rgd.researchgrantname}"><br></p>--%>
+<%--                    <p><input type="text" id="grantyear" name="grantyear" value=" ${rgd.researchgrantyear}"><br></p>--%>
                 </c:forEach>
             </ul>
         </div>
@@ -90,8 +111,9 @@
             <p><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Award</p>
             <ul>
                 <c:forEach var="award" items="${award_detail}">
-                    <p><input type="text" id="award_name" name="award_name" value=" ${award.name}"><br></p>
-                    <p><input type="text" id="year" name="year" value=" ${award.year}"><br></p>
+                    <li>${award.name} ,${award.year} <input type="button" value="ยกเลิก"></li>
+<%--                    <p><input type="text" id="award_name" name="award_name" value=" ${award.name}"><br></p>--%>
+<%--                    <p><input type="text" id="year" name="year" value=" ${award.year}"><br></p>--%>
                 </c:forEach>
             </ul>
         </div>

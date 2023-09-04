@@ -7,7 +7,7 @@ import java.util.List;
 public interface PersonnelDao {
     List<Personnel> getPersonnel();
 
-    Personnel getPersonnel(String id);
+    Personnel getPersonnelById(String id);
 
     List<Award> getAward(String id);
 
@@ -20,6 +20,8 @@ public interface PersonnelDao {
 
     void SavePersonnel(Personnel personnel);
 
+    void SavePersonnelEducation(Education_histiry education_histiry);
+    void removePersonnelEducation(long id);
     void updatePersonnel(Personnel personnel);
     void updateAward(Award award);
 

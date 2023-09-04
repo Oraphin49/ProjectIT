@@ -9,7 +9,7 @@ import java.util.List;
 public interface PersonnelService {
     List<Personnel> getPersonnel();
 
-    Personnel getPersonnel(String personnelId);
+    Personnel getPersonnelById(String personnelId);
 
     Academic_Ranks getAcademicRankById(String acId);
 
@@ -22,6 +22,7 @@ public interface PersonnelService {
     List<Academic_Ranks> getAcademicRanks();
 
     void SavePersonnel(Personnel personnel);
+    void SavePersonnelEducation(Education_histiry education_histiry);
     void updatePersonnel(Personnel personnel);
 
     void updateAward(Award award);
@@ -29,4 +30,5 @@ public interface PersonnelService {
     void updateEducation_histiry(Education_histiry education_histiry);
 
     void updateResearch_grant(Research_grant research_grant);
+    void removePersonnelEducation(long id);
 }

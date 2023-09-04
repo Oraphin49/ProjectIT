@@ -22,8 +22,8 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
-    public Personnel getPersonnel(String personnelId) {
-        return personnelDao.getPersonnel(personnelId);
+    public Personnel getPersonnelById(String personnelId) {
+        return personnelDao.getPersonnelById(personnelId);
     }
 
     @Override
@@ -67,6 +67,12 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
+    public void SavePersonnelEducation(Education_histiry education_histiry) {
+        personnelDao.SavePersonnelEducation(education_histiry);
+    }
+
+    @Override
+    @Transactional
     public void updatePersonnel(Personnel personnel ) {
         personnelDao.updatePersonnel(personnel);
     }
@@ -89,8 +95,16 @@ public class PersonnelServiceImpl implements PersonnelService {
         personnelDao.updateResearch_grant(research_grant);
     }
 
+    @Override
+    @Transactional
+    public void removePersonnelEducation(long id) {
+        personnelDao.removePersonnelEducation(id);
+    }
 
-}
+
+    }
+
+
 
 
 

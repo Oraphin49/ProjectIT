@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: takda
-  Date: 9/29/2022
-  Time: 11:21 AM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -12,14 +6,18 @@
     <meta charset="UTF-8">
     <title>เข้าสู่ระบบ Information Technology</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-       <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
         .f {
             background-color: #aa1818;
         }
         p{
             font-size: 15px;
             color: white;
-            font-family: "-DB Silom";
+            font-family: Kanit;
         }
     </style>
 </head>

@@ -24,7 +24,7 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
-    public Personnel getPersonnel(String personnelId) {
+    public Personnel getPersonnelById(String personnelId) {
         Session session = sessionFactory.getCurrentSession();
         Personnel personnel = session.get(Personnel.class, personnelId);
         return personnel;
@@ -77,6 +77,22 @@ public class PersonnelDaoImpl implements PersonnelDao {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(personnel);
     }
+
+    @Override
+    public void SavePersonnelEducation(Education_histiry education_histiry) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(education_histiry);
+    }
+
+    @Override
+    public void removePersonnelEducation(long id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Education_histiry> query = session.createQuery("FROM Education_histiry e WHERE e.id =: aId", Education_histiry.class);
+        query.setParameter("aId",id);
+        Education_histiry education_histiry = query.getSingleResult();
+        session.remove(education_histiry);
+    }
+
     @Override
     public void updatePersonnel(Personnel personnel) {
         Session session = sessionFactory.getCurrentSession();
