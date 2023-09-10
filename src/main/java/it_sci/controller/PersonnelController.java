@@ -60,7 +60,7 @@ public class PersonnelController {
     }
 
     @PostMapping(path="/save_personnnel")
-    public String saveAddPersonnel(@RequestParam Map<String, String> allReqParams) throws ParseException {
+    public String saveAddPersonnel (@RequestParam Map<String, String> allReqParams) throws ParseException {
         String personnelid = allReqParams.get("id");
         String firstname = allReqParams.get("firstname");
         String lastname= allReqParams.get("lastname");
@@ -115,6 +115,22 @@ public class PersonnelController {
     public String removePersonnelResearch(@PathVariable("id") long id,
                                            @PathVariable String p_id) {
         personnelService.removePersonnelResearch(id);
+        return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
+    }
+
+    @PostMapping(path="/{p_id}/save_award_add")
+    public String saveAddPersonnelses(@RequestParam Map<String, String> allReqParams, @PathVariable String p_id) throws ParseException {
+        String award_name = allReqParams.get("award_name");
+        String award_year = allReqParams.get("award_year");
+        Personnel personnel = personnelService.getPersonnelById(p_id);
+        Award award = new Award(award_name,award_year,personnel);
+        personnelService.SavePersonnelAward(award);
+        return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
+    }
+    @GetMapping("/{p_id}/{id}/remove_award")
+    public String removePersonnelAward(@PathVariable("id") long id,
+                                          @PathVariable String p_id) {
+        personnelService.removePersonnelAward(id);
         return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
     }
 }

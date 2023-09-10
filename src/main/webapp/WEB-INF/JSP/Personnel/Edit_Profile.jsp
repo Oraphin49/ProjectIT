@@ -124,10 +124,25 @@
             <p><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Award</p>
             <ul>
                 <c:forEach var="award" items="${award_detail}">
-                    <li>${award.name} ,${award.year} <input type="button" value="ยกเลิก"></li>
+                    <li>${award.name} ,${award.year}</li>
 <%--                    <p><input type="text" id="award_name" name="award_name" value=" ${award.name}"><br></p>--%>
 <%--                    <p><input type="text" id="year" name="year" value=" ${award.year}"><br></p>--%>
+                    <input type="button" value="ลบ"
+                           onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${award.id}/remove_award'; return false; }"
+                           class="cancel-button"/></li><br>
+
                 </c:forEach>
+                <hr>
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_award_add" method="POST">
+                    <table>
+                        <tr>
+                            <td>ชื่อผลงาน : <input name="award_name" id="award_name"></td>
+                            <td>ปีที่ได้รับ : <input name="award_year" id="award_year"></td>
+                        </tr>
+                        <td><input type="submit" value="เพิ่ม"></td>
+                        </tr>
+                    </table>
+                </form>
             </ul>
         </div>
     </div>

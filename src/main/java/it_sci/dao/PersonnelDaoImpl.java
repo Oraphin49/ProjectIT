@@ -90,6 +90,12 @@ public class PersonnelDaoImpl implements PersonnelDao {
         session.saveOrUpdate(research_grant);
     }
 
+    @Override
+    public void SavePersonnelAward(Award award) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(award);
+    }
+
 
     @Override
     public void removePersonnelEducation(long id) {
@@ -107,6 +113,15 @@ public class PersonnelDaoImpl implements PersonnelDao {
         query.setParameter("rId",id);
         Research_grant research_grant = query.getSingleResult();
         session.remove(research_grant);
+    }
+
+    @Override
+    public void removePersonnelAward(long id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Award> query = session.createQuery("FROM Award a WHERE a.id =: aId", Award.class);
+        query.setParameter("aId",id);
+        Award award = query.getSingleResult();
+        session.remove(award);
     }
 
     @Override

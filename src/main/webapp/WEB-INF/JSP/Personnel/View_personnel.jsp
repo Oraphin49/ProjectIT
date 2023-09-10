@@ -56,7 +56,7 @@
             <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Research Grants</p>
             <ul>
                 <c:forEach var="rgd" items="${research_grant_detail}">
-                    <p>${rgd.researchgrantname}<br></p>
+                    <p>${rgd.researchgrantname} , ${rgd.researchgrantyear}<br></p>
                 </c:forEach>
             </ul>
         </div>
