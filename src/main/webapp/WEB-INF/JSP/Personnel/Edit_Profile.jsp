@@ -17,7 +17,7 @@
 <head>
     <meta charset="UTF-8">
     <title>${personnel_detail.firstname} ${personnel_detail.lastname}</title>
-    <link href="${pageContext.request.contextPath}/assets/css/view_personnel.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/edit_profile.css" rel="stylesheet">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +29,11 @@
 <br>
 <div id="container">
     <div id="profile">
-        <div id="image">
-            <img src="${pageContext.request.contextPath}/assets/image/${personnel_detail.image}">
-        </div>
+        <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_personnel" method="POST">
+            <label for="image">รูปภาพ:</label>
+            <input type="text" id="image" name="image" class="form-control" value="${personnel_detail.image}">
         <p id="name">
-
+            <p id="position">ตำแหน่งทาวิชาการ:</p>
                     <select name="major_id" id="major_id">
                         <c:forEach items="${academic_ranks_detail}" var="academic_ranks">
                             <c:choose>
@@ -46,25 +46,28 @@
                             </c:choose>
                         </c:forEach>
                     </select>
+            <p id="fist">ชื่อ:</p>
             <input type="text" id="fistname" name="academic_ranks_name" value="${personnel_detail.firstname}">
+            <p id="last">นามสกุล:</p>
             <input type="text" id="lastname" name="academic_ranks_lastname" value="${personnel_detail.lastname}">
-        <p id="designation"><br><span id="college"> ${personnel_detail.description}</span></p>
+            <p id="description"><strong>รายละเอียด:</strong>
+            <input type="text" id="designation" name="designation" value="${personnel_detail.description}">
         <hr width="100%">
         <div id="about">
             <p style="display:inline;">About</p>
             <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
         </div>
-        <p id="year-graduation"><strong>Email:</strong>
+            <p id="year-graduation">Email:</p>
             <input type="email" id="email" name="email" value="${personnel_detail.email}"><br></p>
-        <p id="education"><strong>Pubilcations</strong>
+            <p id="education">Pubilcations</p>
             <br><input type="text" id="scolarlink" name="scolarlink" value="${personnel_detail.scolarlink}"></p>
-        <p id="telephone"><strong>phone</strong><br>
+        <p id="telephone">phone</p><br>
             <input type="text" id="phone" name="email" value="${personnel_detail.phone}"></p>
         <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Work Experience</p>
             <p><input type="text" id="work" name="work" value="${personnel_detail.workexperience}"></p>
         <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Expertise</p>
         <p><input type="text" id="expertise" name="expertise" value="${personnel_detail.expertise}"></p>
-
+        </form>
     </div>
     <div id="info-cards">
         <div class="card">

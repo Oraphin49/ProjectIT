@@ -59,7 +59,7 @@ public class PersonnelController {
         return "JSP/Personnel/Add_Personnel";
     }
 
-    @PostMapping(path="/save_personnnel")
+    @PostMapping(path="/{p_id}/save_personnnel")
     public String saveAddPersonnel (@RequestParam Map<String, String> allReqParams) throws ParseException {
         String personnelid = allReqParams.get("id");
         String firstname = allReqParams.get("firstname");

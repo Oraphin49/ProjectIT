@@ -29,9 +29,7 @@
         </div>
         <p id="year-graduation"><strong>Email:</strong> ${personnel_detail.email}<br></p>
         <p id="education"><strong>Pubilcations</strong><br>${personnel_detail.scolarlink}</p>
-        <p id="more-about"><strong>Address</strong><br>Information Technology Division,<br>
-                        Faculty of Science, Maejo University,<br>
-                        Sansai, Chiangmai 50290, THAILAND</p>
+        <p id="more-about"><strong>Address</strong><br>หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ <br>63 หมู่ 4 ตำบลหนองหาร อำเภาสันทราย จังหวัดเชียงใหม่ 50290</p>
         <p id="office"><strong>Office</strong><br> ห้อง 1103-2, อาคารเสาวรัจ นิตยวรรธนะ</p>
         <p id="telephone"><strong>Telephone</strong><br>${personnel_detail.phone}</p>
         <p id="fax"><strong>Fax</strong><br>(+66) 053-873900</p>

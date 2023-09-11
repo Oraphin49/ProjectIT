@@ -9,16 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="update edit reh">
+    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="update edit">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/edit_profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AcademicRanksController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AwardController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Award.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Award.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" afterDir="false" />
     </list>
@@ -31,10 +25,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -303,6 +297,8 @@
       <workItem from="1693658462216" duration="7683000" />
       <workItem from="1693729932629" duration="6568000" />
       <workItem from="1693799023871" duration="24627000" />
+      <workItem from="1694327851046" duration="3290000" />
+      <workItem from="1694405109849" duration="3084000" />
     </task>
     <task id="LOCAL-00001" summary="create controller">
       <created>1693579426903</created>
@@ -339,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693853412401</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update edit">
+      <created>1694327911387</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694327911387</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,8 +352,8 @@
     <MESSAGE value="create controller" />
     <MESSAGE value="controller" />
     <MESSAGE value="update" />
-    <MESSAGE value="update edit" />
     <MESSAGE value="update edit reh" />
-    <option name="LAST_COMMIT_MESSAGE" value="update edit reh" />
+    <MESSAGE value="update edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="update edit" />
   </component>
 </project>
