@@ -29,12 +29,12 @@
 <br>
 <div id="container">
     <div id="profile">
-        <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_personnel" method="POST">
+        <form action="${pageContext.request.contextPath}/personnel//${personnel_detail.id}/edit/save" method="POST">
             <label for="image">รูปภาพ:</label>
             <input type="text" id="image" name="image" class="form-control" value="${personnel_detail.image}">
         <p id="name">
-            <p id="position">ตำแหน่งทาวิชาการ:</p>
-                    <select name="major_id" id="major_id">
+            <p id="ar">ตำแหน่งทาวิชาการ:</p>
+                    <select name="ar_id" id="ar_id">
                         <c:forEach items="${academic_ranks_detail}" var="academic_ranks">
                             <c:choose>
                                 <c:when test="${academic_ranks.id eq personnel_detail.academic_ranks.id}">
@@ -47,31 +47,34 @@
                         </c:forEach>
                     </select>
             <p id="fist">ชื่อ:</p>
-            <input type="text" id="fistname" name="academic_ranks_name" value="${personnel_detail.firstname}">
+            <input type="text" id="fistname" name="firstname" value="${personnel_detail.firstname}">
             <p id="last">นามสกุล:</p>
-            <input type="text" id="lastname" name="academic_ranks_lastname" value="${personnel_detail.lastname}">
-            <p id="description"><strong>รายละเอียด:</strong>
-            <input type="text" id="designation" name="designation" value="${personnel_detail.description}">
+            <input type="text" id="lastname" name="lastname" value="${personnel_detail.lastname}">
+            <p id="descriptions"><strong>รายละเอียด:</strong>
+            <input type="text" id="description" name="description" value="${personnel_detail.description}">
         <hr width="100%">
         <div id="about">
-            <p style="display:inline;">About</p>
+            <p style="display:inline;">ข้อมูล</p>
             <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
         </div>
-            <p id="year-graduation">Email:</p>
+            <p id="year-graduation">อีเมล์:</p>
             <input type="email" id="email" name="email" value="${personnel_detail.email}"><br></p>
             <p id="education">Pubilcations</p>
             <br><input type="text" id="scolarlink" name="scolarlink" value="${personnel_detail.scolarlink}"></p>
-        <p id="telephone">phone</p><br>
-            <input type="text" id="phone" name="email" value="${personnel_detail.phone}"></p>
-        <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Work Experience</p>
-            <p><input type="text" id="work" name="work" value="${personnel_detail.workexperience}"></p>
-        <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Expertise</p>
+        <p id="telephone">เบอร์โทร</p><br>
+            <input type="text" id="phone" name="phone" value="${personnel_detail.phone}"></p>
+        <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการทำงาน</p>
+            <p><input type="text" id="workexperience" name="workexperience" value="${personnel_detail.workexperience}"></p>
+        <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
         <p><input type="text" id="expertise" name="expertise" value="${personnel_detail.expertise}"></p>
+            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ตำแหน่ง</p>
+            <p><input type="text" id="position" name="position" value="${personnel_detail.position}"></p>
+            <input type="submit" value="บันทึก" class="btn btn-primary">
         </form>
     </div>
     <div id="info-cards">
         <div class="card">
-            <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Education</p>
+            <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการศึกษา</p>
             <ul>
                 <c:forEach var="ehd" items="${education_history_detail}">
                     <li>${ehd.firstname} ${ehd.major} ${ehd.university} ${ehd.country} ${ehd.educationyear}
@@ -99,7 +102,7 @@
             </ul>
         </div>
         <div class="card">
-            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Research Grants</p>
+            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ทุนวิจัย</p>
             <ul>
                 <c:forEach var="rgd" items="${research_grant_detail}">
                     <li>${rgd.researchgrantname} ${rgd.researchgrantyear}
@@ -124,7 +127,7 @@
             </ul>
         </div>
         <div class="card">
-            <p><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Award</p>
+            <p><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงาน</p>
             <ul>
                 <c:forEach var="award" items="${award_detail}">
                     <li>${award.name} ,${award.year}</li>

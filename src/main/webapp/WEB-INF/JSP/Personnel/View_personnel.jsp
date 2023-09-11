@@ -24,34 +24,34 @@
         <p id="designation"><br><span id="college"> ${personnel_detail.description}</span></p>
         <hr width="100%">
         <div id="about">
-            <p style="display:inline;">About</p>
+            <p style="display:inline;">ข้อมูล</p>
             <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
         </div>
-        <p id="year-graduation"><strong>Email:</strong> ${personnel_detail.email}<br></p>
-        <p id="education"><strong>Pubilcations</strong><br>${personnel_detail.scolarlink}</p>
-        <p id="more-about"><strong>Address</strong><br>หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ <br>63 หมู่ 4 ตำบลหนองหาร อำเภาสันทราย จังหวัดเชียงใหม่ 50290</p>
+        <p id="year-graduation"><strong>อีเมล:</strong> ${personnel_detail.email}<br></p>
+        <p id="education"><strong>สิ่งพิมพ์</strong><br>${personnel_detail.scolarlink}</p>
+        <p id="more-about"><strong>ที่อยู่</strong><br>หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ <br>63 หมู่ 4 ตำบลหนองหาร อำเภาสันทราย จังหวัดเชียงใหม่ 50290</p>
         <p id="office"><strong>Office</strong><br> ห้อง 1103-2, อาคารเสาวรัจ นิตยวรรธนะ</p>
-        <p id="telephone"><strong>Telephone</strong><br>${personnel_detail.phone}</p>
-        <p id="fax"><strong>Fax</strong><br>(+66) 053-873900</p>
+        <p id="telephone"><strong>เบอร์โทรศัพท์</strong><br>${personnel_detail.phone}</p>
+        <p id="fax"><strong>โทรสาร</strong><br>(+66) 053-873900</p>
     </div>
     <div id="info-cards">
         <div class="card">
-            <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Education</p>
+            <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการศึกษา</p>
             <ul>
                 <c:forEach var="ehd" items="${education_history_detail}">
-                    <p><i class="fas fa-graduation-cap stroke-transparent"></i><strong>&nbsp;&nbsp;&nbsp;${ehd.firstname}</strong> &nbsp;&nbsp;&nbsp;${ehd.major},${ehd.university},${ehd.country},${ehd.educationyear}<br></p>
+                    <p><i class="fas fa-graduation-cap stroke-transparent"></i><strong>&nbsp;&nbsp;&nbsp;${ehd.firstname}</strong> &nbsp;&nbsp;&nbsp;${ehd.major} ,${ehd.university} ,${ehd.country},${ehd.educationyear}<br></p>
                 </c:forEach>
 
             </ul>
         </div>
         <div class="card">
-            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Work Experience</p>
+            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการทำงาน</p>
             <ul>
             <p >${personnel_detail.workexperience}</p>
             </ul>
         </div>
         <div class="card">
-            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Research Grants</p>
+            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ทุนวิจัย</p>
             <ul>
                 <c:forEach var="rgd" items="${research_grant_detail}">
                     <p>${rgd.researchgrantname} , ${rgd.researchgrantyear}<br></p>
@@ -59,7 +59,7 @@
             </ul>
         </div>
         <div class="card">
-            <p><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Award</p>
+            <p><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงาน</p>
             <ul>
                 <c:forEach var="award" items="${award_detail}">
                     <p>${award.name},${award.year}<br></p>
@@ -67,7 +67,7 @@
             </ul>
         </div>
         <div class="card">
-            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Expertise</p>
+            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
             <ul>
                 <p>${personnel_detail.expertise}</p>
             </ul>

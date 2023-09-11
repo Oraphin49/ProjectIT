@@ -59,8 +59,8 @@ public class PersonnelController {
         return "JSP/Personnel/Add_Personnel";
     }
 
-    @PostMapping(path="/{p_id}/save_personnnel")
-    public String saveAddPersonnel (@RequestParam Map<String, String> allReqParams) throws ParseException {
+    @PostMapping(path="/save_personnnel")
+    public String saveAddPersonnel(@RequestParam Map<String, String> allReqParams) throws ParseException {
         String personnelid = allReqParams.get("id");
         String firstname = allReqParams.get("firstname");
         String lastname= allReqParams.get("lastname");
@@ -79,6 +79,26 @@ public class PersonnelController {
                 position,phone,image,scolarlink,description,experitse,workexperience,email,password,academic_ranks);
         personnelService.SavePersonnel(personnel);
         return "redirect:/";
+    }
+
+    @PostMapping(path = "/{p_id}/edit/save")
+    public String saveEditProfile(@RequestParam Map<String, String> allReqParams, @PathVariable String p_id) throws ParseException {
+        Personnel personnel =personnelService.getPersonnelById(p_id);
+        if (personnel != null) {
+            personnel.setFirstname(allReqParams.get("firstname"));
+            personnel.setLastname(allReqParams.get("lastname"));
+            personnel.setPosition(allReqParams.get("position"));
+            personnel.setPhone(allReqParams.get("phone"));
+            personnel.setImage(allReqParams.get("image"));
+            personnel.setScolarlink(allReqParams.get("scolarlink"));
+            personnel.setDescription(allReqParams.get("description"));
+            personnel.setExpertise(allReqParams.get("expertise"));
+            personnel.setWorkexperience(allReqParams.get("workexperience"));
+            personnel.setEmail(allReqParams.get("email"));
+
+            personnelService.updatePersonnel(personnel);
+        }
+        return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
     }
 
     @PostMapping(path="/{p_id}/save_education_add")

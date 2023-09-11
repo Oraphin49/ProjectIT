@@ -1,8 +1,6 @@
 package it_sci.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import java.util.List;
 
 @Entity
 @Table(name="personnel")
@@ -175,6 +173,4 @@ public class Personnel {
     public void setAcademic_ranks(Academic_Ranks academic_ranks) {
         this.academic_ranks = academic_ranks;
     }
-
-
 }
