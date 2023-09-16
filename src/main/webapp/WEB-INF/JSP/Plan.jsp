@@ -27,6 +27,7 @@
             width: 50%;
             height: 25px;
             margin-left: 25%;
+            margin-top: 60px;
         }
          .nav nav-tabs {
             margin:0;
@@ -48,24 +49,28 @@
             text-decoration:none;
              font-family: Kanit;
         }
-
-
+        nav {
+            height: 60px; /* ปรับแต่งความสูงตามที่คุณต้องการ */
+        }
+        *, ::after, ::before {
+            box-sizing: content-box;
+        }
     </style>
 </head>
 <body>
-<div >
+<nav>
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
     <br>
     <br>
     <br>
-</div>
+</nav>
 <select id="choices" name="choices" >
     <option value="option1">แผนการเรียนหลักสูตรปรับปรุงปี 2560</option>
     <option value="option2">แผนการเรียนหลักสูตรปรับปรุงปี 2565</option>
 </select>
 <div class="wrapper col3" align="center">
     <div id="homecontent" align="center">
-        <div class="studyPlan" id="2560" style="margin-top: 20px; width: 90%" >
+        <div class="studyPlan" id="2560" style="margin-top: 40px; width: 90%" >
             <ul id="myTabs" class="nav nav-tabs" role="tablist">
                 <li role="presentation"><a href="#2560Level_0" role="tab" data-toggle="tab" class="nn">วิชารวม</a></li>
                 <li role="presentation" class="active"><a href="#2560Level_1" role="tab" data-toggle="tab" class="nn">ชั้นปีที่ 1</a></li>
@@ -77,7 +82,7 @@
                 <!-- --Start Level-- -->
                 <div role="tabpanel" id="2560Level_0" class="tab-pane fade ">
                     <!-- --Start StudyPlan-- -->
-                    <div style="margin-top: 20px">
+                    <div style="margin-top: 5px">
                         <b>วิชารวม</b>
                     </div>
                     <table  class="table table-bordered" align="center">
@@ -234,7 +239,7 @@
                 <div role="tabpanel" id="2560Level_1"
                      class="tab-pane fade active in">
                     <!-- --Start StudyPlan-- -->
-                    <div style="margin-top: 20px">
+                    <div style="margin-top: 5px">
                         <b>ภาคเรียนที่ 1</b>
                     </div>
                     <table  class="table table-bordered" align="center">
@@ -283,7 +288,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div style="margin-top: 20px">
+                    <div style="margin-top: 5px">
                         <b>ภาคเรียนที่ 2</b>
                     </div>
                     <table  class="table table-bordered" align="center">
@@ -337,7 +342,7 @@
                 <div role="tabpanel" id="2560Level_2"
                      class="tab-pane fade ">
                     <!-- --Start StudyPlan-- -->
-                    <div style="margin-top: 20px">
+                    <div style="margin-top: 5px">
                         <b>ภาคเรียนที่ 1</b>
                     </div>
                     <table  class="table table-bordered" align="center">
@@ -390,7 +395,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div style="margin-top: 20px">
+                    <div style="margin-top: 5px">
                         <b>ภาคเรียนที่ 2</b>
                     </div>
                     <table  class="table table-bordered" align="center">
@@ -444,7 +449,7 @@
                 <div role="tabpanel" id="2560Level_3"
                      class="tab-pane fade ">
                     <!-- --Start StudyPlan-- -->
-                    <div style="margin-top: 20px">
+                    <div style="margin-top: 5px">
                         <b>ภาคเรียนที่ 1</b>
                     </div>
                     <table  class="table table-bordered" align="center">
@@ -493,7 +498,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div style="margin-top: 20px">
+                    <div style="margin-top: 5px">
                         <b>ภาคเรียนที่ 2</b>
                     </div>
                     <table  class="table table-bordered" align="center">
@@ -552,7 +557,7 @@
                      class="tab-pane fade ">
 
                     <!-- --Start StudyPlan-- -->
-                    <div style="margin-top: 20px">
+                    <div style="margin-top: 5px">
                         <b>ภาคเรียนที่ 1</b>
                     </div>
                     <table  class="table table-bordered" align="center">
@@ -592,7 +597,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div style="margin-top: 20px">
+                    <div style="margin-top: 5px">
                         <b>ภาคเรียนที่ 2</b>
                     </div>
                     <table  class="table table-bordered" align="center">

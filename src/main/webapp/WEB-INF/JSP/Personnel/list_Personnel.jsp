@@ -59,10 +59,13 @@
         .view-more-button:hover {
             background-color: #8c1515;
         }
+        *, ::after, ::before {
+            box-sizing: content-box;
+        }
     </style>
 </head>
 <body>
-<nav>
+<nav >
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
 </nav>
 <br>

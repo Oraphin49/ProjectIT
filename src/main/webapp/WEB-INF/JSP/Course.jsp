@@ -69,12 +69,15 @@
         .tab-content .table tbody tr:not(:last-child) {
             margin-bottom: 10px;
         }
+        *, ::after, ::before {
+            box-sizing: content-box;
+        }
     </style>
 </head>
 <body>
-<div>
+<nav>
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
-</div>
+</nav>
 <div class="wrapper col3">
     <div id="homecontent">
         <div class="row">

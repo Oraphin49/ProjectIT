@@ -9,11 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+<style>
+    *, ::after, ::before {
+        box-sizing: content-box;
+    }
 
+</style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div id="inner-nav"> <jsp:include page="/WEB-INF/layouts/nav.jsp"/></div>
+<nav> <jsp:include page="/WEB-INF/layouts/nav.jsp"/></nav>
 <br>
 <div id="container">
     <div id="profile">
