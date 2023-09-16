@@ -20,7 +20,7 @@
     <br>
     <br>
 <div class="alum_img" align="center">
-    <img style="width: 90%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" src="${pageContext.request.contextPath}/assets/image/2.png">
+    <img style="width: 99%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" src="${pageContext.request.contextPath}/assets/image/2.png">
 </div>
 
         <br><br>

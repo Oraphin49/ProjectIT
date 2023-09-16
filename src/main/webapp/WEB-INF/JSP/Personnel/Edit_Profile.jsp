@@ -22,7 +22,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
-
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -50,7 +49,7 @@
             <input type="text" id="fistname" name="firstname" value="${personnel_detail.firstname}">
             <p id="last">นามสกุล:</p>
             <input type="text" id="lastname" name="lastname" value="${personnel_detail.lastname}">
-            <p id="descriptions"><strong>รายละเอียด:</strong>
+            <p id="descriptions">รายละเอียด:</p>
             <input type="text" id="description" name="description" value="${personnel_detail.description}">
         <hr width="100%">
         <div id="about">

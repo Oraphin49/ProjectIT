@@ -31,7 +31,7 @@
         <p id="education"><strong>สิ่งพิมพ์</strong><br>${personnel_detail.scolarlink}</p>
         <p id="more-about"><strong>ที่อยู่</strong><br>หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ <br>63 หมู่ 4 ตำบลหนองหาร อำเภาสันทราย จังหวัดเชียงใหม่ 50290</p>
         <p id="office"><strong>Office</strong><br> ห้อง 1103-2, อาคารเสาวรัจ นิตยวรรธนะ</p>
-        <p id="telephone"><strong>เบอร์โทรศัพท์</strong><br>${personnel_detail.phone}</p>
+        <p id="telephone"><i class="bi bi-telephone-fill"></i><strong>เบอร์โทรศัพท์</strong><br>${personnel_detail.phone}</p>
         <p id="fax"><strong>โทรสาร</strong><br>(+66) 053-873900</p>
     </div>
     <div id="info-cards">

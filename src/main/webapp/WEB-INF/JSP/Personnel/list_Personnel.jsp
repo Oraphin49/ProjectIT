@@ -44,6 +44,7 @@
         .personnel-name {
             font-weight: bold;
             margin: 5px 0;
+            color: black;
         }
         .view-more-button {
             background-color: #aa1818;

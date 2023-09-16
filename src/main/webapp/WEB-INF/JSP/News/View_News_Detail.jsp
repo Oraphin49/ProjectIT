@@ -7,7 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
-
+<style>
+    #header{
+        height:85px;
+        background-color: #ffffff;
+        margin-top: 20px;
+        padding:0;
+        margin-left: 55px;
+        width: 90%;
+        border: 1px  solid #000000;
+        border-radius: 10px 10px 0px 0px;
+    }
+</style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
