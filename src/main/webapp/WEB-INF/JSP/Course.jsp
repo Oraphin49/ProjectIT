@@ -13,7 +13,7 @@
         /* Style the wrapper */
         .wrapper {
             padding: 20px;
-            background-color: #f0f0f0;
+
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -50,13 +50,6 @@
             float: none;
         }
 
-        /* Style the active tab */
-        .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-            border-bottom-color: transparent;
-            cursor: default;
-        }
 
         /* Style the header of each tab content */
         .tab-pane h3 {
@@ -72,17 +65,23 @@
         *, ::after, ::before {
             box-sizing: content-box;
         }
+        h2{
+            font-weight: bold;
+            font-family: Kanit;
+        }
     </style>
 </head>
 <body>
 <nav>
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
 </nav>
+<br><br>
+<h2 style="color: #aa1818;" align="center">ข้อมูลหลักสูตร</h2>
 <div class="wrapper col3">
     <div id="homecontent">
         <div class="row">
             <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]"
-                 style="margin-left: 0; width: 100%">
+                 style="margin-left: 0; width: 100%; margin-top: 20px">
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">

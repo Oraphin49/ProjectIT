@@ -17,14 +17,14 @@
 </style>
 </head>
 <body>
-<nav> <jsp:include page="/WEB-INF/layouts/nav.jsp"/></nav>
+<nav > <jsp:include page="/WEB-INF/layouts/nav.jsp"/></nav>
 <br>
 <div id="container">
     <div id="profile">
         <div id="image">
             <img src="${pageContext.request.contextPath}/assets/image/${personnel_detail.image}">
         </div>
-        <p id="name">${personnel_detail.academic_ranks.name} ${personnel_detail.firstname} ${personnel_detail.lastname}</p>
+        <p id="name" style="color: #111111">${personnel_detail.academic_ranks.name} ${personnel_detail.firstname} ${personnel_detail.lastname}</p>
         <p id="designation"><br><span id="college"> ${personnel_detail.description}</span></p>
         <hr width="100%">
         <div id="about">
@@ -43,22 +43,22 @@
             <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการศึกษา</p>
             <ul>
                 <c:forEach var="ehd" items="${education_history_detail}">
-                    <p><i class="fas fa-graduation-cap stroke-transparent"></i><strong>&nbsp;&nbsp;&nbsp;${ehd.firstname}</strong> &nbsp;&nbsp;&nbsp;${ehd.major} ,${ehd.university} ,${ehd.country},${ehd.educationyear}<br></p>
+                    <p style="color: #111111"><i class="fas fa-graduation-cap stroke-transparent"></i><strong>&nbsp;&nbsp;&nbsp;${ehd.firstname}</strong> &nbsp;&nbsp;&nbsp;${ehd.major} ,${ehd.university} ,${ehd.country},${ehd.educationyear}<br></p>
                 </c:forEach>
 
             </ul>
         </div>
         <div class="card">
-            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการทำงาน</p>
+            <p ><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการทำงาน</p>
             <ul>
-            <p >${personnel_detail.workexperience}</p>
+            <p style="color: #111111">${personnel_detail.workexperience}</p>
             </ul>
         </div>
         <div class="card">
             <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ทุนวิจัย</p>
             <ul>
                 <c:forEach var="rgd" items="${research_grant_detail}">
-                    <p>${rgd.researchgrantname} , ${rgd.researchgrantyear}<br></p>
+                    <p style="color: #111111">${rgd.researchgrantname} , ${rgd.researchgrantyear}<br></p>
                 </c:forEach>
             </ul>
         </div>
@@ -66,18 +66,18 @@
             <p><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงาน</p>
             <ul>
                 <c:forEach var="award" items="${award_detail}">
-                    <p>${award.name},${award.year}<br></p>
+                    <p style="color: #111111">${award.name},${award.year}<br></p>
                 </c:forEach>
             </ul>
         </div>
         <div class="card">
             <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
             <ul>
-                <p>${personnel_detail.expertise}</p>
+                <p style="color: #111111">${personnel_detail.expertise}</p>
             </ul>
         </div>
     </div>
 </div>
-<!-- partial -->
+<jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </body>
 </html>
