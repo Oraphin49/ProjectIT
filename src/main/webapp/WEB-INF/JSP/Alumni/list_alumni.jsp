@@ -12,7 +12,6 @@
   <style>
     .list-item {
       list-style: none;
-      border: 1px solid #ddd;
       margin-bottom: 10px;
       background-color: #f9f9f9;
       border-radius: 10px;
@@ -21,7 +20,8 @@
     }
 
     .list-item:hover {
-      background-color: #670c0c;
+      box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
+
     }
 
     .card {
@@ -121,7 +121,7 @@
                 <img style="width: 100px; height: 120px" src="${pageContext.request.contextPath}/assets/image/${alumni.image}">
               </div>
               <div class="card-body">
-                <h3 class="card-title">${alumni.id}</h3>
+                <h3 class="card-title" style="font-family: Kanit">${alumni.id}</h3>
                 <p class="card-text">${alumni.firstname} ${alumni.lastname}</p>
                 <p class="card-text">ตำแหน่ง : ${alumni.position}</p>
                 <p class="card-text">บริษัท : ${alumni.company}</p>

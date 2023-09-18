@@ -57,7 +57,7 @@
                 <img src="${pageContext.request.contextPath}/assets/image/reading-book.png" width="20px"> นักศึกษา</a></li>
             <li><a href="${pageContext.request.contextPath}/personnel/add_personnel">
                 <img src="${pageContext.request.contextPath}/assets/image/profile-user%20.png" width="20px">เพิ่มบุคลากร</a></li>
-            <li><a href="${pageContext.request.contextPath}/login/doLogout" style="font-size: 13px">
+            <li><a href="${pageContext.request.contextPath}/login/doLogout" style="font-size: 13px; width: 200px">
                 <img src="${pageContext.request.contextPath}/assets/image/logout.png" width="20px"> <%=admin.getAdminname()%> ออกจากระบบ</a></li>
         </ul>
     </nav>

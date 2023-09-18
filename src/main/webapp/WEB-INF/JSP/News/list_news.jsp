@@ -11,9 +11,8 @@
             width: 250px;
             height: 350px;
             margin: 20px;
-            padding: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            border-radius: 15px;
 
         }
         .prevent-hover-transform {
@@ -23,6 +22,9 @@
         .card-text {
             color: black;
             font-family: "Kanit";
+            font-size: 13px;
+            margin-top: -5px;
+            display: inline-block;
         }
 
         .news_img {
@@ -32,6 +34,7 @@
         .card-body {
             display: inline-block;
             height: 100px; /* กำหนดความสูงของเนื้อหาข่าว เช่น 100px */
+            margin-left: 12px;
         }
 
         .button1 {
@@ -42,7 +45,7 @@
             font-family: Kanit;
             font-size: 16px;
             margin: -9px 2px;
-            padding: 8px 16px;
+            padding: 5px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -78,13 +81,10 @@
             margin: 20px;
         }
 
-        p {
-            color: black;
-            font-size: 10px;
-        }
 
         .card:hover {
-            transform: scale(1.1);
+            transform: scale(1.03);
+            box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
         }
     </style>
 </head>
@@ -107,12 +107,12 @@
                             <img style="width: 100%; height: 200px;"
                                  src="${pageContext.request.contextPath}/assets/image/news11.jpg">
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title"
-                                style="font-family: Kanit; margin-bottom: 5px;margin-top: 5px;">${news.newsname}</h5>
-                            <p class="card-text" style="margin-top: 5px">${news.date}</p>
+                        <div class="card-body" >
+                            <h5 class="card-title" style="font-family: Kanit; margin-top: 5px; margin-bottom: 10px">${news.newsname}</h5>
+                            <p class="card-text" >${news.date}</p>
+                            <p class="card-text" >${news.category}</p>
                         </div>
-                        <div style="font-family: Kanit; margin-top: -10px">
+                        <div style="font-family: Kanit; margin-top: -5px" align="center">
                             <a href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail"><button
                                     class="button1">ดูเพิ่มเติม</button></a>
                         </div>

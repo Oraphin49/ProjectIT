@@ -80,7 +80,7 @@
       <br>
       <div class="form-group">
         <input type="submit" value="บันทึก" class="btn btn-primary">
-        <a href="${pageContext.request.contextPath}/news/list_news_manage"><input type="cancel" value="ยกเลิก" class="btn btn-primary"></a>
+        <a href="${pageContext.request.contextPath}/alumni/list_alumni_manage"><input type="cancel" value="ยกเลิก" class="btn btn-primary"></a>
 
       </div>
     </form>
