@@ -261,15 +261,15 @@
                                 <img src="${pageContext.request.contextPath}/assets/image/Yok.jpg" style="width: 250px" >
                             </div>
                             <div class="item">
-                                <img src="${pageContext.request.contextPath}/assets/image/Nice.jpg" style="width: 250px" >
+                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px" >
                             </div>
                             <div class="item">
-                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px" >
+                                <img src="${pageContext.request.contextPath}/assets/image/Nice.jpg" style="width: 250px" >
                             </div>
                         </div>
                     </div>
                 </div>
-              <input type="submit" value="ดูเพิ่มเติม" style="margin-top: 50px; margin-left: 50%; color: #000; padding: 5px;" >
+                <a href="${pageContext.request.contextPath}/alumni/list_alumni"><input type="submit" value="ดูเพิ่มเติม" style="margin-top: 50px; margin-left: 50%; color: #000; padding: 5px;" ></a>
             </div>
 
             <div class="gtco-section-overflow">

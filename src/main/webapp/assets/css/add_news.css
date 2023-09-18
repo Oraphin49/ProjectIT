@@ -54,6 +54,7 @@
     border-radius: 3px;
     cursor: pointer;
     font-family: Kanit;
+    width: 90px;
 }
 
 .news-form input[type="cencel"]:hover {

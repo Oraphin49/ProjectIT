@@ -7,7 +7,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
-
+<style>
+    .news-form input[type="cancel"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-family: Kanit;
+        width: 90px;
+    }
+    .news-form input[type="cencel"]:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        transition: transform 0.2s ease-in-out;
+        font-family: Kanit;
+        width: 90px;
+    }
+</style>
 </head>
 <body>
 <div id="container">

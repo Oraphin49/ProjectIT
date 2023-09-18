@@ -16,7 +16,7 @@
         border-radius: 3px;
         cursor: pointer;
         font-family: Kanit;
-        width: 95px;
+        width: 90px;
     }
 
     .news-form input[type="cencel"]:hover {
@@ -24,7 +24,7 @@
         transform: translateY(-2px);
         transition: transform 0.2s ease-in-out;
         font-family: Kanit;
-        width: 95px;
+        width: 90px;
     }
 </style>
 </head>
@@ -36,7 +36,7 @@
         <b style="font-size: 28px; font-family: Kanit; color: #a41212">ข้อมูลข่าว</b>
     </div>
     <br><br>
-<form action="${pageContext.request.contextPath}/news/save" method="POST">
+<form action="${pageContext.request.contextPath}/news/save" method="POST" onsubmit="return validateForm()">
     <div class="news-form">
         <label type="text">ชื่อข่าว:</label>
         <input type="text" name="news_name" id="news_name">
@@ -62,4 +62,27 @@
 <div class="f" >
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </div>
+<script>
+    function validateForm() {
+        var newsName = document.getElementById("news_name").value;
+
+        if (newsName.trim() === "") {
+            alert("กรุณากรอกชื่อข่าว");
+            return false;
+        }
+        var newsDetail = document.getElementById("news_detail").value;
+        if (newsDetail.trim() === "") {
+            alert("กรุณากรอกรายละเอียดข่าว");
+            return false;
+        }
+        var linkpage = document.getElementById("linkpage").value;
+        if (linkpage.trim() === "") {
+            alert("กรุณากรอกแหล่งที่มา");
+            return false;
+        }
+
+        return true; // ข้อมูลถูกต้องทั้งหมด
+    }
+</script>
+
 </html>

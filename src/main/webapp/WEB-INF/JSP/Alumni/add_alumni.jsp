@@ -10,6 +10,42 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    .form-group input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: Kanit;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+      transition: transform 0.2s ease-in-out;
+      font-family: Kanit;
+    }
+
+    .form-group input[type="cancel"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: Kanit;
+      width: 90px;
+    }
+
+    .form-group input[type="cencel"]:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+      transition: transform 0.2s ease-in-out;
+      font-family: Kanit;
+    }
+  </style>
 </head>
 <body>
   <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
@@ -77,9 +113,8 @@
       </div>
       <br>
       <div class="form-group">
-        <input type="submit" value="บันทึก" class="btn btn-primary">
-        <a href="${pageContext.request.contextPath}/alumni/list_alumni_manage"><input type="cancel" value="ยกเลิก" class="btn btn-primary"></a>
-
+        <input type="submit" value="บันทึก" >
+        <a href="${pageContext.request.contextPath}/alumni/list_alumni_manage"><input type="cancel" value="ยกเลิก" ></a>
       </div>
     </form>
   </div>

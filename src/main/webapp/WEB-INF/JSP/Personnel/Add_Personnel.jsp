@@ -72,7 +72,9 @@
     </style>
 </head>
 <body>
-<h1>Add Personnel</h1>
+<nav><jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/></nav>
+<br><br>
+<h2 style="font-family: Kanit; color: #aa1919" align="center">Add Personnel</h2>
 <form:form method="POST" action="${pageContext.request.contextPath}/personnel/save_personnnel" name="form" id="form" >
     <div id="profile">
         <p><strong>รูป</strong><input type="text" name="image" id="image"></p>
@@ -82,9 +84,9 @@
         <p><strong>ตำแหน่ง</strong><input type="text" id="position" name="position"></p>
         <p><strong>สิ่งพิมพ์</strong><input type="text" id="scolarlink" name="scolarlink" ></p>
         <p><strong>เบอร์โทร</strong><br><input type="text" id="phone" name="phone"></p>
-        <p><strong>คำอธิบาย</strong><br><input type="text" id="description" name="description"></p>
-        <p><strong>การทำงาน</strong><br><input type="text" id="workexperience" name="workexperience"></p>
-        <p><strong>ความชำนาญ</strong><br><input type="text" id="experitise" name="experitise"></p>
+        <p><strong>คำอธิบาย</strong><br><textarea id="description" name="description"></textarea>
+        <p><strong>การทำงาน</strong><br><textarea type="text" id="workexperience" name="workexperience"></textarea>
+        <p><strong>ความชำนาญ</strong><br><textarea type="text" id="experitise" name="experitise"></textarea>
         <p><strong>อีเมล</strong><input type="email" id="email" name="email"><br></p>
         <p><strong>รหัสผ่าน</strong><input type="password" id="password" name="password"><br></p>
         <label>ตำแหน่งทางวิชาการ</label>
@@ -150,6 +152,5 @@
         }
 
     }
-
 </script>
 </html>
