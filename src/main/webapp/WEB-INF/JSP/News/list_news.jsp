@@ -13,8 +13,8 @@
             margin: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
-
         }
+
         .prevent-hover-transform {
             transform: scale(1); /* กลับสเกลเป็นปกติ (ไม่มีการเพิ่มขนาด) */
         }
@@ -77,10 +77,34 @@
         .block_news {
             width: 250px;
             height: 400px;
-            display: inline-block;
+            display: none; /* เริ่มต้นซ่อนทุกข่าว */
             margin: 20px;
         }
 
+        /* CSS สำหรับปุ่มเปลี่ยนหน้า */
+        .pagination {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .pagination button {
+            background-color: #CD3333;
+            color: white;
+            border: 2px solid #771111;
+            border-radius: 5px;
+            font-family: Kanit;
+            font-size: 16px;
+            margin: 0 5px;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: #771111;
+        }
 
         .card:hover {
             transform: scale(1.03);
@@ -92,7 +116,7 @@
 <div class="container">
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
     <br>
-    <div class="top_content" >
+    <div class="top_content">
         <div>
             <h2 style="color: #a41212; font-family: Kanit" align="center">ข่าวสารและกิจกรรม</h2>
             <br>
@@ -100,6 +124,7 @@
                 <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="Search for names.."
                        title="Type in a name">
             </div>
+
             <c:forEach var="news" items="${list_news}">
                 <div class="block_news" data-name="${news.newsname} ${news.date} ${news.category}">
                     <div class="card">
@@ -107,10 +132,11 @@
                             <img style="width: 100%; height: 200px;"
                                  src="${pageContext.request.contextPath}/assets/image/news11.jpg">
                         </div>
-                        <div class="card-body" >
-                            <h5 class="card-title" style="font-family: Kanit; margin-top: 5px; margin-bottom: 10px">${news.newsname}</h5>
-                            <p class="card-text" >${news.date}</p>
-                            <p class="card-text" >${news.category}</p>
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: Kanit; margin-top: 5px; margin-bottom: 10px">${news.newsname}</h5>
+                            <p class="card-text">${news.date}</p>
+                            <p class="card-text">${news.category}</p>
                         </div>
                         <div style="font-family: Kanit; margin-top: -5px" align="center">
                             <a href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail"><button
@@ -123,11 +149,53 @@
     </div>
 </div>
 <br>
+<!-- ปุ่มเปลี่ยนหน้า -->
+<div class="pagination">
+    <button onclick="changePage(1)">1</button>
+    <button onclick="changePage(2)">2</button>
+    <button onclick="changePage(3)">3</button>
+    <button onclick="changePage(4)">4</button>
+    <button onclick="changePage(5)">5</button>
+    <button onclick="changePage(6)">6</button>
+    <button onclick="changePage(7)">7</button>
+    <button onclick="changePage(8)">8</button>
+    <button onclick="changePage(9)">9</button>
+    <button onclick="changePage(10)">10</button>
+    <!-- เพิ่มปุ่มเปลี่ยนหน้าตามต้องการ -->
+</div>
+<br><br>
 <div>
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </div>
 </body>
 <script>
+    var newsList = document.querySelectorAll(".block_news");
+    var itemsPerPage = 24; // จำนวนข่าวที่แสดงในแต่ละหน้า
+    var currentPage = 1; // หน้าปัจจุบัน
+
+    // ฟังก์ชันเปลี่ยนหน้า
+    function changePage(page) {
+        currentPage = page;
+        showNews();
+    }
+
+    // ฟังก์ชันแสดงข่าวในหน้าปัจจุบัน
+    function showNews() {
+        for (var i = 0; i < newsList.length; i++) {
+            var block = newsList[i];
+            var pageNumber = Math.ceil((i + 1) / itemsPerPage);
+
+            if (pageNumber === currentPage) {
+                block.style.display = "inline-block";
+            } else {
+                block.style.display = "none";
+            }
+        }
+    }
+
+    // เรียกใช้ฟังก์ชันแสดงข่าวในหน้าปัจจุบันเมื่อโหลดหน้าเว็บ
+    window.addEventListener("load", showNews);
+
     function search() {
         var input = document.getElementById("searchInput").value.toLowerCase();
         var blocks = document.getElementsByClassName("block_news");

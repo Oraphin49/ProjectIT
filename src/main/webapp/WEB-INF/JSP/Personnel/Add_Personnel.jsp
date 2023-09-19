@@ -93,6 +93,7 @@
         <select name="ar_id" id="ar_id">
             <c:forEach items="${ar_detail}" var="ar">
                 <option value="${ar.id}">${ar.name}</option>
+
             </c:forEach>
         </select>
         <input type="submit" value="save">

@@ -62,6 +62,10 @@
         *, ::after, ::before {
             box-sizing: content-box;
         }
+        .personnel-image {
+            width: 100px; /* ปรับขนาดความกว้างตามที่คุณต้องการ */
+            height: 100px; /* ปรับขนาดความสูงตามที่คุณต้องการ */
+        }
     </style>
 </head>
 <body>

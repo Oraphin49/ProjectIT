@@ -22,6 +22,7 @@
         text-align: center;
         width: 33.33%;
         font-family: Kanit;
+
     }
     .top-nav li a{
         color: #fff;
@@ -53,7 +54,7 @@
             <img src="${pageContext.request.contextPath}/assets/image/home.png" width="20px"> หน้าหลัก</a></li>
         <li><a href="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/edit_personnel_detail">
             <img src="${pageContext.request.contextPath}/assets/image/news.png" width="20px">แก้ไขข้อมูลส่วนตัว</a></li>
-        <li><a href="${pageContext.request.contextPath}/login/doLogout" style="font-size: 13px">
+        <li><a href="${pageContext.request.contextPath}/login/doLogout" style="font-size: 13px; width: auto">
             <img src="${pageContext.request.contextPath}/assets/image/logout.png" width="20px"> <%=personnel.getFirstname()%> ออกจากระบบ</a></li>
     </ul>
 </nav>

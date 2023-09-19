@@ -98,6 +98,36 @@
     .block_alumni {
       display: inline-block;
       margin-left: 15px;
+
+    }
+    /* CSS สำหรับปุ่มเปลี่ยนหน้า */
+    .pagination {
+      text-align: center;
+      margin-top: 65px;
+    }
+
+    .pagination button {
+      background-color: #CD3333;
+      color: white;
+      border: 2px solid #771111;
+      border-radius: 5px;
+      font-family: Kanit;
+      font-size: 16px;
+      margin: 0 5px;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .pagination button:hover {
+      background-color: #771111;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
     }
   </style>
 </head>
@@ -136,6 +166,21 @@
     </div>
   </div>
 </div>
+<!-- ปุ่มเปลี่ยนหน้า -->
+<div class="pagination">
+  <button onclick="changePage(1)">1</button>
+  <button onclick="changePage(2)">2</button>
+  <button onclick="changePage(3)">3</button>
+  <button onclick="changePage(4)">4</button>
+  <button onclick="changePage(5)">5</button>
+  <button onclick="changePage(6)">6</button>
+  <button onclick="changePage(7)">7</button>
+  <button onclick="changePage(8)">8</button>
+  <button onclick="changePage(9)">9</button>
+  <button onclick="changePage(10)">10</button>
+  <!-- เพิ่มปุ่มเปลี่ยนหน้าตามต้องการ -->
+</div>
+<br><br>
 <div>
   <jsp:include page="/WEB-INF/layouts/footer.jsp" />
 </div>
@@ -143,6 +188,33 @@
 </body>
 
 <script>
+    var alumniList = document.querySelectorAll(".block_alumni");
+    var itemsPerPage = 100; // จำนวนข่าวที่แสดงในแต่ละหน้า
+    var currentPage = 1; // หน้าปัจจุบัน
+
+    // ฟังก์ชันเปลี่ยนหน้า
+    function changePage(page) {
+    currentPage = page;
+    showAliumni();
+  }
+
+    // ฟังก์ชันแสดงข่าวในหน้าปัจจุบัน
+    function showAliumni() {
+    for (var i = 0; i < alumniList.length; i++) {
+    var block = alumniList[i];
+    var pageNumber = Math.ceil((i + 1) / itemsPerPage);
+
+    if (pageNumber === currentPage) {
+    block.style.display = "inline-block";
+  } else {
+    block.style.display = "none";
+  }
+  }
+  }
+
+    // เรียกใช้ฟังก์ชันแสดงข่าวในหน้าปัจจุบันเมื่อโหลดหน้าเว็บ
+    window.addEventListener("load",  showAliumni);
+
   function search() {
     var input = document.getElementById("searchInput").value.toLowerCase();
     var blocks = document.getElementsByClassName("block_alumni");

@@ -21,8 +21,8 @@
 <br>
 <div id="container">
     <div id="profile">
-        <div id="image">
-            <img src="${pageContext.request.contextPath}/assets/image/${personnel_detail.image}">
+        <div id="image" >
+            <img  style="width: 100%; height: 100%" src="${pageContext.request.contextPath}/assets/image/${personnel_detail.image}">
         </div>
         <p id="name" style="color: #111111">${personnel_detail.academic_ranks.name} ${personnel_detail.firstname} ${personnel_detail.lastname}</p>
         <p id="designation"><br><span id="college"> ${personnel_detail.description}</span></p>
