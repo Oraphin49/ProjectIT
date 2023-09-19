@@ -113,6 +113,11 @@
             <artifactId>mariadb-java-client</artifactId>
             <version>${mariadb.version}</version>
         </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version> <!-- เวอร์ชันล่าสุดที่มีในเวลาที่คุณสร้างโปรเจค -->
+        </dependency>
     </dependencies>
   <build>
     <finalName>Project</finalName>

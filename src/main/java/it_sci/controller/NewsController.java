@@ -1,6 +1,8 @@
 package it_sci.controller;
 import it_sci.model.News;
 import it_sci.service.NewsService;
+import it_sci.util.PathImg;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
@@ -8,11 +10,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -59,8 +69,9 @@ public class NewsController {
         return "JSP/News/add_news";
     }
 
-    @PostMapping(path = "/save")
-    public String processForm(@RequestParam Map<String, String> allReqParams) throws ParseException {
+    @Transactional
+    @PostMapping("/save")
+    public String processForm(@RequestParam Map<String, String> allReqParams,@RequestParam("imageFile") MultipartFile[] imageFiles) throws IOException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String newsname = allReqParams.get("news_name");
         Date sysDate = new Date();
@@ -68,9 +79,55 @@ public class NewsController {
         String news_detail = allReqParams.get("news_detail");
         String linkpage = allReqParams.get("linkpage");
 
-        News news = new News(newsname,sysDate,news_detail,news_category,linkpage);
-        newsService.SaveNews(news);
+        long latestId = newsService.max_id(); // Get the latest id from the database
+
+        int count = 1;
+        List<String> newFileNames = new ArrayList<>(); // To store the new file names
+
+        for (MultipartFile imageFile : imageFiles) {
+            if (!imageFile.isEmpty()) {
+                String uploadDirectory = PathImg.path_Img + "/news/" + (latestId + 1);
+
+                Path directoryPath = Paths.get(uploadDirectory);
+                Files.createDirectories(directoryPath);
+
+                String fileName = imageFile.getOriginalFilename();
+                String fileExtension = getFileExtension(fileName);
+
+                String formattedId = String.format("%02d", latestId + 1);
+                String formattedSequence = String.format("%04d", count);
+                String newFileName = String.format("IMG_%s_%s%s", formattedId, formattedSequence, fileExtension);
+                Path filePath = Paths.get(uploadDirectory, newFileName);
+
+                // Write the image file to the specified path
+                Files.write(filePath, imageFile.getBytes());
+
+                // Store the new file name in the list
+                newFileNames.add(newFileName);
+
+                count++;
+            }
+        }
+
+        // Create an ImageModel instance and add the file names to the image list
+        News image = new News(newsname,sysDate,news_detail,news_category,linkpage);
+        image.getNewsImage().addAll(newFileNames);
+        image.setId(latestId+1);
+        Session session = sessionFactory.getCurrentSession();
+        News mergedNews = (News) session.merge(image);
+
+        // Save the image data to the database
+//        newsService.SaveNews(image);
         return "redirect:/news/list_news_manage";
+    }
+
+
+    private String getFileExtension(String fileName) {
+        int dotIndex = fileName.lastIndexOf('.');
+        if (dotIndex > 0 && dotIndex < fileName.length() - 1) {
+            return fileName.substring(dotIndex);
+        }
+        return "";
     }
 
     @InitBinder

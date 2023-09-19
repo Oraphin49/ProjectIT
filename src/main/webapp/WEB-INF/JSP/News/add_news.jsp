@@ -36,7 +36,7 @@
         <b style="font-size: 28px; font-family: Kanit; color: #a41212">ข้อมูลข่าว</b>
     </div>
     <br><br>
-<form action="${pageContext.request.contextPath}/news/save" method="POST" onsubmit="return validateForm()">
+        <form action="${pageContext.request.contextPath}/news/save" method="POST" onsubmit="return validateForm()" enctype="multipart/form-data">
     <div class="news-form">
         <label type="text">ชื่อข่าว:</label>
         <input type="text" name="news_name" id="news_name">
@@ -53,6 +53,7 @@
         <textarea name="news_detail" id="news_detail"></textarea>
         <label type="text">แหล่งที่มา:</label>
         <input type="text" name="linkpage" id="linkpage">
+        <input type="file" name="imageFile" accept="image/*" multiple><br> <!-- ใช้ 'files' แทน 'file' และเพิ่ม 'multiple' เพื่ออัปโหลดหลายไฟล์ -->
         <input type="submit" value="บันทึกข่าว" >
         <a href="${pageContext.request.contextPath}/news/list_news_manage"><input type="cancel" value="ยกเลิก"></a>
 
@@ -62,27 +63,27 @@
 <div class="f" >
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </div>
-<script>
-    function validateForm() {
-        var newsName = document.getElementById("news_name").value;
+<%--<script>--%>
+<%--    function validateForm() {--%>
+<%--        var newsName = document.getElementById("news_name").value;--%>
 
-        if (newsName.trim() === "") {
-            alert("กรุณากรอกชื่อข่าว");
-            return false;
-        }
-        var newsDetail = document.getElementById("news_detail").value;
-        if (newsDetail.trim() === "") {
-            alert("กรุณากรอกรายละเอียดข่าว");
-            return false;
-        }
-        var linkpage = document.getElementById("linkpage").value;
-        if (linkpage.trim() === "") {
-            alert("กรุณากรอกแหล่งที่มา");
-            return false;
-        }
+<%--        if (newsName.trim() === "") {--%>
+<%--            alert("กรุณากรอกชื่อข่าว");--%>
+<%--            return false;--%>
+<%--        }--%>
+<%--        var newsDetail = document.getElementById("news_detail").value;--%>
+<%--        if (newsDetail.trim() === "") {--%>
+<%--            alert("กรุณากรอกรายละเอียดข่าว");--%>
+<%--            return false;--%>
+<%--        }--%>
+<%--        var linkpage = document.getElementById("linkpage").value;--%>
+<%--        if (linkpage.trim() === "") {--%>
+<%--            alert("กรุณากรอกแหล่งที่มา");--%>
+<%--            return false;--%>
+<%--        }--%>
 
-        return true; // ข้อมูลถูกต้องทั้งหมด
-    }
-</script>
+<%--        return true; // ข้อมูลถูกต้องทั้งหมด--%>
+<%--    }--%>
+<%--</script>--%>
 
 </html>

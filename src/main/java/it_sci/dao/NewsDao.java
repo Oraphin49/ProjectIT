@@ -14,6 +14,7 @@ public interface NewsDao {
 
     long getLatestId();
 
+    long max_id();
     void removeNews(Long id);
 
 }

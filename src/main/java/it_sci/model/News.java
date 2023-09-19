@@ -3,7 +3,9 @@ package it_sci.model;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name="news")
@@ -30,6 +32,11 @@ public class News {
 
     @Column(name="linkpage",nullable = false,length = 100)
     private String linkpage;
+
+    @ElementCollection
+    @CollectionTable(name = "news_image",joinColumns = @JoinColumn(name = "news_newsid"))
+    @Column(name = "image_news")
+    private List<String> newsImage = new ArrayList<>();
 
 //    @ManyToOne
 //    @JoinColumn(name = "news_newsid")
@@ -94,5 +101,11 @@ public class News {
         this.linkpage = linkpage;
     }
 
+    public List<String> getNewsImage() {
+        return newsImage;
+    }
 
+    public void setNewsImage(List<String> newsImage) {
+        this.newsImage = newsImage;
+    }
 }

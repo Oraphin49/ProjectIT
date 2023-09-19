@@ -53,4 +53,10 @@ public class NewsServiceImpl implements NewsService {
     public void removeNews(Long id) {
         newsDao.removeNews(id);
     }
+
+    @Override
+    @Transactional
+    public long max_id() {
+        return newsDao.max_id();
+    }
 }

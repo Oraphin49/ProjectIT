@@ -44,6 +44,14 @@ public class NewsDaoImpl  implements NewsDao{
     }
 
     @Override
+    public long max_id() {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Long> query = session.createQuery("select MAX(id) FROM News ",Long.class);
+        Long result = query.uniqueResult();
+        return result != null ? result.intValue() : 0;
+    }
+
+    @Override
     public void EditNews(News news) {
         Session session = sessionFactory.getCurrentSession();
         session.update(news);

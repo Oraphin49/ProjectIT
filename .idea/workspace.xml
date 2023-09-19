@@ -10,16 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/util/PathImg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/view_personnel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/view_personnel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/G.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/G.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/News.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/News_image.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/listalumni.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listalumni.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +36,8 @@
         <option value="HTML File" />
         <option value="Jsp File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -318,7 +322,8 @@
       <workItem from="1695004565417" duration="7678000" />
       <workItem from="1695013455633" duration="3939000" />
       <workItem from="1695041720457" duration="8798000" />
-      <workItem from="1695092774063" duration="9168000" />
+      <workItem from="1695092774063" duration="9425000" />
+      <workItem from="1695128116327" duration="10176000" />
     </task>
     <task id="LOCAL-00001" summary="create controller">
       <created>1693579426903</created>
@@ -411,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695058648787</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update">
+      <created>1695123121506</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1695123121506</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,5 +441,16 @@
     <MESSAGE value="edit news and alumni" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp</url>
+          <line>42</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
