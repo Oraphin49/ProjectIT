@@ -8,7 +8,98 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Kanit;
+        }
 
+        .news-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        .news-image {
+            margin-right: 30px;
+            width: 110px;
+            margin-left: 50px;
+
+
+        }
+
+        .news-details {
+            width: 60%;
+        }
+
+        .news-title {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 5px;
+            font-family: Kanit;
+        }
+
+        .news-category {
+            font-weight: bold;
+            margin: 0;
+            color: #111111;
+            font-family: Kanit;
+            font-size: 16px;
+        }
+
+        .news-date {
+            font-family: Kanit;
+            margin: 0;
+            color: #111111;
+            font-family: Kanit;
+            font-size: 16px;
+        }
+        #searchInput {
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 40%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            font-family: Kanit;
+            float: left;
+            margin-left: 500px;
+
+        }
+        /* CSS สำหรับปุ่มเปลี่ยนหน้า */
+        .pagination {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .pagination button {
+            background-color: #CD3333;
+            color: white;
+            border: 2px solid #771111;
+            border-radius: 5px;
+            font-family: Kanit;
+            font-size: 16px;
+            margin: 0 5px;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: #771111;
+        }
+
+        .block_manage_news:hover {
+            transform: scale(1.03);
+            box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -25,7 +116,7 @@
     <img src="${pageContext.request.contextPath}/assets/image/bookmark-plus.png" style="width: 30px; "></button></a>
 <br><br><br>
 <c:forEach var="news" items="${list_manage_news}">
-    <div class="block_manage_news" data-name="${news.newsname} ${news.category} ${news.date}">
+    <div class="block_manage_news" data-name="${news.newsname} ${news.category} ${news.date}" style="display: block">
         <div class="news-container" >
             <img class="news-image" src="${pageContext.request.contextPath}/assets/image/news1.jpg">
             <div class="news-details" >
@@ -37,14 +128,58 @@
             <a href="${pageContext.request.contextPath}/news/${news.id}/delete"><img src="${pageContext.request.contextPath}/assets/image/dustbin.png" style="width: 20px"></a>
         </div>
     </div>
-
-
 </c:forEach>
+<br>
+<!-- ปุ่มเปลี่ยนหน้า -->
+<div class="pagination">
+    <button onclick="prevPage()">ก่อนหน้า</button>
+    <button onclick="nextPage()">ถัดไป</button>
+</div>
+<br><br>
 </body>
 <footer>
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </footer>
 <script>
+    var newsListmanage = document.querySelectorAll(".block_manage_news");
+    var itemsPerPage = 100; // จำนวนข่าวที่แสดงในแต่ละหน้า
+    var currentPage = 1; // หน้าปัจจุบัน
+
+    // ฟังก์ชันเพื่อไปหน้าถัดไป
+    function nextPage() {
+        if (currentPage < 100) { // 10 คือจำนวนหน้าทั้งหมด
+            currentPage++;
+            changePage(currentPage);
+        }
+    }
+
+    // ฟังก์ชันเพื่อกลับหน้าก่อนหน้า
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            changePage(currentPage);
+        }
+    }
+
+    // ฟังก์ชันเปลี่ยนหน้า
+    function changePage(page) {
+        currentPage = page;
+        showNews();
+    }
+
+    // ฟังก์ชันแสดงข่าวในหน้าปัจจุบัน
+    function showNews() {
+        for (var i = 0; i < newsListmanage.length; i++) {
+            var block = newsListmanage[i];
+            var pageNumber = Math.ceil((i + 1) / itemsPerPage);
+
+            if (pageNumber === currentPage) {
+                block.style.display = "block";
+            } else {
+                block.style.display = "none";
+            }
+        }
+    }
     function search() {
         var input = document.getElementById("searchInput").value.toLowerCase();
         var blocks = document.getElementsByClassName("block_manage_news");

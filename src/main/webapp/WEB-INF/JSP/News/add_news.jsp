@@ -53,7 +53,7 @@
         <textarea name="news_detail" id="news_detail"></textarea>
         <label type="text">แหล่งที่มา:</label>
         <input type="text" name="linkpage" id="linkpage">
-        <input type="file" name="imageFile" accept="image/*" multiple><br> <!-- ใช้ 'files' แทน 'file' และเพิ่ม 'multiple' เพื่ออัปโหลดหลายไฟล์ -->
+        <input type="file" name="imageFile" accept="image/*" multiple><br><br><br> <!-- ใช้ 'files' แทน 'file' และเพิ่ม 'multiple' เพื่ออัปโหลดหลายไฟล์ -->
         <input type="submit" value="บันทึกข่าว" >
         <a href="${pageContext.request.contextPath}/news/list_news_manage"><input type="cancel" value="ยกเลิก"></a>
 

@@ -168,17 +168,8 @@
 </div>
 <!-- ปุ่มเปลี่ยนหน้า -->
 <div class="pagination">
-  <button onclick="changePage(1)">1</button>
-  <button onclick="changePage(2)">2</button>
-  <button onclick="changePage(3)">3</button>
-  <button onclick="changePage(4)">4</button>
-  <button onclick="changePage(5)">5</button>
-  <button onclick="changePage(6)">6</button>
-  <button onclick="changePage(7)">7</button>
-  <button onclick="changePage(8)">8</button>
-  <button onclick="changePage(9)">9</button>
-  <button onclick="changePage(10)">10</button>
-  <!-- เพิ่มปุ่มเปลี่ยนหน้าตามต้องการ -->
+  <button onclick="prevPage()">ก่อนหน้า</button>
+  <button onclick="nextPage()">ถัดไป</button>
 </div>
 <br><br>
 <div>
@@ -188,32 +179,48 @@
 </body>
 
 <script>
-    var alumniList = document.querySelectorAll(".block_alumni");
-    var itemsPerPage = 100; // จำนวนข่าวที่แสดงในแต่ละหน้า
-    var currentPage = 1; // หน้าปัจจุบัน
+  var alumniList = document.querySelectorAll(".block_alumni");
+  var itemsPerPage = 30; // จำนวนที่แสดงในแต่ละหน้า
+  var currentPage = 1; // หน้าปัจจุบัน
 
-    // ฟังก์ชันเปลี่ยนหน้า
-    function changePage(page) {
+  // ฟังก์ชันเพื่อไปหน้าถัดไป
+  function nextPage() {
+    if (currentPage < 10) { // 10 คือจำนวนหน้าทั้งหมด
+      currentPage++;
+      changePage(currentPage);
+    }
+  }
+
+  // ฟังก์ชันเพื่อกลับหน้าก่อนหน้า
+  function prevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      changePage(currentPage);
+    }
+  }
+
+  // ฟังก์ชันเปลี่ยนหน้า
+  function changePage(page) {
     currentPage = page;
-    showAliumni();
+    showAlumni();
   }
 
-    // ฟังก์ชันแสดงข่าวในหน้าปัจจุบัน
-    function showAliumni() {
+  // ฟังก์ชันแสดงข่าวในหน้าปัจจุบัน
+  function showAlumni() {
     for (var i = 0; i < alumniList.length; i++) {
-    var block = alumniList[i];
-    var pageNumber = Math.ceil((i + 1) / itemsPerPage);
+      var block = alumniList[i];
+      var pageNumber = Math.ceil((i + 1) / itemsPerPage);
 
-    if (pageNumber === currentPage) {
-    block.style.display = "inline-block";
-  } else {
-    block.style.display = "none";
-  }
-  }
+      if (pageNumber === currentPage) {
+        block.style.display = "inline-block";
+      } else {
+        block.style.display = "none";
+      }
+    }
   }
 
-    // เรียกใช้ฟังก์ชันแสดงข่าวในหน้าปัจจุบันเมื่อโหลดหน้าเว็บ
-    window.addEventListener("load",  showAliumni);
+  // เรียกใช้ฟังก์ชันแสดงข่าวในหน้าปัจจุบันเมื่อโหลดหน้าเว็บ
+  window.addEventListener("load", showAlumni);
 
   function search() {
     var input = document.getElementById("searchInput").value.toLowerCase();

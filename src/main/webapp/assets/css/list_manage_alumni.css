@@ -2,6 +2,7 @@ table {
     border-collapse: collapse;
     width: 90%;
     font-family: Kanit;
+    display: table;
 }
 
 th, td {

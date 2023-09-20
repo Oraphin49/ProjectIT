@@ -105,11 +105,11 @@
       </div>
       <div class="form-group">
         <label for="expertise">ความเชี่ยวชาญ:</label>
-        <input type="text" id="expertise" name="expertise" class="form-control">
+        <textarea type="text" id="expertise" name="expertise" class="form-control"></textarea>
       </div>
       <div class="form-group">
         <label for="award">ผลงาน:</label>
-        <input type="text" id="award" name="award" class="form-control">
+        <textarea type="text" id="award" name="award" class="form-control"></textarea>
       </div>
       <br>
       <div class="form-group">

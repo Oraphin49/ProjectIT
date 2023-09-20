@@ -9,13 +9,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+<style>
+    /* CSS สำหรับปุ่มเปลี่ยนหน้า */
+    .pagination {
+        text-align: center;
+        margin-top: 65px;
+    }
 
+    .pagination button {
+        background-color: #CD3333;
+        color: white;
+        border: 2px solid #771111;
+        border-radius: 5px;
+        font-family: Kanit;
+        font-size: 16px;
+        margin: 0 5px;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .pagination button:hover {
+        background-color: #771111;
+    }
+
+</style>
 </head>
 <body>
-<%
-    request.setCharacterEncoding("UTF-8");
-    response.setCharacterEncoding("UTF-8");
-%>
 <div class="container">
     <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
 </div>
@@ -36,7 +57,7 @@
         <br>
     </div>
 </div>
-<table align="center">
+<table align="center" class="list_manage" >
     <tr>
         <th>รูปภาพ</th>
         <th>ชื่อ-นามสกุล</th>
@@ -59,14 +80,65 @@
 
     </c:forEach>
 </table>
+<br><br>
+<!-- ปุ่มเปลี่ยนหน้า -->
+<div class="pagination">
+    <button onclick="prevPage()">ก่อนหน้า</button>
+    <button onclick="nextPage()">ถัดไป</button>
+</div>
+<br><br>
 <footer>
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </footer>
 </body>
 <script>
+
+    var alumniList = document.querySelectorAll(".list_manage");
+    var itemsPerPage = 100; // จำนวนที่แสดงในแต่ละหน้า
+    var currentPage = 1; // หน้าปัจจุบัน
+
+    // ฟังก์ชันเพื่อไปหน้าถัดไป
+    function nextPage() {
+        if (currentPage < 100) { // 10 คือจำนวนหน้าทั้งหมด
+            currentPage++;
+            changePage(currentPage);
+        }
+    }
+
+    // ฟังก์ชันเพื่อกลับหน้าก่อนหน้า
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            changePage(currentPage);
+        }
+    }
+
+    // ฟังก์ชันเปลี่ยนหน้า
+    function changePage(page) {
+        currentPage = page;
+        showAlumni();
+    }
+
+    // ฟังก์ชันแสดงข่าวในหน้าปัจจุบัน
+    function showAlumni() {
+        for (var i = 0; i < alumniList.length; i++) {
+            var block = alumniList[i];
+            var pageNumber = Math.ceil((i + 1) / itemsPerPage);
+
+            if (pageNumber === currentPage) {
+                block.style.display = "table";
+            } else {
+                block.style.display = "none";
+            }
+        }
+    }
+
+    // เรียกใช้ฟังก์ชันแสดงข่าวในหน้าปัจจุบันเมื่อโหลดหน้าเว็บ
+    window.addEventListener("load", showAlumni);
+
     function search() {
         var input = document.getElementById("searchInput").value.toLowerCase();
-        var rows = document.querySelectorAll(".block_alumni");
+        var rows = document.querySelectorAll(".list_manage");
         var table = document.querySelector("table");
 
         // ซ่อนทั้งตารางก่อนที่จะทำการค้นหา

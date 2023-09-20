@@ -151,17 +151,8 @@
 <br>
 <!-- ปุ่มเปลี่ยนหน้า -->
 <div class="pagination">
-    <button onclick="changePage(1)">1</button>
-    <button onclick="changePage(2)">2</button>
-    <button onclick="changePage(3)">3</button>
-    <button onclick="changePage(4)">4</button>
-    <button onclick="changePage(5)">5</button>
-    <button onclick="changePage(6)">6</button>
-    <button onclick="changePage(7)">7</button>
-    <button onclick="changePage(8)">8</button>
-    <button onclick="changePage(9)">9</button>
-    <button onclick="changePage(10)">10</button>
-    <!-- เพิ่มปุ่มเปลี่ยนหน้าตามต้องการ -->
+    <button onclick="prevPage()">ก่อนหน้า</button>
+    <button onclick="nextPage()">ถัดไป</button>
 </div>
 <br><br>
 <div>
@@ -172,6 +163,22 @@
     var newsList = document.querySelectorAll(".block_news");
     var itemsPerPage = 24; // จำนวนข่าวที่แสดงในแต่ละหน้า
     var currentPage = 1; // หน้าปัจจุบัน
+
+    // ฟังก์ชันเพื่อไปหน้าถัดไป
+    function nextPage() {
+        if (currentPage < 10) { // 10 คือจำนวนหน้าทั้งหมด
+            currentPage++;
+            changePage(currentPage);
+        }
+    }
+
+    // ฟังก์ชันเพื่อกลับหน้าก่อนหน้า
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            changePage(currentPage);
+        }
+    }
 
     // ฟังก์ชันเปลี่ยนหน้า
     function changePage(page) {
