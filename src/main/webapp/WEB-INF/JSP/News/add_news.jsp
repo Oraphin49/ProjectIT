@@ -33,11 +33,11 @@
     <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
     <br><br>
     <div align="center">
-        <b style="font-size: 28px; font-family: Kanit; color: #a41212">ข้อมูลข่าว</b>
+        <b style="font-size: 28px; font-family: Kanit; color: #a41212">เพิ่มข้อมูลข่าว</b>
     </div>
     <br><br>
         <form action="${pageContext.request.contextPath}/news/save" method="POST" onsubmit="return validateForm()" enctype="multipart/form-data">
-    <div class="news-form">
+    <div class="news-form"  style="width: 70%; margin-left: 15%">
         <label type="text">ชื่อข่าว:</label>
         <input type="text" name="news_name" id="news_name">
         <select name="news_category" id="news_category" class="news_category" style=" width: 100%;
@@ -53,7 +53,9 @@
         <textarea name="news_detail" id="news_detail"></textarea>
         <label type="text">แหล่งที่มา:</label>
         <input type="text" name="linkpage" id="linkpage">
-        <input type="file" name="imageFile" accept="image/*" multiple><br><br><br> <!-- ใช้ 'files' แทน 'file' และเพิ่ม 'multiple' เพื่ออัปโหลดหลายไฟล์ -->
+        <br><br>
+        <input type="file" name="imageFile" accept="image/*" multiple id="imageFile">
+        <br><br><br> <!-- ใช้ 'files' แทน 'file' และเพิ่ม 'multiple' เพื่ออัปโหลดหลายไฟล์ -->
         <input type="submit" value="บันทึกข่าว" >
         <a href="${pageContext.request.contextPath}/news/list_news_manage"><input type="cancel" value="ยกเลิก"></a>
 
@@ -63,27 +65,53 @@
 <div class="f" >
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </div>
-<%--<script>--%>
-<%--    function validateForm() {--%>
-<%--        var newsName = document.getElementById("news_name").value;--%>
+<script>
+    function validateForm() {
+        var newsName = document.getElementById("news_name").value;
 
-<%--        if (newsName.trim() === "") {--%>
-<%--            alert("กรุณากรอกชื่อข่าว");--%>
-<%--            return false;--%>
-<%--        }--%>
-<%--        var newsDetail = document.getElementById("news_detail").value;--%>
-<%--        if (newsDetail.trim() === "") {--%>
-<%--            alert("กรุณากรอกรายละเอียดข่าว");--%>
-<%--            return false;--%>
-<%--        }--%>
-<%--        var linkpage = document.getElementById("linkpage").value;--%>
-<%--        if (linkpage.trim() === "") {--%>
-<%--            alert("กรุณากรอกแหล่งที่มา");--%>
-<%--            return false;--%>
-<%--        }--%>
+        if (newsName.trim() === "") {
+            alert("กรุณากรอกชื่อข่าว");
+            return false;
+        }  else if (newsName.length < 2 || newsName.length > 50 || /^[A-Z|a-z|ก-์]$/.test(newsName)) {
+            alert("ชื่อข่าวต้องมีความยาวระหว่าง 2 และ 50 ตัวอักษรและต้องเป็นภาษาไทยเท่านั้น");
+            return false;
+        }
+        var newsDetail = document.getElementById("news_detail").value;
+        if (newsDetail.trim() === "") {
+            alert("กรุณากรอกรายละเอียดข่าว");
+            return false;
+        }
+        var linkpage = document.getElementById("linkpage").value;
+        if (linkpage.trim() === "") {
+            alert("กรุณากรอกแหล่งที่มา");
+            return false;
+        }
 
-<%--        return true; // ข้อมูลถูกต้องทั้งหมด--%>
-<%--    }--%>
-<%--</script>--%>
+        // ตรวจสอบว่ามีไฟล์รูปภาพถูกเลือกหรือไม่
+        var imageFiles = document.getElementById("imageFile").files;
+        if (imageFiles.length === 0) {
+            alert("กรุณาเลือกไฟล์รูปภาพ");
+            return false;
+        }
+
+// ตรวจสอบจำนวนไฟล์รูปภาพที่อัปโหลด
+        if (imageFiles.length > 8) {
+            alert("คุณสามารถอัปโหลดได้เพียง 8 รูปเท่านั้น");
+            return false;
+        }
+// ตรวจสอบขนาดของไฟล์รูปภาพ
+        for (var i = 0; i < imageFiles.length; i++) {
+            var imageSize = imageFiles[i].size; // ขนาดไฟล์ในไบต์
+            var maxSizeInBytes = 1024 * 1024; // 1 MB (แก้ไขตามที่คุณต้องการ)
+
+            if (imageSize > maxSizeInBytes) {
+                alert("ไฟล์รูปภาพที่ " + (i + 1) + " มีขนาดใหญ่เกินไป");
+                return false;
+            }
+        }
+
+        return true; // ข้อมูลถูกต้องทั้งหมด
+    }
+</script>
 
 </html>

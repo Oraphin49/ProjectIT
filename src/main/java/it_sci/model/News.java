@@ -108,4 +108,5 @@ public class News {
     public void setNewsImage(List<String> newsImage) {
         this.newsImage = newsImage;
     }
+
 }

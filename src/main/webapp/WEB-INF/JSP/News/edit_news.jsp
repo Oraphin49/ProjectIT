@@ -32,11 +32,11 @@
     <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
     <br><br>
     <div align="center">
-        <b style="font-size: 28px; font-family: Kanit; color: #a41212">ข้อมูลข่าว</b>
+        <b style="font-size: 28px; font-family: Kanit; color: #a41212">แก้ไขข้อมูลข่าว</b>
     </div>
     <br><br>
     <form action="${pageContext.request.contextPath}/news/${news.id}/edit/save" method="POST">
-        <div class="news-form">
+        <div class="news-form" style="width: 70%; margin-left: 15%">
             <label type="text">ชื่อข่าว:</label>
             <input type="text" name="news_name" id="news_name" value="${news.newsname}" >
             <select name="news_category" id="news_category" class="news_category" style=" width: 100%;
@@ -52,7 +52,7 @@
             <textarea name="news_detail" id="news_detail" >${news.newsdetail}</textarea>
             <label type="text">แหล่งที่มา:</label>
             <input type="text" name="linkpage" id="linkpage" value="${news.linkpage}">
-<%--            <input type="file" name="imageFile" accept="image/*" multiple value=""><br>--%>
+            <input type="file" name="imageFile" accept="image/*" multiple ><br>
             <input type="submit" value="บันทึกข่าว">
             <a href="${pageContext.request.contextPath}/alumni/list_alumni_manage"><input type="cancel" value="ยกเลิก" class="btn btn-primary"></a>
         </div>

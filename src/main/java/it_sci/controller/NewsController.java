@@ -49,9 +49,8 @@ public class NewsController {
 
     @GetMapping("/{id}/view_news_detail")
     public String ShowNewsDetail(@PathVariable("id") Long id, Model model) {
+        //        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
         News news =  newsService.getNews(id);
-//        model.addAttribute("title", title + " - รายการสินค้า");
-//        model.addAttribute("shop", shop);
         model.addAttribute("news_detail", news);
         return "JSP/News/View_News_Detail";
     }
@@ -78,7 +77,6 @@ public class NewsController {
         String news_category = allReqParams.get("news_category");
         String news_detail = allReqParams.get("news_detail");
         String linkpage = allReqParams.get("linkpage");
-
         long latestId = newsService.max_id(); // Get the latest id from the database
 
         int count = 1;

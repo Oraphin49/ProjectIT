@@ -88,8 +88,8 @@
         }
 
         .pagination button {
-            background-color: #CD3333;
-            color: white;
+            background-color: #f5ebeb;
+            color: #2f2f2f;
             border: 2px solid #771111;
             border-radius: 5px;
             font-family: Kanit;
@@ -103,7 +103,7 @@
         }
 
         .pagination button:hover {
-            background-color: #771111;
+            background-color: #f59898;
         }
 
         .card:hover {

@@ -78,12 +78,12 @@
                 การสร้างภาพเคลื่อนไหวและมัลติมีเดียเช่นเดียวกับสาขาเทคโนโลยีสารสนเทศของสถาบันอื่นๆ *</p>
         </td>
         <td align="center">
-            <img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/assets/image/n1.jpg" alt="..." />
+            <img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/assets/image/tk.jpg" alt="..." />
         </td>
     </tr>
     <br><br>
     <tr>
-        <td align="center"><img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/assets/image/n3.jpg" alt="..." /></td>
+        <td align="center"><img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/assets/image/it2.jpg" alt="..." /></td>
         <td>
             <h2 class="display-4">ปรัชญาการศึกษาของหลักสูตร</h2>
             <p style="color: #111111">

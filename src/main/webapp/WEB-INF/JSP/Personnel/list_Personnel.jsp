@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
 <html>
 <head>
     <title>List of Personnel</title>
@@ -10,42 +9,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <style>
-        body {
-            font-family: 'Kanit', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            text-align: center;
-            padding: 50px;
-            background-color: #343a40;
-            color: white;
-        }
+        /* ข้อมูลบุคลากร */
         .personnel-box {
-            background-color: white;
+            background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin: 20px;
             text-align: center;
             transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .personnel-box:hover {
-            transform: translateY(-5px);
-        }
+
         .personnel-image {
-            width: 110px;
-            height: 130px;
+            width: 100px;
+            height: 100px;
             margin: 0 auto 10px;
             border: 2px solid #aaa;
-            border-radius: 5px;
+            border-radius: 50%;
+            object-fit: cover;
         }
+
         .personnel-name {
             font-weight: bold;
             margin: 5px 0;
-            color: black;
+            color: #333;
         }
+
         .view-more-button {
             background-color: #aa1818;
             color: white;
@@ -55,16 +47,43 @@
             font-weight: bold;
             text-decoration: none;
             transition: background-color 0.2s;
+            margin-top: auto;
         }
+
         .view-more-button:hover {
             background-color: #8c1515;
         }
-        *, ::after, ::before {
-            box-sizing: content-box;
+
+        /* ส่วนที่เปลี่ยนเป็นสีดำ */
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
         }
+
+        .header {
+            text-align: center;
+            padding: 50px;
+            background-color: #343a40;
+            color: white;
+        }
+
+        /* ส่วนเพิ่มเติมในหัวข้อที่เปลี่ยนเป็นสีดำ */
+        h1 {
+            font-size: 36px;
+        }
+
+        /* ตัวอักษรขนาดเล็กกว่า */
+        .personnel-name {
+            font-size: 18px;
+        }
+
+        /* ปรับขนาดรูปภาพบุคลากร */
         .personnel-image {
-            width: 100px; /* ปรับขนาดความกว้างตามที่คุณต้องการ */
-            height: 100px; /* ปรับขนาดความสูงตามที่คุณต้องการ */
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
@@ -96,3 +115,4 @@
 </body>
 <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </html>
+
