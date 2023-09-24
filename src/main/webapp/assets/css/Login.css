@@ -87,3 +87,9 @@ nav.main-nav{
 .bacK{
     background-color: #aa1818;
 }
+body{
+    background-image: url('https://itsci.mju.ac.th/itsci/assets/img/banner4.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

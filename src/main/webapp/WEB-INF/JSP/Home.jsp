@@ -95,23 +95,72 @@
     <div class="gtco-section-overflow" style="margin-top: 0px; ">
 
         <div class="gtco-section" id="gtco-services" data-section="services">
-            <div class="gtco-container">
+            <div class="gtco-container" align="center">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="gtco-heading" align="center">
-                            <img src="${pageContext.request.contextPath}/assets/image/3.png " width="150px" style="font-size: 8px;" ><br>
-                            <p style="font-size: 20px;">INFORMATION TECHNOLOGY</p><hr><br>
-                            <p>เทคโนโลยีสารสนเทศ ทำให้ช่วยให้มนุษย์มีความเป็นอยู่ที่ดีขึ้น มีอุปกรณ์ต่างๆที่ช่วยให้ทำความสะดวกแก่บุคคลที่ใช้งาน<br>
-                                ทำให้มีความคล่องตัวและความสะดวกเร็วมากขึ้นต่อกิจกรรมในด้านต่างๆ ที่เกิดขึ้นในชีวิตประจำวัน<br>
-                                ซึ่งธุรกิจส่วนใหญ่จึงต้องมีการปรับตัวตามเทคโนโลยีเหล่านั้น โดยการบริหารองค์กรธุรกิจในปัจจุบันจึงมีลักษณะที่ยืดหยุ่น<br>
-                                มีการแข่งขันสูง จึงต้องมีความคล่องตัว มีรูปแบบกระบวนการและมีการปรับปรุงอย่างต่อเนื่อง จึงเกิดความต้องการมากขึ้น<br>
-                                ดังนั้นจึงปฏิเสธไม่ได้ว่า IT ได้กลายเป็นที่สนใจของคน และถูกนำมาประยุกต์ใช้ในด้านต่างๆ ที่ล้วนเกี่ยวข้องกับการดำรงชีวิตในปัจจุบัน</p>
+                        <div id="team_grid">
+                            <div class="row">
+                                <style>
+                                    .custom-col {
+                                        display: inline-block;
+                                        vertical-align: top;
+                                        width: 20%;
+                                        padding: 10px;
+                                        text-align: center;
+                                        margin: 0;
+                                    }
+
+                                    .custom-col img {
+                                        max-width: 100%;
+                                        height: auto;
+                                        border-radius: 50%; /* เพิ่ม CSS เพื่อทำให้รูปมีขอบกลม */
+                                    }
+                                </style>
+                                <div class="col-1 custom-col">
+                                        <picture id="wb_Picture1" style="display:block;width:100%;height:193px;z-index:12">
+                                            <a href="${pageContext.request.contextPath}/alumni/list_alumni"> <img src="${pageContext.request.contextPath}/assets/image/p.png" id="Picture1" alt="" title="Bachelor&apos;s degree" width="196" height="193"></a>
+                                        </picture>
+                                    <br>
+                                    <div id="wb_Name1" style="display:inline-block;width:100%;z-index:13;">
+                                        <h3 id="Name1">ศิษย์เก่า</h3>
+                                    </div>
+                                </div>
+                                <div class="col-2 custom-col">
+                                        <picture id="wb_Picture2" style="display:block;width:100%;height:194px;z-index:15">
+                                           <a href="${pageContext.request.contextPath}/personnel/list_personnel"> <img src="${pageContext.request.contextPath}/assets/image/employee%20(1).png" id="Picture2" alt="" title="Master degree" width="194" height="194"></a>
+                                        </picture>
+                                    <br>
+                                    <div id="wb_Name2" style="display:inline-block;width:100%;z-index:16;">
+                                        <h3 id="Name2">บุคลากร</h3>
+                                    </div>
+                                </div>
+                                <div class="col-3 custom-col">
+                                        <picture id="wb_Picture3" style="display:block;width:100%;height:192px;z-index:18">
+                                           <a href="${pageContext.request.contextPath}/plan"><img src="${pageContext.request.contextPath}/assets/image/plan.jpg" id="Picture3" alt="" title="Doctoral degree" width="194" height="192"></a>
+                                        </picture>
+                                    <br>
+                                    <div id="wb_Name3" style="display:inline-block;width:100%;z-index:19;">
+                                        <h3 id="Name3">แผนการเรียน</h3>
+                                    </div>
+                                </div>
+                                <div class="col-4 custom-col">
+                                        <picture id="wb_Picture4" style="display:block;width:100%;height:192px;z-index:21">
+                                            <a href="${pageContext.request.contextPath}/course"> <img src="${pageContext.request.contextPath}/assets/image/co.jpg" id="Picture4" alt="" title="International Program" width="194" height="193"></a>
+                                        </picture>
+                                    <br>
+                                    <div id="wb_Name4" style="display:inline-block;width:100%;z-index:22;">
+                                        <h3 id="Name4">ข้อมูลหลักสูตร</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="gtco-blog" data-section="blog">
+
+        <div id="gtco-blog" data-section="blog">
                 <div class="gtco-container" >
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
@@ -228,7 +277,6 @@
 
                     </div>
                 </div>
-
             </div>
 
             <div id="gtco-subscribe">
@@ -245,32 +293,32 @@
                 </div>
             </div>
 
-            <div id="gtco-products" data-section="products" >
-                <div class="gtco-container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                            <h2 style="font-size: 30px; color: #E75d5d;" >ความสำเร็จของศิษย์เก่า</h2>
-                        </div>
-                    </div>
-                    <div class="row" align="center">
-                        <div class="owl-carousel owl-carousel-carousel" >
-                            <div class="item" style="width: 300px">
-                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px">
-                            </div>
-                            <div class="item">
-                                <img src="${pageContext.request.contextPath}/assets/image/Yok.jpg" style="width: 250px" >
-                            </div>
-                            <div class="item">
-                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px" >
-                            </div>
-                            <div class="item">
-                                <img src="${pageContext.request.contextPath}/assets/image/Nice.jpg" style="width: 250px" >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="${pageContext.request.contextPath}/alumni/list_alumni"><input type="submit" value="ดูเพิ่มเติม" style="margin-top: 50px; margin-left: 50%; color: #000; padding: 5px;" ></a>
-            </div>
+<%--            <div id="gtco-products" data-section="products" >--%>
+<%--                <div class="gtco-container">--%>
+<%--                    <div class="row">--%>
+<%--                        <div class="col-md-8 col-md-offset-2 text-center gtco-heading">--%>
+<%--                            <h2 style="font-size: 30px; color: #E75d5d;" >ความสำเร็จของศิษย์เก่า</h2>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="row" align="center">--%>
+<%--                        <div class="owl-carousel owl-carousel-carousel" >--%>
+<%--                            <div class="item" style="width: 300px">--%>
+<%--                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px">--%>
+<%--                            </div>--%>
+<%--                            <div class="item">--%>
+<%--                                <img src="${pageContext.request.contextPath}/assets/image/Yok.jpg" style="width: 250px" >--%>
+<%--                            </div>--%>
+<%--                            <div class="item">--%>
+<%--                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px" >--%>
+<%--                            </div>--%>
+<%--                            <div class="item">--%>
+<%--                                <img src="${pageContext.request.contextPath}/assets/image/Nice.jpg" style="width: 250px" >--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <a href="${pageContext.request.contextPath}/alumni/list_alumni"><input type="submit" value="ดูเพิ่มเติม" style="margin-top: 50px; margin-left: 50%; color: #000; padding: 5px;" ></a>--%>
+<%--            </div>--%>
 
             <div class="gtco-section-overflow">
                 <div id="gtco-counter" class="gtco-section">

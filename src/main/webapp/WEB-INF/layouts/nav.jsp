@@ -68,8 +68,8 @@
             <img src="${pageContext.request.contextPath}/assets/image/reading-book.png" width="20px"> นักศึกษา</a>
         <ul class="submenu">
             <li><a href="${pageContext.request.contextPath}/alumni/list_alumni">ข้อมูลศิษย์เก่า</a></li>
-            <li><a href="${pageContext.request.contextPath}">จัดส่งรายงานสหกิจ</a></li>
-            <li><a href="${pageContext.request.contextPath}">โครงงานสารสนเทศ</a></li>
+            <li><a href="https://itsci.mju.ac.th/coopedu2/">จัดส่งรายงานสหกิจ</a></li>
+            <li><a href="${pageContext.request.contextPath}">ฐานข้อมูลโครงงานสารสนเทศ</a></li>
         </ul>
         </li>
         <li><a href="${pageContext.request.contextPath}/personnel/list_personnel">

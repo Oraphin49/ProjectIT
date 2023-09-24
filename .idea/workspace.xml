@@ -9,20 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="create list_img(news)">
+    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="ตกแต่ง1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/util/PathImg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/util/PathImg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/add_news.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/add_news.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/Login.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +330,11 @@
       <workItem from="1695195459949" duration="5707000" />
       <workItem from="1695213343627" duration="4462000" />
       <workItem from="1695266051954" duration="6448000" />
-      <workItem from="1695301214575" duration="9553000" />
+      <workItem from="1695301214575" duration="9903000" />
+      <workItem from="1695348701550" duration="995000" />
+      <workItem from="1695352679896" duration="2794000" />
+      <workItem from="1695454126762" duration="16288000" />
+      <workItem from="1695524704351" duration="4352000" />
     </task>
     <task id="LOCAL-00001" summary="create controller">
       <created>1693579426903</created>
@@ -441,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695139153864</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ตกแต่ง1">
+      <created>1695319575116</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1695319575116</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,6 +466,7 @@
     <MESSAGE value="edit news and alumni" />
     <MESSAGE value="update" />
     <MESSAGE value="create list_img(news)" />
-    <option name="LAST_COMMIT_MESSAGE" value="create list_img(news)" />
+    <MESSAGE value="ตกแต่ง1" />
+    <option name="LAST_COMMIT_MESSAGE" value="ตกแต่ง1" />
   </component>
 </project>

@@ -10,10 +10,55 @@
 
 
     <style>
+        /* ปรับแต่งสไตล์ของส่วน "อาชีพที่สามารถประกอบได้" */
+        .info-value ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-value ul li {
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-value ul li:before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: #aa1818;
+        }
+        @media (min-width: 992px) {
+            .info-section .container-fluid {
+                display: flex;
+            }
+
+            .info-section .col-lg-6 {
+                flex: 0 0 50%; /* แบ่งให้แต่ละคอลัมน์เป็น 50% ของความกว้าง */
+            }
+        }
+        .info-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #aa1818;
+            font-size: 15px;
+        }
+
+        .info-value {
+            font-family: 'Kanit', sans-serif;
+            margin-bottom: 10px;
+        }
+        .info-item{
+            margin-top: 20px;
+        }
+
         /* Style the wrapper */
         .wrapper {
             padding: 20px;
-
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -90,112 +135,83 @@
                 </ul>
 
                 <!-- Tab panes -->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="tab1">
+                <div class="tab-content" >
+                    <div role="tabpanel" class="tab-pane active" id="tab1" >
 
-                        <br />
-                        <table  class="table table-bordered"
-                               style="width: 100%">
-                            <tr class="active">
-                                <th>ชื่อหลักสูตร</th>
-                                <th></th>
-                            </tr>
-                            <tbody>
-                            <tr>
-                                <td>ภาษาไทย :</td>
-                                <td>หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ</td>
-                            </tr>
-                            <tr>
-                                <td>ภาษาอังกฤษ :</td>
-                                <td>Bachelor Of Science In Information Technology</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <!-- ส่วนของข้อมูลทั่วไป -->
+                        <div class="info-section" style="margin-left: 40px">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- คอลัมน์ฝั่งซ้าย -->
+                                    <div class="col-lg-6">
+                                        <!-- ข้อมูลชื่อหลักสูตร (ภาษาไทย) -->
+                                        <div class="info-item">
+                                            <div class="info-label">ชื่อหลักสูตร (ภาษาไทย) :</div>
+                                            <div class="info-value">หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ</div>
+                                        </div>
+                                        <!-- ข้อมูลชื่อปริญญาและสาขาวิชาเต็ม (ภาษาไทย) -->
+                                        <div class="info-item">
+                                            <div class="info-label">ชื่อปริญญาและสาขาวิชาเต็ม (ภาษาไทย) :</div>
+                                            <div class="info-value">วิทยาศาสตรบัณฑิต (เทคโนโลยีสารสนเทศ)</div>
+                                        </div>
+                                        <!-- ข้อมูลรูปแบบของหลักสูตร -->
+                                        <div class="info-item">
+                                            <div class="info-label">รูปแบบ :</div>
+                                            <div class="info-value">หลักสูตรระดับปริญญาตรี หลักสูตร 4 ปี</div>
+                                        </div>
+                                        <!-- ข้อมูลความร่วมมือกับสถาบันอื่น -->
+                                        <div class="info-item">
+                                            <div class="info-label">ความร่วมมือกับสถาบันอื่น :</div>
+                                            <div class="info-value">เป็นหลักสูตรของมหาวิทยาลัยโดยเฉพาะ</div>
+                                        </div>
+                                    </div>
 
-                        <table  class="table table-bordered"
-                               style="width: 100%">
-                            <tr class="active">
-                                <th>ชื่อปริญญาและสาขาวิชา</th>
-                                <th></th>
-                            </tr>
-                            <tbody>
+                                    <!-- คอลัมน์ฝั่งขวา -->
+                                    <div class="col-lg-6">
+                                        <!-- ข้อมูลชื่อหลักสูตร (ภาษาอังกฤษ) -->
+                                        <div class="info-item">
+                                            <div class="info-label">ชื่อหลักสูตร (ภาษาอังกฤษ) :</div>
+                                            <div class="info-value">Bachelor Of Science In Information Technology</div>
+                                        </div>
+                                        <!-- ข้อมูลชื่อปริญญาและสาขาวิชาย่อ -->
+                                        <div class="info-item">
+                                            <div class="info-label">ชื่อปริญญาและสาขาวิชาย่อ (ภาษาไทย) :</div>
+                                            <div class="info-value">วท.บ.(เทคโนโลยีสารสนเทศ)</div>
+                                        </div>
+                                        <!-- ข้อมูลภาษาที่ใช้ -->
+                                        <div class="info-item">
+                                            <div class="info-label">ภาษาที่ใช้ :</div>
+                                            <div class="info-value">หลักสูตรจัดการศึกษาเป็นภาษาไทย</div>
+                                        </div>
+                                        <!-- ข้อมูลการให้ปริญญาแก่ผู้สำเร็จการศึกษา -->
+                                        <div class="info-item">
+                                            <div class="info-label">การให้ปริญญาแก่ผู้สำเร็จการศึกษา :</div>
+                                            <div class="info-value">ให้ปริญญาเพียงสาขาวิชาเดียว</div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <tr>
-                                <td>ชื่อปริญญาและสาขาวิชาเต็ม(ภาษาไทย) :</td>
-                                <td>วิทยาศาสตรบัณฑิต (เทคโนโลยีสารสนเทศ)</td>
-                            </tr>
-                            <tr>
-                                <td>ชื่อปริญญาและสาขาวิชาย่อ(ภาษาไทย) :</td>
-                                <td>วท.บ.(เทคโนโลยีสารสนเทศ)</td>
-                            </tr>
-                            <tr>
-                                <td>ชื่อปริญญาและสาขาวิชาเต็ม(ภาษาอังกฤษ) :</td>
-                                <td>Bachelor Of Science In Information Technology</td>
-                            </tr>
-                            <tr>
-                                <td>ชื่อปริญญาและสาขาวิชาย่อ(ภาษาอังกฤษ) :</td>
-                                <td>B.S. (Information Technology)</td>
-                            </tr>
-                            <tr>
-                                <td>จำนวนหน่วยกิตที่เรียนตลอดหลักสูตร</td>
-                                <td>จำนวนหน่วยกิตรวมตลอดหลักสูตรไม่น้อยกว่า 135 หน่วยกิต</td>
-                            </tr>
-
-                            </tbody>
-                        </table>
-
-                        <table  class="table table-bordered"
-                               style="width: 100%">
-                            <tr class="active">
-                                <th>รูปแบบของหลักสูตร</th>
-                                <th></th>
-                            </tr>
-                            <tbody>
-                            <tr>
-                                <td>รูปแบบ :</td>
-                                <td>หลักสูตรระดับปริญญาตรี หลักสูตร 4 ปี</td>
-                            </tr>
-                            <tr>
-                                <td>ภาษาที่ใช้ :</td>
-                                <td>หลักสูตรจัดการศึกษาเป็นภาษาไทย</td>
-                            </tr>
-                            <tr>
-                                <td>การรับเข้าศึกษา :</td>
-                                <td>รับนักศึกษาไทย และนักศึกษาต่างประเทศ</td>
-                            </tr>
-                            <tr>
-                                <td>ความร่วมมือกับสถาบันอื่น :</td>
-                                <td>เป็นหลักสูตรของมหาวิทยาลัยโดยเฉพาะ</td>
-                            </tr>
-                            <tr>
-                                <td>การให้ปริญญาแก่ผู้สำเร็จการศึกษา :</td>
-                                <td>ให้ปริญญาเพียงสาขาวิชาเดียว</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <table  class="table table-bordered"
-                               style="width: 100%">
-                            <tr class="active">
-                                <th>อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา</th>
-                                <th></th>
-                            </tr>
-                            <tbody>
-
-                            <tr>
-                                <td>ประกอบไปด้วย :</td>
-                                <td>นักเทคโนโลยีสารสนเทศ หรือนักเทคโนโลยีและสารสนเทศ<br>
-                                    นักวิชาการเทคโนโลยีสารสนเทศ<br>
-                                    นักวิเคราะห์และออกแบบระบบงาน<br> นักเขียนโปรแกรม
-                                    หรือผู้พัฒนาซอฟต์แวร์<br>
-                                    ผู้ดูแลระบบเครือข่ายและเครื่องแม่ข่าย<br>
-                                    ผู้จัดการโครงการสารสนเทศ<br> นักพัฒนาเว็บไซต์<br>
-                                    ผู้จัดการซอฟต์แวร์<br> นักทดสอบซอฟต์แวร์<br>
-                                    นักวิชาชีพในสถานประกอบการที่มีการใช้เทคโนโลยีสารสนเทศ<br>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-
+                                <!-- ข้อมูลจำนวนหน่วยกิตที่เรียนตลอดหลักสูตร -->
+                                <div class="info-item">
+                                    <div class="info-label">จำนวนหน่วยกิตที่เรียนตลอดหลักสูตร :</div>
+                                    <div class="info-value">จำนวนหน่วยกิตรวมตลอดหลักสูตรไม่น้อยกว่า 135 หน่วยกิต</div>
+                                    <br>
+                                    <div class="info-label">อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา :</div>
+                                    <div class="info-value" style="color: #111111; font-family: Kanit">
+                                        <p style="color: #111111; font-family: Kanit; ">นักเทคโนโลยีสารสนเทศ หรือนักเทคโนโลยีและสารสนเทศ</p>
+                                        <p style="color: #111111; font-family: Kanit; ">นักวิชาการเทคโนโลยีสารสนเทศ</p>
+                                        <p style="color: #111111; font-family: Kanit; ">นักวิเคราะห์และออกแบบระบบงาน</p>
+                                        <p style="color: #111111; font-family: Kanit; ">นักเขียนโปรแกรม หรือผู้พัฒนาซอฟต์แวร์</p>
+                                        <p style="color: #111111; font-family: Kanit; ">ผู้ดูแลระบบเครือข่ายและเครื่องแม่ข่าย</p>
+                                        <p style="color: #111111; font-family: Kanit; ">ผู้จัดการโครงการสารสนเทศ</p>
+                                        <p style="color: #111111; font-family: Kanit; ">นักพัฒนาเว็บไซต์</p>
+                                        <p style="color: #111111; font-family: Kanit; ">ผู้จัดการซอฟต์แวร์</p>
+                                        <p style="color: #111111; font-family: Kanit; ">นักทดสอบซอฟต์แวร์</p>
+                                        <p style="color: #111111; font-family: Kanit; ">นักวิชาชีพในสถานประกอบการที่มีการใช้เทคโนโลยีสารสนเทศ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="tab2">
                         <br />

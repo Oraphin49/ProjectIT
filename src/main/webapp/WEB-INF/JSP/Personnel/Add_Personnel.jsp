@@ -93,7 +93,6 @@
         <select name="ar_id" id="ar_id">
             <c:forEach items="${ar_detail}" var="ar">
                 <option value="${ar.id}">${ar.name}</option>
-
             </c:forEach>
         </select>
         <input type="submit" value="save">
@@ -101,57 +100,5 @@
     </div>
 </form:form>
 </body>
-<script>
-    function checkdata(form) {
-
-        //check ชื่อ
-        /*chack type text name */
-        var firstname = /^[ก-์]{2,}\s[ก-์]{2,}$/;
-        if (!form.firstname.value.match(firstname)) {
-            alert("กรุณากรอกชื่อเป็นภาษาไทยลองใหม่ๆ");
-            frm.firstname.value = "";
-            return false;
-        }
-
-        //<-------------Check Tel--------------------->
-        var phone = /^[0]{1}([2]|[5-9]){1}[-?0-9]{7,}$/;
-        if (!frm.phone.value.match(phone)) {
-            alert("คุณกรอกเบอร์โทรให้ถูกต้องไม่ถูกต้อง กรุณากรอกใหม่");
-            form.phone.value = "";
-            return false;
-        }
-
-        //<-------------------LableEmail------------------------>
-
-        var email = /^[A-Za-z0-9]{2,}['@'](gmail|hotmail|outlook|Gmail|Hotmail|Outlook|ac.th)(.com)$/;//email
-        if (!form.email.value.match(email)) {
-            alert("กรุณากรอกอีเมลให้ถูกต้อง");
-            form.email.value = "";
-            return false;
-        }
-
-        // //check file
-        // var extall = "jpg,pdf,gif,jpeg";
-        // file = form.img.value;
-        // ext = file.split('.').pop().toLowerCase();
-        //
-        // if (parseInt(extall.indexOf(ext)) < 0) {
-        //     alert('แนบไฟล์ :' + extall + 'เท่านั้น');
-        //     form.img.value = "";
-        //     return false;
-        // } else if (frm.img.value == "") {
-        //     alert("กรุณาแนบรูปโปรไฟล์");
-        //     return false
-        // }
-        //check password
-        var password = /^[A-Z|a-z|0-9|@]{8}$/;
-        if (!form.password.value.match(password)) {
-            alert("รหัสผ่านจะต้องเป็นตัวอักษรภาษาอังกฤษ ตัวเลข และ @ เท่านั้น จำนวน 8 ตัว");
-            form.password.value = "";
-            form.password.focus();
-            return false;
-        }
-
-    }
-</script>
 </html>
+
