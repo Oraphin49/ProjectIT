@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>List news</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
@@ -15,9 +16,6 @@
             border-radius: 15px;
         }
 
-        .prevent-hover-transform {
-            transform: scale(1); /* กลับสเกลเป็นปกติ (ไม่มีการเพิ่มขนาด) */
-        }
 
         .card-text {
             color: black;
@@ -27,8 +25,12 @@
             display: inline-block;
         }
 
-        .news_img {
-            display: inline-block;
+        .card img {
+            transition: .5s;
+        }
+
+        .card:hover img {
+            transform: scale(1.01);
         }
 
         .card-body {
@@ -36,25 +38,32 @@
             height: 100px; /* กำหนดความสูงของเนื้อหาข่าว เช่น 100px */
             margin-left: 12px;
         }
-
-        .button1 {
-            background-color: #CD3333;
-            color: white;
-            border: 2px solid #771111;
-            border-radius: 5px;
-            font-family: Kanit;
-            font-size: 16px;
-            margin: -9px 2px;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
+        .read-more-link {
+            position: relative;
             display: inline-block;
-            transition-duration: 0.4s;
-            cursor: pointer;
+            text-decoration: none;
+            color: #000; /* สีของข้อความ */
+            font-weight: 500; /* ความหนาของข้อความ */
         }
 
-        .button1:hover {
-            background-color: #771111;
+        .read-more-link i.fa-arrow-right {
+            margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
+            transition: margin-left 0.3s ease-in-out;
+            opacity: 0; /* เริ่มต้นซ่อนลูกศร */
+        }
+        .read-more-link i.fa-arrow-left {
+            margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
+            transition: margin-left 0.3s ease-in-out;
+            opacity: 0; /* เริ่มต้นซ่อนลูกศร */
+        }
+
+        .read-more-link:hover i.fa-arrow-right {
+            margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
+            opacity: 1; /* แสดงลูกศรเมื่อ hover */
+        }
+        .read-more-link:hover i.fa-arrow-left {
+            margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
+            opacity: 1; /* แสดงลูกศรเมื่อ hover */
         }
 
         .top_content {
@@ -87,23 +96,19 @@
             margin-top: 45px;
         }
 
-        .pagination button {
-            background-color: #f5ebeb;
-            color: #2f2f2f;
-            border: 2px solid #771111;
-            border-radius: 5px;
-            font-family: Kanit;
-            font-size: 16px;
-            margin: 0 5px;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
+        a i.fa-arrow-left,
+        a i.fa-arrow-right {
+            font-size: 18px;
+            vertical-align: middle;
+            margin-right: 15px;
+            margin-left: 15px;
+            color: #AA1818;
         }
 
-        .pagination button:hover {
-            background-color: #f59898;
+        /* CSS เมื่อโฮเวอร์ลูกศร */
+        a:hover i.fa-arrow-left,
+        a:hover i.fa-arrow-right {
+            color: #771111; /* เปลี่ยนสีของลูกศรเมื่อโฮเวอร์ */
         }
 
         .card:hover {
@@ -128,19 +133,20 @@
             <c:forEach var="news" items="${list_news}">
                 <div class="block_news" data-name="${news.newsname} ${news.date} ${news.category}">
                     <div class="card">
-                        <div class="news_img">
-                            <img style="width: 100%; height: 200px;"
-                                 src="${pageContext.request.contextPath}/assets/image/news11.jpg">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" style="width: 100%; height: 200px;" src="${pageContext.request.contextPath}/assets/image/news11.jpg">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title"
-                                style="font-family: Kanit; margin-top: 5px; margin-bottom: 10px">${news.newsname}</h5>
+                            <h5 class="card-title" style="font-family: Kanit; margin-top: 5px; margin-bottom: 10px">${news.newsname}</h5>
                             <p class="card-text">${news.date}</p>
                             <p class="card-text">${news.category}</p>
                         </div>
-                        <div style="font-family: Kanit; margin-top: -5px" align="center">
-                            <a href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail"><button
-                                    class="button1">ดูเพิ่มเติม</button></a>
+                        <div style="font-family: Kanit;"align="center">
+                            <a class="fw-medium read-more-link" href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail" style="color: #AA1818;font-weight: bold;">
+                                ดูเพิ่มเติม
+                                <i class="fa fa-arrow-right ms-2"></i>
+                            </a>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -151,8 +157,15 @@
 <br>
 <!-- ปุ่มเปลี่ยนหน้า -->
 <div class="pagination">
-    <button onclick="prevPage()">ก่อนหน้า</button>
-    <button onclick="nextPage()">ถัดไป</button>
+    <!-- ปุ่ม "ก่อนหน้า" -->
+    <a href="#" onclick="prevPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
+        <i class="fa fa-arrow-left"></i> ก่อนหน้า
+    </a>
+
+    <!-- ปุ่ม "ถัดไป" -->
+    <a href="#" onclick="nextPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
+        ถัดไป <i class="fa fa-arrow-right"></i>
+    </a>
 </div>
 <br><br>
 <div>
@@ -179,6 +192,7 @@
             changePage(currentPage);
         }
     }
+
 
     // ฟังก์ชันเปลี่ยนหน้า
     function changePage(page) {

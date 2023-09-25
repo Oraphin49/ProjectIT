@@ -16,7 +16,7 @@
         border-bottom: 4px solid #aa1919;
         float: left;
         font-size: 10px;
-        height: 30px;
+        height: 40px;
         padding-top: 10px;
         position: relative;
         text-align: center;

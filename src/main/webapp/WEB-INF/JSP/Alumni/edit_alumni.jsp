@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     .form-group input[type="submit"] {
       background-color: #007bff;
       color: #fff;
@@ -89,6 +92,10 @@
           <option value="อื่นๆ" ${alumni.position == 'อื่นๆ' ?  'selected' : ''}>อื่นๆ</option>
         </select>
       </div>
+      <div id="otherPositionDiv" style="display: ${alumni.position == 'Programmer' ? 'none' : 'block'};">
+        <label for="otherPosition">กรอกตำแหน่งอื่นๆ:</label>
+        <input type="text"  style="width: 50%" id="otherPosition" name="otherPosition" value="${alumni.position != 'Programmer' ? alumni.position : ''}">
+      </div>
       <div class="form-group">
         <label for="company">บริษัท:</label>
         <input type="text" id="company" name="company" class="form-control" value="${alumni.company}">
@@ -127,4 +134,17 @@
   <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </div>
 </body>
+<script>
+  document.getElementById("position").addEventListener("change", function () {
+    var positionSelect = document.getElementById("position");
+    var otherPositionDiv = document.getElementById("otherPositionDiv");
+
+    if (positionSelect.value === "อื่นๆ") {
+      otherPositionDiv.style.display = "block";
+    } else {
+      otherPositionDiv.style.display = "none";
+    }
+  });
+
+</script>
 </html>

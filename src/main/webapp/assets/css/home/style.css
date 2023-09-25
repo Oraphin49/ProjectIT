@@ -1972,7 +1972,7 @@ form label {
   display: table;
   opacity: 0;
   min-height: 700px;
-  width: 900;
+  width: 100%;
 }
 #gtco-hero .flexslider .slider-text > .slider-text-inner {
   display: table-cell;
@@ -1993,6 +1993,7 @@ form label {
 #gtco-hero .flexslider .slider-text > .slider-text-inner .gtco-lead {
   font-size: 20px;
   color: #fff;
+
 }
 #gtco-hero .flexslider .slider-text > .slider-text-inner .gtco-lead .icon-heart {
   color: #d9534f;

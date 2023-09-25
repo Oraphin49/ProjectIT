@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
        .card-text{
             color: #111111;
            font-family: Kanit;

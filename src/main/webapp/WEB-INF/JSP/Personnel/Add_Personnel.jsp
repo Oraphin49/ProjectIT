@@ -69,6 +69,9 @@
             transform: translateY(-2px);
             transition: transform 0.2s ease-in-out;
         }
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>

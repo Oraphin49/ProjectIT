@@ -38,20 +38,6 @@ public class PersonnelController {
         return "JSP/Personnel/View_personnel";
     }
 
-    @GetMapping("/{id}/edit_personnel_detail")
-    public String ShowFormEditPersonnelDetail(@PathVariable("id") String id, Model model) {
-        Personnel personnel = personnelService.getPersonnelById(id);
-        List<Award> award = personnelService.getAward(id);
-        List<Education_histiry>  education_histiry = personnelService.getEducationHistiry(id);
-        List<Research_grant> research_grant = personnelService.getResearchGrant(id);
-        List<Academic_Ranks> academic_ranks = personnelService.getAcademicRanks();
-        model.addAttribute("personnel_detail", personnel);
-        model.addAttribute("award_detail",award);
-        model.addAttribute("education_history_detail",education_histiry);
-        model.addAttribute("research_grant_detail",research_grant);
-        model.addAttribute("academic_ranks_detail",academic_ranks);
-        return "JSP/Personnel/Edit_Profile";
-    }
 
     @GetMapping("/add_personnel")
     public String addPersonnel(Model model){
@@ -81,6 +67,21 @@ public class PersonnelController {
         return "redirect:/";
     }
 
+    @GetMapping("/{id}/edit_personnel_detail")
+    public String ShowFormEditPersonnelDetail(@PathVariable("id") String id, Model model) {
+        Personnel personnel = personnelService.getPersonnelById(id);
+        List<Award> award = personnelService.getAward(id);
+        List<Education_histiry>  education_histiry = personnelService.getEducationHistiry(id);
+        List<Research_grant> research_grant = personnelService.getResearchGrant(id);
+        List<Academic_Ranks> academic_ranks = personnelService.getAcademicRanks();
+        model.addAttribute("personnel_detail", personnel);
+        model.addAttribute("award_detail",award);
+        model.addAttribute("education_history_detail",education_histiry);
+        model.addAttribute("research_grant_detail",research_grant);
+        model.addAttribute("academic_ranks_detail",academic_ranks);
+        return "JSP/Personnel/Edit_Profile";
+    }
+
     @PostMapping(path = "/{p_id}/edit/save")
     public String saveEditProfile(@RequestParam Map<String, String> allReqParams, @PathVariable String p_id) throws ParseException {
         Personnel personnel =personnelService.getPersonnelById(p_id);
@@ -95,6 +96,12 @@ public class PersonnelController {
             personnel.setExpertise(allReqParams.get("expertise"));
             personnel.setWorkexperience(allReqParams.get("workexperience"));
             personnel.setEmail(allReqParams.get("email"));
+
+            String academicRankId = allReqParams.get("ar_id");
+            Academic_Ranks academicRank = personnelService.getAcademicRankById(academicRankId);
+            if (academicRank != null) {
+                personnel.setAcademic_ranks(academicRank);
+            }
 
             personnelService.updatePersonnel(personnel);
         }

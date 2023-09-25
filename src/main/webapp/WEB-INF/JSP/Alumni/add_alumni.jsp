@@ -45,6 +45,9 @@
       transition: transform 0.2s ease-in-out;
       font-family: Kanit;
     }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -87,6 +90,10 @@
           <option value="อื่นๆ">อื่นๆ</option>
         </select>
       </div>
+      <div id="otherPositionDiv" style="display: none;">
+        <label for="otherPosition">กรอกตำแหน่ง:</label>
+        <input type="text" id="otherPosition" name="otherPosition" class="form-control">
+      </div>
       <div class="form-group">
         <label for="company">บริษัท:</label>
         <input type="text" id="company" name="company" class="form-control">
@@ -123,4 +130,17 @@
   <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </div>
 </body>
+<script>
+  document.getElementById("position").addEventListener("change", function() {
+    var positionSelect = document.getElementById("position");
+    var otherPositionDiv = document.getElementById("otherPositionDiv");
+
+    if (positionSelect.value === "อื่นๆ") {
+      otherPositionDiv.style.display = "block";
+    } else {
+      otherPositionDiv.style.display = "none";
+    }
+  });
+
+</script>
 </html>

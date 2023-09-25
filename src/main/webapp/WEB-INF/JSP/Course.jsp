@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 
-
     <style>
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
         /* ปรับแต่งสไตล์ของส่วน "อาชีพที่สามารถประกอบได้" */
         .info-value ul {
             list-style: none;
@@ -106,9 +108,6 @@
         /* Add some spacing between rows */
         .tab-content .table tbody tr:not(:last-child) {
             margin-bottom: 10px;
-        }
-        *, ::after, ::before {
-            box-sizing: content-box;
         }
         h2{
             font-weight: bold;

@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
         table {
             width: 80%;
             border-collapse: collapse;
@@ -29,11 +32,7 @@
             margin-left: 25%;
             margin-top: 60px;
         }
-         .nav nav-tabs {
-            margin:0;
-            padding:10px 10px 0 50px;
-            list-style:none;
-        }
+
 
          li {
             display:inline;
@@ -49,12 +48,7 @@
             text-decoration:none;
              font-family: Kanit;
         }
-        nav {
-            height: 60px; /* ปรับแต่งความสูงตามที่คุณต้องการ */
-        }
-        *, ::after, ::before {
-            box-sizing: content-box;
-        }
+
     </style>
 </head>
 <body>

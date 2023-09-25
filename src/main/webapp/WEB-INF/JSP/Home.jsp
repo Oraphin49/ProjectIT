@@ -40,7 +40,21 @@
     <!--[if lt IE 9]>
     <script src="${pageContext.request.contextPath}/assets/js/respond.min.js"></script>
     <![endif]-->
+<style>
+    #gtco-hero .flexslider .slider-text {
+        display: table;
+        opacity: 0;
+        min-height: 700px;
+        width: 95%;
+    }
 
+    .col-md-offset-1 {
+        margin-left:3%;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+</style>
 </head>
 <body>
 
@@ -53,14 +67,13 @@
 </nav>
 <div >
     <div id="gtco-hero" class="js-fullheight"  data-section="home" >
-        <div class="flexslider js-fullheight" style="height: 300px;">
-            <ul class="slides">
+        <div class="flexslider js-fullheight" style="height: 300px; " align="CENYER">
+            <ul class="slides" >
                 <li>
                     <div class="overlay"></div>
                     <div class="container">
                         <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
                             <div class="slider-text-inner">
-
                                 <p><a href="" target="_blank"><img src="${pageContext.request.contextPath}/assets/image/banner.png" width="500%"></a></p>
                             </div>
                         </div>
@@ -104,7 +117,7 @@
                                     .custom-col {
                                         display: inline-block;
                                         vertical-align: top;
-                                        width: 20%;
+                                        width: 15%;
                                         padding: 10px;
                                         text-align: center;
                                         margin: 0;
@@ -114,6 +127,7 @@
                                         max-width: 100%;
                                         height: auto;
                                         border-radius: 50%; /* เพิ่ม CSS เพื่อทำให้รูปมีขอบกลม */
+                                        box-shadow: 2px 0px 10px rgba(0,0,0,.2);
                                     }
                                 </style>
                                 <div class="col-1 custom-col">
@@ -152,6 +166,14 @@
                                         <h3 id="Name4">ข้อมูลหลักสูตร</h3>
                                     </div>
                                 </div>
+                                <div class="col-5 custom-col">
+                                    <picture id="wb_Picture5" style="display:block;width:100%;height:192px;z-index:21">
+                                        <a href="${pageContext.request.contextPath}/course"> <img src="${pageContext.request.contextPath}/assets/image/p.png" id="Picture5" alt="" title="International Program" width="194" height="193"></a>
+                                    </picture>
+                                    <br>
+                                    <div id="wb_Name5" style="display:inline-block;width:100%;z-index:22;">
+                                        <h3 id="Name5">ค่ายไอทีแคมป์</h3>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -360,13 +382,11 @@
 
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
             </div>
-
 
             <!-- jQuery -->
             <script src="${pageContext.request.contextPath}/assets/js/jquery.min.js"></script>

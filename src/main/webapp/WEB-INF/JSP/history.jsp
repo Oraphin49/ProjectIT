@@ -49,8 +49,9 @@
     td {
         padding: 10px;
     }
-
-
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
 
 </style>
 </head>

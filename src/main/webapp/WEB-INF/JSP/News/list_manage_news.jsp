@@ -5,10 +5,14 @@
 <head>
     <title>Information  Technology</title>
     <link href="${pageContext.request.contextPath}/assets/css/list_manage_news.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
         body {
             font-family: Kanit;
         }
@@ -75,24 +79,39 @@
             text-align: center;
             margin-top: 45px;
         }
-
-        .pagination button {
-            background-color: #CD3333;
-            color: white;
-            border: 2px solid #771111;
-            border-radius: 5px;
-            font-family: Kanit;
-            font-size: 16px;
-            margin: 0 5px;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
+        /* CSS สำหรับลูกศรในปุ่ม "ก่อนหน้า" และ "ถัดไป" */
+        a i.fa-arrow-left,
+        a i.fa-arrow-right {
+            font-size: 18px;
+            vertical-align: middle;
+            margin-right: 15px;
+            margin-left: 15px;
+            color: #AA1818;
         }
 
-        .pagination button:hover {
-            background-color: #771111;
+        /* CSS เมื่อโฮเวอร์ลูกศร */
+        a:hover i.fa-arrow-left,
+        a:hover i.fa-arrow-right {
+            color: #771111; /* เปลี่ยนสีของลูกศรเมื่อโฮเวอร์ */
+        }
+        .read-more-link i.fa-arrow-right {
+            margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
+            transition: margin-left 0.3s ease-in-out;
+            opacity: 0; /* เริ่มต้นซ่อนลูกศร */
+        }
+        .read-more-link i.fa-arrow-left {
+            margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
+            transition: margin-left 0.3s ease-in-out;
+            opacity: 0; /* เริ่มต้นซ่อนลูกศร */
+        }
+
+        .read-more-link:hover i.fa-arrow-right {
+            margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
+            opacity: 1; /* แสดงลูกศรเมื่อ hover */
+        }
+        .read-more-link:hover i.fa-arrow-left {
+            margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
+            opacity: 1; /* แสดงลูกศรเมื่อ hover */
         }
 
         .block_manage_news:hover {
@@ -132,8 +151,15 @@
 <br>
 <!-- ปุ่มเปลี่ยนหน้า -->
 <div class="pagination">
-    <button onclick="prevPage()">ก่อนหน้า</button>
-    <button onclick="nextPage()">ถัดไป</button>
+    <!-- ปุ่ม "ก่อนหน้า" -->
+    <a href="#" onclick="prevPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
+        <i class="fa fa-arrow-left"></i> ก่อนหน้า
+    </a>
+
+    <!-- ปุ่ม "ถัดไป" -->
+    <a href="#" onclick="nextPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
+        ถัดไป <i class="fa fa-arrow-right"></i>
+    </a>
 </div>
 <br><br>
 </body>

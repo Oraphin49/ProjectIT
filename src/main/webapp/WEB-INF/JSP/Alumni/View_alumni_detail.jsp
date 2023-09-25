@@ -8,12 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
-<div id="container">
+<div id="container" style="background-color: #Fffff1">
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
     <br><br>
-    <div align="center">
+    <div align="center" style="background-color: #Fffff1">
     <b style="; font-size: 28px;font-family: Kanit">ข้อมูลศิษย์เก่า</b>
     </div>
     <br><br>
@@ -21,8 +26,8 @@
 </div>
 <div id="bd">
     <div id="yui-main">
-        <div class="yui-b">
-            <div class="yui-gd">
+        <div class="yui-b" style="background-color: #Fffff1">
+            <div class="yui-gd" >
                 <div class="yui-u first">
                     <div class="content1" align="center">
                         <div class="alum_img">
@@ -31,7 +36,7 @@
                     </div>
                 </div>
                 <div class="yui-u" >
-                    <div class="content2" style="width: 470px" >
+                    <div class="content2" style="width: 470px;background-color: #F0FFFF;" >
                         <h3 class="card-text">รหัสนักศึกษา : ${alumni_detail.id}</h3>
                         <p class="card-text" >ชื่อ : ${alumni_detail.firstname} นามสกุล : ${alumni_detail.lastname}</p>
                         <p class="card-text">ปีที่จบการศึกษา : ${alumni_detail.graduationyear}</p>

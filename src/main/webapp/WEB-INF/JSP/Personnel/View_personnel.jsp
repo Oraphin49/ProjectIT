@@ -11,9 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 <style>
     *, ::after, ::before {
-        box-sizing: content-box;
+        box-sizing: border-box;
     }
-
 </style>
 </head>
 <body>

@@ -1,27 +1,44 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>List Alumni</title>
-  <%--  <link href="${pageContext.request.contextPath}/assets/css/listalumni.css" rel="stylesheet">--%>
+  <title>รายชื่อศิษย์เก่า</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังของหน้าเว็บ */
+    }
+
+    header h1 {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
     .list-item {
       list-style: none;
-      margin-bottom: 10px;
       background-color: #f9f9f9;
       border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s;
+      margin-top: 80px;
     }
 
     .list-item:hover {
-      box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
-
+      background-color: #e0e0e0; /* เปลี่ยนสีพื้นหลังเมื่อนำเมาส์ไปชี้หรือคลิก */
+      border: 1px solid #ccc; /* เปลี่ยนสีขอบ */
+      transition: background-color 0.3s;
     }
 
     .card {
@@ -44,7 +61,6 @@
       height: 240px;
       width: 350px;
       margin: 20px;
-      /*padding: 10px;*/
     }
 
     .alum_img {
@@ -57,24 +73,22 @@
     }
 
     .button1 {
-      border: none;
+      background-color: #CD3333;
       color: white;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      transition-duration: 0.4s;
-      cursor: pointer;
-      background-color: white;
-      color: black;
       border: 2px solid #771111;
       border-radius: 5px;
       font-family: Kanit;
+      font-size: 16px;
+      margin: 4px 2px;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
     }
 
     .button1:hover {
-      background-color: #CD3333;
+      background-color: #771111;
       color: white;
     }
 
@@ -91,39 +105,56 @@
       border: 1px solid #ddd;
       margin-bottom: 12px;
       font-family: Kanit;
-      margin-left: 500px;
       float: left;
+      margin-left: 40%;
     }
 
     .block_alumni {
       display: inline-block;
       margin-left: 15px;
-
     }
+
     /* CSS สำหรับปุ่มเปลี่ยนหน้า */
     .pagination {
       text-align: center;
       margin-top: 65px;
     }
 
-    .pagination button {
-      background-color: #CD3333;
-      color: white;
-      border: 2px solid #771111;
-      border-radius: 5px;
-      font-family: Kanit;
-      font-size: 16px;
-      margin: 0 5px;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
+    /* CSS สำหรับลูกศรในปุ่ม "ก่อนหน้า" และ "ถัดไป" */
+    a i.fa-arrow-left,
+    a i.fa-arrow-right {
+      font-size: 18px;
+      vertical-align: middle;
+      margin-right: 15px;
+      margin-left: 15px;
+      color: #AA1818;
     }
 
-    .pagination button:hover {
-      background-color: #771111;
+    /* CSS เมื่อโฮเวอร์ลูกศร */
+    a:hover i.fa-arrow-left,
+    a:hover i.fa-arrow-right {
+      color: #771111; /* เปลี่ยนสีของลูกศรเมื่อโฮเวอร์ */
     }
+    .read-more-link i.fa-arrow-right {
+      margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
+      transition: margin-left 0.3s ease-in-out;
+      opacity: 0; /* เริ่มต้นซ่อนลูกศร */
+    }
+    .read-more-link i.fa-arrow-left {
+      margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
+      transition: margin-left 0.3s ease-in-out;
+      opacity: 0; /* เริ่มต้นซ่อนลูกศร */
+    }
+
+    .read-more-link:hover i.fa-arrow-right {
+      margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
+      opacity: 1; /* แสดงลูกศรเมื่อ hover */
+    }
+    .read-more-link:hover i.fa-arrow-left {
+      margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
+      opacity: 1; /* แสดงลูกศรเมื่อ hover */
+    }
+
 
     .card:hover {
       transform: scale(1.03);
@@ -131,9 +162,8 @@
     }
   </style>
 </head>
-
 <body>
-<div class="container">
+<div  class="container">
   <jsp:include page="/WEB-INF/layouts/nav.jsp" />
   <br>
   <div class="top_content">
@@ -141,7 +171,7 @@
       <h2 style="color: #a41212 " align="center">ข้อมูลศิษย์เก่า</h2>
       <br>
       <div>
-        <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="Search for names.." title="Type in a name">
+        <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="ค้นหาชื่อ.." title="Search for names..">
       </div>
       <c:forEach var="alumni" items="${list_alumni}">
         <div class="block_alumni list-item" data-name="${alumni.id} ${alumni.firstname} ${alumni.position} ${alumni.company}">
@@ -166,16 +196,21 @@
     </div>
   </div>
 </div>
-<!-- ปุ่มเปลี่ยนหน้า -->
 <div class="pagination">
-  <button onclick="prevPage()">ก่อนหน้า</button>
-  <button onclick="nextPage()">ถัดไป</button>
+  <!-- ปุ่ม "ก่อนหน้า" -->
+  <a href="#" onclick="prevPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
+    <i class="fa fa-arrow-left"></i> ก่อนหน้า
+  </a>
+
+  <!-- ปุ่ม "ถัดไป" -->
+  <a href="#" onclick="nextPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
+    ถัดไป <i class="fa fa-arrow-right"></i>
+  </a>
 </div>
 <br><br>
 <div>
   <jsp:include page="/WEB-INF/layouts/footer.jsp" />
 </div>
-
 </body>
 
 <script>

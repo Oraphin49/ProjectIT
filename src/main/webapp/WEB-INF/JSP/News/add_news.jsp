@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 <style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    .news-form {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        width: 70%;
+        background-color: #fce7e7;
+    }
     .news-form input[type="cancel"] {
         background-color: #007bff;
         color: #fff;

@@ -56,7 +56,10 @@ public class AlumniController {
         return "JSP/Alumni/add_alumni";
     }
     @PostMapping(path = "/save")
-    public String saveAlumniForm(@RequestParam Map<String, String> allReqParams) throws ParseException {
+    public String saveAlumniForm(
+            @RequestParam Map<String, String> allReqParams,
+            @RequestParam(name = "otherPosition", required = false) String otherPosition
+    ) throws ParseException {
         String id = allReqParams.get("alumni_id");
         String firstname = allReqParams.get("firstname");
         String lastname = allReqParams.get("lastname");
@@ -69,10 +72,17 @@ public class AlumniController {
         String expertise = allReqParams.get("expertise");
         String award = allReqParams.get("award");
 
-        Alumni alumni = new Alumni(id,firstname,lastname,graduationyear,position,company,phone,email,image,expertise,award);
+        // ตรวจสอบค่า position ว่าเป็น "อื่นๆ" หรือไม่
+        if ("อื่นๆ".equals(position)) {
+            // ใช้ค่า otherPosition ที่รับมา
+            position = otherPosition;
+        }
+
+        Alumni alumni = new Alumni(id, firstname, lastname, graduationyear, position, company, phone, email, image, expertise, award);
         alumniService.SaveAlumni(alumni);
         return "redirect:/alumni/list_alumni_manage";
     }
+
 
     @InitBinder
     public void initBinder(WebDataBinder dataBinder) {
@@ -92,13 +102,14 @@ public class AlumniController {
 
     @PostMapping(path = "/{id}/edit/save")
     public String saveEditAlumni(@RequestParam Map<String, String> allReqParams, @PathVariable String id) throws ParseException {
-        Alumni alumni =alumniService.getAlumni(id);
+        Alumni alumni = alumniService.getAlumni(id);
         if (alumni != null) {
             alumni.setId(allReqParams.get("alumni_id"));
             alumni.setFirstname(allReqParams.get("firstname"));
             alumni.setLastname(allReqParams.get("lastname"));
             alumni.setGraduationyear(allReqParams.get("year"));
-            alumni.setPosition(allReqParams.get("position"));
+            String position = allReqParams.get("position"); // รับค่า position จาก allReqParams
+            alumni.setPosition(position);
             alumni.setCompany(allReqParams.get("company"));
             alumni.setPhone(allReqParams.get("phone"));
             alumni.setEmail(allReqParams.get("email"));
@@ -106,10 +117,17 @@ public class AlumniController {
             alumni.setExpertise(allReqParams.get("expertise"));
             alumni.setAward(allReqParams.get("award"));
 
+            // ตรวจสอบค่า position ว่าเป็น "อื่นๆ" หรือไม่
+            if ("อื่นๆ".equals(position)) {
+                String otherPosition = allReqParams.get("otherPosition"); // รับค่า otherPosition จาก allReqParams
+                alumni.setPosition(otherPosition);
+            }
+
             alumniService.EditAlumni(alumni);
         }
         return "redirect:/alumni/list_alumni_manage";
     }
+
     @GetMapping("/{id}/delete")
     public String isRemoveAlumni(@PathVariable("id") String id) {
         alumniService.removeAlumni(id);
