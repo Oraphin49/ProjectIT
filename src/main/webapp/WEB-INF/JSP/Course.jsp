@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Information Technology</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" style="min-height: 100px;margin-bottom: 0px">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
@@ -12,6 +12,7 @@
         *, ::after, ::before {
             box-sizing: border-box;
         }
+
         /* ปรับแต่งสไตล์ของส่วน "อาชีพที่สามารถประกอบได้" */
         .info-value ul {
             list-style: none;
@@ -116,7 +117,7 @@
     </style>
 </head>
 <body>
-<nav>
+<nav style="box-sizing: revert; ">
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
 </nav>
 <br><br>

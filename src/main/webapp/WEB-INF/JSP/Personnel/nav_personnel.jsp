@@ -1,63 +1,92 @@
+
 <%@ page import="it_sci.model.Personnel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Personnel personnel = (Personnel) session.getAttribute("personnel");
 %>
-<meta charset="UTF-8">
-<title>Information Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
-<style>
-    .top-nav li{
-        background: #aa1818;
-        border-bottom: 4px solid #aa1919;
-        float: left;
-        font-size: 10px;
-        height: 40px;
-        padding-top: 10px;
-        position: relative;
-        text-align: center;
-        width: 33.33%;
-        font-family: Kanit;
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Information Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- เพิ่มไลบรารี Font Awesome -->
+    <style>
+        /* เพิ่มไอคอนให้กับลิงก์ */
+        .top-nav li a i {
+            margin-right: 5px;
+        }
 
-    }
-    .top-nav li a{
-        color: #fff;
-        padding-top: 7px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 150px;
-        height: 25px;
-        font-size: 13px;
-        text-decoration: none;
-        font-family: Kanit;
-        position: center;
-    }
-</style>
+        /* เปลี่ยนสีของลิงก์เมื่อ hover */
+        .top-nav li a:hover {
+            color: rgb(245, 178, 33);
+        }
+
+        /* ปรับแต่งสไตล์ของเมนูแบบหลายระดับ */
+        .top-nav .submenu {
+            margin-top: 0px;
+            display: none;
+        }
+
+        .top-nav li:hover .submenu {
+            display: block;
+            width: 150px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+        /* ลบสีพื้นหลังของรายการนำทาง */
+        .top-nav li {
+            background: none;
+            float: right; /* จัดลำดับรายการนำทางไปทางขวา */
+            font-size: 10px;
+            height: 40px;
+            padding-top: 10px;
+            position: relative;
+            text-align: center;
+            width: 21%;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        /* ปรับแต่งสไตล์ของลิงก์ */
+        .top-nav li a {
+            color: #aa1818;
+            padding-top: 7px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 13px;
+            text-decoration: none;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        /* เพิ่มไอคอนให้กับลิงก์ */
+        .top-nav li a i {
+            margin-right: 5px;
+        }
+
+        /* เปลี่ยนสีของลิงก์เมื่อ hover */
+        .top-nav li a:hover {
+            color: rgb(245, 178, 33);
+        }
+    </style>
 </head>
 <body bgcolor="#ffffff" >
-<header>
-    <div class="navbar navbar-default navbar-static-top">
-        <div class="navbar-header">
-            <a class="navbar-brand" > <img src="${pageContext.request.contextPath}/assets/image/LOGOIT.png" class="hidden-xs" alt="" width="250px" style="margin-left: 5px;"></a>
-
+<nav >
+    <div class="navbar navbar-default navbar-static-top" style="background-color: #FFFFFF">
+        <div class="navbar-header" >
+            <a class="navbar-brand" > <img src="${pageContext.request.contextPath}/assets/image/LOGOIT.png" class="hidden-xs" alt="" width="250px" style="margin-left: 15px; margin-top: 20px"></a>
         </div>
     </div>
-</header>
-<nav >
-    <ul class="top-nav" >
-        <li><a href="${pageContext.request.contextPath}">
-            <img src="${pageContext.request.contextPath}/assets/image/home.png" width="20px"> หน้าหลัก</a></li>
-        <li><a href="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/edit_personnel_detail">
-            <img src="${pageContext.request.contextPath}/assets/image/news.png" width="20px">แก้ไขข้อมูลส่วนตัว</a></li>
-        <li><a href="${pageContext.request.contextPath}/login/doLogout" style="font-size: 13px; width: auto">
-            <img src="${pageContext.request.contextPath}/assets/image/logout.png" width="20px"> <%=personnel.getFirstname()%> ออกจากระบบ</a></li>
+    <ul class="top-nav" style="background-color: #FFFFFF; margin-top: -45px" >
+        <li><a href="${pageContext.request.contextPath}/login/doLogout" style="font-size: 13px; width: auto"><i class="fas fa-sign-out-alt"></i><%=personnel.getFirstname()%> ออกจากระบบ</a></li>
+        <li><a href="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/edit_personnel_detail"><i class="fas fa-user-edit"></i> แก้ไขข้อมูลส่วนตัว</a></li>
+        <li><a href="${pageContext.request.contextPath}"><i class="fas fa-home"></i> หน้าหลัก</a></li>
     </ul>
 </nav>
-</div>
 </body>
 </html>

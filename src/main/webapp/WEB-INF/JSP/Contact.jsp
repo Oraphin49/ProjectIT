@@ -18,12 +18,12 @@
     </style>
 </head>
 <body>
-<div class="container">
+<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -16px">
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
-</div>
+</nav>
     <br>
     <br>
-<div class="alum_img" align="center">
+<div class="alum_img" align="center" style="margin-top: 100px">
     <img style="width: 99%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" src="${pageContext.request.contextPath}/assets/image/2.png">
 </div>
 

@@ -54,7 +54,7 @@
 <div id="container">
   <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
   <br><br>
-  <div class="text-center">
+  <div class="text-center"  >
     <h2 style="font-family: 'Kanit', sans-serif; color: #a41212;">เพิ่มข้อมูลศิษย์เก่า</h2>
   </div>
   <br><br>
@@ -92,7 +92,7 @@
           <option value="อื่นๆ" ${alumni.position == 'อื่นๆ' ?  'selected' : ''}>อื่นๆ</option>
         </select>
       </div>
-      <div id="otherPositionDiv" style="display: ${alumni.position == 'Programmer' ? 'none' : 'block'};">
+      <div id="otherPositionDiv" style="display: none;">
         <label for="otherPosition">กรอกตำแหน่งอื่นๆ:</label>
         <input type="text"  style="width: 50%" id="otherPosition" name="otherPosition" value="${alumni.position != 'Programmer' ? alumni.position : ''}">
       </div>
@@ -135,16 +135,29 @@
 </div>
 </body>
 <script>
-  document.getElementById("position").addEventListener("change", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     var positionSelect = document.getElementById("position");
     var otherPositionDiv = document.getElementById("otherPositionDiv");
+    var alumniPosition = "${alumni.position}"; // รับค่าตำแหน่งจากฐานข้อมูล
 
-    if (positionSelect.value === "อื่นๆ") {
-      otherPositionDiv.style.display = "block";
+    // ตรวจสอบค่าเริ่มต้นของ dropdown
+    if (positionSelect.value !== alumniPosition && positionSelect.value !== "อื่นๆ") {
+      otherPositionDiv.style.display = "block"; // แสดงช่องกรอก
+      positionSelect.value = "อื่นๆ"; // เลือก "อื่นๆ" ใน dropdown
     } else {
-      otherPositionDiv.style.display = "none";
+      otherPositionDiv.style.display = "none"; // ซ่อนช่องกรอก
     }
+
+    // เมื่อ dropdown ถูกเปลี่ยนค่า
+    positionSelect.addEventListener("change", function () {
+      if (positionSelect.value === "อื่นๆ") {
+        otherPositionDiv.style.display = "block"; // แสดงช่องกรอก
+      } else {
+        otherPositionDiv.style.display = "none"; // ซ่อนช่องกรอก
+      }
+    });
   });
+
 
 </script>
 </html>

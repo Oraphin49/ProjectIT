@@ -8,11 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 <style>
-    /* styles.css */
 
     /* ตั้งสีพื้นหลังให้หน้าเว็บ */
     body {
-        background-color: #f4f4f4;
+        background-color: #ffffff;
         font-family: 'Kanit', sans-serif;
         margin: 0;
         padding: 0;
@@ -56,9 +55,10 @@
 </style>
 </head>
 <body>
-<nav style="box-sizing: revert">
+<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -16px;">
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
 </nav>
+
 <br>
 <br>
 <div  align="center">

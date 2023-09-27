@@ -7,10 +7,6 @@
     <%
     Personnel personnel = (Personnel) session.getAttribute("personnel");
 %>
-<body>
-<nav>
-    <jsp:include page="/WEB-INF/JSP/Personnel/nav_personnel.jsp"/>
-</nav>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en" >
@@ -24,9 +20,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<br>
-<div id="container">
+<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -16px">
+    <jsp:include page="/WEB-INF/JSP/Personnel/nav_personnel.jsp"/>
+</nav>
+<br><br>
+<div id="container" style="margin-top: 80px">
     <div id="profile">
         <form action="${pageContext.request.contextPath}/personnel//${personnel_detail.id}/edit/save" method="POST">
             <label for="image">รูปภาพ:</label>

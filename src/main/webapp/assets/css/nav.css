@@ -1,55 +1,66 @@
-
-nav.main-nav{
-    background: rgb(51, 51, 51);
-    background-image: linear-gradient(top,#2f2f2f,#4f4f4f);
-    width: 100%;
+/* ลบสีพื้นหลังของรายการนำทาง */
+.top-nav li {
+    background: none;
+    border-bottom: 4px solid #a41212;
+    float: left;
+    font-size: 10px;
+    height: 40px;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 12.5%;
+    font-family: 'Kanit', sans-serif;
 }
 
-.top-nav{
-    height: 30px;
-    list-style: none;
-    margin: 0;
+/* ปรับแต่งสไตล์ของลิงก์ */
+.top-nav li a {
+    color: #aa1818;
+    padding-top: 7px;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 5px;
+    height: 100%;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
 }
 
+/* เพิ่มไอคอนให้กับลิงก์ */
+.top-nav li a i {
+    margin-right: 5px;
+}
 
-
-.top-nav li a:hover{
+/* เปลี่ยนสีของลิงก์เมื่อ hover */
+.top-nav li a:hover {
     color: rgb(245, 178, 33);
-
 }
-nav .submenu {
-    margin-top: 28.5px;
+
+/* ปรับแต่งสไตล์ของเมนูแบบหลายระดับ */
+.top-nav .submenu {
+    margin-top: 0px;
     display: none;
-    font-family: Kanit;
 }
 
-nav ul li:hover .submenu {
+.top-nav li:hover .submenu {
     display: block;
     width: 150px;
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
-nav .submenu li {
+.top-nav .submenu li {
     display: block;
     background-color: #a41212;
     width: 150px;
-    font-family: Kanit;
+    font-family: 'Kanit', sans-serif;
 }
 
-nav .submenu li a {
+.top-nav .submenu li a {
     padding: 2px;
     color: #fff;
-    width: 150px;
+    width: 100%;
     margin-top: 5px;
     font-size: 12px;
-}
-.p{
-    float: right;
-    font-family: "Kanit";
-    font-size: 16px;
-    color: black;
-    margin-right: 35px;
-    margin-top: 30px;
-
 }

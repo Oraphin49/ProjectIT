@@ -63,8 +63,8 @@
             <label >รายละเอียดข่าว:</label>
             <textarea name="news_detail" id="news_detail" >${news.newsdetail}</textarea>
             <label type="text">แหล่งที่มา:</label>
-            <input type="text" name="linkpage" id="linkpage" value="${news.linkpage}">
-            <input type="file" name="imageFile" accept="image/*" multiple ><br>
+            <input type="text" name="linkpage" id="linkpage" value="${news.linkpage}"><br><br>
+            <input type="file" name="imageFile" accept="image/*" multiple ><br><br>
             <input type="submit" value="บันทึกข่าว">
             <a href="${pageContext.request.contextPath}/alumni/list_alumni_manage"><input type="cancel" value="ยกเลิก" class="btn btn-primary"></a>
         </div>

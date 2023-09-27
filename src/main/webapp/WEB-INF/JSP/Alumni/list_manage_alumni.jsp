@@ -33,6 +33,11 @@
         margin-left: 15px;
         color: #AA1818;
     }
+    tr {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+        border-collapse: collapse;
+        padding: 8px;
+    }
 
     /* CSS เมื่อโฮเวอร์ลูกศร */
     a:hover i.fa-arrow-left,
@@ -94,7 +99,7 @@
     </tr>
     <c:forEach var="alumni" items="${list_manage_alumni}">
         <tr class="block_alumni_manage" data-name=" ${alumni.id} ${alumni.firstname} ${alumni.lastname} ${alumni.position}" >
-            <td><img style="width: 50px; height: 60px;" src="${pageContext.request.contextPath}/assets/image/${alumni.image}"></td>
+            <td><img style="width: 50px; height: 60px; " src="${pageContext.request.contextPath}/assets/image/${alumni.image}"></td>
             <td>${alumni.firstname} ${alumni.lastname}</td>
             <td>${alumni.id}</td>
             <td>${alumni.position}</td>

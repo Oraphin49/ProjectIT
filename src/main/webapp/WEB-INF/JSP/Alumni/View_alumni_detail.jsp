@@ -15,9 +15,10 @@
     </style>
 </head>
 <body>
-<div id="container" style="background-color: #Fffff1">
+<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -16px">
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
-    <br><br>
+</nav>
+    <br><br><br>
     <div align="center" style="background-color: #Fffff1">
     <b style="; font-size: 28px;font-family: Kanit">ข้อมูลศิษย์เก่า</b>
     </div>

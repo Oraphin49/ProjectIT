@@ -15,7 +15,7 @@
     }
 </style>
 </head>
-<body>
+<body style="background-color: #FFFFFF">
 <nav > <jsp:include page="/WEB-INF/layouts/nav.jsp"/></nav>
 <br>
 <div id="container">

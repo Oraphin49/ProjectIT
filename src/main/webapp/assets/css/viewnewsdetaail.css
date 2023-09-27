@@ -10,9 +10,9 @@
 /*#doc2 {*/
 /*    width:73.074em;*width:71.313em;min-width:950px;}*/
 /*!* 100% with 10px viewport side matting *!*/
-/*#doc3 {*/
-/*    margin:auto 10px; !* not for structure, but so content doesn't bleed to edge *!*/
-/*    width:auto;}*/
+#doc3 {
+    margin:auto 10px; /* not for structure, but so content doesn't bleed to edge */
+    width:auto;}
 
 /*!* below required for all fluid grids; adjust widths and margins above accordingly *!*/
 
@@ -144,6 +144,7 @@
     margin-left: 55px;
     border: 1px solid #000000;
     border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 
 }
 

@@ -16,11 +16,10 @@
             border-radius: 15px;
         }
 
-
         .card-text {
             color: black;
             font-family: "Kanit";
-            font-size: 13px;
+            font-size: 14px;
             margin-top: -5px;
             display: inline-block;
         }
@@ -30,7 +29,7 @@
         }
 
         .card:hover img {
-            transform: scale(1.01);
+            transform: scale(1.02);
         }
 
         .card-body {
@@ -118,12 +117,13 @@
     </style>
 </head>
 <body>
-<div class="container">
+<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -16px">
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+</nav>
     <br>
     <div class="top_content">
         <div>
-            <h2 style="color: #a41212; font-family: Kanit" align="center">ข่าวสารและกิจกรรม</h2>
+            <h2 style="color: #a41212; font-family: Kanit;margin-top: 105px;" align="center">ข่าวสารและกิจกรรม</h2>
             <br>
             <div>
                 <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="Search for names.."
@@ -133,13 +133,13 @@
             <c:forEach var="news" items="${list_news}">
                 <div class="block_news" data-name="${news.newsname} ${news.date} ${news.category}">
                     <div class="card">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" style="width: 100%; height: 200px;" src="${pageContext.request.contextPath}/assets/image/news11.jpg">
+                        <h3 class="card2" align="center" style="font-family: Kanit; color: #ff5e5e">${news.category}</h3>
+                        <div class="overflow-hidden" align="center">
+                            <img class="img-fluid" style="width: 85%; height: auto;" src="${pageContext.request.contextPath}/assets/image/news11.jpg">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title" style="font-family: Kanit; margin-top: 5px; margin-bottom: 10px">${news.newsname}</h5>
                             <p class="card-text">${news.date}</p>
-                            <p class="card-text">${news.category}</p>
                         </div>
                         <div style="font-family: Kanit;"align="center">
                             <a class="fw-medium read-more-link" href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail" style="color: #AA1818;font-weight: bold;">

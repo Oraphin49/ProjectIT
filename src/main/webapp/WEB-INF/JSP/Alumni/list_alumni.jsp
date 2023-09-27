@@ -17,7 +17,7 @@
       box-sizing: border-box;
     }
     body {
-      background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังของหน้าเว็บ */
+      background-color: #ffffff; /* เปลี่ยนสีพื้นหลังของหน้าเว็บ */
     }
 
     header h1 {
@@ -36,7 +36,7 @@
     }
 
     .list-item:hover {
-      background-color: #e0e0e0; /* เปลี่ยนสีพื้นหลังเมื่อนำเมาส์ไปชี้หรือคลิก */
+      background-color: #e0e0e0;
       border: 1px solid #ccc; /* เปลี่ยนสีขอบ */
       transition: background-color 0.3s;
     }
@@ -133,25 +133,25 @@
     /* CSS เมื่อโฮเวอร์ลูกศร */
     a:hover i.fa-arrow-left,
     a:hover i.fa-arrow-right {
-      color: #771111; /* เปลี่ยนสีของลูกศรเมื่อโฮเวอร์ */
+      color: #771111;
     }
     .read-more-link i.fa-arrow-right {
-      margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
+      margin-left: 5px;
       transition: margin-left 0.3s ease-in-out;
       opacity: 0; /* เริ่มต้นซ่อนลูกศร */
     }
     .read-more-link i.fa-arrow-left {
-      margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
+      margin-left: 5px;
       transition: margin-left 0.3s ease-in-out;
       opacity: 0; /* เริ่มต้นซ่อนลูกศร */
     }
 
     .read-more-link:hover i.fa-arrow-right {
-      margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
+      margin-left: 10px;
       opacity: 1; /* แสดงลูกศรเมื่อ hover */
     }
     .read-more-link:hover i.fa-arrow-left {
-      margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
+      margin-left: 10px;
       opacity: 1; /* แสดงลูกศรเมื่อ hover */
     }
 
@@ -163,12 +163,13 @@
   </style>
 </head>
 <body>
-<div  class="container">
-  <jsp:include page="/WEB-INF/layouts/nav.jsp" />
-  <br>
+<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; ">
+  <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+</nav>
+  <br><br><br><br>
   <div class="top_content">
     <div>
-      <h2 style="color: #a41212 " align="center">ข้อมูลศิษย์เก่า</h2>
+      <h2 style="color: #a41212 ;margin-top: 75px;" align="center" >ข้อมูลศิษย์เก่า</h2>
       <br>
       <div>
         <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="ค้นหาชื่อ.." title="Search for names..">
@@ -186,9 +187,13 @@
                 <p class="card-text">ตำแหน่ง : ${alumni.position}</p>
                 <p class="card-text">บริษัท : ${alumni.company}</p>
               </div>
-              <div style="margin-top: -10px">
-                <a href="${pageContext.request.contextPath}/alumni/${alumni.id}/view_alumni_detail"><button class="button1">ดูเพิ่มเติม</button></a>
-              </div>
+                <div style="font-family: Kanit;"align="center">
+                    <a class="fw-medium read-more-link" href="${pageContext.request.contextPath}/alumni/${alumni.id}/view_alumni_detail" style="color: #AA1818;font-weight: bold;text-decoration:none">
+                        ดูเพิ่มเติม
+                        <i class="fa fa-arrow-right ms-2"></i>
+                    </a>
+                    </a>
+                </div>
             </div>
           </div>
         </div>

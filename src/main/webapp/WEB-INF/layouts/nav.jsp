@@ -3,85 +3,125 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <form:form action="${pageContext.request.contextPath}/logout" method="POST" name="frmLogout"></form:form>
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
-    <title>เข้าสู่ระบบ Information Technology</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- เพิ่มไลบรารี Font Awesome -->
     <style>
-        .top-nav li{
-            background: #aa1818;
-            border-bottom: 4px solid #aa1919;
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        .gtco-nav ul li a:hover, .gtco-nav ul li a:focus, .gtco-nav ul li a:active {
+            color: #fff;}
+        .top-nav li {
+            background: none;
+            border-bottom: 2px solid #a41212;
             float: left;
             font-size: 10px;
-            height: 40px;
-            padding-top: 10px;
+            height: 32px;
+            padding-top: 8px;
             position: relative;
             text-align: center;
             width: 12.5%;
-          font-family: Kanit;
+            font-family: 'Kanit', sans-serif;
+            background-color: #ffffff;
         }
-        .top-nav li a{
-            color: #fff;
-            padding-top: 7px;
+
+        /* ปรับแต่งสไตล์ของลิงก์ */
+        .top-nav li a {
+            color: #aa1818;
+            padding-top: 5px;
             position: absolute;
             top: 0;
             left: 0;
-            width: 150px;
-            height: 25px;
+            width: 100%;
+            height: 100%;
             font-size: 13px;
             text-decoration: none;
-            font-family: Kanit;
+            font-family: 'Kanit', sans-serif;
+            background-color: #FFFFFF;
+
+        }
+
+        /* เพิ่มไอคอนให้กับลิงก์ */
+        .top-nav li a i {
+            margin-right: 5px;
+        }
+
+        /* เปลี่ยนสีของลิงก์เมื่อ hover */
+        .top-nav li a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(218, 37, 37);
+        }
+
+        /* ปรับแต่งสไตล์ของเมนูแบบหลายระดับ */
+        .top-nav .submenu {
+            margin-top: 0px;
+            display: none;
+        }
+
+        .top-nav li:hover .submenu {
+            display: block;
+            width: 150px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+
+        .top-nav .submenu li {
+            display: block;
+            background-color: #a41212;
+            width: 150px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .top-nav .submenu li a {
+            padding: 2px;
+            color: #ffffff;
+            width: 100%;
+            margin-top: 5px;
+            font-size: 12px;
+            background-color: #aa1919;
+        }
+        .top-nav .submenu li a:hover {
+            color: #ffffff;
+            background-color: #670c0c;
         }
     </style>
 </head>
-<body bgcolor="#ffffff" >
-<header>
-    <div class="navbar navbar-default navbar-static-top">
-        <div class="navbar-header">
-            <a class="navbar-brand"> <img src="${pageContext.request.contextPath}/assets/image/LOGOIT.png" class="hidden-xs" alt="" width="250px" style="margin-left: 30px;"></a>
-
+<body >
+<nav class="navbar-b">
+    <div class="navbar navbar-default navbar-static-top" style="background-color: #FFFFFF">
+        <div class="navbar-header" >
+            <a class="navbar-brand" > <img src="${pageContext.request.contextPath}/assets/image/LOGOIT.png" class="hidden-xs" alt="" width="250px" style="margin-left: 30px;"></a>
         </div>
     </div>
-</header>
-<nav >
-    <ul class="top-nav" >
-        <li><a href="${pageContext.request.contextPath}">
-            <img src="${pageContext.request.contextPath}/assets/image/home.png" width="20px"> หน้าหลัก</a></li>
+    <ul class="top-nav" style="background-color: #FFFFFF">
+        <li><a href="${pageContext.request.contextPath}"><i class="fas fa-home"></i> หน้าหลัก</a></li>
         <li>
-            <a href="${pageContext.request.contextPath}/history">
-                <img src="${pageContext.request.contextPath}/assets/image/software-application.png" width="20px"> เกี่ยวกับเรา</a>
+            <a href="${pageContext.request.contextPath}/history"><i class="fas fa-info-circle"></i> เกี่ยวกับเรา</a>
             <ul class="submenu">
                 <li><a href="${pageContext.request.contextPath}/history">ประวัติความเป็นมา</a></li>
                 <li><a href="${pageContext.request.contextPath}/course">ข้อมูลหลักสูตร</a></li>
                 <li><a href="${pageContext.request.contextPath}/plan">แผนการเรียน</a></li>
             </ul>
         </li>
-        <li><a href="${pageContext.request.contextPath}/news/list_news">
-            <img src="${pageContext.request.contextPath}/assets/image/news.png" width="20px">ข่าวสารและกิจกรรม</a></li>
-        <li><a href="${pageContext.request.contextPath}/alumni/list_alumni">
-            <img src="${pageContext.request.contextPath}/assets/image/reading-book.png" width="20px"> นักศึกษา</a>
-        <ul class="submenu">
-            <li><a href="${pageContext.request.contextPath}/alumni/list_alumni">ข้อมูลศิษย์เก่า</a></li>
-            <li><a href="https://itsci.mju.ac.th/coopedu2/">จัดส่งรายงานสหกิจ</a></li>
-            <li><a href="${pageContext.request.contextPath}">ฐานข้อมูลโครงงานสารสนเทศ</a></li>
-        </ul>
+        <li><a href="${pageContext.request.contextPath}/news/list_news"><i class="fas fa-newspaper"></i> ข่าวสารและกิจกรรม</a></li>
+        <li><a href="${pageContext.request.contextPath}/alumni/list_alumni"><i class="fas fa-graduation-cap"></i> นักศึกษา</a>
+            <ul class="submenu">
+                <li><a href="${pageContext.request.contextPath}/alumni/list_alumni">ข้อมูลศิษย์เก่า</a></li>
+                <li><a href="https://itsci.mju.ac.th/coopedu2/"><i class="fas fa-file-alt"></i> จัดส่งรายงานสหกิจ</a></li>
+                <li><a href="${pageContext.request.contextPath}/project"> ฐานข้อมูลโครงงานสารสนเทศ</a></li>
+            </ul>
         </li>
-        <li><a href="${pageContext.request.contextPath}/personnel/list_personnel">
-            <img src="${pageContext.request.contextPath}/assets/image/profile-user%20.png" width="20px">  บุคลากร</a></li>
-        <li><a href="${pageContext.request.contextPath}">
-            <img src="${pageContext.request.contextPath}/assets/image/help.png" width="20px">  FAQ</a></li>
-        <li><a href="${pageContext.request.contextPath}/contact">
-            <img src="${pageContext.request.contextPath}/assets/image/contact-us.png" width="20px">  ช่องทางการติดต่อ</a></li>
-
+        <li><a href="${pageContext.request.contextPath}/personnel/list_personnel"><i class="fas fa-users"></i> บุคลากร</a></li>
+        <li><a href="${pageContext.request.contextPath}/faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+        <li><a href="${pageContext.request.contextPath}/contact"><i class="fas fa-envelope"></i> ช่องทางการติดต่อ</a></li>
         <li>
-            <a href="${pageContext.request.contextPath}" style="text-decoration: none;" >
-                <img src="${pageContext.request.contextPath}/assets/image/in.png" width="20px"> เข้าสู่ระบบ</a>
+            <a href="${pageContext.request.contextPath}" style="text-decoration: none;"><i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ</a>
             <ul class="submenu">
                 <li><a href="${pageContext.request.contextPath}/login/LoginByPersonnel">บุคลากร</a></li>
                 <li><a href="${pageContext.request.contextPath}/login/LoginByAdmin">ผู้ดูแลระบบ</a></li>
