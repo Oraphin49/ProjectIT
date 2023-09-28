@@ -40,14 +40,15 @@
         /* ลบสีพื้นหลังของรายการนำทาง */
         .top-nav li {
             background: none;
-            float: right; /* จัดลำดับรายการนำทางไปทางขวา */
             font-size: 10px;
             height: 40px;
             padding-top: 10px;
             position: relative;
             text-align: center;
-            width: 21%;
+            width: 22%;
             font-family: 'Kanit', sans-serif;
+            list-style-type: none;
+            list-style-image: none;
         }
 
         /* ปรับแต่งสไตล์ของลิงก์ */

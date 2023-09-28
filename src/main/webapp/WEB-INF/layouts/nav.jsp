@@ -14,12 +14,28 @@
         *, ::after, ::before {
             box-sizing: border-box;
         }
-        .gtco-nav ul li a:hover, .gtco-nav ul li a:focus, .gtco-nav ul li a:active {
-            color: #fff;}
+        /*.gtco-nav ul li a:hover, .gtco-nav ul li a:focus, .gtco-nav ul li a:active {*/
+        /*    color: #fff;}*/
+        /* ปรับแต่งสไตล์ของลิงก์ */
+        .top-nav li a {
+            color: #aa1818;
+            padding-top: 5px;
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            font-size: 13px;
+            text-decoration: none;
+            font-family: 'Kanit', sans-serif;
+            background-color: #FFFFFF; /* เอาบรรทัดนี้ออก */
+        }
+
         .top-nav li {
             background: none;
-            border-bottom: 2px solid #a41212;
             float: left;
+            left: -20px;
+            border-bottom: 2px solid #a41212;
             font-size: 10px;
             height: 32px;
             padding-top: 8px;
@@ -28,27 +44,9 @@
             width: 12.5%;
             font-family: 'Kanit', sans-serif;
             background-color: #ffffff;
-        }
 
-        /* ปรับแต่งสไตล์ของลิงก์ */
-        .top-nav li a {
-            color: #aa1818;
-            padding-top: 5px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            font-size: 13px;
-            text-decoration: none;
-            font-family: 'Kanit', sans-serif;
-            background-color: #FFFFFF;
-
-        }
-
-        /* เพิ่มไอคอนให้กับลิงก์ */
-        .top-nav li a i {
-            margin-right: 5px;
+            list-style-type: none;
+            list-style-image: none;
         }
 
         /* เปลี่ยนสีของลิงก์เมื่อ hover */
@@ -90,16 +88,17 @@
             color: #ffffff;
             background-color: #670c0c;
         }
+
     </style>
 </head>
 <body >
 <nav class="navbar-b">
     <div class="navbar navbar-default navbar-static-top" style="background-color: #FFFFFF">
         <div class="navbar-header" >
-            <a class="navbar-brand" > <img src="${pageContext.request.contextPath}/assets/image/LOGOIT.png" class="hidden-xs" alt="" width="250px" style="margin-left: 30px;"></a>
+            <a class="navbar-brand"  style="height: 75px"> <img src="${pageContext.request.contextPath}/assets/image/LOGOIT.png" class="hidden-xs" alt="" width="250px" style="margin-left: 30px;"></a>
         </div>
     </div>
-    <ul class="top-nav" style="background-color: #FFFFFF">
+    <ul class="top-nav" style="background-color: #FFFFFF; margin-top: 0px">
         <li><a href="${pageContext.request.contextPath}"><i class="fas fa-home"></i> หน้าหลัก</a></li>
         <li>
             <a href="${pageContext.request.contextPath}/history"><i class="fas fa-info-circle"></i> เกี่ยวกับเรา</a>
@@ -128,6 +127,7 @@
             </ul>
         </li>
     </ul>
+
 </nav>
 </body>
 </html>

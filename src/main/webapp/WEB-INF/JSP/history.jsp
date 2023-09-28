@@ -62,7 +62,7 @@
 <br>
 <br>
 <div  align="center">
-    <img style="width: 90%;" src="${pageContext.request.contextPath}/assets/image/1.png">
+    <img style="width: 90%;margin-top: 100px" src="${pageContext.request.contextPath}/assets/image/1.png">
 </div>
 <br><br>
 <table align="center">

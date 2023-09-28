@@ -52,7 +52,7 @@
     </style>
 </head>
 <body>
-<nav>
+<nav >
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
     <br>
     <br>

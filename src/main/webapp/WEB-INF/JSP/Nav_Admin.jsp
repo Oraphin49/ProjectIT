@@ -25,6 +25,8 @@
             text-align: center;
             width: 20%;
             font-family: Kanit;
+            list-style-type: none;
+            list-style-image: none;
         }
         .top-nav li a{
             color: #fff;
@@ -32,12 +34,12 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 150px;
             height: 25px;
             font-size: 13px;
             text-decoration: none;
             font-family: Kanit;
             position: center;
+            width: 100%
         }
     </style>
 </head>

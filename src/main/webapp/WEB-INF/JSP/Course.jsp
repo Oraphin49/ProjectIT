@@ -117,7 +117,7 @@
     </style>
 </head>
 <body>
-<nav style="box-sizing: revert; ">
+<nav >
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
 </nav>
 <br><br>
