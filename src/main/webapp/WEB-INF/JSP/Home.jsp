@@ -76,7 +76,7 @@
                         <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
                             <div class="slider-text-inner">
                                 <p><a href="" target="_blank"><img
-                                        src="${pageContext.request.contextPath}/assets/image/banner.png"
+                                        src="${pageContext.request.contextPath}/assets/image/banner4.png"
                                         width="500%"></a></p>
                             </div>
                         </div>

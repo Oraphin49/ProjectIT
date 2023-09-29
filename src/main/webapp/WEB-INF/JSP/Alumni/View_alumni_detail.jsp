@@ -19,7 +19,7 @@
     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
 </nav>
     <br><br><br>
-    <div align="center" style="background-color: #Fffff1">
+    <div align="center" >
     <b style="; font-size: 28px;font-family: Kanit">ข้อมูลศิษย์เก่า</b>
     </div>
     <br><br>
@@ -27,7 +27,7 @@
 </div>
 <div id="bd">
     <div id="yui-main">
-        <div class="yui-b" style="background-color: #Fffff1">
+        <div class="yui-b" >
             <div class="yui-gd" >
                 <div class="yui-u first">
                     <div class="content1" align="center">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="yui-u" >
-                    <div class="content2" style="width: 470px;background-color: #F0FFFF;" >
+                    <div class="content2" style="width: 470px;" >
                         <h3 class="card-text">รหัสนักศึกษา : ${alumni_detail.id}</h3>
                         <p class="card-text" >ชื่อ : ${alumni_detail.firstname} นามสกุล : ${alumni_detail.lastname}</p>
                         <p class="card-text">ปีที่จบการศึกษา : ${alumni_detail.graduationyear}</p>
@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="yui-b">
-        <div id="secondary">
+        <div id="secondary" style="background-color: #FFFFFF">
             <div class="page2">
                 <p class="p1" style="width:90%; height: 40px";><b class="ff"> ความชำนาญ</b></p>
                 <div class="pp" style="width:90%";><p class="p2">${alumni_detail.expertise}</p></div>

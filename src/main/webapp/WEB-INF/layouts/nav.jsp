@@ -34,7 +34,7 @@
         .top-nav li {
             background: none;
             float: left;
-            left: -20px;
+            left: 10px;
             border-bottom: 2px solid #a41212;
             font-size: 10px;
             height: 32px;
@@ -95,7 +95,7 @@
 <nav class="navbar-b">
     <div class="navbar navbar-default navbar-static-top" style="background-color: #FFFFFF">
         <div class="navbar-header" >
-            <a class="navbar-brand"  style="height: 75px"> <img src="${pageContext.request.contextPath}/assets/image/LOGOIT.png" class="hidden-xs" alt="" width="250px" style="margin-left: 30px;"></a>
+            <a class="navbar-brand"  > <img src="${pageContext.request.contextPath}/assets/image/LOGOIT.png" class="hidden-xs" alt="" width="250px" style="margin-left: 30px;"></a>
         </div>
     </div>
     <ul class="top-nav" style="background-color: #FFFFFF; margin-top: 0px">
@@ -127,7 +127,6 @@
             </ul>
         </li>
     </ul>
-
 </nav>
 </body>
 </html>
