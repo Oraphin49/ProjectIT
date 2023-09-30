@@ -94,8 +94,8 @@
 <body>
 <nav><jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/></nav>
 <br><br>
-<h2>Add Personnel</h2>
-<form:form method="POST" action="${pageContext.request.contextPath}/personnel/save_personnnel" name="form" id="form" class="custom-form">
+<h2>เพิ่มบุคลการ</h2>
+<form:form method="POST" action="${pageContext.request.contextPath}/personnel/save_personnnel" name="form" id="form" class="custom-form"  onsubmit="return validateForm()">
     <div id="profile">
         <div class="row">
             <div class="column">
@@ -174,4 +174,128 @@
     </div>
 </form:form>
 </body>
+<script>
+    function validateForm() {
+        // เว้นไว้ก่อน
+        var image = document.getElementById("image").value;
+        if (image === "") {
+            alert("กรุณากรอกข้อมูลรูป");
+            return false; // ยกเลิกการส่งฟอร์ม
+        }
+
+        //เว้นไว้ก่อน
+        var id = document.getElementById("id").value;
+        if (id === "") {
+            alert("กรุณากรอกรหัส");
+            return false;
+        }
+
+        //เช็คชื่อจริง //
+        var firstname = document.getElementById("firstname").value;
+        if (firstname.trim() === "") {
+            alert("กรุณากรอกชื่อจริง");
+            return false;
+        } else if (!/^[ก-๙]+(\s[ก-๙]+)*$/.test(firstname) || firstname.length < 2 || firstname.length > 50) {
+            alert("ชื่อจริงต้องเป็นภาษาไทยเท่านั้นและมีความยาวระหว่าง 2 ถึง 50 ตัวอักษร และมีช่องว่างระหว่างตัวอักษรได้ไม่เกิน 1 ช่อง");
+            document.getElementById("firstname").value = "";
+            return false;
+        }
+
+        //เช็คนามสกุล //
+        var lastname = document.getElementById("lastname").value;
+        if (lastname.trim() === "") {
+            alert("กรุณากรอกนามสกุล");
+            return false;
+        } else if (!/^[ก-๙]+(\s[ก-๙]+)*$/.test(lastname) || lastname.length < 2 || lastname.length > 50) {
+            alert("นามสกุลต้องเป็นภาษาไทยเท่านั้นและมีความยาวระหว่าง 2 ถึง 50 ตัวอักษร และมีช่องว่างระหว่างตัวอักษรได้ไม่เกิน 1 ช่อง");
+            document.getElementById("lastname").value = "";
+            return false;
+        }
+
+        //เช็คตำแหน่ง //
+        var position = document.getElementById("position").value;
+        var thaiRegex = /^[ก-๏เ-๙\s]+$/;
+
+        if (position === "") {
+            alert("กรุณากรอกตำแหน่ง");
+            return false;
+        } else if (!thaiRegex.test(position) || position.length < 2 || position.length > 50) {
+            alert("ตำแหน่งต้องเป็นภาษาไทยและมีขนาดระหว่าง 2 ถึง 50 ตัวอักษร");
+            return false;
+        }
+
+
+        //เช็คสิ่งพิมพ์ //
+        var scolarlink = document.getElementById("scolarlink").value;
+        if (scolarlink.trim() === "") {
+            alert("กรุณากรอก scolarlink");
+            return false;
+        }else if (/^\s|\s$|\s{1,}/.test(scolarlink)) {
+            alert("ไม่ควรมีช่องว่างระหว่างตัวอักษรใน scolarlink เนื่องจากเก็บเป็น http");
+            return false;
+        }
+
+        //เช็คเบอร์โทร //
+        var phone = document.getElementById("phone").value;
+        var TelTH = /^(06|08|09|8)[0-9]{1}-?[0-9]{3}-?[0-9]{4}$/; // รองรับขีด (-) หรือไม่ก็ได้
+        if (phone.trim() === "") {
+            alert("กรุณากรอกเบอร์โทร");
+            return false;
+        } else if (!phone.match(TelTH)) {
+            alert("คุณกรอกเบอร์โทรให้ถูกต้องไม่ถูกต้อง กรุณากรอกใหม่");
+            document.getElementById("phone").value = "";
+            return false;
+        }
+
+        //เช็คคำบรรยาย //
+        var description = document.getElementById("description").value;
+        if (description === "") {
+            alert("กรุณากรอกคำอธิบาย");
+            return false;
+        }
+
+        //เช็คการทำงาน //
+        var workexperience = document.getElementById("workexperience").value;
+        if (workexperience === "") {
+            alert("กรุณากรอกการทำงาน");
+            return false;
+        }
+
+        // เช็คความชำนาญ //
+        var experitise = document.getElementById("experitise").value;
+        if (experitise === "") {
+            alert("กรุณากรอกความชำนาญ");
+            return false;
+        }
+
+        //เช็คอีเมล์ //
+        var email = document.getElementById("email").value;
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (email.trim() === "") {
+            alert("กรุณากรอกอีเมล์");
+            return false;
+        } else if (!email.match(emailRegex)) {
+            alert("กรุณากรอกอีเมล์ให้ถูกต้อง");
+            document.getElementById("email").value = "";
+            return false;
+        }
+
+        //เว้นไว้ก่อน
+        var password = document.getElementById("password").value;
+        if (password === "") {
+            alert("กรุณากรอกรหัสผ่าน");
+            return false;
+        }
+
+
+        var ar_id = document.getElementById("ar_id").value;
+        if (ar_id === "0") {
+            alert("กรุณาเลือกตำแหน่งทางวิชาการ");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
 </html>

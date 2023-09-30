@@ -45,7 +45,7 @@
         <b style="font-size: 28px; font-family: Kanit; color: #a41212">แก้ไขข้อมูลข่าว</b>
     </div>
     <br><br>
-    <form action="${pageContext.request.contextPath}/news/${news.id}/edit/save" method="POST">
+        <form action="${pageContext.request.contextPath}/news/${news.id}/edit/save" method="POST" onsubmit="return validateForm()">
         <div class="news-form" style="width: 70%; margin-left: 15%">
             <label type="text">ชื่อข่าว:</label>
             <input type="text" name="news_name" id="news_name" value="${news.newsname}">
@@ -72,4 +72,65 @@
 <div class="f">
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </div>
+<script>
+    function validateForm() {
+        // เช็คชื่อข่าว
+        var newsName = document.getElementById("news_name").value;
+        if (newsName.trim() === "") {
+            alert("กรุณากรอกชื่อข่าว");
+            return false;
+        } else if (newsName.length < 2 || newsName.length > 200 || !/^[A-Za-zก-์\d\s.,!?/'"()]+$/u.test(newsName)) {
+            alert("ชื่อข่าวต้องมีความยาวระหว่าง 2 และ 200 ตัวอักษร และใช้ได้เฉพาะภาษาไทยและภาษาอังกฤษเท่านั้น และอนุญาตให้ใช้ตัวเลขและอักขระพิเศษได้ .,!?/'");
+            document.getElementById("news_name").value = "";
+            return false;
+        }
+
+        //เช็คระละเอียด
+        var newsDetail = document.getElementById("news_detail").value;
+        if (newsDetail.trim() === "") {
+            alert("กรุณากรอกรายละเอียดข่าว");
+            document.getElementById("news_detail").value = "";
+            return false;
+        }
+
+        //เช็ค แหล่งที่มา
+        var linkpage = document.getElementById("linkpage").value;
+        if (linkpage.trim() === "") {
+            alert("กรุณากรอกแหล่งที่มา");
+            return false;
+        }else if (/^\s|\s$|\s{1,}/.test(linkpage)) {
+            alert("ไม่ควรมีช่องว่างระหว่างตัวอักษรในแหล่งที่มา");
+            document.getElementById("linkpage").value = "";
+            return false;
+        }
+
+        // เช็ครูปภาพ
+//
+//         // ตรวจสอบว่ามีไฟล์รูปภาพถูกเลือกหรือไม่
+//         var imageFiles = document.getElementById("imageFile").files;
+//         if (imageFiles.length === 0) {
+//             alert("กรุณาเลือกไฟล์รูปภาพ");
+//             document.getElementById("imageFile").value = "";
+//             return false;
+//         }
+//
+// // ตรวจสอบจำนวนไฟล์รูปภาพที่อัปโหลด
+//         if (imageFiles.length > 8) {
+//             alert("คุณสามารถอัปโหลดได้เพียง 8 รูปเท่านั้น");
+//             return false;
+//         }
+// // ตรวจสอบขนาดของไฟล์รูปภาพ
+//         for (var i = 0; i < imageFiles.length; i++) {
+//             var imageSize = imageFiles[i].size; // ขนาดไฟล์ในไบต์
+//             var maxSizeInBytes = 1024 * 1024; // 1 MB (แก้ไขตามที่คุณต้องการ)
+//
+//             if (imageSize > maxSizeInBytes) {
+//                 alert("ไฟล์รูปภาพที่ " + (i + 1) + " มีขนาดใหญ่เกินไป");
+//                 return false;
+//             }
+//         }
+//
+//         return true; // ข้อมูลถูกต้องทั้งหมด
+    }
+</script>
 </html>

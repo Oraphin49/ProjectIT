@@ -144,8 +144,9 @@
                 <p class="news-date">วันที่: ${news.date}</p>
             </div>
             <a href="${pageContext.request.contextPath}/news/${news.id}/update"><img src="${pageContext.request.contextPath}/assets/image/edit.png" style="width: 20px; margin-right: 50px"></a>
-            <a href="${pageContext.request.contextPath}/news/${news.id}/delete"><img src="${pageContext.request.contextPath}/assets/image/dustbin.png" style="width: 20px"></a>
-        </div>
+            <a href="javascript:void(0);" onclick="confirmDelete('${pageContext.request.contextPath}/alumni/${alumni.id}/delete')">
+                <img src="${pageContext.request.contextPath}/assets/image/dustbin.png" style="width: 20px">
+            </a> </div>
     </div>
 </c:forEach>
 <br>
@@ -166,6 +167,8 @@
 <footer>
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </footer>
+
+///////////////////////////เช็คก่อนหน้าและถัดไป///////////////////////////////////////////
 <script>
     var newsListmanage = document.querySelectorAll(".block_manage_news");
     var itemsPerPage = 100; // จำนวนข่าวที่แสดงในแต่ละหน้า
@@ -206,6 +209,8 @@
             }
         }
     }
+
+    ///////////////////////////เช็คการค้นหา///////////////////////////////////////////
     function search() {
         var input = document.getElementById("searchInput").value.toLowerCase();
         var blocks = document.getElementsByClassName("block_manage_news");
@@ -219,6 +224,15 @@
             } else {
                 block.style.display = "none";
             }
+        }
+    }
+</script>
+
+///////////////////////////เช็คการลบข่าว///////////////////////////////////////////
+<script>
+    function confirmDelete(deleteUrl) {
+        if (confirm("คุณแน่ใจหรือว่าต้องการลบ?")) {
+            window.location.href = deleteUrl;
         }
     }
 </script>

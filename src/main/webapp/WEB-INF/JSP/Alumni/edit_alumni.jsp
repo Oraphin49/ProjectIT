@@ -76,7 +76,7 @@
 <h3>แก้ไขข้อมูลศิษย์เก่า</h3>
 <br><br>
 <div class="container">
-    <form action="${pageContext.request.contextPath}/alumni/${alumni.id}/edit/save" method="POST">
+    <form action="${pageContext.request.contextPath}/alumni/${alumni.id}/edit/save" method="POST" onsubmit="return validateForm();">
       <div class="form-group row">
         <div class="col-md-6">
           <label for="alumni_id">รหัสนักศึกษา:</label>
@@ -189,6 +189,112 @@
     });
   });
 
+</script>
 
+////////////////////////////////////////เช็ค script แต่ละช่อง////////////////////////////////////////////////////
+
+<script>
+  function validateForm() {
+    //เช็ครหัสนักศึกษา
+    var alumni_id = document.getElementById("alumni_id").value;
+    if (alumni_id.trim() === "") {
+      alert("กรุณากรอกรหัสนักศึกษา");
+      return false;
+    } else if (alumni_id.length !== 10 || !/^\d+$/.test(alumni_id) || /\s/.test(alumni_id)) {
+      alert("รหัสนักศึกษาต้องประกอบด้วยตัวเลข 10 ตัวและไม่ควรมีช่องว่างระหว่างตัวเลข");
+      document.getElementById("alumni_id").value = "";
+      return false;
+    }
+
+    // เว้นไว้ก่อน
+    var year = document.getElementById("year").value;
+    if (year.trim() === "") {
+      alert("กรุณากรอกปีที่จบการศึกษา");
+      return false;
+    }
+
+    // เช็คชื่อ //
+    var firstname = document.getElementById("firstname").value;
+    if (firstname.trim() === "") {
+      alert("กรุณากรอกชื่อจริง");
+      return false;
+    } else if (!/^[ก-๙]+(\s[ก-๙]+)*$/.test(firstname) || firstname.length < 2 || firstname.length > 50) {
+      alert("ชื่อจริงต้องเป็นภาษาไทยเท่านั้นและมีความยาวระหว่าง 2 ถึง 50 ตัวอักษร และมีช่องว่างระหว่างตัวอักษรได้ไม่เกิน 1 ช่อง");
+      document.getElementById("firstname").value = "";
+      return false;
+    }
+    // เช็คนามสกุล //
+    var lastname = document.getElementById("lastname").value;
+    if (lastname.trim() === "") {
+      alert("กรุณากรอกนามสกุล");
+      return false;
+    } else if (!/^[ก-๙]+(\s[ก-๙]+)*$/.test(lastname) || lastname.length < 2 || lastname.length > 50) {
+      alert("นามสกุลต้องเป็นภาษาไทยเท่านั้นและมีความยาวระหว่าง 2 ถึง 50 ตัวอักษร และมีช่องว่างระหว่างตัวอักษรได้ไม่เกิน 1 ช่อง");
+      document.getElementById("lastname").value = "";
+      return false;
+    }
+
+
+    //เช็คบริษัท //
+    var company = document.getElementById("company").value;
+    if (company.trim() === "") {
+      alert("กรุณากรอกชื่อบริษัท");
+      return false;
+    } else if (company.length < 2 ||company.length > 50 || !/^[A-Za-zก-์\s,.]+$/.test(company)) {
+      alert("ชื่อบริษัทต้องมีความยาวตั้งแต่ 2 และไม่เกิน 50 ตัวอักษร และใช้ได้เฉพาะภาษาไทยและภาษาอังกฤษรวมถึงอักขระพิเศษ . และ , เท่านั้น");
+      document.getElementById("company").value = "";
+      return false;
+    }
+
+    //เช็คเบอร์ //
+    var phone = document.getElementById("phone").value;
+    var TelTH = /^(06|08|09|8)[0-9]{1}-?[0-9]{3}-?[0-9]{4}$/; // รองรับขีด (-) หรือไม่ก็ได้
+    if (phone.trim() === "") {
+      alert("กรุณากรอกเบอร์โทร");
+      return false;
+    } else if (!phone.match(TelTH)) {
+      alert("คุณกรอกเบอร์โทรให้ถูกต้องไม่ถูกต้อง กรุณากรอกใหม่");
+      document.getElementById("phone").value = "";
+      return false;
+    }
+
+    //เช็คอีเมล์ //
+    var email = document.getElementById("email").value;
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (email.trim() === "") {
+      alert("กรุณากรอกอีเมล์");
+      return false;
+    } else if (!email.match(emailRegex)) {
+      alert("กรุณากรอกอีเมล์ให้ถูกต้อง");
+      document.getElementById("email").value = "";
+      return false;
+    }
+
+    //เว้นไว้ก่อน
+    var image = document.getElementById("image").value;
+    if (image.trim() === "") {
+      alert("กรุณากรอกรูปภาพ");
+      document.getElementById("image").value = "";
+      return false;
+    }
+
+    //เช็คความชำนาญ //
+    var expertise = document.getElementById("expertise").value;
+    if (expertise.trim() === "") {
+      alert("กรุณากรอกความเชี่ยวชาญ");
+      document.getElementById("experitise").value = "";
+      return false;
+    }
+
+    //เช็คผลงาน //
+    var award = document.getElementById("award").value;
+    if (award.trim() === "") {
+      alert("กรุณากรอกผลงาน");
+      document.getElementById("award").value = "";
+      return false;
+    }
+
+    return true; // ข้อมูลถูกต้องทั้งหมด
+  }
 </script>
 </html>

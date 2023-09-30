@@ -94,30 +94,43 @@
 </div>
 <script>
     function validateForm() {
+        // เช็คชื่อข่าว
         var newsName = document.getElementById("news_name").value;
-
         if (newsName.trim() === "") {
             alert("กรุณากรอกชื่อข่าว");
             return false;
-        } else if (newsName.length < 2 || newsName.length > 50 || /^[A-Z|a-z|ก-์]$/.test(newsName)) {
-            alert("ชื่อข่าวต้องมีความยาวระหว่าง 2 และ 50 ตัวอักษรและต้องเป็นภาษาไทยเท่านั้น");
+        } else if (newsName.length < 2 || newsName.length > 200 || !/^[A-Za-zก-์\d\s.,!?/'"()]+$/u.test(newsName)) {
+            alert("ชื่อข่าวต้องมีความยาวระหว่าง 2 และ 200 ตัวอักษร และใช้ได้เฉพาะภาษาไทยและภาษาอังกฤษเท่านั้น และอนุญาตให้ใช้ตัวเลขและอักขระพิเศษได้ .,!?/'");
+            document.getElementById("news_name").value = "";
             return false;
         }
+
+        //เช็คระละเอียด
         var newsDetail = document.getElementById("news_detail").value;
         if (newsDetail.trim() === "") {
             alert("กรุณากรอกรายละเอียดข่าว");
+            document.getElementById("news_detail").value = "";
             return false;
         }
+
+        //เช็ค แหล่งที่มา
         var linkpage = document.getElementById("linkpage").value;
         if (linkpage.trim() === "") {
             alert("กรุณากรอกแหล่งที่มา");
             return false;
+        }else if (/^\s|\s$|\s{1,}/.test(linkpage)) {
+            alert("ไม่ควรมีช่องว่างระหว่างตัวอักษรในแหล่งที่มา");
+            document.getElementById("linkpage").value = "";
+            return false;
         }
+
+        // เช็ครูปภาพ
 
         // ตรวจสอบว่ามีไฟล์รูปภาพถูกเลือกหรือไม่
         var imageFiles = document.getElementById("imageFile").files;
         if (imageFiles.length === 0) {
             alert("กรุณาเลือกไฟล์รูปภาพ");
+            document.getElementById("imageFile").value = "";
             return false;
         }
 

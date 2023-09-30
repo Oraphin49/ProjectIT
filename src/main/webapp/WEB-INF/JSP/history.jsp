@@ -106,7 +106,7 @@
             </p>
         </td>
         <td align="center">
-            <img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/assets/image/n33.jpg" alt="..." />
+            <img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/assets/image/news1.jpg" alt="..." />
         </td>
     </tr>
 </table>

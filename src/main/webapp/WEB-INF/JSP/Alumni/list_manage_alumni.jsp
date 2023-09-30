@@ -105,7 +105,11 @@
             <td>${alumni.position}</td>
             <td>${alumni.company}</td>
             <td><a href="${pageContext.request.contextPath}/alumni/${alumni.id}/update"><img src="${pageContext.request.contextPath}/assets/image/edit.png" style="width: 20px"></a></td>
-            <td><a href="${pageContext.request.contextPath}/alumni/${alumni.id}/delete"><img src="${pageContext.request.contextPath}/assets/image/dustbin.png" style="width: 20px"></a></td>
+            <td>
+                <a href="javascript:void(0);" onclick="confirmDelete('${pageContext.request.contextPath}/alumni/${alumni.id}/delete')">
+                    <img src="${pageContext.request.contextPath}/assets/image/dustbin.png" style="width: 20px">
+                </a>
+            </td>
         </tr>
 
     </c:forEach>
@@ -128,6 +132,18 @@
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </footer>
 </body>
+
+///////////////////////////เช็คการลบศิษย์เก่า///////////////////////////////////////////
+<script>
+    function confirmDelete(deleteUrl) {
+        if (confirm("คุณแน่ใจหรือว่าต้องการลบ?")) {
+            window.location.href = deleteUrl;
+        }
+    }
+</script>
+
+
+///////////////////////////////////// เช็ค ก่อนหน้าและถัดไป//////////////////////////////////////////////////
 <script>
 
     var alumniList = document.querySelectorAll(".list_manage");
@@ -172,6 +188,8 @@
 
     // เรียกใช้ฟังก์ชันแสดงข่าวในหน้าปัจจุบันเมื่อโหลดหน้าเว็บ
     window.addEventListener("load", showAlumni);
+
+    /////////////////////////เช็คค้นหา///////////////////////////////////
 
     function search() {
         var input = document.getElementById("searchInput").value.toLowerCase();

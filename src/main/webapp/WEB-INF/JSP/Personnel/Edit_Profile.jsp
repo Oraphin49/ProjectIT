@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -16px">
+<nav style="box-sizing: revert;">
     <jsp:include page="/WEB-INF/JSP/Personnel/nav_personnel.jsp"/>
 </nav>
 <br><br>
@@ -80,7 +80,7 @@
                                class="cancel-button"/></li><br>
                 </c:forEach>
                 <hr>
-                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_education_add" method="POST">
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_education_add" method="POST" onsubmit="return validateEducationForm()">
                     <table>
                         <tr>
                             <td>ระดับการศึกษา : <input name="education_name" id="education_name"></td>
@@ -111,7 +111,7 @@
 
                 </c:forEach>
                 <hr>
-                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_research_add" method="POST">
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_research_add" method="POST"  onsubmit="return validateResearchForm()">
                     <table>
                         <tr>
                             <td>ชื่อทุน : <input name="research_name" id="research_name"></td>
@@ -151,4 +151,113 @@
     </div>
 </div>
 </body>
+
+////////////////////////////////////////script personnel////////////////////////////////////////////////////
+
+
+<script>
+    ///////////////////////////////////////script การศึกษา/////////////////////////////////////////////////////
+    function validateEducationForm() {
+
+        // เช็คชื่อประวัติการศึกษา
+        var educationName = document.getElementById("education_name").value;
+        if (educationName.trim() === "") {
+            alert("กรุณากรอกชื่อ");
+            return false;
+        } else if (educationName.length < 2 || educationName.length > 50 || !/^[ก-๏เ-๛\s]+$/u.test(educationName)) {
+            alert("ชื่อระดับการศึกษาต้องมีความยาวตั้งแต่ 2 ไม่เกิน 50 ตัวอักษร และใช้ได้เฉพาะภาษาไทยเท่านั้น");
+            document.getElementById("education_name").value = "";
+            return false;
+        }
+
+// เช็คชื่อสาขา
+        var majorName = document.getElementById("major_name").value;
+        if (majorName.trim() === "") {
+            alert("กรุณากรอกชื่อสาขา");
+            return false;
+        } else if (majorName.length < 2 || majorName.length > 50 || !/^[ก-๏เ-๛\s]+$/u.test(majorName)) {
+            alert("ชื่อสาขาต้องมีความยาวตั้งแต่ 2 ไม่เกิน 50 ตัวอักษร และใช้ได้เฉพาะภาษาไทยเท่านั้น");
+            document.getElementById("major_name").value = "";
+            return false;
+        }
+
+// เช็คชื่อมหาวิทยาลัย
+        var universityName = document.getElementById("university_name").value;
+        if (universityName.trim() === "") {
+            alert("กรุณากรอกชื่อมหาวิทยาลัย");
+            return false;
+        } else if (universityName.length < 2 || universityName.length > 45 || !/^[ก-๏เ-๛\s]+$/u.test(universityName)) {
+            alert("ชื่อมหาวิทยาลัยมีความยาวตั้งแต่ 2 ไม่เกิน 45 ตัวอักษร และใช้ได้เฉพาะภาษาไทยเท่านั้น");
+            document.getElementById("university_name").value = "";
+            return false;
+        }
+
+// เช็คชื่อเมือง
+        var countryName = document.getElementById("country_name").value;
+        if (countryName.trim() === "") {
+            alert("กรุณากรอกชื่อเมือง");
+            return false;
+        } else if (countryName.length < 2 || countryName.length > 45 || !/^[ก-๏เ-๛\s]+$/u.test(countryName)) {
+            alert("ชื่อเมืองมีความยาวตั้งแต่ 2 ไม่เกิน 45 ตัวอักษร และใช้ได้เฉพาะภาษาไทยเท่านั้น");
+            document.getElementById("country_name").value = "";
+            return false;
+        }
+        //เว้นไว้ก่อน
+        var educationYear = document.getElementById("educationyear").value;
+        if (educationYear === "") {
+            alert("กรุณากรอกปีที่จบ");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+
+<script>
+    ///////////////////////////////////////script ทุนวิจัย /////////////////////////////////////////////////////
+    function validateResearchForm() {
+        //เช็คชื่อทุน
+        var researchName = document.getElementById("research_name").value;
+        if (researchName === "") {
+            alert("กรุณากรอกชื่อทุน");
+            return false;
+        }
+
+        //เช็คปีที่ได้รับทุน
+        var researchYear = document.getElementById("research_year").value;
+        if (researchYear === "") {
+            alert("กรุณากรอกปีที่ได้รับทุน");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+
+
+<script>
+    ///////////////////////////////////////script ผลงาน/////////////////////////////////////////////////////
+    function validateAwardForm() {
+
+        //เช็คชื่อผลงาน
+        var awardName = document.getElementById("award_name").value;
+        if (awardName === "") {
+            alert("กรุณากรอกชื่อผลงาน");
+            return  false;
+        }
+
+        //เช็คปี
+        var awardYear = document.getElementById("award_year").value;
+        if (awardYear === "") {
+            alert("กรุณากรอกปีที่ได้รับรางวัล");
+            return  false;
+        }
+
+        return true;
+    }
+</script>
+
+
 </html>

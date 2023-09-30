@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
 <html>
@@ -55,6 +56,16 @@
         *, ::after, ::before {
             box-sizing: border-box;
         }
+
+        .equal-height-card {
+            height: 300px; /* ปรับความสูงตามที่คุณต้องการ */
+        }
+
+        .equal-height-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -209,121 +220,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
-                            <a href="#" class="gtco-card-item has-text">
-                                <figure>
-                                    <div class="overlay"><i class="ti-plus"></i></div>
-                                    <img src="${pageContext.request.contextPath}/assets/image/news11.jpg" alt="Image"
-                                         class="img-responsive">
-                                </figure>
-                                <div class="gtco-text text-left">
-                                    <h2>25 Minimal Web Design for Inspiration</h2>
-                                    <p class="gtco-category">Sep. 25th, 2016 by John Doe</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-4">
-                            <a href="#" class="gtco-card-item has-text">
-                                <figure>
-                                    <div class="overlay"><i class="ti-plus"></i></div>
-                                    <img src="${pageContext.request.contextPath}/assets/image/news1.jpg" alt="Image"
-                                         class="img-responsive">
-                                </figure>
-                                <div class="gtco-text text-left">
-                                    <h2>25 Minimal Web Design for Inspiration</h2>
-                                    <p class="gtco-category">Sep. 25th, 2016 by John Doe</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="clearfix visible-sm-block"></div>
-                        <div class="col-md-4">
-                            <a href="#" class="gtco-card-item has-text">
-                                <figure>
-                                    <div class="overlay"><i class="ti-plus"></i></div>
-                                    <img src="${pageContext.request.contextPath}/assets/image/news11.jpg" alt="Image"
-                                         class="img-responsive">
-                                </figure>
-                                <div class="gtco-text text-left">
-                                    <h2>25 Minimal Web Design for Inspiration</h2>
-                                    <p class="gtco-category">Sep. 25th, 2016 by John Doe</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="clearfix visible-sm-block"></div>
-                        <div class="col-md-4">
-                            <a href="#" class="gtco-card-item has-text">
-                                <figure>
-                                    <div class="overlay"><i class="ti-plus"></i></div>
-                                    <img src="${pageContext.request.contextPath}/assets/image/news11.jpg" alt="Image"
-                                         class="img-responsive">
-                                </figure>
-                                <div class="gtco-text text-left">
-                                    <h2>25 Minimal Web Design for Inspiration</h2>
-                                    <p class="gtco-category">Sep. 25th, 2016 by John Doe</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="clearfix visible-lg-block visible-md-block"></div>
-
-                        <div class="col-md-4">
-                            <a href="#" class="gtco-card-item has-text">
-                                <figure>
-                                    <div class="overlay"><i class="ti-plus"></i></div>
-                                    <img src="${pageContext.request.contextPath}/assets/image/news1.jpg" alt="Image"
-                                         class="img-responsive">
-                                </figure>
-                                <div class="gtco-text text-left">
-                                    <h2>25 Minimal Web Design for Inspiration</h2>
-                                    <p class="gtco-category">Sep. 25th, 2016 by John Doe</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="clearfix visible-sm-block"></div>
-
-                        <div class="col-md-4">
-                            <a href="#" class="gtco-card-item has-text">
-                                <figure>
-                                    <div class="overlay"><i class="ti-plus"></i></div>
-                                    <img src="${pageContext.request.contextPath}/assets/image/news11.jpg" alt="Image"
-                                         class="img-responsive">
-                                </figure>
-                                <div class="gtco-text text-left">
-                                    <h2>25 Minimal Web Design for Inspiration</h2>
-                                    <p class="gtco-category">Sep. 25th, 2016 by John Doe</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="#" class="gtco-card-item has-text">
-                                <figure>
-                                    <div class="overlay"><i class="ti-plus"></i></div>
-                                    <img src="${pageContext.request.contextPath}/assets/image/news1.jpg" alt="Image"
-                                         class="img-responsive">
-                                </figure>
-                                <div class="gtco-text text-left">
-                                    <h2>25 Minimal Web Design for Inspiration</h2>
-                                    <p class="gtco-category">Sep. 25th, 2016 by John Doe</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-4">
-                            <a href="#" class="gtco-card-item has-text">
-                                <figure>
-                                    <div class="overlay"><i class="ti-plus"></i></div>
-                                    <img src="${pageContext.request.contextPath}/assets/image/news1.jpg" alt="Image"
-                                         class="img-responsive">
-                                </figure>
-                                <div class="gtco-text text-left">
-                                    <h2>25 Minimal Web Design for Inspiration</h2>
-                                    <p class="gtco-category">Sep. 25th, 2016 by John Doe</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="clearfix visible-lg-block visible-md-block"></div>
-                        <div class="clearfix visible-sm-block"></div>
-
+                        <c:forEach var="news" items="${newsList}">
+                            <div class="col-md-4">
+                                <a href="#" class="gtco-card-item has-text equal-height-card">
+                                    <figure>
+                                        <div class="overlay"><i class="ti-plus"></i></div>
+                                        <img src="${pageContext.request.contextPath}/assets/image/news11.jpg" alt="Image" class="img-responsive">
+                                    </figure>
+                                    <div class="gtco-text text-left">
+                                        <h4>${news.newsname}</h4>
+                                        <p class="gtco-category">${news.date}, ${news.category}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </c:forEach>
                     </div>
                 </div>
             </div>

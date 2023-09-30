@@ -13,12 +13,19 @@
     *, ::after, ::before {
         box-sizing: border-box;
     }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000; /* ให้ navbar อยู่หน้าหลัก */
+    }
 </style>
 </head>
 <body style="background-color: #FFFFFF">
-<nav > <jsp:include page="/WEB-INF/layouts/nav.jsp"/></nav>
+<nav> <jsp:include page="/WEB-INF/layouts/nav.jsp"/></nav>
 <br>
-<div id="container">
+<div id="container" style="margin-top: 75px">
     <div id="profile">
         <div id="image" >
             <img  style="width: 100%; height: 100%" src="${pageContext.request.contextPath}/assets/image/${personnel_detail.image}">
@@ -30,12 +37,12 @@
             <p style="display:inline; color: #111111">ข้อมูล</p>
             <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
         </div>
-        <p id="year-graduation"><strong>อีเมล:</strong> ${personnel_detail.email}<br></p>
-        <p id="education"><strong>สิ่งพิมพ์</strong><br><a href="${personnel_detail.scolarlink}">Google Scholar Link</a></p>
-        <p id="more-about"><strong>ที่อยู่</strong><br>หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ <br>63 หมู่ 4 ตำบลหนองหาร อำเภาสันทราย จังหวัดเชียงใหม่ 50290</p>
-        <p id="office" style="color: #111111"><strong>Office</strong><br> ห้อง 1103-2, อาคารเสาวรัจ นิตยวรรธนะ</p>
-        <p id="telephone"><i class="bi bi-telephone-fill"></i><strong>เบอร์โทรศัพท์</strong><br>${personnel_detail.phone}</p>
-        <p id="fax"><strong>โทรสาร</strong><br>(+66) 053-873900</p>
+        <p id="year-graduation"><i class="fas fa-envelope stroke-transparent"></i>&nbsp;<strong>อีเมล:</strong><br> ${personnel_detail.email}<br></p>
+        <p id="education"><i class="fab fa-google stroke-transparent"></i>&nbsp;<strong>สิ่งพิมพ์</strong><br><a href="${personnel_detail.scolarlink}">Google Scholar Link</a></p>
+        <p id="more-about"><i class="fas fa-map-marker-alt stroke-transparent"></i>&nbsp;<strong>ที่อยู่</strong><br>หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ <br>63 หมู่ 4 ตำบลหนองหาร อำเภาสันทราย จังหวัดเชียงใหม่ 50290</p>
+        <p id="office" style="color: #111111"><i class="fas fa-building stroke-transparent"></i>&nbsp;<strong>Office</strong><br> ห้อง 1103-2, อาคารเสาวรัจ นิตยวรรธนะ</p>
+        <p id="telephone"><i class="fas fa-phone stroke-transparent"></i>&nbsp;<strong>เบอร์โทรศัพท์</strong><br>${personnel_detail.phone}</p>
+        <p id="fax"><i class="fas fa-fax stroke-transparent"></i>&nbsp;<strong>โทรสาร</strong><br>(+66) 053-873900</p>
     </div>
     <div id="info-cards">
         <div class="card">
