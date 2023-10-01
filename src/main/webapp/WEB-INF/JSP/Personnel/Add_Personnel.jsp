@@ -95,12 +95,12 @@
 <nav><jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/></nav>
 <br><br>
 <h2>เพิ่มบุคลการ</h2>
-<form:form method="POST" action="${pageContext.request.contextPath}/personnel/save_personnnel" name="form" id="form" class="custom-form"  onsubmit="return validateForm()">
+<form:form method="POST" action="${pageContext.request.contextPath}/personnel/save_personnnel" name="form" id="form" class="custom-form" enctype="multipart/form-data"  onsubmit="return validateForm()">
     <div id="profile">
         <div class="row">
             <div class="column">
-                <label for="image">รูป</label>
-                <input type="text" name="image" id="image">
+                <label for="imageFile">รูป</label>
+                <input type="file" name="imageFile" id="imageFile">
             </div>
             <div class="column">
                 <label for="id">รหัส</label>

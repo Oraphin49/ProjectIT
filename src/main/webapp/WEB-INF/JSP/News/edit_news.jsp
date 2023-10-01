@@ -45,16 +45,11 @@
         <b style="font-size: 28px; font-family: Kanit; color: #a41212">แก้ไขข้อมูลข่าว</b>
     </div>
     <br><br>
-        <form action="${pageContext.request.contextPath}/news/${news.id}/edit/save" method="POST" onsubmit="return validateForm()">
+    <form action="${pageContext.request.contextPath}/news/${news.id}/edit/save" method="POST" onsubmit="return validateForm()"  enctype="multipart/form-data">
         <div class="news-form" style="width: 70%; margin-left: 15%">
             <label type="text">ชื่อข่าว:</label>
             <input type="text" name="news_name" id="news_name" value="${news.newsname}">
-            <select name="news_category" id="news_category" class="news_category" style=" width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-family: Kanit;">
+            <select name="news_category" id="news_category" class="news_category" style=" width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 3px; font-family: Kanit;">
                 <option value="ข่าวสาร " ${news.category == 'ข่าวสาร' ?  'selected' : ''}>ข่าวสาร</option>
                 <option value="กิจกรรม" ${news.category == 'กิจกรรม' ?  'selected' : ''}>กิจกรรม</option>
             </select>
@@ -66,7 +61,8 @@
             <div class="button-group">
                 <input type="submit" value="บันทึก">
                 <a href="${pageContext.request.contextPath}/news/list_news_manage" class="cancel-link custom-button">ยกเลิก</a>
-            </div></div>
+            </div>
+        </div>
     </form>
 </body>
 <div class="f">
@@ -98,39 +94,40 @@
         if (linkpage.trim() === "") {
             alert("กรุณากรอกแหล่งที่มา");
             return false;
-        }else if (/^\s|\s$|\s{1,}/.test(linkpage)) {
+        } else if (/^\s|\s$|\s{1,}/.test(linkpage)) {
             alert("ไม่ควรมีช่องว่างระหว่างตัวอักษรในแหล่งที่มา");
             document.getElementById("linkpage").value = "";
             return false;
         }
 
         // เช็ครูปภาพ
-//
-//         // ตรวจสอบว่ามีไฟล์รูปภาพถูกเลือกหรือไม่
-//         var imageFiles = document.getElementById("imageFile").files;
-//         if (imageFiles.length === 0) {
-//             alert("กรุณาเลือกไฟล์รูปภาพ");
-//             document.getElementById("imageFile").value = "";
-//             return false;
-//         }
-//
-// // ตรวจสอบจำนวนไฟล์รูปภาพที่อัปโหลด
-//         if (imageFiles.length > 8) {
-//             alert("คุณสามารถอัปโหลดได้เพียง 8 รูปเท่านั้น");
-//             return false;
-//         }
-// // ตรวจสอบขนาดของไฟล์รูปภาพ
-//         for (var i = 0; i < imageFiles.length; i++) {
-//             var imageSize = imageFiles[i].size; // ขนาดไฟล์ในไบต์
-//             var maxSizeInBytes = 1024 * 1024; // 1 MB (แก้ไขตามที่คุณต้องการ)
-//
-//             if (imageSize > maxSizeInBytes) {
-//                 alert("ไฟล์รูปภาพที่ " + (i + 1) + " มีขนาดใหญ่เกินไป");
-//                 return false;
-//             }
-//         }
-//
-//         return true; // ข้อมูลถูกต้องทั้งหมด
+        // ตรวจสอบว่ามีไฟล์รูปภาพถูกเลือกหรือไม่
+        var imageFiles = document.getElementsByName("imageFile")[0].files;
+        // ตรวจสอบว่ามีไฟล์รูปภาพถูกเลือกหรือไม่
+        if (imageFiles.length === 0) {
+            alert("กรุณาเลือกไฟล์รูปภาพ");
+            return false;
+        }
+
+
+        // ตรวจสอบจำนวนไฟล์รูปภาพที่อัปโหลด
+        if (imageFiles.length > 8) {
+            alert("คุณสามารถอัปโหลดได้เพียง 8 รูปเท่านั้น");
+            return false;
+        }
+
+        // ตรวจสอบขนาดของไฟล์รูปภาพ
+        for (var i = 0; i < imageFiles.length; i++) {
+            var imageSize = imageFiles[i].size; // ขนาดไฟล์ในไบต์
+            var maxSizeInBytes = 1024 * 1024; // 1 MB (แก้ไขตามที่คุณต้องการ)
+
+            if (imageSize > maxSizeInBytes) {
+                alert("ไฟล์รูปภาพที่ " + (i + 1) + " มีขนาดใหญ่เกินไป");
+                return false;
+            }
+        }
+
+        return true; // ข้อมูลถูกต้องทั้งหมด
     }
 </script>
 </html>

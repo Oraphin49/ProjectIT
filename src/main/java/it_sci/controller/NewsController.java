@@ -2,6 +2,7 @@ package it_sci.controller;
 import it_sci.model.News;
 import it_sci.service.NewsService;
 import it_sci.util.PathImg;
+import org.apache.commons.io.FileUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -70,7 +71,7 @@ public class NewsController {
 
     @Transactional
     @PostMapping("/save")
-    public String processForm(@RequestParam Map<String, String> allReqParams,@RequestParam("imageFile") MultipartFile[] imageFiles) throws IOException {
+    public String processForm(@RequestParam Map<String, String> allReqParams, @RequestParam("imageFiles") MultipartFile[] imageFiles) throws IOException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String newsname = allReqParams.get("news_name");
         Date sysDate = new Date();
@@ -107,18 +108,17 @@ public class NewsController {
             }
         }
 
-        // Create an ImageModel instance and add the file names to the image list
-        News image = new News(newsname,sysDate,news_detail,news_category,linkpage);
-        image.getNewsImage().addAll(newFileNames);
-        image.setId(latestId+1);
+        // Create a News instance and add the file names to the image list
+        News news = new News(newsname, sysDate, news_detail, news_category, linkpage);
+        news.getNewsImage().addAll(newFileNames);
+        news.setId(latestId + 1);
         Session session = sessionFactory.getCurrentSession();
-        News mergedNews = (News) session.merge(image);
+        News mergedNews = (News) session.merge(news);
 
-        // Save the image data to the database
-//        newsService.SaveNews(image);
+        // Save the news data to the database
+        // newsService.SaveNews(news);
         return "redirect:/news/list_news_manage";
     }
-
 
     private String getFileExtension(String fileName) {
         int dotIndex = fileName.lastIndexOf('.');
@@ -144,23 +144,81 @@ public class NewsController {
     }
 
     @PostMapping(path = "/{id}/edit/save")
-    public String saveEditNews(@RequestParam Map<String, String> allReqParams, @PathVariable long id) throws ParseException {
-       News news =newsService.getNews(id);
+    public String processForm(@PathVariable Long id, @RequestParam Map<String, String> allReqParams,
+                              @RequestParam("imageFile") MultipartFile[] imageFiles) throws IOException {
+        News news = newsService.getNews(id);
         if (news != null) {
             news.setNewsname(allReqParams.get("news_name"));
             news.setCategory(allReqParams.get("news_category"));
             news.setNewsdetail(allReqParams.get("news_detail"));
             news.setLinkpage(allReqParams.get("linkpage"));
 
+            // บันทึกการแก้ไขข้อมูลข่าว
+            newsService.EditNews(news);
+
+            // ลบไฟล์รูปเก่า
+            String oldUploadDirectory = PathImg.path_Img + "/news/" + id;
+            FileUtils.deleteDirectory(new File(oldUploadDirectory));
+
+            // กำหนดเส้นทางของไดเรกทอรีใหม่
+            String uploadDirectory = PathImg.path_Img + "/news/" + id;
+
+            int count = 1;
+            List<String> newFileNames = new ArrayList<>(); // To store the new file names
+
+            for (MultipartFile imageFile : imageFiles) {
+                if (!imageFile.isEmpty()) {
+                    Path directoryPath = Paths.get(uploadDirectory);
+                    Files.createDirectories(directoryPath);
+
+                    String fileName = imageFile.getOriginalFilename();
+                    String fileExtension = getFileExtension(fileName);
+
+                    String formattedSequence = String.format("%04d", count);
+                    String newFileName = String.format("IMG_%s_%s%s", id, formattedSequence, fileExtension);
+                    Path filePath = Paths.get(uploadDirectory, newFileName);
+
+                    // Write the image file to the specified path
+                    Files.write(filePath, imageFile.getBytes());
+
+                    // Store the new file name in the list
+                    newFileNames.add(newFileName);
+
+                    count++;
+                }
+            }
+
+            // อัปเดตรายชื่อไฟล์รูปภาพใหม่
+            news.setNewsImage(newFileNames);
+            // บันทึกการเปลี่ยนแปลงของไฟล์รูปภาพ
             newsService.EditNews(news);
         }
-            return "redirect:/news/list_news_manage";
-        }
 
-
-    @GetMapping("/{id}/delete")
-    public String isRemoveNews(@PathVariable("id") Long id) {
-        newsService.removeNews(id);
         return "redirect:/news/list_news_manage";
     }
+
+    @Transactional
+    @GetMapping("/{id}/delete")
+    public String deleteNews(@PathVariable Long id) {
+        // ดึงข้อมูลข่าวที่ต้องการลบจากฐานข้อมูล
+        News news = newsService.getNews(id);
+
+        if (news != null) {
+            newsService.removeNews(id);
+
+            // ลบไดเรกทอรีรูปภาพที่เกี่ยวข้อง
+            String uploadDirectory = PathImg.path_Img + "/news/" + id;
+            File directory = new File(uploadDirectory);
+            if (directory.exists()) {
+                try {
+                    FileUtils.deleteDirectory(directory);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return "redirect:/news/list_news_manage";
+    }
+
 }

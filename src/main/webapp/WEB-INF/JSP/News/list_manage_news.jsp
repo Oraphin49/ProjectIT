@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -31,8 +30,6 @@
             margin-right: 30px;
             width: 110px;
             margin-left: 50px;
-
-
         }
 
         .news-details {
@@ -72,7 +69,6 @@
             font-family: Kanit;
             float: left;
             margin-left: 500px;
-
         }
         /* CSS สำหรับปุ่มเปลี่ยนหน้า */
         .pagination {
@@ -144,9 +140,10 @@
                 <p class="news-date">วันที่: ${news.date}</p>
             </div>
             <a href="${pageContext.request.contextPath}/news/${news.id}/update"><img src="${pageContext.request.contextPath}/assets/image/edit.png" style="width: 20px; margin-right: 50px"></a>
-            <a href="javascript:void(0);" onclick="confirmDelete('${pageContext.request.contextPath}/alumni/${alumni.id}/delete')">
+            <a href="javascript:void(0);" onclick="confirmDelete('${pageContext.request.contextPath}/news/${news.id}/delete')">
                 <img src="${pageContext.request.contextPath}/assets/image/dustbin.png" style="width: 20px">
-            </a> </div>
+            </a>
+        </div>
     </div>
 </c:forEach>
 <br>
@@ -168,8 +165,8 @@
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </footer>
 
-///////////////////////////เช็คก่อนหน้าและถัดไป///////////////////////////////////////////
 <script>
+    ///////////////////////////เช็คก่อนหน้าและถัดไป///////////////////////////////////////////
     var newsListmanage = document.querySelectorAll(".block_manage_news");
     var itemsPerPage = 100; // จำนวนข่าวที่แสดงในแต่ละหน้า
     var currentPage = 1; // หน้าปัจจุบัน
@@ -228,8 +225,9 @@
     }
 </script>
 
-///////////////////////////เช็คการลบข่าว///////////////////////////////////////////
+
 <script>
+    ///////////////////////////เช็คการลบข่าว///////////////////////////////////////////
     function confirmDelete(deleteUrl) {
         if (confirm("คุณแน่ใจหรือว่าต้องการลบ?")) {
             window.location.href = deleteUrl;

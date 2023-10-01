@@ -80,7 +80,7 @@
             <label type="text">แหล่งที่มา:</label>
             <input type="text" name="linkpage" id="linkpage">
             <br><br>
-            <input type="file" name="imageFile" accept="image/*" multiple id="imageFile">
+            <input type="file" name="imageFiles" accept="image/*" multiple id="imageFile">
             <br><br><br> <!-- ใช้ 'files' แทน 'file' และเพิ่ม 'multiple' เพื่ออัปโหลดหลายไฟล์ -->
             <div class="button-group">
                 <input type="submit" value="บันทึก">
