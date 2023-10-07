@@ -28,7 +28,7 @@
             font-size: 13px;
             text-decoration: none;
             font-family: 'Kanit', sans-serif;
-            background-color: #FFFFFF; /* เอาบรรทัดนี้ออก */
+            background-color: rgba(239, 235, 233, 0.93);
         }
 
         .top-nav li {
@@ -105,6 +105,7 @@
             <ul class="submenu">
                 <li><a href="${pageContext.request.contextPath}/history">ประวัติความเป็นมา</a></li>
                 <li><a href="${pageContext.request.contextPath}/course">ข้อมูลหลักสูตร</a></li>
+                <li><a href="${pageContext.request.contextPath}/course65">ข้อมูลหลักสูตรปี65</a></li>
                 <li><a href="${pageContext.request.contextPath}/plan">แผนการเรียน</a></li>
             </ul>
         </li>

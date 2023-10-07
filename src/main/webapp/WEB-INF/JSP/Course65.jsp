@@ -181,12 +181,12 @@
                                         <!-- ข้อมูลภาษาที่ใช้ -->
                                         <div class="info-item">
                                             <div class="info-label">ภาษาที่ใช้ :</div>
-                                            <div class="info-value">หลักสูตรจัดการศึกษาเป็นภาษาไทย </div>
+                                            <div class="info-value">หลักสูตรจัดการศึกษาเป็นภาษาไทย และ/หรือภาษาอังกฤษ</div>
                                         </div>
                                         <!-- ข้อมูลการให้ปริญญาแก่ผู้สำเร็จการศึกษา -->
                                         <div class="info-item">
-                                            <div class="info-label">การให้ปริญญาแก่ผู้สำเร็จการศึกษา :</div>
-                                            <div class="info-value">ให้ปริญญาเพียงสาขาวิชาเดียว</div>
+                                            <div class="info-label">การรับเข้าศึกษา :</div>
+                                            <div class="info-value">รับนักศึกษาทั้งไทยและนักศึกษาต่างประเทศที่มีพื้นฐานภาษาไทย</div>
                                         </div>
                                     </div>
                                 </div>
@@ -194,7 +194,7 @@
                                 <!-- ข้อมูลจำนวนหน่วยกิตที่เรียนตลอดหลักสูตร -->
                                 <div class="info-item">
                                     <div class="info-label">จำนวนหน่วยกิตที่เรียนตลอดหลักสูตร :</div>
-                                    <div class="info-value">จำนวนหน่วยกิตรวมตลอดหลักสูตรไม่น้อยกว่า 135 หน่วยกิต</div>
+                                    <div class="info-value">จำนวนหน่วยกิตรวมตลอดหลักสูตรไม่น้อยกว่า 120 หน่วยกิต</div>
                                     <br>
                                     <div class="info-label">อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา :</div>
                                     <div class="info-value" style="color: #111111; font-family: Kanit">
@@ -228,32 +228,36 @@
                                 <td>30</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาสังคมศาสตร์</td>
+                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาด้านสังคมและวัฒนธรรม</td>
                                 <td>6</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชามนุษยศาสตร์</td>
-                                <td>6</td>
+                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาด้านคุณค่าความเป็นมนุษย์และการใช้ชีวิต</td>
+                                <td>3</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาภาษา</td>
+                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาด้านภาษาและการสื่อสาร</td>
                                 <td>12</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาวิทยาศาสตร์และคณิตศาสตร์</td>
+                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาด้านการคิดคำนวณ การใช้เหตุผลและเทคโนโลยี</td>
                                 <td>6</td>
                             </tr>
                             <tr>
-                                <td><b>หมวดวิชาเฉพาะด้าน</b></td>
-                                <td>96</td>
+                                <td>&nbsp;&nbsp;&nbsp;- ด้านการเป็นผู้ประกอบการ</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><b>หมวดวิชาเฉพาะ</b></td>
+                                <td>84</td>
                             </tr>
                             <tr>
                                 <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาแกน</td>
-                                <td>21</td>
+                                <td>18</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาเอกบังคับ</td>
-                                <td>66</td>
+                                <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาเฉพาะด้าน</td>
+                                <td>51</td>
                             </tr>
                             <tr>
                                 <td style="padding: 0 45px;">-
@@ -263,7 +267,7 @@
                             <tr>
                                 <td style="padding: 0 45px;">-
                                     กลุ่มวิชาเทคโนโลยีเพื่องานประยุกต์</td>
-                                <td>18</td>
+                                <td>21</td>
                             </tr>
                             <tr>
                                 <td style="padding: 0 45px;">-
@@ -273,16 +277,17 @@
                             <tr>
                                 <td style="padding: 0 45px;">-
                                     กลุ่มวิชาโครงสร้างพื้นฐานของระบบ</td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 0 45px;">- กลุ่มวิชาอื่นๆ</td>
-                                <td>15</td>
+                                <td>9</td>
                             </tr>
                             <tr>
                                 <td>&nbsp;&nbsp;&nbsp;- กลุ่มวิชาเอกเลือก</td>
                                 <td>9</td>
                             </tr>
+                            <tr>
+                                <td style="padding: 0 45px;">- กลุ่มวิชาประสบการณ์ภาคสนาม</td>
+                                <td>6</td>
+                            </tr>
+
                             <tr>
                                 <td><b>หมวดวิชาเลือกเสรี</b></td>
                                 <td>6</td>
@@ -318,143 +323,80 @@
                                                 </tr>
                                                 <!-- --Start Subject-- -->
                                                 <tr>
-                                                    <td style="width: 10%">ศศ 101</td>
-                                                    <td style="width: 80%">เศรษฐศาสตร์เพื่อชีวิตประจำวันและการประกอบการ (Economics in Daily Life and Operations)</td>
+                                                    <td style="width: 10%">10700101</td>
+                                                    <td style="width: 80%">สังคมโลกสมัยใหม่ในชีวิตประจำวัน</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 021</td>
-                                                    <td style="width: 80%">สังคมศาสตร์ในชีวิตประจำวัน (Social Sciences IN Everyday Life)</td>
+                                                    <td style="width: 10%">10700102</td>
+                                                    <td style="width: 80%">อารยธรรมโลกและโลกสมัยใหม่</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 022</td>
-                                                    <td style="width: 80%">อารยธรรมโลก (World Civilization)</td>
+                                                    <td style="width: 10%">10700105</td>
+                                                    <td style="width: 80%">มนุษย์ สังคม เทคโนโลยีและสิ่งแวดล้อม</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 104 </td>
-                                                    <td style="width: 80%">มนุษย์และสิ่งแวดล้อม (Man AND Environment)</td>
+                                                    <td style="width: 10%">10700304</td>
+                                                    <td style="width: 80%">ภาษาไทยเพื่องานเขียนเชิงวิชาการ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 302</td>
-                                                    <td style="width: 80%">สังคมและวัฒนธรรมไทย (Thai Society AND Culture)</td>
+                                                    <td style="width: 10%">10700307</td>
+                                                    <td style="width: 80%">ทักษะภาษาอังกฤษสำหรับศตวรรษที่ 21</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">กช 321</td>
-                                                    <td style="width: 80%">เศรษฐกิจพอเพียงและการพัฒนาที่ยั่งยืน
-                                                        (Sufficiency Economy AND Sustainable Development)</td>
+                                                    <td style="width: 10%">10700308</td>
+                                                    <td style="width: 80%">ภาษาอังกฤษในชีวิตประจำวัน</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 011</td>
-                                                    <td style="width: 80%">มนุษย์กับความงามทางศิลปะ (Man AND Arts Appreciation)</td>
+                                                    <td style="width: 10%">10300402</td>
+                                                    <td style="width: 80%">การใช้ชีวิตในสังคมดิจิทัล</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 012</td>
-                                                    <td style="width: 80%">จิตวิทยาและพฤติกรรมมนุษย์ (Psychology AND Human Behavior)</td>
+                                                    <td style="width: 10%">10300404</td>
+                                                    <td style="width: 80%">การตัดสินใจในชีวิตประจำวัน</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 013</td>
-                                                    <td style="width: 80%">สุขภาพเพื่อการดำรงชีวิต (Health FOR Life)</td>
+                                                    <td style="width: 10%">10200504</td>
+                                                    <td style="width: 80%">การเป็นผู้ประกอบการ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 180</td>
-                                                    <td style="width: 80%">ศิลปะกับความคิดสร้างสรรค์ (Art AND Creative Thinking)</td>
+                                                    <td style="width: 10%">10200505</td>
+                                                    <td style="width: 80%">การตลาดบนสมาร์ทโฟน</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 304</td>
-                                                    <td style="width: 80%">ศาสตร์และศิลป์แห่งปัญญาชน (Liberal Art of Intellectuals)</td>
+                                                    <td style="width: 10%">10204428</td>
+                                                    <td style="width: 80%">การบริการทางการเงินบนระบบดิจิทัล</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 305</td>
-                                                    <td style="width: 80%">ประวัติศาสตร์และการพัฒนาของล้านนา (History AND Development of Lanna)</td>
+                                                    <td style="width: 10%">10306492</td>
+                                                    <td style="width: 80%">นวัตกรรมดิจิทัลสตาร์ทอัพ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">วท 101></td>
-                                                    <td style="width: 80%">วิทยาศาสตร์เพื่อชีวิต (Science FOR Life)</td>
+                                                    <td style="width: 10%">10306335</td>
+                                                    <td style="width: 80%">การประยุกต์ใช้การประมวลผลกลุ่มเมฆ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">วท 102</td>
-                                                    <td style="width: 80%">การพัฒนาวิทยาศาสตร์และเทคโนโลยี (Development of Science AND Technology)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">ศท 014</td>
-                                                    <td style="width: 80%">การสืบค้นสารนิเทศเพื่อการศึกษา (Information Searching FOR Academic Study)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">วอ 101</td>
-                                                    <td style="width: 80%">วิศวกรรมเบื้องต้นในชีวิตประจำวัน (Basic Engineering IN Daily Life)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">วอ 102</td>
-                                                    <td style="width: 80%">นานาสาระเกี่ยวกับอาหารและยา (General Aspects of Food AND Drug)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">พง 100</td>
-                                                    <td style="width: 80%">พลังงานสําหรับชีวิตประจําวัน (Energy for Daily Life)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">ทส 333</td>
-                                                    <td style="width: 80%">เทคโนโลยีสารสนเทศส าหรับการเงินและการบัญชี (Information Technology FOR Finance AND Accounting)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">ทส 334</td>
-                                                    <td style="width: 80%">พื้นฐานทางธุรกิจสำหรับเทคโนโลยีสารสนเทศ (Business fundamentals for Information Technology)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">ทส 411</td>
-                                                    <td style="width: 80%">การโปรแกรมบนอุปกรณ์เคลื่อนที่ (Mobile Programming)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">ทส 432</td>
-                                                    <td style="width: 80%">การจัดการและควบคุมการเปลี่ยนแปลงของซอฟต์แวร์ (Software Configuration and Change Management)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td style="width: 10%">ทส 434</td>
-                                                    <td style="width: 80%">วิทยาการข้อมูลสำหรับธุรกิจ (Data Science for Business)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">ทส 435</td>
-                                                    <td style="width: 80%">การพาณิชย์อิเล็กทรอนิกส์ (Electronics Commerce)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">ทส 492</td>
-                                                    <td style="width: 80%">ผู้ประกอบการทางด้านเทคโนโลยีสารสนเทศ (Information Technology Entrepreneurship)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td style="width: 10%">ทส 493</td>
-                                                    <td style="width: 80%">การศึกษาหัวข้อสนใจด้านเทคโนโลยีสารสนเทศ (Special Topic in Information Technology)</td>
+                                                    <td style="width: 10%">10306431</td>
+                                                    <td style="width: 80%">การเขียนโปรแกรมขั้นต้นสำหรับงานวิทยากรข้อมูลและแสดงผล</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <!-- --End Subject-- -->
                                                 <tr>
                                                     <td></td>
                                                     <td><b>รวม</b></td>
-                                                    <td><b>78</b></td>
+                                                    <td><b>42</b></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -475,33 +417,33 @@
                                                 </tr>
                                                 <!-- --Start Subject-- -->
                                                 <tr>
-                                                    <td style="width: 10%">ศท 031</td>
-                                                    <td style="width: 80%">การใช้ภาษาไทย (Thai LANGUAGE USAGE)</td>
+                                                    <td style="width: 10%">10700304</td>
+                                                    <td style="width: 80%">ภาษาไทยเพื่องานเขียนเชิงวิชาการ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 141</td>
-                                                    <td style="width: 80%"> ภาษาอังกฤษพื้นฐาน 1 (Fundamental English 1)</td>
+                                                    <td style="width: 10%">10300402</td>
+                                                    <td style="width: 80%">การใช้ชีวิตในสังคมดิจิทัล</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ผษ 101</td>
-                                                    <td style="width: 80%">เกษตรเพื่อชีวิต (Agriculture FOR Life)</td>
+                                                    <td style="width: 10%">10306102</td>
+                                                    <td style="width: 80%">ตรรกะและเทคนิคการเขียนโปรแกรม</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">คศ 100</td>
-                                                    <td style="width: 80%">คณิตศาสตร์ขั้นพื้นฐาน (Foundation of Mathematics)</td>
+                                                    <td style="width: 10%">10300404</td>
+                                                    <td style="width: 80%">การตัดสินใจในชีวิตประจำวัน</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 101</td>
-                                                    <td style="width: 80%">เทคโนโลยีสารสนเทศคอมพิวเตอร์ (Computer Information Technology)</td>
+                                                    <td style="width: 10%">10305100</td>
+                                                    <td style="width: 80%">คณิตศาตสร์พื้นฐาน</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 102</td>
-                                                    <td style="width: 80%">ตรรกะและเทคนิคการเขียนโปรแกรม (Programming Logic and techniques)</td>
+                                                    <td style="width: 10%">........</td>
+                                                    <td style="width: 80%">หมวดวิชาทั่วไป กลุ่มสังคมและวัฒนธรรม วิชาที่ 1</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <!-- --End Subject-- -->
@@ -524,33 +466,33 @@
                                                 </tr>
                                                 <!-- --Start Subject-- -->
                                                 <tr>
-                                                    <td style="width: 10%">ศท 001</td>
-                                                    <td style="width: 80%">กลุ่มวิชาสังคมศาสตร์ วิชาที่ 1 (Social Sciences Subject 1)</td>
+                                                    <td style="width: 10%">10306103</td>
+                                                    <td style="width: 80%">กระบวนการพัฒนาซอฟต์แวร์</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 002</td>
-                                                    <td style="width: 80%">กลุ่มวิชามนุษยศาสตร์ วิชาที่ 1 (Human Sciences Subject 1)</td>
+                                                    <td style="width: 10%">10306105</td>
+                                                    <td style="width: 80%">การออกแบบส่วนติดต่อกับผู้ใช้และประสบการณ์ผู้ใช้</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 005</td>
-                                                    <td style="width: 80%">กลุ่มวิชาวิทยาศาสตร์และคณิตศาสตร์วิชาที่ 2 (Sciences and Mathematic Subject 2)</td>
+                                                    <td style="width: 10%">10700308</td>
+                                                    <td style="width: 80%">ภาษาอังกฤษในชีวิตประจำวัน</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 142</td>
-                                                    <td style="width: 80%">ภาษาอังกฤษพื้นฐาน 2 (Fundamental English 2)</td>
+                                                    <td style="width: 10%">10100214</td>
+                                                    <td style="width: 80%">เกษตรเพื่อชีวิต</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 103</td>
-                                                    <td style="width: 80%">กระบวนการพัฒนาซอฟต์แวร์ (Software Development PROCESS)</td>
+                                                    <td style="width: 10%">10305205</td>
+                                                    <td style="width: 80%"> ตรรกศาสตร์เชิงคณิตศาสตร์เบื้องต้น</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 105</td>
-                                                    <td style="width: 80%">การออกแบบส่วนติดต่อกับผู้ใช้และประสบการณ์ผู้ใช้ (User Interface and User Experience Design)</td>
+                                                    <td style="width: 10%">........</td>
+                                                    <td style="width: 80%">หมวดวิชาศึกษาทั่วไป กลุ่มสังคมและวัฒนธรรม วิชาที่ 2</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <!-- --End Subject-- -->
@@ -580,33 +522,33 @@
                                                 <!-- --Start Subject-- -->
 
                                                 <tr>
-                                                    <td style="width: 10%">ศท 003</td>
-                                                    <td style="width: 80%">กลุ่มวิชาสังคมศาสตร์ วิชาที่ 2 (Social Sciences Subject 2)</td>
+                                                    <td style="width: 10%">10306213</td>
+                                                    <td style="width: 80%">แนวคิดเชิงวัตถุ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 004</td>
-                                                    <td style="width: 80%">กลุ่มวิชามนุษยศาสตร์ วิชาที่ 2 (Human Sciences Subject 2)</td>
+                                                    <td style="width: 10%">10306241</td>
+                                                    <td style="width: 80%">ระบบบริหารจัดการเว็บไซต์</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 241</td>
-                                                    <td style="width: 80%">ภาษาอังกฤษเชิงวิทยาศาสตร์และเทคโนโลยี  1 (English FOR Science AND Technology 1)</td>
+                                                    <td style="width: 10%">10306242</td>
+                                                    <td style="width: 80%">พื้นฐานระบบเครือข่ายคอมพิวเตอร์</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">คศ 205</td>
-                                                    <td style="width: 80%">ตรรกศาสตร์และคณิตศาสตร์เบื้องต้น (Introduction TO Mathematical Logic)</td>
+                                                    <td style="width: 10%">10700307</td>
+                                                    <td style="width: 80%">ทักษะภาษาอังกฤษสำหรับศตวรรษที่ 21</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 241</td>
-                                                    <td style="width: 80%">ระบบบริหารจัดการเว็บไซต์ (Web Content Management System)</td>
+                                                    <td style="width: 10%">10306232</td>
+                                                    <td style="width: 80%">ระบบฐานข้อมูล</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 213</td>
-                                                    <td style="width: 80%">แนวคิดเชิงวัตถุ (Object Oriented Concepts)</td>
+                                                    <td style="width: 10%">........</td>
+                                                    <td style="width: 80%">วิชาเสรี วิชาที่ 1</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
 
@@ -631,33 +573,33 @@
                                                 </tr>
                                                 <!-- --Start Subject-- -->
                                                 <tr>
-                                                    <td style="width: 10%">ลส 001</td>
-                                                    <td style="width: 80%">วิชาเลือกเสรี วิชาที่ 1 (Free elective Subject 1)</td>
+                                                    <td style="width: 10%">10306214</td>
+                                                    <td style="width: 80%">การโปรแกรมเชิงวัตถุ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">สต 301</td>
-                                                    <td style="width: 80%">หลักสถิติ (Principles of Statistics)</td>
+                                                    <td style="width: 10%">10306215</td>
+                                                    <td style="width: 80%">การโปรแกรมฝั่งไคลเอนต์</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 232</td>
-                                                    <td style="width: 80%">ระบบฐานข้อมูล (DATABASE System)</td>
+                                                    <td style="width: 10%">10306332</td>
+                                                    <td style="width: 80%">การโปรแกรมฐานข้อมูล</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 214</td>
-                                                    <td style="width: 80%">การโปรแกรมเชิงวัตถุ (Object Oriented Programming)</td>
+                                                    <td style="width: 10%">10304301</td>
+                                                    <td style="width: 80%">หลักสถิติ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 215</td>
-                                                    <td style="width: 80%">การโปรแกรมฝั่งไคลเอนต์ (CLIENT Side Programming)</td>
+                                                    <td style="width: 10%">.......</td>
+                                                    <td style="width: 80%">หมวดวิชาศึกษาทั่วไป กลุ่มการเป็นผู้ประกอบการ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 242</td>
-                                                    <td style="width: 80%">พื้นฐานระบบเครือข่ายคอมพิวเตอร์ (Fundamental of Networking System)</td>
+                                                    <td style="width: 10%">........</td>
+                                                    <td style="width: 80%">วิชาเลือกเสรี วิชาที่ 2</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <!-- --End Subject-- -->
@@ -685,33 +627,33 @@
                                                 </tr>
                                                 <!-- --Start Subject-- -->
                                                 <tr>
-                                                    <td style="width: 10%">ลส 002</td>
-                                                    <td style="width: 80%">วิชาเลือกเสรี วิชาที่ 2 (Free elective Subject 2)</td>
+                                                    <td style="width: 10%">10306311</td>
+                                                    <td style="width: 80%">โปรแกรมฝั่งเซิร์ฟเวอร์</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 343</td>
-                                                    <td style="width: 80%">สนทนาภาษาอังกฤษ (English Conversation for the Workplace)</td>
+                                                    <td style="width: 10%">10306322</td>
+                                                    <td style="width: 80%">การออกแบบการทดสอบซอฟต์แวร์</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 322 </td>
-                                                    <td style="width: 80%">การทดสอบซอฟต์แวร์ (Software Testing)</td>
+                                                    <td style="width: 10%">10306492 </td>
+                                                    <td style="width: 80%">นวัตกรรมดิจิทัลสตาร์ทอัพ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 332</td>
-                                                    <td style="width: 80%">การโปรแกรมฐานข้อมูล (DATABASE Programming)</td>
+                                                    <td style="width: 10%">10700309</td>
+                                                    <td style="width: 80%">สนทนาภาษาอังกฤษ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 311</td>
-                                                    <td style="width: 80%">การโปรแกรมฝั่งเซิร์ฟเวอร์ (SERVER Side Programming)</td>
+                                                    <td style="width: 10%">........</td>
+                                                    <td style="width: 80%">วิชาเอกเลือกเสรี วิชาที่ 1</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 321</td>
-                                                    <td style="width: 80%">การวิเคราะห์และออกแบบระบบ (System Analysis AND Design)</td>
+                                                    <td style="width: 10%">........</td>
+                                                    <td style="width: 80%">วิชาเอกเลือกเสรี วิชาที่ 2</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <!-- --End Subject-- -->
@@ -736,42 +678,36 @@
                                                 <!-- --Start Subject-- -->
 
                                                 <tr>
-                                                    <td style="width: 10%">ทส 001</td>
-                                                    <td style="width: 80%">กลุ่มวิชาเอกเลือก วิชาที่ 1 (Major Elective Subject 1)</td>
+                                                    <td style="width: 10%">10306321</td>
+                                                    <td style="width: 80%">การวิเคราะห์และออกแบบระบบสมัยใหม่</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 002</td>
-                                                    <td style="width: 80%">กลุ่มวิชาเอกเลือก วิชาที่ 2
-                                                        (Major Elective Subject 2)</td>
+                                                    <td style="width: 10%">10306396</td>
+                                                    <td style="width: 80%">โครงงานขนาดเล็กทางเทคโนโลยีสานสนเทศ</td>
+                                                    <td style="width: 10%">2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 10%">10306324</td>
+                                                    <td style="width: 80%">การทดสอบซอฟต์แวร์อัตโนมัติ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ศท 348</td>
-                                                    <td style="width: 80%">ภาษาอังกฤษเพื่อการศึกษาต่อและการประกอบอาชีพ (English for Further Studies and Careers)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">ทส 324</td>
-                                                    <td style="width: 80%">การทดสอบซอฟต์แวร์อัตโนมัติ (Automated Software Testing)</td>
-                                                    <td style="width: 10%">3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 10%">ทส 396</td>
-                                                    <td style="width: 80%">โครงงานขนาดเล็กทางเทคโนโลยีสารสนเทศ (Mini-Project IN Information Technology)</td>
+                                                    <td style="width: 10%">10204428</td>
+                                                    <td style="width: 80%">การบริหารทางการเงินระบบดิจิทัล</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
 
                                                 <tr>
-                                                    <td style="width: 10%">> ทส 323</td>
-                                                    <td style="width: 80%">การวิเคราะห์และออกแบบระบบเชิงวัตถุด้วยยูเอ็มแอล (Object Oriented Development WITH UML)</td>
+                                                    <td style="width: 10%">........</td>
+                                                    <td style="width: 80%">กลุ่มวิชาเอกเลือก วิชาที่ 3</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <!-- --End Subject-- -->
                                                 <tr>
                                                     <td></td>
                                                     <td><b>รวม</b></td>
-                                                    <td><b>18</b></td>
+                                                    <td><b>14</b></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -793,31 +729,31 @@
                                                 </tr>
                                                 <!-- --Start Subject-- -->
                                                 <tr>
-                                                    <td style="width: 10%">ทส 003</td>
-                                                    <td style="width: 80%">กลุ่มวิชาเอกเลือก วิชาที่ 3 (Major Elective Subject 3)</td>
+                                                    <td style="width: 10%">10306433</td>
+                                                    <td style="width: 80%">การสื่อสารทางวิชาชีพเทคโนโลยีสารสนเทศ</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 433</td>
-                                                    <td style="width: 80%">การสื่อสารทางวิชาชีพเทคโนโลยีสารสนเทศ (Information Technology Professional Communication)</td>
-                                                    <td style="width: 10%">3</td>
+                                                    <td style="width: 10%">10306495</td>
+                                                    <td style="width: 80%">เทคโนโลยีสารสนเทศเพื่อบริการสังคม</td>
+                                                    <td style="width: 10%">1</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">ทส 496</td>
-                                                    <td style="width: 80%">โครงงานเทคโนโลยีสารสนเทศ (Project IN Information Technology)</td>
+                                                    <td style="width: 10%">10306496</td>
+                                                    <td style="width: 80%">โครงงานเทคโนโลยีสารสนเทศ </td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
 
                                                 <tr>
-                                                    <td style="width: 10%">ทส 495</td>
-                                                    <td style="width: 80%">เทคโนโลยีสารสนเทศเพื่อบริการสังคม (Information Technology for Social Service)</td>
+                                                    <td style="width: 10%">10700311</td>
+                                                    <td style="width: 80%">ภาษาอังกฤษเพื่อการสมัครงาน</td>
                                                     <td style="width: 10%">3</td>
                                                 </tr>
                                                 <!-- --End Subject-- -->
                                                 <tr>
                                                     <td></td>
                                                     <td><b>รวม</b></td>
-                                                    <td><b>12</b></td>
+                                                    <td><b>10</b></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -833,25 +769,25 @@
                                                 </tr>
                                                 <!-- --Start Subject-- -->
                                                 <tr>
-                                                    <td style="width: 10%">วท 497</td>
-                                                    <td style="width: 80%">สหกิจศึกษา (Co-operative Education)</td>
-                                                    <td style="width: 10%">9</td>
+                                                    <td style="width: 10%">10300497</td>
+                                                    <td style="width: 80%">สหกิจศึกษา  หรือ </td>
+                                                    <td style="width: 10%">6</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">วท 498</td>
-                                                    <td style="width: 80%">การเรียนรู้อิสระ (Independent Study)</td>
-                                                    <td style="width: 10%">9</td>
+                                                    <td style="width: 10%">10300498</td>
+                                                    <td style="width: 80%">การเรียนรู้อิสระ หรือ</td>
+                                                    <td style="width: 10%">6</td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 10%">วท 499 </td>
-                                                    <td style="width: 80%">การศึกษา หรือ การฝึกงาน หรือ  ฝึกอบรมต่างประเทศ (Overseas Study Training OR Internship)</td>
-                                                    <td style="width: 10%">9</td>
+                                                    <td style="width: 10%">10300499</td>
+                                                    <td style="width: 80%">การศึกษา หรือ การฝึกงาน หรือ  ฝึกอบรมต่างประเทศ </td>
+                                                    <td style="width: 10%">6</td>
                                                 </tr>
                                                 <!-- --End Subject-- -->
                                                 <tr>
                                                     <td></td>
                                                     <td><b>รวม</b></td>
-                                                    <td><b>27</b></td>
+                                                    <td><b>6</b></td>
                                                 </tr>
                                                 </tbody>
                                             </table>

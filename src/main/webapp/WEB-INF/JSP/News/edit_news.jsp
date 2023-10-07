@@ -52,6 +52,7 @@
             <select name="news_category" id="news_category" class="news_category" style=" width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 3px; font-family: Kanit;">
                 <option value="ข่าวสาร " ${news.category == 'ข่าวสาร' ?  'selected' : ''}>ข่าวสาร</option>
                 <option value="กิจกรรม" ${news.category == 'กิจกรรม' ?  'selected' : ''}>กิจกรรม</option>
+                <option value="ประชาสัมพันธ์" ${news.category == 'ประชาสัมพันธ์' ?  'selected' : ''}>ประชาสัมพันธ์</option>
             </select>
             <label>รายละเอียดข่าว:</label>
             <textarea name="news_detail" id="news_detail">${news.newsdetail}</textarea>

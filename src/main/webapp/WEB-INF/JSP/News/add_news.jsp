@@ -74,6 +74,7 @@
     font-family: Kanit;">
                 <option value="ข่าวสาร">ข่าวสาร</option>
                 <option value="กิจกรรม">กิจกรรม</option>
+                <option value="ประชาสัมพันธ์">ประชาสัมพันธ์</option>
             </select>
             <label>รายละเอียดข่าว:</label>
             <textarea name="news_detail" id="news_detail"></textarea>

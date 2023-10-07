@@ -33,6 +33,11 @@ public class WebHomeController {
         return "JSP/Course";
     }
 
+    @RequestMapping("/course65")
+    public String showCourse65() {
+        return "JSP/Course65";
+    }
+
     @RequestMapping("/plan")
     public String showPlan() {
         return "JSP/Plan";

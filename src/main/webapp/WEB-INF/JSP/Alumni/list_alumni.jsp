@@ -36,13 +36,13 @@
     }
 
     .list-item:hover {
-      background-color: #e0e0e0;
+      background-color: #ede7f6;
       border: 1px solid #ccc; /* เปลี่ยนสีขอบ */
       transition: background-color 0.3s;
     }
 
     .card {
-      background-color: #e5e5e5;
+      background-color: #fde0dc;
       width: 100%;
       height: 100%;
       border-radius: 10px;
@@ -182,7 +182,7 @@
                 <img style="width: 100px; height: 120px" src="${pageContext.request.contextPath}/assets/image/${alumni.image}">
               </div>
               <div class="card-body">
-                <h3 class="card-title" style="font-family: Kanit">${alumni.id}</h3>
+                <h3 class="card-title" style="font-family: Kanit; color: #ec2727">${alumni.id}</h3>
                 <p class="card-text">${alumni.firstname} ${alumni.lastname}</p>
                 <p class="card-text">ตำแหน่ง : ${alumni.position}</p>
                 <p class="card-text">บริษัท : ${alumni.company}</p>

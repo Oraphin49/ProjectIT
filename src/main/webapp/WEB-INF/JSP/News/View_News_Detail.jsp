@@ -59,6 +59,10 @@
         <br><br>
         <div class="yui-b">
             <div id="secondary"></div>
+            <c:forEach var="imageName" items="${imageNames}">
+                <img src="${pageContext.request.contextPath}/assets/image/news/${imageName}" alt="Image">
+            </c:forEach>
+
         </div>
     </div>
     <div>

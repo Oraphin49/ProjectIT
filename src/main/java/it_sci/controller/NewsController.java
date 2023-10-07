@@ -43,18 +43,21 @@ public class NewsController {
     }
     @GetMapping("/news")
     public String shoeNews(Model model) {
-//        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
+        //model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
         //model.addAttribute("list_alumni",alumniService.getAlumni());
         return "JSP/News";
     }
 
     @GetMapping("/{id}/view_news_detail")
     public String ShowNewsDetail(@PathVariable("id") Long id, Model model) {
-        //        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
-        News news =  newsService.getNews(id);
+        News news = newsService.getNews(id);
+        // ดึงข้อมูลรูปภาพและเก็บไว้ใน List
+        List<String> newFileNames = new ArrayList<>();
         model.addAttribute("news_detail", news);
+        model.addAttribute("imageNames", newFileNames);
         return "JSP/News/View_News_Detail";
     }
+
 
     @GetMapping("/list_news_manage")
     public String listNew(Model model) {
