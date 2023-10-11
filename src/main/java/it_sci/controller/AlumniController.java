@@ -89,8 +89,6 @@ public class AlumniController {
     @GetMapping("/{id}/update")
     public String isEditAlumni(@Valid @PathVariable("id") String id, Model model) {
         Alumni alumni = alumniService.getAlumni(id);
-//        model.addAttribute("title", "แก้ไข" + title);
-//        model.addAttribute("categories", categoryService.getCategories());
         model.addAttribute("alumni", alumni);
         return "JSP/Alumni/edit_alumni";
     }

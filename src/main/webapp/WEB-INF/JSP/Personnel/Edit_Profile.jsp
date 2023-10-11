@@ -56,12 +56,8 @@
         </div>
             <p id="year-graduation">อีเมล์:</p>
             <input type="email" id="email" name="email" value="${personnel_detail.email}"><br></p>
-            <p id="education">Pubilcations</p>
-            <br><input type="text" id="scolarlink" name="scolarlink" value="${personnel_detail.scolarlink}"></p>
         <p id="telephone">เบอร์โทร</p><br>
             <input type="text" id="phone" name="phone" value="${personnel_detail.phone}"></p>
-        <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการทำงาน</p>
-            <p><input type="text" id="workexperience" name="workexperience" value="${personnel_detail.workexperience}"></p>
         <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
         <p><input type="text" id="expertise" name="expertise" value="${personnel_detail.expertise}"></p>
             <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ตำแหน่ง</p>
@@ -143,6 +139,30 @@
                             <td>ปีที่ได้รับ : <input name="award_year" id="award_year"></td>
                         </tr>
                         <td><input type="submit" value="เพิ่ม"></td>
+                        </tr>
+                    </table>
+                </form>
+            </ul>
+        </div>
+        <div class="card">
+            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการทำงาน</p>
+            <ul>
+                <c:forEach var="work" items="${work_experience_detail}">
+                    <li>${work.workexperiencename} ${work.workexperienceyear}
+                        <input type="button" value="ลบ"
+                               onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${work.id}/remove_work'; return false; }"
+                               class="cancel-button"/></li><br>
+
+                </c:forEach>
+                <hr>
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_work_add" method="POST" >
+                    <table>
+                        <tr>
+                            <td>ชื่อสถานที่ : <input name="work_name" id="work_name"></td>
+                            <td>ปีที่เข้าทำงาน : <input name="work_year" id="work_year"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="เพิ่ม"></td>
                         </tr>
                     </table>
                 </form>

@@ -119,7 +119,7 @@ public class NewsController {
         News mergedNews = (News) session.merge(news);
 
         // Save the news data to the database
-        // newsService.SaveNews(news);
+//         newsService.SaveNews(news);
         return "redirect:/news/list_news_manage";
     }
 

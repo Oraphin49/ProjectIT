@@ -29,7 +29,7 @@ public class AlumniServiceImpl  implements AlumniService {
     @Override
     @Transactional
     public void SaveAlumni(Alumni alumni) {
-        long id = alumniDao.getLatestId();
+//        long id = alumniDao.getLatestId();
         //alumni.setId(generateLatestId(id + 1));
         alumniDao.SaveAlumni(alumni);
     }

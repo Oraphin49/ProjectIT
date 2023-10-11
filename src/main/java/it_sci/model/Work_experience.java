@@ -24,4 +24,48 @@ public class Work_experience {
     @ManyToOne
     @JoinColumn(name = "personnel_personnelid")
     private Personnel personnel;
+
+
+    public Work_experience(String workexperiencename, String workexperienceyear, Personnel personnel) {
+        this.workexperiencename = workexperiencename;
+        this.workexperienceyear = workexperienceyear;
+        this.personnel = personnel;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getWorkexperiencename() {
+        return workexperiencename;
+    }
+
+    public void setWorkexperiencename(String workexperiencename) {
+        this.workexperiencename = workexperiencename;
+    }
+
+    public String getWorkexperienceyear() {
+        return workexperienceyear;
+    }
+
+    public void setWorkexperienceyear(String workexperienceyear) {
+        this.workexperienceyear = workexperienceyear;
+    }
+
+    public Personnel getPersonnel() {
+        return personnel;
+    }
+
+    public void setPersonnel(Personnel personnel) {
+        this.personnel = personnel;
+    }
+
+    public Work_experience() {
+    }
+
+
 }

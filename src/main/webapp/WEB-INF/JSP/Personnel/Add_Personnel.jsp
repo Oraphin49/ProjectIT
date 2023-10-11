@@ -6,7 +6,7 @@
     <title>Add Personnel</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Kanit;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
@@ -99,8 +99,8 @@
     <div id="profile">
         <div class="row">
             <div class="column">
-                <label for="imageFile">รูป</label>
-                <input type="file" name="imageFile" id="imageFile">
+                <label for="image">รูป</label>
+                <input type="text" name="image" id="image">
             </div>
             <div class="column">
                 <label for="id">รหัส</label>
@@ -138,10 +138,6 @@
             </div>
         </div>
         <div class="row">
-            <div class="column">
-                <label for="workexperience">การทำงาน</label>
-                <textarea type="text" id="workexperience" name="workexperience"></textarea>
-            </div>
             <div class="column">
                 <label for="experitise">ความชำนาญ</label>
                 <textarea type="text" id="experitise" name="experitise"></textarea>
@@ -253,14 +249,6 @@
             alert("กรุณากรอกคำอธิบาย");
             return false;
         }
-
-        //เช็คการทำงาน //
-        var workexperience = document.getElementById("workexperience").value;
-        if (workexperience === "") {
-            alert("กรุณากรอกการทำงาน");
-            return false;
-        }
-
         // เช็คความชำนาญ //
         var experitise = document.getElementById("experitise").value;
         if (experitise === "") {

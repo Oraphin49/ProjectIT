@@ -87,7 +87,7 @@
 </nav>
 <br>
 <div class="header" style="margin-top: 100px">
-    <h2>บุคลากรของหลักสูตร</h2>
+    <h2 style="color: #aa1919; font-family: Kanit">บุคลากรของหลักสูตร</h2>
 </div>
 <div class="container">
     <div class="row">

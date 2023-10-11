@@ -53,7 +53,7 @@
         <div class="yui-b">
             <div class="content">
                 <p class="card-text">${news_detail.newsdetail}</p>
-                <p class="card-text"> แหล่งที่มา : ${news_detail.linkpage}</p>
+                <p class="card-text"> แหล่งที่มา : <a href="${news_detail.linkpage}">กดที่นี่</a></p>
             </div>
         </div>
         <br><br>

@@ -29,10 +29,12 @@ public class PersonnelController {
     public String ShowPersonnelDetail(@PathVariable("id") String id, Model model) {
         Personnel personnel = personnelService.getPersonnelById(id);
         List<Award> award = personnelService.getAward(id);
+        List<Work_experience>  work_experience = personnelService.getWorkexperience(id);
         List<Education_histiry>  education_histiry = personnelService.getEducationHistiry(id);
         List<Research_grant> research_grant = personnelService.getResearchGrant(id);
         model.addAttribute("personnel_detail", personnel);
         model.addAttribute("award_detail",award);
+        model.addAttribute("work_experiences_detail",work_experience);
         model.addAttribute("education_history_detail",education_histiry);
         model.addAttribute("research_grant_detail",research_grant);
         return "JSP/Personnel/View_personnel";
@@ -56,13 +58,12 @@ public class PersonnelController {
         String scolarlink = allReqParams.get("scolarlink");
         String description = allReqParams.get("description");
         String experitse = allReqParams.get("experitise");
-        String workexperience = allReqParams.get("workexperience");
         String email = allReqParams.get("email");
         String password = allReqParams.get("password");
         Academic_Ranks academic_ranks = personnelService.getAcademicRankById(allReqParams.get("ar_id"));
 
         Personnel personnel = new Personnel(personnelid,firstname,lastname,
-                position,phone,image,scolarlink,description,experitse,workexperience,email,password,academic_ranks);
+                position,phone,image,scolarlink,description,experitse,email,password,academic_ranks);
         personnelService.SavePersonnel(personnel);
         return "redirect:/";
     }
@@ -71,11 +72,13 @@ public class PersonnelController {
     public String ShowFormEditPersonnelDetail(@PathVariable("id") String id, Model model) {
         Personnel personnel = personnelService.getPersonnelById(id);
         List<Award> award = personnelService.getAward(id);
+        List<Work_experience> work_experience = personnelService.getWorkexperience(id);
         List<Education_histiry>  education_histiry = personnelService.getEducationHistiry(id);
         List<Research_grant> research_grant = personnelService.getResearchGrant(id);
         List<Academic_Ranks> academic_ranks = personnelService.getAcademicRanks();
         model.addAttribute("personnel_detail", personnel);
         model.addAttribute("award_detail",award);
+        model.addAttribute("work_experience_detail",work_experience);
         model.addAttribute("education_history_detail",education_histiry);
         model.addAttribute("research_grant_detail",research_grant);
         model.addAttribute("academic_ranks_detail",academic_ranks);
@@ -94,7 +97,6 @@ public class PersonnelController {
             personnel.setScolarlink(allReqParams.get("scolarlink"));
             personnel.setDescription(allReqParams.get("description"));
             personnel.setExpertise(allReqParams.get("expertise"));
-            personnel.setWorkexperience(allReqParams.get("workexperience"));
             personnel.setEmail(allReqParams.get("email"));
 
             String academicRankId = allReqParams.get("ar_id");
@@ -140,7 +142,7 @@ public class PersonnelController {
     }
     @GetMapping("/{p_id}/{id}/remove")
     public String removePersonnelResearch(@PathVariable("id") long id,
-                                           @PathVariable String p_id) {
+                                          @PathVariable String p_id) {
         personnelService.removePersonnelResearch(id);
         return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
     }
@@ -156,8 +158,26 @@ public class PersonnelController {
     }
     @GetMapping("/{p_id}/{id}/remove_award")
     public String removePersonnelAward(@PathVariable("id") long id,
-                                          @PathVariable String p_id) {
+                                       @PathVariable String p_id) {
         personnelService.removePersonnelAward(id);
         return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
     }
+
+    @PostMapping(path = "/{p_id}/save_work_add")
+    public String saveAddPersonnelWork(@RequestParam Map<String, String> allReqParams, @PathVariable String p_id) throws ParseException {
+        String work_name = allReqParams.get("work_name");
+        String work_year = allReqParams.get("work_year");
+        Personnel personnel = personnelService.getPersonnelById(p_id);
+        Work_experience work_experience = new Work_experience(work_name,work_year,personnel);
+        personnelService.SavePersonnelWork(work_experience);
+        return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
+    }
+    @GetMapping("/{p_id}/{id}/remove_work")
+    public String removePersonnelWork(@PathVariable("id") long id,
+                                       @PathVariable String p_id) {
+        personnelService.removePersonnelWork(id);
+        return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
+    }
+
+
 }

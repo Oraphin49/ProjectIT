@@ -33,9 +33,6 @@ public class Personnel {
     @Column(name="expertise",nullable = false,length = 500)
     private String expertise;
 
-    @Column(name="workexperience",nullable = false,length = 500)
-    private String workexperience;
-
     @Column(name="email",nullable = false,length = 60)
     private String email;
 
@@ -54,7 +51,7 @@ public class Personnel {
         this.firstname = firstname;
     }
 
-    public Personnel(String id, String firstname, String lastname, String position, String phone, String image, String scolarlink, String description, String expertise, String workexperience, String email, String password, Academic_Ranks academic_ranks) {
+    public Personnel(String id, String firstname, String lastname, String position, String phone, String image, String scolarlink, String description, String expertise, String email, String password, Academic_Ranks academic_ranks) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -64,7 +61,6 @@ public class Personnel {
         this.scolarlink = scolarlink;
         this.description = description;
         this.expertise = expertise;
-        this.workexperience = workexperience;
         this.email = email;
         Password = password;
         this.academic_ranks = academic_ranks;
@@ -140,14 +136,6 @@ public class Personnel {
 
     public void setExpertise(String expertise) {
         this.expertise = expertise;
-    }
-
-    public String getWorkexperience() {
-        return workexperience;
-    }
-
-    public void setWorkexperience(String workexperience) {
-        this.workexperience = workexperience;
     }
 
     public String getEmail() {

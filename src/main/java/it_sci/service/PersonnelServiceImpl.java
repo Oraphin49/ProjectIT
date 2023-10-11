@@ -34,6 +34,12 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
+    public List<Work_experience> getWorkexperience(String workId) {
+        return personnelDao.getWorkexperience(workId);
+    }
+
+    @Override
+    @Transactional
     public List<Education_histiry>  getEducationHistiry(String EDHid) {
         return personnelDao.getEducationHistiry(EDHid);
     }
@@ -86,6 +92,13 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
+    public void SavePersonnelWork(Work_experience work_experience) {
+        personnelDao.SavePersonnelWork(work_experience);
+
+    }
+
+    @Override
+    @Transactional
     public void updatePersonnel(Personnel personnel ) {
         personnelDao.updatePersonnel(personnel);
     }
@@ -94,6 +107,13 @@ public class PersonnelServiceImpl implements PersonnelService {
     @Transactional
     public void updateAward(Award award) {
         personnelDao.updateAward(award);
+    }
+
+    @Override
+    @Transactional
+    public void updateWork_experience(Work_experience work_experience) {
+        personnelDao.updateWork_experience(work_experience);
+
     }
 
     @Override
@@ -121,6 +141,12 @@ public class PersonnelServiceImpl implements PersonnelService {
     @Override
     @Transactional
     public void removePersonnelAward(long id) { personnelDao.removePersonnelAward(id);}
+
+    @Override
+    @Transactional
+    public void removePersonnelWork(long id) { personnelDao.removePersonnelWork(id);
+
+    }
 
 
 }

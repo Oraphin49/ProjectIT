@@ -40,6 +40,15 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
+    public List<Work_experience> getWorkexperience(String id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Work_experience> query = session.createQuery("FROM Work_experience a WHERE a.personnel.id =: aId", Work_experience.class);
+        query.setParameter("aId",id);
+        List<Work_experience> work_experiences = query.getResultList();
+        return work_experiences ;
+    }
+
+    @Override
     public List<Education_histiry> getEducationHistiry(String id) {
         Session session = sessionFactory.getCurrentSession();
         Query<Education_histiry> query = session.createQuery("FROM Education_histiry a WHERE a.personnel.id =: aId", Education_histiry.class);
@@ -96,6 +105,13 @@ public class PersonnelDaoImpl implements PersonnelDao {
         session.saveOrUpdate(award);
     }
 
+    @Override
+    public void SavePersonnelWork(Work_experience work_experience) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(work_experience);
+
+    }
+
 
     @Override
     public void removePersonnelEducation(long id) {
@@ -125,6 +141,16 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
+    public void removePersonnelWork(long id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Work_experience> query = session.createQuery("FROM Work_experience a WHERE a.id =: aId", Work_experience.class);
+        query.setParameter("aId",id);
+        Work_experience work_experience = query.getSingleResult();
+        session.remove(work_experience);
+
+    }
+
+    @Override
     public void updatePersonnel(Personnel personnel) {
         Session session = sessionFactory.getCurrentSession();
         session.update(personnel);
@@ -134,6 +160,13 @@ public class PersonnelDaoImpl implements PersonnelDao {
     public void updateAward(Award award) {
         Session session = sessionFactory.getCurrentSession();
         session.update(award);
+    }
+
+    @Override
+
+    public void updateWork_experience(Work_experience work_experience) {
+        Session session = sessionFactory.getCurrentSession();
+        session.update(work_experience);
     }
 
     @Override

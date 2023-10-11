@@ -38,7 +38,6 @@
             <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
         </div>
         <p id="year-graduation"><i class="fas fa-envelope stroke-transparent"></i>&nbsp;<strong>อีเมล:</strong><br> ${personnel_detail.email}<br></p>
-        <p id="education"><i class="fab fa-google stroke-transparent"></i>&nbsp;<strong>สิ่งพิมพ์</strong><br><a href="${personnel_detail.scolarlink}">Google Scholar Link</a></p>
         <p id="more-about"><i class="fas fa-map-marker-alt stroke-transparent"></i>&nbsp;<strong>ที่อยู่</strong><br>หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ <br>63 หมู่ 4 ตำบลหนองหาร อำเภาสันทราย จังหวัดเชียงใหม่ 50290</p>
         <p id="office" style="color: #111111"><i class="fas fa-building stroke-transparent"></i>&nbsp;<strong>Office</strong><br> ห้อง 1103-2, อาคารเสาวรัจ นิตยวรรธนะ</p>
         <p id="telephone"><i class="fas fa-phone stroke-transparent"></i>&nbsp;<strong>เบอร์โทรศัพท์</strong><br>${personnel_detail.phone}</p>
@@ -57,7 +56,9 @@
         <div class="card">
             <p style="color: #AA1818" ><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการทำงาน</p>
             <ul>
-            <p style="color: #111111">${personnel_detail.workexperience}</p>
+                <c:forEach var="work" items="${work_experiences_detail}">
+                    <p style="color: #111111">${work.workexperiencename} , ${work.workexperienceyear}<br></p>
+                </c:forEach>
             </ul>
         </div>
         <div class="card">
@@ -80,6 +81,12 @@
             <p style="color: #AA1818"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
             <ul>
                 <p style="color: #111111">${personnel_detail.expertise}</p>
+            </ul>
+        </div>
+        <div class="card">
+            <p style="color: #AA1818" id="education"><i class="fab fa-google stroke-transparent"></i>&nbsp;&nbsp;&nbsp;สิ่งพิมพ์</p>
+            <ul>
+                <p style="color: #111111"><a href="${personnel_detail.scolarlink}">Google Scholar Link</a></p>
             </ul>
         </div>
     </div>

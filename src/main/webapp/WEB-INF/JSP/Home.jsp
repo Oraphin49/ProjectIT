@@ -246,7 +246,8 @@
                     <div class="row">
                         <c:forEach var="news" items="${newsList}">
                             <div class="col-md-4">
-                                <a href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail" class="gtco-card-item has-text equal-height-card">
+                                <a href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail"
+                                   class="gtco-card-item has-text equal-height-card">
                                     <figure>
                                         <div class="overlay"><i class="ti-plus"></i></div>
                                         <img src="${pageContext.request.contextPath}/assets/image/news11.jpg"
@@ -260,122 +261,122 @@
                             </div>
                         </c:forEach>
                     </div>
-                <a href="${pageContext.request.contextPath}/news/list_news"><input type="submit" value="ดูเพิ่มเติม" style="margin-top: 40px; margin-left: 50%; color: #000; padding: 5px;"></a>
+                    <a href="${pageContext.request.contextPath}/news/list_news"><input type="submit" value="ดูเพิ่มเติม"
+                                                                                       style="margin-top: 40px; margin-left: 50%; color: #000; padding: 5px;"></a>
                 </div>
             </div>
 
-    <div id="gtco-subscribe">
-        <div><img src="${pageContext.request.contextPath}/assets/image/nn.jpg" width="550px"
-                  style="margin-left: 40px; margin-top: -78px;"></div>
-        <div style="float: right;margin-right: 130px; margin-top: -255px; ">
-            <h3>สาขาวิชาเทคโนโลยีสารสนเทศ<br>
-                เปิดรับสมัครเข้าศึกษาต่อ ประจำปีการศึกษา 2566</h3>
-            <p style="color: #000">รับผู้กำลังศึกษา หรือสำเร็จการศึกษา<br>
-                -ม.6 ทุกแผนการเรียน<br>
-                -ปวช. ประเภทวิชาอุตสาหกรรม วิชสช่างอิเล็กทรอนิกส์ วิชาพานิชยกรรม<br>
-                วิชาคอมพิวเตอร์คอมพิวเตอร์ธุรกิจ สาขาวิชาที่เกี่ยวข้อง<br>
-                หรืออยู่ในดุลยพินิจของอาจารย์ผู้รับผิดชอบหลักสูตร</p>
-            <a href="https://admissions.mju.ac.th/www/Search.aspx"><input type="submit" value="รายละเอียด"
-                                                                          style=" margin-left: 60%; margin-top: -10px;  width:180px ; border-radius: 20px; color: #fff; padding: 5px; background-color: #CD3333;"></a>
-        </div>
-    </div>
-
-    <%--            <div id="gtco-products" data-section="products" >--%>
-    <%--                <div class="gtco-container">--%>
-    <%--                    <div class="row">--%>
-    <%--                        <div class="col-md-8 col-md-offset-2 text-center gtco-heading">--%>
-    <%--                            <h2 style="font-size: 30px; color: #E75d5d;" >ความสำเร็จของศิษย์เก่า</h2>--%>
-    <%--                        </div>--%>
-    <%--                    </div>--%>
-    <%--                    <div class="row" align="center">--%>
-    <%--                        <div class="owl-carousel owl-carousel-carousel" >--%>
-    <%--                            <div class="item" style="width: 300px">--%>
-    <%--                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px">--%>
-    <%--                            </div>--%>
-    <%--                            <div class="item">--%>
-    <%--                                <img src="${pageContext.request.contextPath}/assets/image/Yok.jpg" style="width: 250px" >--%>
-    <%--                            </div>--%>
-    <%--                            <div class="item">--%>
-    <%--                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px" >--%>
-    <%--                            </div>--%>
-    <%--                            <div class="item">--%>
-    <%--                                <img src="${pageContext.request.contextPath}/assets/image/Nice.jpg" style="width: 250px" >--%>
-    <%--                            </div>--%>
-    <%--                        </div>--%>
-    <%--                    </div>--%>
-    <%--                </div>--%>
-    <%--                <a href="${pageContext.request.contextPath}/alumni/list_alumni"><input type="submit" value="ดูเพิ่มเติม" style="margin-top: 50px; margin-left: 50%; color: #000; padding: 5px;" ></a>--%>
-    <%--            </div>--%>
-
-    <div class="gtco-section-overflow">
-        <div id="gtco-counter" class="gtco-section">
-            <div class="gtco-container">
-
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                        <h2 style="font-size: 30px; color: #E75d5d;">สถิติสะสมของสาขาวิชา</h2>
-                    </div>
+            <div id="gtco-subscribe">
+                <div><img src="${pageContext.request.contextPath}/assets/image/nn.jpg" width="550px"
+                          style="margin-left: 40px; margin-top: -78px;"></div>
+                <div style="float: right;margin-right: 130px; margin-top: -255px; ">
+                    <h3>สาขาวิชาเทคโนโลยีสารสนเทศ<br>
+                        เปิดรับสมัครเข้าศึกษาต่อ ประจำปีการศึกษา 2566</h3>
+                    <p style="color: #000">รับผู้กำลังศึกษา หรือสำเร็จการศึกษา<br>
+                        -ม.6 ทุกแผนการเรียน<br>
+                        -ปวช. ประเภทวิชาอุตสาหกรรม วิชสช่างอิเล็กทรอนิกส์ วิชาพานิชยกรรม<br>
+                        วิชาคอมพิวเตอร์คอมพิวเตอร์ธุรกิจ สาขาวิชาที่เกี่ยวข้อง<br>
+                        หรืออยู่ในดุลยพินิจของอาจารย์ผู้รับผิดชอบหลักสูตร</p>
+                    <a href="https://admissions.mju.ac.th/www/Search.aspx"><input type="submit" value="รายละเอียด"
+                                                                                  style=" margin-left: 60%; margin-top: -10px;  width:180px ; border-radius: 20px; color: #fff; padding: 5px; background-color: #CD3333;"></a>
                 </div>
+            </div>
 
-                <div class="row" style="margin-left: 220px; margin-top: 0px;">
-                    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                        <div class="feature-center">
-									<span class="icon">
-										<i class="ti-face-smile"></i>
-									</span>
-                            <span class="counter js-counter" data-from="0" data-to="200" data-speed="5000"
-                                  data-refresh-interval="50">1</span>
-                            <span class="counter-label">จำนวนศิษย์เก่า</span>
+            <%--            <div id="gtco-products" data-section="products" >--%>
+            <%--                <div class="gtco-container">--%>
+            <%--                    <div class="row">--%>
+            <%--                        <div class="col-md-8 col-md-offset-2 text-center gtco-heading">--%>
+            <%--                            <h2 style="font-size: 30px; color: #E75d5d;" >ความสำเร็จของศิษย์เก่า</h2>--%>
+            <%--                        </div>--%>
+            <%--                    </div>--%>
+            <%--                    <div class="row" align="center">--%>
+            <%--                        <div class="owl-carousel owl-carousel-carousel" >--%>
+            <%--                            <div class="item" style="width: 300px">--%>
+            <%--                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px">--%>
+            <%--                            </div>--%>
+            <%--                            <div class="item">--%>
+            <%--                                <img src="${pageContext.request.contextPath}/assets/image/Yok.jpg" style="width: 250px" >--%>
+            <%--                            </div>--%>
+            <%--                            <div class="item">--%>
+            <%--                                <img src="${pageContext.request.contextPath}/assets/image/Pim.jpg" style="width: 250px" >--%>
+            <%--                            </div>--%>
+            <%--                            <div class="item">--%>
+            <%--                                <img src="${pageContext.request.contextPath}/assets/image/Nice.jpg" style="width: 250px" >--%>
+            <%--                            </div>--%>
+            <%--                        </div>--%>
+            <%--                    </div>--%>
+            <%--                </div>--%>
+            <%--                <a href="${pageContext.request.contextPath}/alumni/list_alumni"><input type="submit" value="ดูเพิ่มเติม" style="margin-top: 50px; margin-left: 50%; color: #000; padding: 5px;" ></a>--%>
+            <%--            </div>--%>
+
+            <div class="gtco-section-overflow">
+                <div id="gtco-counter" class="gtco-section">
+                    <div class="gtco-container">
+
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                                <h2 style="font-size: 30px; color: #E75d5d;">สถิติสะสมของสาขาวิชา</h2>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                        <div class="feature-center">
+
+                        <div class="row" style="margin-left: 220px; margin-top: 0px;">
+                            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="feature-center">
+        <span class="icon">
+            <i class="ti-face-smile"></i>
+        </span>
+                                    <span id="visitorCount" class="counter js-counter" data-from="0" data-speed="5000"
+                                          data-refresh-interval="50">0</span>
+                                    <span class="counter-label">จำนวนผู้เข้าชม</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="feature-center">
 									<span class="icon">
 										<i class="ti-briefcase"></i>
 									</span>
-                            <span class="counter js-counter" data-from="0" data-to="200" data-speed="5000"
-                                  data-refresh-interval="50">1</span>
-                            <span class="counter-label">ทำงานตรงสาขา</span>
+                                    <span class="counter js-counter" data-from="0" data-to="200" data-speed="5000"
+                                          data-refresh-interval="50">1</span>
+                                    <span class="counter-label">ทำงานตรงสาขา</span>
 
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                        <div class="feature-center">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="feature-center">
 									<span class="icon">
 										<i class="ti-time"></i>
 									</span>
-                            <span class="counter js-counter" data-from="0" data-to="550" data-speed="5000"
-                                  data-refresh-interval="50">1</span>
-                            <span class="counter-label">นักศึกษาปัจจุบัน</span>
-
+                                    <span class="counter js-counter" data-from="0" data-to="550" data-speed="5000"
+                                          data-refresh-interval="50">1</span>
+                                    <span class="counter-label">นักศึกษาปัจจุบัน</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
 
-    </div>
-
-    <!-- jQuery -->
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
-    <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.waypoints.min.js"></script>
-    <!-- Carousel -->
-    <script src="${pageContext.request.contextPath}/assets/js/owl.carousel.min.js"></script>
-    <!-- countTo -->
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.countTo.js"></script>
-    <!-- Flexslider -->
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.flexslider-min.js"></script>
-    <!-- Magnific Popup -->
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/magnific-popup-options.js"></script>
-    <!-- Main -->
-    <script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
-    <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
+            <!-- jQuery -->
+            <script src="${pageContext.request.contextPath}/assets/js/jquery.min.js"></script>
+            <!-- jQuery Easing -->
+            <script src="${pageContext.request.contextPath}/assets/js/jquery.easing.1.3.js"></script>
+            <!-- Bootstrap -->
+            <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
+            <!-- Waypoints -->
+            <script src="${pageContext.request.contextPath}/assets/js/jquery.waypoints.min.js"></script>
+            <!-- Carousel -->
+            <script src="${pageContext.request.contextPath}/assets/js/owl.carousel.min.js"></script>
+            <!-- countTo -->
+            <script src="${pageContext.request.contextPath}/assets/js/jquery.countTo.js"></script>
+            <!-- Flexslider -->
+            <script src="${pageContext.request.contextPath}/assets/js/jquery.flexslider-min.js"></script>
+            <!-- Magnific Popup -->
+            <script src="${pageContext.request.contextPath}/assets/js/jquery.magnific-popup.min.js"></script>
+            <script src="${pageContext.request.contextPath}/assets/js/magnific-popup-options.js"></script>
+            <!-- Main -->
+            <script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
+            <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -412,6 +413,26 @@
         }, 1000); // เริ่มอนิเมชันหลังจาก 1 วินาทีหลังจากโหลดหน้าเว็บ
     });
 </script>
+<script>
+    var visitorCount = 0; // เริ่มต้นจำนวนผู้เข้าชมที่ 0
+
+    // อัพเดตแสดงจำนวนผู้เข้าชม
+    function updateVisitorCount() {
+        document.getElementById("visitorCount").textContent = visitorCount;
+    }
+
+    // เรียกใช้ฟังก์ชันเพิ่มจำนวนผู้เข้าชมเมื่อหน้าเว็บโหลดเสร็จ
+    window.onload = function() {
+        incrementVisitorCount();
+    };
+
+    // เพิ่มจำนวนผู้เข้าชม
+    function incrementVisitorCount() {
+        visitorCount++;
+        updateVisitorCount(); // อัพเดตแสดงผล
+    }
+</script>
+
 </html>
 
 

@@ -15,6 +15,8 @@ public interface PersonnelService {
 
     List<Award> getAward(String awardId);
 
+    List<Work_experience> getWorkexperience(String workId);
+
     List<Education_histiry> getEducationHistiry(String EDHid);
 
     List<Research_grant> getResearchGrant(String RGid);
@@ -28,16 +30,24 @@ public interface PersonnelService {
 
     void  SavePersonnelAward(Award award);
 
+    void  SavePersonnelWork(Work_experience work_experience);
+
     void updatePersonnel(Personnel personnel);
 
     void updateAward(Award award);
 
+    void updateWork_experience(Work_experience work_experience);
+
     void updateEducation_histiry(Education_histiry education_histiry);
 
     void updateResearch_grant(Research_grant research_grant);
+
+
     void removePersonnelEducation(long id);
 
     void removePersonnelResearch(long id);
 
     void  removePersonnelAward(long id);
+
+    void  removePersonnelWork(long id);
 }
