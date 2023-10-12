@@ -2,7 +2,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Information  Technology</title>
+    <title>List-news-manage</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <link href="${pageContext.request.contextPath}/assets/css/list_manage_news.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,10 +120,14 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
-</div>
-<br>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+        </div>
+    </div>
+</nav>
+<br><br><br><br><br><br>
 <h2 align="center" style="color: #aa1818">รายการข่าว</h2>
 <br>
 <div>

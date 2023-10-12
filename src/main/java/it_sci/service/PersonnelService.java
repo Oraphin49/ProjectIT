@@ -9,17 +9,17 @@ import java.util.List;
 public interface PersonnelService {
     List<Personnel> getPersonnel();
 
-    Personnel getPersonnelById(String personnelId);
+    Personnel getPersonnelById(long personnelId);
 
-    Academic_Ranks getAcademicRankById(String acId);
+    Academic_Ranks getAcademicRankById(long acId);
 
-    List<Award> getAward(String awardId);
+    List<Award> getAward(long awardId);
 
-    List<Work_experience> getWorkexperience(String workId);
+    List<Work_experience> getWorkexperience(long workId);
 
-    List<Education_histiry> getEducationHistiry(String EDHid);
+    List<Education_histiry> getEducationHistiry(long EDHid);
 
-    List<Research_grant> getResearchGrant(String RGid);
+    List<Research_grant> getResearchGrant(long RGid);
 
     List<Academic_Ranks> getAcademicRanks();
 

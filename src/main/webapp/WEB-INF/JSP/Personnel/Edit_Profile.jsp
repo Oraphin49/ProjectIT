@@ -13,6 +13,9 @@
 <head>
     <meta charset="UTF-8">
     <title>${personnel_detail.firstname} ${personnel_detail.lastname}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <link href="${pageContext.request.contextPath}/assets/css/edit_profile.css" rel="stylesheet">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +23,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav style="box-sizing: revert;">
-    <jsp:include page="/WEB-INF/JSP/Personnel/nav_personnel.jsp"/>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/JSP/Personnel/nav_personnel.jsp"/>
+        </div>
+    </div>
 </nav>
-<br><br>
+<br><br><br><br><br>
 <div id="container" style="margin-top: 80px">
     <div id="profile">
         <form action="${pageContext.request.contextPath}/personnel//${personnel_detail.id}/edit/save" method="POST">

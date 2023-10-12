@@ -4,6 +4,9 @@
 <html>
 <head>
     <title>${news_detail.newsname}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <link href="${pageContext.request.contextPath}/assets/css/viewnewsdetaail.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,10 +42,14 @@
     </style>
 </head>
 <body>
-<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -16px">
-    <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+        </div>
+    </div>
 </nav>
-<br><br><br><br><br>
+<br><br><br><br><br><br>
 <div id="doc3" class="yui-t7">
     <h2 align="center" style="margin-top: 50px">ข่าวสารและกิจกรรม</h2>
     <div id="header">
@@ -51,7 +58,7 @@
     </div>
     <div id="yui-main">
         <div class="yui-b">
-            <div class="content">
+            <div class="content" style="height: 250px">
                 <p class="card-text">${news_detail.newsdetail}</p>
                 <p class="card-text"> แหล่งที่มา : <a href="${news_detail.linkpage}">กดที่นี่</a></p>
             </div>

@@ -104,9 +104,9 @@
             <a href="${pageContext.request.contextPath}/history"><i class="fas fa-info-circle"></i> เกี่ยวกับเรา</a>
             <ul class="submenu">
                 <li><a href="${pageContext.request.contextPath}/history">ประวัติความเป็นมา</a></li>
-                <li><a href="${pageContext.request.contextPath}/course">ข้อมูลหลักสูตร</a></li>
+                <li><a href="${pageContext.request.contextPath}/course">ข้อมูลหลักสูตรปี60</a></li>
                 <li><a href="${pageContext.request.contextPath}/course65">ข้อมูลหลักสูตรปี65</a></li>
-                <li><a href="${pageContext.request.contextPath}/plan">แผนการเรียน</a></li>
+<%--                <li><a href="${pageContext.request.contextPath}/plan">แผนการเรียน</a></li>--%>
             </ul>
         </li>
         <li><a href="${pageContext.request.contextPath}/news/list_news"><i class="fas fa-newspaper"></i> ข่าวสารและกิจกรรม</a></li>

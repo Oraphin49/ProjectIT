@@ -1,36 +1,67 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en" >
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>${personnel_detail.firstname} ${personnel_detail.lastname}</title>
     <link href="${pageContext.request.contextPath}/assets/css/view_personnel.css" rel="stylesheet">
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
-<style>
-    *, ::after, ::before {
-        box-sizing: border-box;
-    }
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000; /* ให้ navbar อยู่หน้าหลัก */
-    }
-</style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <meta name="description" content="Free HTML5 Website Template by gettemplates.co"/>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/icomoon.css">
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/themify-icons.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/bootstrap.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="${pageContext.request.contextPath}/assets/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="${pageContext.request.contextPath}/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* ให้ navbar อยู่หน้าหลัก */
+            background-color: #FFFFFF;
+        }
+    </style>
 </head>
-<body style="background-color: #FFFFFF">
-<nav> <jsp:include page="/WEB-INF/layouts/nav.jsp"/></nav>
+<body>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+        </div>
+    </div>
+</nav>
+<br>
 <br>
 <div id="container" style="margin-top: 75px">
     <div id="profile">
         <div id="image" >
             <img  style="width: 100%; height: 100%" src="${pageContext.request.contextPath}/assets/image/${personnel_detail.image}">
         </div>
-        <p id="name" style="color: #AA1818">${personnel_detail.academic_ranks.name} ${personnel_detail.firstname} ${personnel_detail.lastname}</p>
+        <p id="name" style="color: #AA1818">${personnel_detail.firstname} ${personnel_detail.lastname}</p>
         <p id="designation"><br><span id="college"> ${personnel_detail.description}</span></p>
         <hr width="100%">
         <div id="about">
@@ -91,6 +122,11 @@
         </div>
     </div>
 </div>
-<jsp:include page="/WEB-INF/layouts/footer.jsp"/>
+<!-- Bootstrap -->
+<script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
+<!-- Main -->
+<script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
 </body>
 </html>
+
+

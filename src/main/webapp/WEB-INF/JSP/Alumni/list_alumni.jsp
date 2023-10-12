@@ -1,17 +1,18 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-
 <head>
-  <title>รายชื่อศิษย์เก่า</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>รายชื่อศิษย์เก่า</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Theme style  -->
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
+
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -32,7 +33,7 @@
       border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s;
-      margin-top: 80px;
+      margin-top: 50px;
     }
 
     .list-item:hover {
@@ -66,6 +67,7 @@
     .alum_img {
       display: inline-block;
       margin-right: 30px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .card-body {
@@ -163,43 +165,47 @@
   </style>
 </head>
 <body>
-<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; ">
-  <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+<nav class="gtco-nav" role="navigation">
+  <div class="gtco-container">
+    <div class="row"  style="display: block">
+      <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+    </div>
+  </div>
 </nav>
-  <br><br><br><br>
-  <div class="top_content">
+<br><br><br><br>
+<div class="top_content">
+  <div>
+    <h2 style="color: #a41212 ;margin-top: 75px; font-family: Kanit" align="center" >ข้อมูลศิษย์เก่า</h2>
+    <br>
     <div>
-      <h2 style="color: #a41212 ;margin-top: 75px;" align="center" >ข้อมูลศิษย์เก่า</h2>
-      <br>
-      <div>
-        <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="ค้นหาชื่อ.." title="Search for names..">
-      </div>
-      <c:forEach var="alumni" items="${list_alumni}">
-        <div class="block_alumni list-item" data-name="${alumni.id} ${alumni.firstname} ${alumni.position} ${alumni.company}">
-          <div class="bp" align="center" style="display: inline-block;">
-            <div class="card">
-              <div class="alum_img">
-                <img style="width: 100px; height: 120px" src="${pageContext.request.contextPath}/assets/image/${alumni.image}">
-              </div>
-              <div class="card-body">
-                <h3 class="card-title" style="font-family: Kanit; color: #ec2727">${alumni.id}</h3>
-                <p class="card-text">${alumni.firstname} ${alumni.lastname}</p>
-                <p class="card-text">ตำแหน่ง : ${alumni.position}</p>
-                <p class="card-text">บริษัท : ${alumni.company}</p>
-              </div>
-                <div style="font-family: Kanit;"align="center">
-                    <a class="fw-medium read-more-link" href="${pageContext.request.contextPath}/alumni/${alumni.id}/view_alumni_detail" style="color: #AA1818;font-weight: bold;text-decoration:none">
-                        ดูเพิ่มเติม
-                        <i class="fa fa-arrow-right ms-2"></i>
-                    </a>
-                    </a>
-                </div>
+      <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="ค้นหาชื่อ.." title="Search for names..">
+    </div>
+    <c:forEach var="alumni" items="${list_alumni}">
+      <div class="block_alumni list-item" data-name="${alumni.id} ${alumni.firstname} ${alumni.position} ${alumni.company}">
+        <div class="bp" align="center" style="display: inline-block;">
+          <div class="card">
+            <div class="alum_img">
+              <img style="width: 100px; height: 120px; object-fit: cover;" src="${pageContext.request.contextPath}/assets/image/alumni/${alumni.image}">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title" style="font-family: Kanit; color: #ec2727">${alumni.id}</h3>
+              <p class="card-text">${alumni.firstname} ${alumni.lastname}</p>
+              <p class="card-text">ตำแหน่ง : ${alumni.position}</p>
+              <p class="card-text">บริษัท : ${alumni.company}</p>
+            </div>
+            <div style="font-family: Kanit;"align="center">
+              <a class="fw-medium read-more-link" href="${pageContext.request.contextPath}/alumni/${alumni.id}/view_alumni_detail" style="color: #AA1818;font-weight: bold;text-decoration:none">
+                ดูเพิ่มเติม
+                <i class="fa fa-arrow-right ms-2"></i>
+              </a>
+              </a>
             </div>
           </div>
         </div>
-      </c:forEach>
-    </div>
+      </div>
+    </c:forEach>
   </div>
+</div>
 </div>
 <div class="pagination">
   <!-- ปุ่ม "ก่อนหน้า" -->
@@ -216,8 +222,6 @@
 <div>
   <jsp:include page="/WEB-INF/layouts/footer.jsp" />
 </div>
-</body>
-
 <script>
   var alumniList = document.querySelectorAll(".block_alumni");
   var itemsPerPage = 30; // จำนวนที่แสดงในแต่ละหน้า
@@ -279,5 +283,7 @@
   }
 
 </script>
-
+</body>
 </html>
+
+

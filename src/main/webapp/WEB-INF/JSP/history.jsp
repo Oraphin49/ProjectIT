@@ -3,6 +3,9 @@
 <html>
 <head>
     <title>Information Technology</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,12 +58,14 @@
 </style>
 </head>
 <body>
-<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -16px;">
-    <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+        </div>
+    </div>
 </nav>
-
-<br>
-<br>
+<br><br><br>
 <div  align="center">
     <img style="width: 90%;margin-top: 100px" src="${pageContext.request.contextPath}/assets/image/1.png">
 </div>
@@ -84,7 +89,7 @@
     </tr>
     <br><br>
     <tr>
-        <td align="center"><img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/assets/image/it2.jpg" alt="..." /></td>
+        <td align="center"><img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/assets/image/nn.jpg" alt="..." /></td>
         <td>
             <h2 class="display-4">ปรัชญาการศึกษาของหลักสูตร</h2>
             <p style="color: #111111">

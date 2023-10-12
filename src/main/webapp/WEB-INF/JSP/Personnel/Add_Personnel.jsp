@@ -3,7 +3,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Add Personnel</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <style>
         body {
             font-family: Kanit;
@@ -92,8 +94,14 @@
     </style>
 </head>
 <body>
-<nav><jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/></nav>
-<br><br>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+        </div>
+    </div>
+</nav>
+<br><br><br><br><br><br><br>
 <h2>เพิ่มบุคลการ</h2>
 <form:form method="POST" action="${pageContext.request.contextPath}/personnel/save_personnnel" name="form" id="form" class="custom-form" enctype="multipart/form-data"  onsubmit="return validateForm()">
     <div id="profile">
@@ -101,10 +109,6 @@
             <div class="column">
                 <label for="image">รูป</label>
                 <input type="text" name="image" id="image">
-            </div>
-            <div class="column">
-                <label for="id">รหัส</label>
-                <input type="text" id="id" name="id">
             </div>
         </div>
         <div class="row">

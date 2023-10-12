@@ -7,18 +7,18 @@ import java.util.List;
 public interface PersonnelDao {
     List<Personnel> getPersonnel();
 
-    Personnel getPersonnelById(String id);
+    Personnel getPersonnelById(long id);
 
-    List<Award> getAward(String id);
+    List<Award> getAward(long id);
 
-    List<Work_experience> getWorkexperience(String id);
+    List<Work_experience> getWorkexperience(long id);
 
-    List<Education_histiry> getEducationHistiry(String id);
+    List<Education_histiry> getEducationHistiry(long id);
 
-    List<Research_grant> getResearchGrant(String id);
+    List<Research_grant> getResearchGrant(long id);
 
     List<Academic_Ranks> getAcademicRanks();
-    Academic_Ranks getAcademicRankById(String id);
+    Academic_Ranks getAcademicRankById(long id);
 
     void SavePersonnel(Personnel personnel);
 

@@ -315,42 +315,42 @@
 
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                                <h2 style="font-size: 30px; color: #E75d5d;">สถิติสะสมของสาขาวิชา</h2>
+                                <h2 style="font-size: 30px; color: #E75d5d;">สถิติสะสม</h2>
                             </div>
                         </div>
 
-                        <div class="row" style="margin-left: 220px; margin-top: 0px;">
+                        <div class="row" style="margin-left: 350px; margin-top: 0px;">
                             <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="feature-center">
-        <span class="icon">
-            <i class="ti-face-smile"></i>
-        </span>
+                                <div class="feature-center" style="background-color: #f9effd" >
+                                    <span class="icon">
+                                        <i class="ti-face-smile"></i>
+                                    </span>
                                     <span id="visitorCount" class="counter js-counter" data-from="0" data-speed="5000"
                                           data-refresh-interval="50">0</span>
                                     <span class="counter-label">จำนวนผู้เข้าชม</span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="feature-center">
+                                <div class="feature-center" style="background-color: #f9effd" >
 									<span class="icon">
 										<i class="ti-briefcase"></i>
 									</span>
-                                    <span class="counter js-counter" data-from="0" data-to="200" data-speed="5000"
+                                    <span class="counter js-counter" data-from="0" data-to="354" data-speed="5000"
                                           data-refresh-interval="50">1</span>
-                                    <span class="counter-label">ทำงานตรงสาขา</span>
+                                    <span class="counter-label">นักศึกษาปัจจุบัน</span>
 
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="feature-center">
-									<span class="icon">
-										<i class="ti-time"></i>
-									</span>
-                                    <span class="counter js-counter" data-from="0" data-to="550" data-speed="5000"
-                                          data-refresh-interval="50">1</span>
-                                    <span class="counter-label">นักศึกษาปัจจุบัน</span>
-                                </div>
-                            </div>
+<%--                            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">--%>
+<%--                                <div class="feature-center">--%>
+<%--									<span class="icon">--%>
+<%--										<i class="ti-time"></i>--%>
+<%--									</span>--%>
+<%--                                    <span class="counter js-counter" data-from="0" data-to="550" data-speed="5000"--%>
+<%--                                          data-refresh-interval="50">1</span>--%>
+<%--                                    <span class="counter-label">นักศึกษาปัจจุบัน</span>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Information Technology</title>
+    <title>เพิ่มข้อมูลศิษย์เก่า</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <link href="${pageContext.request.contextPath}/assets/css/add-alumni.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,14 +72,18 @@
     </style>
 </head>
 <body>
-<nav>
-    <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+        </div>
+    </div>
 </nav>
-<br><br>
+<br><br><br><br><br><br><br><br>
 <h3>เพิ่มข้อมูลศิษย์เก่า</h3>
 <br><br>
 <div class="container">
-    <form action="${pageContext.request.contextPath}/alumni/save" method="POST" onsubmit="return validateForm();">
+    <form action="${pageContext.request.contextPath}/alumni/save" method="POST" onsubmit="return validateForm();"  enctype="multipart/form-data">
         <div class="form-group row">
             <div class="col-md-6">
                 <label for="alumni_id">รหัสนักศึกษา:</label>
@@ -134,8 +141,8 @@
         </div>
         <!-- เพิ่มสไตล์ CSS สำหรับรูปภาพ -->
         <div class="form-group">
-            <label for="image">รูปภาพ:</label>
-            <input type="text" id="image" name="image" class="form-control">
+            <label for="imageFile">รูปภาพ:</label>
+            <input type="file" id="imageFile" name="imageFile" accept="image/*" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="expertise">ความเชี่ยวชาญ:</label>

@@ -3,6 +3,9 @@
 <html>
 <head>
     <title>Information Technology</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" style="min-height: 100px;margin-bottom: 0px">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,10 +120,14 @@
     </style>
 </head>
 <body>
-<nav >
-    <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+        </div>
+    </div>
 </nav>
-<br><br>
+<br><br><br><br><br><br><br><br>
 <h2 style="color: #aa1818;" align="center">ข้อมูลหลักสูตรปี65</h2>
 <div class="wrapper col3">
     <div id="homecontent">

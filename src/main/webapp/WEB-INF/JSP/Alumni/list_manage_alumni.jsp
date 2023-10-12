@@ -5,6 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <title>List_Manage_Alumni</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/list_manage_alumni.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,10 +70,14 @@
 </style>
 </head>
 <body>
-<div class="container">
-    <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
-</div>
-<br>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+        </div>
+    </div>
+</nav>
+<br><br><br><br><br><br><br>
 <div class="top_content" align="center">
     <div>
         <h2 style="color: #a41212; font-size: 30px;font-family: Kanit;">จัดการข้อมูลศิษย์เก่า</h2>
@@ -99,7 +106,7 @@
     </tr>
     <c:forEach var="alumni" items="${list_manage_alumni}">
         <tr class="block_alumni_manage" data-name=" ${alumni.id} ${alumni.firstname} ${alumni.lastname} ${alumni.position}" >
-            <td><img style="width: 50px; height: 60px; " src="${pageContext.request.contextPath}/assets/image/${alumni.image}"></td>
+            <td><img style="width: 50px; height: 60px; object-fit: cover; " src="${pageContext.request.contextPath}/assets/image/alumni/${alumni.image}"></td>
             <td>${alumni.firstname} ${alumni.lastname}</td>
             <td>${alumni.id}</td>
             <td>${alumni.position}</td>
@@ -143,8 +150,6 @@
     }
 </script>
 
-
-///////////////////////////////////// เช็ค ก่อนหน้าและถัดไป//////////////////////////////////////////////////
 <script>
 
     var alumniList = document.querySelectorAll(".list_manage");

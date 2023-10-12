@@ -9,29 +9,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="1">
+    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="3 ได้เพิ่มรูปเดียวแล้ว และ join ตารางmton(ไม่รู้ว่าถูกไหม)">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/nav-gtco.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AlumniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AlumniController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Personnel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Personnel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Work_experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Work_experience.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/AlumniServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AlumniServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course65.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course65.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/viewalumnidetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/viewalumnidetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/IMG_1696237360240_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/viewnewsdetaail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/viewnewsdetaail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/home (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/information-technology.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/market.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/medal (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/medal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/next (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/programmer (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/right-arrow.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +63,9 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="CSS File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -404,6 +424,18 @@
       <workItem from="1696737023250" duration="2510000" />
       <workItem from="1696751409371" duration="11876000" />
       <workItem from="1696820599891" duration="11225000" />
+      <workItem from="1697025876725" duration="307000" />
+      <workItem from="1697038420783" duration="5422000" />
+      <workItem from="1697085519667" duration="603000" />
+      <workItem from="1697121619222" duration="2953000" />
+      <workItem from="1697125055708" duration="3818000" />
+      <workItem from="1697164715728" duration="3246000" />
+      <workItem from="1697177257484" duration="5916000" />
+      <workItem from="1697187902017" duration="8666000" />
+      <workItem from="1697267705881" duration="1593000" />
+      <workItem from="1697334181719" duration="5140000" />
+      <workItem from="1697340805309" duration="1843000" />
+      <workItem from="1697342795661" duration="1061000" />
     </task>
     <task id="LOCAL-00001" summary="create controller">
       <created>1693579426903</created>
@@ -566,7 +598,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696659932485</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="2">
+      <created>1697026163484</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1697026163484</updated>
+    </task>
+    <task id="LOCAL-00025" summary="3 ได้เพิ่มรูปเดียวแล้ว และ join ตารางmton(ไม่รู้ว่าถูกไหม)">
+      <created>1697129074589</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1697129074589</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,6 +651,9 @@
     <MESSAGE value="นับ1ใหม่" />
     <MESSAGE value="ใหม่" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="2" />
+    <MESSAGE value="3 ได้เพิ่มรูปเดียวแล้ว join ตารางmton(ไม่รู้ว่าถูกไหม)" />
+    <MESSAGE value="3 ได้เพิ่มรูปเดียวแล้ว และ join ตารางmton(ไม่รู้ว่าถูกไหม)" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 ได้เพิ่มรูปเดียวแล้ว และ join ตารางmton(ไม่รู้ว่าถูกไหม)" />
   </component>
 </project>

@@ -24,14 +24,14 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
-    public Personnel getPersonnelById(String personnelId) {
+    public Personnel getPersonnelById(long personnelId) {
         Session session = sessionFactory.getCurrentSession();
         Personnel personnel = session.get(Personnel.class, personnelId);
         return personnel;
     }
 
     @Override
-    public List<Award> getAward(String id) {
+    public List<Award> getAward(long id) {
         Session session = sessionFactory.getCurrentSession();
         Query<Award> query = session.createQuery("FROM Award a WHERE a.personnel.id =: aId", Award.class);
         query.setParameter("aId",id);
@@ -40,7 +40,7 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
-    public List<Work_experience> getWorkexperience(String id) {
+    public List<Work_experience> getWorkexperience(long id) {
         Session session = sessionFactory.getCurrentSession();
         Query<Work_experience> query = session.createQuery("FROM Work_experience a WHERE a.personnel.id =: aId", Work_experience.class);
         query.setParameter("aId",id);
@@ -49,7 +49,7 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
-    public List<Education_histiry> getEducationHistiry(String id) {
+    public List<Education_histiry> getEducationHistiry(long id) {
         Session session = sessionFactory.getCurrentSession();
         Query<Education_histiry> query = session.createQuery("FROM Education_histiry a WHERE a.personnel.id =: aId", Education_histiry.class);
         query.setParameter("aId",id);
@@ -58,7 +58,7 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
-    public List<Research_grant> getResearchGrant(String id) {
+    public List<Research_grant> getResearchGrant(long id) {
         Session session = sessionFactory.getCurrentSession();
         Query<Research_grant> query = session.createQuery("FROM Research_grant a WHERE a.personnel.id =: aId", Research_grant.class);
         query.setParameter("aId",id);
@@ -75,7 +75,7 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
-    public Academic_Ranks getAcademicRankById(String acId) {
+    public Academic_Ranks getAcademicRankById(long acId) {
         Session session = sessionFactory.getCurrentSession();
         Academic_Ranks academic_ranks = session.get(Academic_Ranks.class, acId);
         return academic_ranks;
@@ -187,6 +187,5 @@ public class PersonnelDaoImpl implements PersonnelDao {
         Query<Long> query = session.createQuery("SELECT COUNT(p) FROM Personnel p", Long.class);
         return query.getSingleResult();
     }
-
 
 }

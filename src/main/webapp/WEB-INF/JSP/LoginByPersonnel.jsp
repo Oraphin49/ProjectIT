@@ -8,14 +8,14 @@
   <title>${title}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="${pageContext.request.contextPath}/assets/css/Login.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 <body bgcolor="#fffff1" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%,rgba(255, 255, 255, 0.6) 100%), url('https://itsci.mju.ac.th/itsci/assets/img/banner4.png');background-position: center;background-size: cover;background-repeat: no-repeat; ">
 <img src="${pageContext.request.contextPath}/assets/image/LOGOIT1.png" width="320px" alt="Image">
 <nav>
   <ul class="top-nav">
-    <li><a href="${pageContext.request.contextPath}">
-      <img src="${pageContext.request.contextPath}/assets/image/home.png" width="20px"> หน้าหลัก</a></li>
+    <li><a href="${pageContext.request.contextPath}"><i class="fas fa-home"></i>หน้าหลัก</a></li>
   </ul>
 </nav>
 <div class="p">

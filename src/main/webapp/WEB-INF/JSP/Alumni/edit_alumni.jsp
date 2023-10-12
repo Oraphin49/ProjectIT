@@ -4,7 +4,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Information Technology</title>
+  <title>แก้ไขข้อมูลศิษย์เก่า</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
   <link href="${pageContext.request.contextPath}/assets/css/add-alumni.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,10 +72,14 @@
   </style>
 </head>
 <body>
-<nav>
-  <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+<nav class="gtco-nav" role="navigation">
+  <div class="gtco-container">
+    <div class="row"  style="display: block">
+      <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+    </div>
+  </div>
 </nav>
-<br><br>
+<br><br><br><br><br><br><br><br>
 <h3>แก้ไขข้อมูลศิษย์เก่า</h3>
 <br><br>
 <div class="container">

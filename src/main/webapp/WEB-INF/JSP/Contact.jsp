@@ -2,10 +2,12 @@
 <html>
 <head>
     <title>Information Technology</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
-
     <style>
         *, ::after, ::before {
             box-sizing: border-box;
@@ -18,11 +20,14 @@
     </style>
 </head>
 <body>
-<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -16px">
-    <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+        </div>
+    </div>
 </nav>
-    <br>
-    <br>
+    <br><br><br>
 <div class="alum_img" align="center" style="margin-top: 100px">
     <img style="width: 85%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" src="${pageContext.request.contextPath}/assets/image/2.png">
 </div>

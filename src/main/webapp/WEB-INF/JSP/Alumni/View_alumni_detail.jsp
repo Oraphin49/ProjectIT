@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${alumni_detail.id}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <!-- เพิ่มลิงก์ CSS ของ Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +59,9 @@
         }
 
         .profile-picture img {
-            max-width: 55%;
+            width: 215px;
+            height: 250px;
+            object-fit: cover;
             border-radius: 10%;
             border: 2px solid #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -131,10 +136,14 @@
 
 </head>
 <body>
-<nav style="box-sizing: revert; position: fixed; top: 0; width: 100%; z-index: 100; margin-top: -30px">
-    <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+        </div>
+    </div>
 </nav>
-<br><br><br><br><br>
+<br><br><br><br><br><br><br>
 <div class="container">
     <div class="header bg-dark text-white">
         <h1>${alumni_detail.firstname} ${alumni_detail.lastname}</h1>
@@ -151,7 +160,7 @@
     </div>
 
     <div class="profile-picture mt-4">
-        <img src="${pageContext.request.contextPath}/assets/image/${alumni_detail.image}" alt="Profile Image" class="img-fluid rounded-circle">
+        <img src="${pageContext.request.contextPath}/assets/image/alumni/${alumni_detail.image}" alt="Profile Image" class="img-fluid rounded-circle">
     </div>
     <br>
     <!-- Clearfix -->

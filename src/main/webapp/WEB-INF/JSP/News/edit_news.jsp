@@ -1,7 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Information Technology</title>
+    <title>แก้ไขข้อมูลข่าวสาร</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <link href="${pageContext.request.contextPath}/assets/css/add_news.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,9 +41,14 @@
     </style>
 </head>
 <body>
-<div id="container">
-    <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
-    <br><br>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+        <div class="row"  style="display: block">
+            <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+        </div>
+    </div>
+</nav>
+<br><br><br><br><br><br><br>
     <div align="center">
         <b style="font-size: 28px; font-family: Kanit; color: #a41212">แก้ไขข้อมูลข่าว</b>
     </div>
