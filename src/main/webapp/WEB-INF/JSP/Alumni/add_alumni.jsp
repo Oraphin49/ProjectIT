@@ -76,7 +76,7 @@
 <h3>เพิ่มข้อมูลศิษย์เก่า</h3>
 <br><br>
 <div class="container">
-    <form action="${pageContext.request.contextPath}/alumni/save" method="POST" onsubmit="return validateForm();">
+    <form action="${pageContext.request.contextPath}/alumni/save" method="POST" onsubmit="return validateForm();"  enctype="multipart/form-data">
         <div class="form-group row">
             <div class="col-md-6">
                 <label for="alumni_id">รหัสนักศึกษา:</label>
@@ -134,8 +134,8 @@
         </div>
         <!-- เพิ่มสไตล์ CSS สำหรับรูปภาพ -->
         <div class="form-group">
-            <label for="image">รูปภาพ:</label>
-            <input type="text" id="image" name="image" class="form-control">
+            <label for="imageFile">รูปภาพ:</label>
+            <input type="file" id="imageFile" name="imageFile" accept="image/*" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="expertise">ความเชี่ยวชาญ:</label>

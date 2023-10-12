@@ -2,15 +2,23 @@ package it_sci.controller;
 
 import it_sci.model.Alumni;
 import it_sci.service.AlumniService;
+import it_sci.util.PathImg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.validation.Valid;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.Map;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/alumni")
@@ -54,8 +62,9 @@ public class AlumniController {
     @PostMapping(path = "/save")
     public String saveAlumniForm(
             @RequestParam Map<String, String> allReqParams,
-            @RequestParam(name = "otherPosition", required = false) String otherPosition
-    ) throws ParseException {
+            @RequestParam(name = "otherPosition", required = false) String otherPosition,
+            @RequestParam(name = "imageFile") MultipartFile imageFile
+    ) throws ParseException, IOException {
         String id = allReqParams.get("alumni_id");
         String firstname = allReqParams.get("firstname");
         String lastname = allReqParams.get("lastname");
@@ -64,9 +73,26 @@ public class AlumniController {
         String company = allReqParams.get("company");
         String phone = allReqParams.get("phone");
         String email = allReqParams.get("email");
-        String image = allReqParams.get("image");
         String expertise = allReqParams.get("expertise");
         String award = allReqParams.get("award");
+
+        String imageFileName = null;
+
+        if (!imageFile.isEmpty()) {
+            // อัพโหลดไฟล์รูปภาพ
+            // กำหนดชื่อไฟล์ใหม่
+            String originalFilename = imageFile.getOriginalFilename();
+            String fileExtension = originalFilename.substring(originalFilename.lastIndexOf('.'));
+            String newFileName = UUID.randomUUID().toString() + fileExtension;
+
+            // บันทึกไฟล์รูปภาพลงในโฟลเดอร์หรือเก็บในฐานข้อมูลแบบ String
+            // เราใช้ตัวอย่างนี้เพื่อบันทึกลงในโฟลเดอร์ (เป็นตัวอย่างเท่านั้น)
+            String uploadDirectory = PathImg.path_Img + "/alumni/";
+            Path filePath = Paths.get(uploadDirectory, newFileName);
+            Files.write(filePath, imageFile.getBytes());
+
+            imageFileName = newFileName;
+        }
 
         // ตรวจสอบค่า position ว่าเป็น "อื่นๆ" หรือไม่
         if ("อื่นๆ".equals(position)) {
@@ -74,7 +100,7 @@ public class AlumniController {
             position = otherPosition;
         }
 
-        Alumni alumni = new Alumni(id, firstname, lastname, graduationyear, position, company, phone, email, image, expertise, award);
+        Alumni alumni = new Alumni(id, firstname, lastname, graduationyear, position, company, phone, email, imageFileName, expertise, award);
         alumniService.SaveAlumni(alumni);
         return "redirect:/alumni/list_alumni_manage";
     }

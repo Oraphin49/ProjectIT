@@ -151,7 +151,7 @@
     </div>
 
     <div class="profile-picture mt-4">
-        <img src="${pageContext.request.contextPath}/assets/image/${alumni_detail.image}" alt="Profile Image" class="img-fluid rounded-circle">
+        <img src="${pageContext.request.contextPath}/assets/image/alumni/${alumni_detail.image}" alt="Profile Image" class="img-fluid rounded-circle">
     </div>
     <br>
     <!-- Clearfix -->

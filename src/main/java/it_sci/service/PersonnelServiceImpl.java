@@ -22,31 +22,31 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
-    public Personnel getPersonnelById(String personnelId) {
+    public Personnel getPersonnelById(long personnelId) {
         return personnelDao.getPersonnelById(personnelId);
     }
 
     @Override
     @Transactional
-    public List<Award> getAward(String awardId) {
+    public List<Award> getAward(long awardId) {
         return personnelDao.getAward(awardId);
     }
 
     @Override
     @Transactional
-    public List<Work_experience> getWorkexperience(String workId) {
+    public List<Work_experience> getWorkexperience(long workId) {
         return personnelDao.getWorkexperience(workId);
     }
 
     @Override
     @Transactional
-    public List<Education_histiry>  getEducationHistiry(String EDHid) {
+    public List<Education_histiry>  getEducationHistiry(long EDHid) {
         return personnelDao.getEducationHistiry(EDHid);
     }
 
     @Override
     @Transactional
-    public List<Research_grant> getResearchGrant(String RGid) {
+    public List<Research_grant> getResearchGrant(long RGid) {
         return personnelDao.getResearchGrant(RGid);
     }
 
@@ -59,7 +59,7 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
-    public Academic_Ranks getAcademicRankById(String acId) {
+    public Academic_Ranks getAcademicRankById(long acId) {
         return personnelDao.getAcademicRankById(acId);
     }
 

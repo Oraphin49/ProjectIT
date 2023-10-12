@@ -99,7 +99,7 @@
     </tr>
     <c:forEach var="alumni" items="${list_manage_alumni}">
         <tr class="block_alumni_manage" data-name=" ${alumni.id} ${alumni.firstname} ${alumni.lastname} ${alumni.position}" >
-            <td><img style="width: 50px; height: 60px; " src="${pageContext.request.contextPath}/assets/image/${alumni.image}"></td>
+            <td><img style="width: 50px; height: 60px; " src="${pageContext.request.contextPath}/assets/image/alumni/${alumni.image}"></td>
             <td>${alumni.firstname} ${alumni.lastname}</td>
             <td>${alumni.id}</td>
             <td>${alumni.position}</td>
@@ -143,8 +143,6 @@
     }
 </script>
 
-
-///////////////////////////////////// เช็ค ก่อนหน้าและถัดไป//////////////////////////////////////////////////
 <script>
 
     var alumniList = document.querySelectorAll(".list_manage");

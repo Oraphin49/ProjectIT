@@ -102,10 +102,6 @@
                 <label for="image">รูป</label>
                 <input type="text" name="image" id="image">
             </div>
-            <div class="column">
-                <label for="id">รหัส</label>
-                <input type="text" id="id" name="id">
-            </div>
         </div>
         <div class="row">
             <div class="column">

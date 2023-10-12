@@ -26,7 +26,7 @@ public class PersonnelController {
     }
 
     @GetMapping("/{id}/view_personnel_detail")
-    public String ShowPersonnelDetail(@PathVariable("id") String id, Model model) {
+    public String ShowPersonnelDetail(@PathVariable("id") long id, Model model) {
         Personnel personnel = personnelService.getPersonnelById(id);
         List<Award> award = personnelService.getAward(id);
         List<Work_experience>  work_experience = personnelService.getWorkexperience(id);
@@ -41,6 +41,7 @@ public class PersonnelController {
     }
 
 
+
     @GetMapping("/add_personnel")
     public String addPersonnel(Model model){
         model.addAttribute("ar_detail",personnelService.getAcademicRanks());
@@ -49,7 +50,6 @@ public class PersonnelController {
 
     @PostMapping(path="/save_personnnel")
     public String saveAddPersonnel(@RequestParam Map<String, String> allReqParams) throws ParseException {
-        String personnelid = allReqParams.get("id");
         String firstname = allReqParams.get("firstname");
         String lastname= allReqParams.get("lastname");
         String position = allReqParams.get("position");
@@ -60,16 +60,15 @@ public class PersonnelController {
         String experitse = allReqParams.get("experitise");
         String email = allReqParams.get("email");
         String password = allReqParams.get("password");
-        Academic_Ranks academic_ranks = personnelService.getAcademicRankById(allReqParams.get("ar_id"));
 
-        Personnel personnel = new Personnel(personnelid,firstname,lastname,
-                position,phone,image,scolarlink,description,experitse,email,password,academic_ranks);
+        Personnel personnel = new Personnel(firstname,lastname,
+                position,phone,image,scolarlink,description,experitse,email,password);
         personnelService.SavePersonnel(personnel);
         return "redirect:/";
     }
 
     @GetMapping("/{id}/edit_personnel_detail")
-    public String ShowFormEditPersonnelDetail(@PathVariable("id") String id, Model model) {
+    public String ShowFormEditPersonnelDetail(@PathVariable("id") long id, Model model) {
         Personnel personnel = personnelService.getPersonnelById(id);
         List<Award> award = personnelService.getAward(id);
         List<Work_experience> work_experience = personnelService.getWorkexperience(id);
@@ -86,7 +85,7 @@ public class PersonnelController {
     }
 
     @PostMapping(path = "/{p_id}/edit/save")
-    public String saveEditProfile(@RequestParam Map<String, String> allReqParams, @PathVariable String p_id) throws ParseException {
+    public String saveEditProfile(@RequestParam Map<String, String> allReqParams, @PathVariable long p_id) throws ParseException {
         Personnel personnel =personnelService.getPersonnelById(p_id);
         if (personnel != null) {
             personnel.setFirstname(allReqParams.get("firstname"));
@@ -99,12 +98,6 @@ public class PersonnelController {
             personnel.setExpertise(allReqParams.get("expertise"));
             personnel.setEmail(allReqParams.get("email"));
 
-            String academicRankId = allReqParams.get("ar_id");
-            Academic_Ranks academicRank = personnelService.getAcademicRankById(academicRankId);
-            if (academicRank != null) {
-                personnel.setAcademic_ranks(academicRank);
-            }
-
             personnelService.updatePersonnel(personnel);
         }
         return "redirect:/personnel/"+p_id+"/edit_personnel_detail";
@@ -112,7 +105,7 @@ public class PersonnelController {
 
     @PostMapping(path="/{p_id}/save_education_add")
     public String saveAddPersonal(@RequestParam Map<String, String> allReqParams,
-                                  @PathVariable String p_id) throws ParseException {
+                                  @PathVariable long p_id) throws ParseException {
 //        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String education_name = allReqParams.get("education_name");
         String major_name = allReqParams.get("major_name");
@@ -132,7 +125,7 @@ public class PersonnelController {
     }
 
     @PostMapping(path="/{p_id}/save_research_add")
-    public String saveAddPersonnel(@RequestParam Map<String, String> allReqParams, @PathVariable String p_id) throws ParseException {
+    public String saveAddPersonnel(@RequestParam Map<String, String> allReqParams, @PathVariable long p_id) throws ParseException {
         String research_name = allReqParams.get("research_name");
         String research_year = allReqParams.get("research_year");
         Personnel personnel = personnelService.getPersonnelById(p_id);
@@ -148,7 +141,7 @@ public class PersonnelController {
     }
 
     @PostMapping(path="/{p_id}/save_award_add")
-    public String saveAddPersonnelses(@RequestParam Map<String, String> allReqParams, @PathVariable String p_id) throws ParseException {
+    public String saveAddPersonnelses(@RequestParam Map<String, String> allReqParams, @PathVariable long p_id) throws ParseException {
         String award_name = allReqParams.get("award_name");
         String award_year = allReqParams.get("award_year");
         Personnel personnel = personnelService.getPersonnelById(p_id);
@@ -164,7 +157,7 @@ public class PersonnelController {
     }
 
     @PostMapping(path = "/{p_id}/save_work_add")
-    public String saveAddPersonnelWork(@RequestParam Map<String, String> allReqParams, @PathVariable String p_id) throws ParseException {
+    public String saveAddPersonnelWork(@RequestParam Map<String, String> allReqParams, @PathVariable long p_id) throws ParseException {
         String work_name = allReqParams.get("work_name");
         String work_year = allReqParams.get("work_year");
         Personnel personnel = personnelService.getPersonnelById(p_id);

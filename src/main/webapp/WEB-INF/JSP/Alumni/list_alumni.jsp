@@ -179,7 +179,7 @@
           <div class="bp" align="center" style="display: inline-block;">
             <div class="card">
               <div class="alum_img">
-                <img style="width: 100px; height: 120px" src="${pageContext.request.contextPath}/assets/image/${alumni.image}">
+                <img style="width: 100px; height: 120px" src="${pageContext.request.contextPath}/assets/image/alumni/${alumni.image}">
               </div>
               <div class="card-body">
                 <h3 class="card-title" style="font-family: Kanit; color: #ec2727">${alumni.id}</h3>

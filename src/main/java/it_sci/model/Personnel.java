@@ -1,13 +1,19 @@
 package it_sci.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="personnel")
 public class Personnel {
     @Id
     @Column(name = "personnelid",length = 10)
-    private String id;
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+    private long id;
 
     @Column(name="firstname",nullable = false,length = 50)
     private String firstname;
@@ -39,20 +45,24 @@ public class Personnel {
     @Column(name="password",nullable = false,length = 16)
     private String Password;
 
-    @ManyToOne
-    @JoinColumn(name = "academic_ranks_id")
-    private Academic_Ranks academic_ranks;
+
+    @ManyToMany
+    @JoinTable(
+            name = "personnel_academic_ranks",
+            joinColumns = @JoinColumn(name = "personnelid"),
+            inverseJoinColumns = @JoinColumn(name = "academicranksid")
+    )
+    private Set<Academic_Ranks> academicRank = new HashSet<>();
 
     public Personnel() {
     }
 
-    public Personnel(String id, String firstname) {
+    public Personnel(long id, String firstname) {
         this.id = id;
         this.firstname = firstname;
     }
 
-    public Personnel(String id, String firstname, String lastname, String position, String phone, String image, String scolarlink, String description, String expertise, String email, String password, Academic_Ranks academic_ranks) {
-        this.id = id;
+    public Personnel(String firstname, String lastname, String position, String phone, String image, String scolarlink, String description, String expertise, String email, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.position = position;
@@ -63,14 +73,14 @@ public class Personnel {
         this.expertise = expertise;
         this.email = email;
         Password = password;
-        this.academic_ranks = academic_ranks;
     }
 
-    public String getId() {
+
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -154,11 +164,11 @@ public class Personnel {
         Password = password;
     }
 
-    public Academic_Ranks getAcademic_ranks() {
-        return academic_ranks;
+    public Set<Academic_Ranks> getAcademicRank() {
+        return academicRank;
     }
 
-    public void setAcademic_ranks(Academic_Ranks academic_ranks) {
-        this.academic_ranks = academic_ranks;
+    public void setAcademicRank(Set<Academic_Ranks> academicRank) {
+        this.academicRank = academicRank;
     }
 }
