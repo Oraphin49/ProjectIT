@@ -1,659 +1,507 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Project:war exploded" />
+      <artifact name="Project:war exploded"/>
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="SELECTIVE"/>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="3 ได้เพิ่มรูปเดียวแล้ว และ join ตารางmton(ไม่รู้ว่าถูกไหม)">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/nav-gtco.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AlumniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AlumniController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course65.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course65.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/viewnewsdetaail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/viewnewsdetaail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/help.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/home (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/in.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/information-technology.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/logout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/market.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/medal (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/medal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/next (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/programmer (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/right-arrow.png" beforeDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
+    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="ลบรูปภาพในข่าว"/>
+    <option name="SHOW_DIALOG" value="false"/>
+    <option name="HIGHLIGHT_CONFLICTS" value="true"/>
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false"/>
+    <option name="LAST_RESOLUTION" value="IGNORE"/>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="Interface" />
-        <option value="Jsp File" />
-        <option value="Class" />
-        <option value="CSS File" />
+        <option value="HTML File"/>
+        <option value="Jsp File"/>
+        <option value="Interface"/>
+        <option value="CSS File"/>
+        <option value="Class"/>
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$"/>
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
+  <component name="GitHubPullRequestSearchHistory">{ "lastFilter": { "state": "OPEN" } }</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="3a82a964-8099-4573-8276-5cbac89a4c7b" />
-        <option name="url" value="https://github.com/Oraphin49/ProjectIT.git" />
+        <option name="accountId" value="3a82a964-8099-4573-8276-5cbac89a4c7b"/>
+        <option name="url" value="https://github.com/Oraphin49/ProjectIT.git"/>
       </UrlAndAccount>
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING"/>
   </component>
   <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
+    <option name="FILTER_ERRORS" value="false"/>
+    <option name="FILTER_WARNINGS" value="false"/>
+    <option name="FILTER_INFO" value="true"/>
+    <option name="FILTER_DEBUG" value="true"/>
+    <option name="CUSTOM_FILTER"/>
   </component>
   <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+    <option name="stateVersion" value="1"/>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
+        <option name="useMavenConfig" value="true"/>
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
+        <option name="workspaceImportEnabled" value="true"/>
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2QHGjoKEHWv9V8LpeDyN3UW9XeF" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2QHGjoKEHWv9V8LpeDyN3UW9XeF"/>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true"/>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true"/>
+    <option name="showLibraryContents" value="true"/>
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/IdeaProjects/ProjectIT&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;9e727fdd3aec8274f46685441900280d&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">{ "keyToString": { "DefaultHtmlFileTemplate": "HTML File", "RunOnceActivity.OpenProjectViewOnStart": "true", "RunOnceActivity.ShowReadmeOnStart": "true", "SHARE_PROJECT_CONFIGURATION_FILES": "true", "WebServerToolWindowFactoryState": "false", "last_opened_file_path": "C:/Users/Asus/IdeaProjects/ProjectIT", "list.type.of.created.stylesheet": "CSS", "node.js.detected.package.eslint": "true", "node.js.detected.package.tslint": "true", "node.js.selected.package.eslint": "(autodetect)", "node.js.selected.package.tslint": "(autodetect)", "nodejs_package_manager_path": "npm", "project.structure.last.edited": "Global Libraries", "project.structure.proportion": "0.0", "project.structure.side.proportion": "0.2", "service.view.auto.scroll.to.source": "true", "spring.configuration.checksum": "9e727fdd3aec8274f46685441900280d", "vue.rearranger.settings.migration": "true" } }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="it_sci.dao" />
+      <recent name="it_sci.dao"/>
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\IdeaProjects\ProjectITSCI\src\main\webapp\assets\css\lisenews" />
-      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\image" />
-      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP\News" />
-      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\js" />
-      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\style" />
+      <recent name="C:\Users\Asus\IdeaProjects\ProjectITSCI\src\main\webapp\assets\css\lisenews"/>
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\image"/>
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP\News"/>
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\js"/>
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\style"/>
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\js\home" />
-      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\css\home" />
-      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP\Alumni" />
-      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP\News" />
-      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets" />
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\js\home"/>
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets\css\home"/>
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP\Alumni"/>
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\WEB-INF\JSP\News"/>
+      <recent name="C:\Users\Asus\IdeaProjects\Project\src\main\webapp\assets"/>
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="it_sci.dao" />
+      <recent name="it_sci.dao"/>
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="it_sci.config" />
-      <recent name="it_sci.controller" />
-      <recent name="config" />
-      <recent name="model" />
+      <recent name="it_sci.config"/>
+      <recent name="it_sci.controller"/>
+      <recent name="config"/>
+      <recent name="model"/>
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.64">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="itsci.TestCrypt" />
-      <module name="Project" />
+      <option name="MAIN_CLASS_NAME" value="itsci.TestCrypt"/>
+      <module name="Project"/>
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="Make" enabled="true"/>
       </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="Make" enabled="true"/>
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
+      <option name="filePath"/>
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="Make" enabled="true"/>
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.64" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.64" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3"/>
+      <option name="UPDATING_POLICY" value="restart-server"/>
       <deployment>
         <artifact name="Project:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/Project_war_exploded" />
+            <option name="CONTEXT_PATH" value="/Project_war_exploded"/>
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="87e1ab4d-4903-4aa0-8c9f-256ee7afa3b8" />
-        <option name="HTTP_PORT" value="8081" />
+        <option name="BASE_DIRECTORY_NAME" value="87e1ab4d-4903-4aa0-8c9f-256ee7afa3b8"/>
+        <option name="HTTP_PORT" value="8081"/>
       </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
+      <predefined_log_file enabled="true" id="Tomcat"/>
+      <predefined_log_file enabled="true" id="Tomcat Catalina"/>
+      <predefined_log_file id="Tomcat Manager"/>
+      <predefined_log_file id="Tomcat Host Manager"/>
+      <predefined_log_file id="Tomcat Localhost Access"/>
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54046" />
+        <option name="DEBUG_PORT" value="54046"/>
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
+        <option name="USE_ENV_VARIABLES" value="true"/>
         <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
+          <option name="USE_DEFAULT" value="true"/>
+          <option name="SCRIPT" value=""/>
+          <option name="VM_PARAMETERS" value=""/>
+          <option name="PROGRAM_PARAMETERS" value=""/>
         </STARTUP>
         <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
+          <option name="USE_DEFAULT" value="true"/>
+          <option name="SCRIPT" value=""/>
+          <option name="VM_PARAMETERS" value=""/>
+          <option name="PROGRAM_PARAMETERS" value=""/>
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
+        <option name="USE_ENV_VARIABLES" value="true"/>
         <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
+          <option name="USE_DEFAULT" value="true"/>
+          <option name="SCRIPT" value=""/>
+          <option name="VM_PARAMETERS" value=""/>
+          <option name="PROGRAM_PARAMETERS" value=""/>
         </STARTUP>
         <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
+          <option name="USE_DEFAULT" value="true"/>
+          <option name="SCRIPT" value=""/>
+          <option name="VM_PARAMETERS" value=""/>
+          <option name="PROGRAM_PARAMETERS" value=""/>
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
+        <option name="USE_ENV_VARIABLES" value="true"/>
         <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
+          <option name="USE_DEFAULT" value="true"/>
+          <option name="SCRIPT" value=""/>
+          <option name="VM_PARAMETERS" value=""/>
+          <option name="PROGRAM_PARAMETERS" value=""/>
         </STARTUP>
         <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
+          <option name="USE_DEFAULT" value="true"/>
+          <option name="SCRIPT" value=""/>
+          <option name="VM_PARAMETERS" value=""/>
+          <option name="PROGRAM_PARAMETERS" value=""/>
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
+        <option name="USE_ENV_VARIABLES" value="true"/>
         <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
+          <option name="USE_DEFAULT" value="true"/>
+          <option name="SCRIPT" value=""/>
+          <option name="VM_PARAMETERS" value=""/>
+          <option name="PROGRAM_PARAMETERS" value=""/>
         </STARTUP>
         <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
+          <option name="USE_DEFAULT" value="true"/>
+          <option name="SCRIPT" value=""/>
+          <option name="VM_PARAMETERS" value=""/>
+          <option name="PROGRAM_PARAMETERS" value=""/>
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="Make" enabled="true"/>
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Project:war exploded" />
+          <artifact name="Project:war exploded"/>
         </option>
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.64" />
+      <item itemvalue="Application.Unnamed"/>
+      <item itemvalue="Tomcat Server.Tomcat 9.0.64"/>
     </list>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true"/>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="" />
+      <changelist id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment=""/>
       <created>1685003234825</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
+      <option name="number" value="Default"/>
+      <option name="presentableId" value="Default"/>
       <updated>1685003234825</updated>
-      <workItem from="1685003236271" duration="1192000" />
-      <workItem from="1685005576118" duration="2689000" />
-      <workItem from="1685008304688" duration="571000" />
-      <workItem from="1685021552411" duration="124000" />
-      <workItem from="1685021804393" duration="9478000" />
-      <workItem from="1685514373978" duration="3449000" />
-      <workItem from="1685602597819" duration="43555000" />
-      <workItem from="1685727175028" duration="45047000" />
-      <workItem from="1686022558133" duration="2990000" />
-      <workItem from="1686215994511" duration="15614000" />
-      <workItem from="1686541857833" duration="34183000" />
-      <workItem from="1686714863984" duration="7555000" />
-      <workItem from="1686723750919" duration="19021000" />
-      <workItem from="1686801645089" duration="7186000" />
-      <workItem from="1687185887747" duration="4785000" />
-      <workItem from="1687321910860" duration="638000" />
-      <workItem from="1687322561347" duration="212000" />
-      <workItem from="1687322782443" duration="7362000" />
-      <workItem from="1688131531132" duration="55028000" />
-      <workItem from="1689045960336" duration="3688000" />
-      <workItem from="1689055786217" duration="9384000" />
-      <workItem from="1689399293296" duration="2575000" />
-      <workItem from="1689498352975" duration="25076000" />
-      <workItem from="1689740198518" duration="8750000" />
-      <workItem from="1689783888822" duration="7903000" />
-      <workItem from="1690090170655" duration="2573000" />
-      <workItem from="1690269140637" duration="5729000" />
-      <workItem from="1690360105299" duration="13153000" />
-      <workItem from="1690386222117" duration="15633000" />
-      <workItem from="1690900951484" duration="11544000" />
-      <workItem from="1690954807671" duration="1190000" />
-      <workItem from="1691068248109" duration="27391000" />
-      <workItem from="1691471013044" duration="15617000" />
-      <workItem from="1691594225026" duration="6349000" />
-      <workItem from="1691906443580" duration="18336000" />
-      <workItem from="1692082129200" duration="4050000" />
-      <workItem from="1692090023839" duration="11359000" />
-      <workItem from="1692114549212" duration="838000" />
-      <workItem from="1692116051805" duration="1327000" />
-      <workItem from="1692154627213" duration="2486000" />
-      <workItem from="1692159408085" duration="1229000" />
-      <workItem from="1692185984825" duration="1157000" />
-      <workItem from="1692203041580" duration="14000" />
-      <workItem from="1692252468950" duration="1050000" />
-      <workItem from="1692601818443" duration="495000" />
-      <workItem from="1692603155300" duration="11730000" />
-      <workItem from="1692759554236" duration="1032000" />
-      <workItem from="1692945407138" duration="14205000" />
-      <workItem from="1693025217934" duration="6829000" />
-      <workItem from="1693113435784" duration="10213000" />
-      <workItem from="1693192879948" duration="13330000" />
-      <workItem from="1693296777424" duration="792000" />
-      <workItem from="1693401943065" duration="5730000" />
-      <workItem from="1693488815024" duration="1278000" />
-      <workItem from="1693491337174" duration="350000" />
-      <workItem from="1693502677410" duration="2363000" />
-      <workItem from="1693507292383" duration="193000" />
-      <workItem from="1693507592947" duration="169000" />
-      <workItem from="1693508202500" duration="71000" />
-      <workItem from="1693578782764" duration="2620000" />
-      <workItem from="1693628649571" duration="14225000" />
-      <workItem from="1693658462216" duration="7683000" />
-      <workItem from="1693729932629" duration="6568000" />
-      <workItem from="1693799023871" duration="24627000" />
-      <workItem from="1694327851046" duration="3290000" />
-      <workItem from="1694405109849" duration="3124000" />
-      <workItem from="1694421367153" duration="6074000" />
-      <workItem from="1694441074878" duration="2000" />
-      <workItem from="1694441919220" duration="475000" />
-      <workItem from="1694492009859" duration="5376000" />
-      <workItem from="1694517948342" duration="5523000" />
-      <workItem from="1694526621620" duration="128000" />
-      <workItem from="1694572240660" duration="3746000" />
-      <workItem from="1694699158041" duration="1883000" />
-      <workItem from="1694836324304" duration="5601000" />
-      <workItem from="1694868834669" duration="17148000" />
-      <workItem from="1694969234786" duration="1906000" />
-      <workItem from="1695004565417" duration="7678000" />
-      <workItem from="1695013455633" duration="3939000" />
-      <workItem from="1695041720457" duration="8798000" />
-      <workItem from="1695092774063" duration="9425000" />
-      <workItem from="1695128116327" duration="18365000" />
-      <workItem from="1695176598431" duration="2456000" />
-      <workItem from="1695180648759" duration="180000" />
-      <workItem from="1695181604860" duration="1594000" />
-      <workItem from="1695195459949" duration="5707000" />
-      <workItem from="1695213343627" duration="4462000" />
-      <workItem from="1695266051954" duration="6448000" />
-      <workItem from="1695301214575" duration="9903000" />
-      <workItem from="1695348701550" duration="995000" />
-      <workItem from="1695352679896" duration="2794000" />
-      <workItem from="1695454126762" duration="16288000" />
-      <workItem from="1695524704351" duration="4415000" />
-      <workItem from="1695536416309" duration="6230000" />
-      <workItem from="1695556058635" duration="5588000" />
-      <workItem from="1695566858874" duration="4893000" />
-      <workItem from="1695615010674" duration="10565000" />
-      <workItem from="1695629542630" duration="3038000" />
-      <workItem from="1695632616918" duration="5517000" />
-      <workItem from="1695639289540" duration="2182000" />
-      <workItem from="1695658505962" duration="6251000" />
-      <workItem from="1695711421691" duration="4000" />
-      <workItem from="1695742980549" duration="9185000" />
-      <workItem from="1695782232436" duration="28484000" />
-      <workItem from="1695873421759" duration="131000" />
-      <workItem from="1695873637429" duration="20000" />
-      <workItem from="1695873752408" duration="2642000" />
-      <workItem from="1695897606593" duration="1416000" />
-      <workItem from="1695918471736" duration="4256000" />
-      <workItem from="1695960093631" duration="3038000" />
-      <workItem from="1695964004166" duration="1481000" />
-      <workItem from="1695981393649" duration="4906000" />
-      <workItem from="1696058837521" duration="309000" />
-      <workItem from="1696059185672" duration="1357000" />
-      <workItem from="1696061672188" duration="4038000" />
-      <workItem from="1696074327361" duration="10151000" />
-      <workItem from="1696086527893" duration="7207000" />
-      <workItem from="1696147931170" duration="3491000" />
-      <workItem from="1696153311513" duration="3049000" />
-      <workItem from="1696159213618" duration="3344000" />
-      <workItem from="1696219515544" duration="5055000" />
-      <workItem from="1696232523225" duration="5216000" />
-      <workItem from="1696246454856" duration="7212000" />
-      <workItem from="1696262548869" duration="5732000" />
-      <workItem from="1696305769704" duration="2080000" />
-      <workItem from="1696312696251" duration="1315000" />
-      <workItem from="1696393817381" duration="5694000" />
-      <workItem from="1696437909311" duration="2015000" />
-      <workItem from="1696518320324" duration="228000" />
-      <workItem from="1696525920625" duration="659000" />
-      <workItem from="1696526672878" duration="2698000" />
-      <workItem from="1696581496711" duration="7184000" />
-      <workItem from="1696644299813" duration="491000" />
-      <workItem from="1696656730481" duration="13167000" />
-      <workItem from="1696737023250" duration="2510000" />
-      <workItem from="1696751409371" duration="11876000" />
-      <workItem from="1696820599891" duration="11225000" />
-      <workItem from="1697025876725" duration="307000" />
-      <workItem from="1697038420783" duration="5422000" />
-      <workItem from="1697085519667" duration="603000" />
-      <workItem from="1697121619222" duration="2953000" />
-      <workItem from="1697125055708" duration="3818000" />
-      <workItem from="1697164715728" duration="3246000" />
-      <workItem from="1697177257484" duration="5916000" />
-      <workItem from="1697187902017" duration="8666000" />
-      <workItem from="1697267705881" duration="1593000" />
-      <workItem from="1697334181719" duration="5140000" />
-      <workItem from="1697340805309" duration="1843000" />
-      <workItem from="1697342795661" duration="1061000" />
+      <workItem from="1685003236271" duration="1192000"/>
+      <workItem from="1685005576118" duration="2689000"/>
+      <workItem from="1685008304688" duration="571000"/>
+      <workItem from="1685021552411" duration="124000"/>
+      <workItem from="1685021804393" duration="9478000"/>
+      <workItem from="1685514373978" duration="3449000"/>
+      <workItem from="1685602597819" duration="43555000"/>
+      <workItem from="1685727175028" duration="45047000"/>
+      <workItem from="1686022558133" duration="2990000"/>
+      <workItem from="1686215994511" duration="15614000"/>
+      <workItem from="1686541857833" duration="34183000"/>
+      <workItem from="1686714863984" duration="7555000"/>
+      <workItem from="1686723750919" duration="19021000"/>
+      <workItem from="1686801645089" duration="7186000"/>
+      <workItem from="1687185887747" duration="4785000"/>
+      <workItem from="1687321910860" duration="638000"/>
+      <workItem from="1687322561347" duration="212000"/>
+      <workItem from="1687322782443" duration="7362000"/>
+      <workItem from="1688131531132" duration="55028000"/>
+      <workItem from="1689045960336" duration="3688000"/>
+      <workItem from="1689055786217" duration="9384000"/>
+      <workItem from="1689399293296" duration="2575000"/>
+      <workItem from="1689498352975" duration="25076000"/>
+      <workItem from="1689740198518" duration="8750000"/>
+      <workItem from="1689783888822" duration="7903000"/>
+      <workItem from="1690090170655" duration="2573000"/>
+      <workItem from="1690269140637" duration="5729000"/>
+      <workItem from="1690360105299" duration="13153000"/>
+      <workItem from="1690386222117" duration="15633000"/>
+      <workItem from="1690900951484" duration="11544000"/>
+      <workItem from="1690954807671" duration="1190000"/>
+      <workItem from="1691068248109" duration="27391000"/>
+      <workItem from="1691471013044" duration="15617000"/>
+      <workItem from="1691594225026" duration="6349000"/>
+      <workItem from="1691906443580" duration="18336000"/>
+      <workItem from="1692082129200" duration="4050000"/>
+      <workItem from="1692090023839" duration="11359000"/>
+      <workItem from="1692114549212" duration="838000"/>
+      <workItem from="1692116051805" duration="1327000"/>
+      <workItem from="1692154627213" duration="2486000"/>
+      <workItem from="1692159408085" duration="1229000"/>
+      <workItem from="1692185984825" duration="1157000"/>
+      <workItem from="1692203041580" duration="14000"/>
+      <workItem from="1692252468950" duration="1050000"/>
+      <workItem from="1692601818443" duration="495000"/>
+      <workItem from="1692603155300" duration="11730000"/>
+      <workItem from="1692759554236" duration="1032000"/>
+      <workItem from="1692945407138" duration="14205000"/>
+      <workItem from="1693025217934" duration="6829000"/>
+      <workItem from="1693113435784" duration="10213000"/>
+      <workItem from="1693192879948" duration="13330000"/>
+      <workItem from="1693296777424" duration="792000"/>
+      <workItem from="1693401943065" duration="5730000"/>
+      <workItem from="1693488815024" duration="1278000"/>
+      <workItem from="1693491337174" duration="350000"/>
+      <workItem from="1693502677410" duration="2363000"/>
+      <workItem from="1693507292383" duration="193000"/>
+      <workItem from="1693507592947" duration="169000"/>
+      <workItem from="1693508202500" duration="71000"/>
+      <workItem from="1693578782764" duration="2620000"/>
+      <workItem from="1693628649571" duration="14225000"/>
+      <workItem from="1693658462216" duration="7683000"/>
+      <workItem from="1693729932629" duration="6568000"/>
+      <workItem from="1693799023871" duration="24627000"/>
+      <workItem from="1694327851046" duration="3290000"/>
+      <workItem from="1694405109849" duration="3124000"/>
+      <workItem from="1694421367153" duration="6074000"/>
+      <workItem from="1694441074878" duration="2000"/>
+      <workItem from="1694441919220" duration="475000"/>
+      <workItem from="1694492009859" duration="5376000"/>
+      <workItem from="1694517948342" duration="5523000"/>
+      <workItem from="1694526621620" duration="128000"/>
+      <workItem from="1694572240660" duration="3746000"/>
+      <workItem from="1694699158041" duration="1883000"/>
+      <workItem from="1694836324304" duration="5601000"/>
+      <workItem from="1694868834669" duration="17148000"/>
+      <workItem from="1694969234786" duration="1906000"/>
+      <workItem from="1695004565417" duration="7678000"/>
+      <workItem from="1695013455633" duration="3939000"/>
+      <workItem from="1695041720457" duration="8798000"/>
+      <workItem from="1695092774063" duration="9425000"/>
+      <workItem from="1695128116327" duration="18365000"/>
+      <workItem from="1695176598431" duration="2456000"/>
+      <workItem from="1695180648759" duration="180000"/>
+      <workItem from="1695181604860" duration="1594000"/>
+      <workItem from="1695195459949" duration="5707000"/>
+      <workItem from="1695213343627" duration="4462000"/>
+      <workItem from="1695266051954" duration="6448000"/>
+      <workItem from="1695301214575" duration="9903000"/>
+      <workItem from="1695348701550" duration="995000"/>
+      <workItem from="1695352679896" duration="2794000"/>
+      <workItem from="1695454126762" duration="16288000"/>
+      <workItem from="1695524704351" duration="4415000"/>
+      <workItem from="1695536416309" duration="6230000"/>
+      <workItem from="1695556058635" duration="5588000"/>
+      <workItem from="1695566858874" duration="4893000"/>
+      <workItem from="1695615010674" duration="10565000"/>
+      <workItem from="1695629542630" duration="3038000"/>
+      <workItem from="1695632616918" duration="5517000"/>
+      <workItem from="1695639289540" duration="2182000"/>
+      <workItem from="1695658505962" duration="6251000"/>
+      <workItem from="1695711421691" duration="4000"/>
+      <workItem from="1695742980549" duration="9185000"/>
+      <workItem from="1695782232436" duration="28484000"/>
+      <workItem from="1695873421759" duration="131000"/>
+      <workItem from="1695873637429" duration="20000"/>
+      <workItem from="1695873752408" duration="2642000"/>
+      <workItem from="1695897606593" duration="1416000"/>
+      <workItem from="1695918471736" duration="4256000"/>
+      <workItem from="1695960093631" duration="3038000"/>
+      <workItem from="1695964004166" duration="1481000"/>
+      <workItem from="1695981393649" duration="4906000"/>
+      <workItem from="1696058837521" duration="309000"/>
+      <workItem from="1696059185672" duration="1357000"/>
+      <workItem from="1696061672188" duration="4038000"/>
+      <workItem from="1696074327361" duration="10151000"/>
+      <workItem from="1696086527893" duration="7207000"/>
+      <workItem from="1696147931170" duration="3491000"/>
     </task>
     <task id="LOCAL-00001" summary="create controller">
       <created>1693579426903</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00001"/>
+      <option name="presentableId" value="LOCAL-00001"/>
+      <option name="project" value="LOCAL"/>
       <updated>1693579426903</updated>
     </task>
     <task id="LOCAL-00002" summary="controller">
       <created>1693579934498</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00002"/>
+      <option name="presentableId" value="LOCAL-00002"/>
+      <option name="project" value="LOCAL"/>
       <updated>1693579934499</updated>
     </task>
     <task id="LOCAL-00003" summary="update">
       <created>1693658528973</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00003"/>
+      <option name="presentableId" value="LOCAL-00003"/>
+      <option name="project" value="LOCAL"/>
       <updated>1693658528973</updated>
     </task>
     <task id="LOCAL-00004" summary="update edit">
       <created>1693847311035</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00004"/>
+      <option name="presentableId" value="LOCAL-00004"/>
+      <option name="project" value="LOCAL"/>
       <updated>1693847311035</updated>
     </task>
     <task id="LOCAL-00005" summary="update edit reh">
       <created>1693853412401</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00005"/>
+      <option name="presentableId" value="LOCAL-00005"/>
+      <option name="project" value="LOCAL"/>
       <updated>1693853412401</updated>
     </task>
     <task id="LOCAL-00006" summary="update edit">
       <created>1694327911387</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00006"/>
+      <option name="presentableId" value="LOCAL-00006"/>
+      <option name="project" value="LOCAL"/>
       <updated>1694327911387</updated>
     </task>
     <task id="LOCAL-00007" summary="update css">
       <created>1694413851847</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00007"/>
+      <option name="presentableId" value="LOCAL-00007"/>
+      <option name="project" value="LOCAL"/>
       <updated>1694413851847</updated>
     </task>
     <task id="LOCAL-00008" summary="update okay">
       <created>1694427319300</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00008"/>
+      <option name="presentableId" value="LOCAL-00008"/>
+      <option name="project" value="LOCAL"/>
       <updated>1694427319300</updated>
     </task>
     <task id="LOCAL-00009" summary="commit">
       <created>1694836758926</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00009"/>
+      <option name="presentableId" value="LOCAL-00009"/>
+      <option name="project" value="LOCAL"/>
       <updated>1694836758926</updated>
     </task>
     <task id="LOCAL-00010" summary="commit">
       <created>1694849794307</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00010"/>
+      <option name="presentableId" value="LOCAL-00010"/>
+      <option name="project" value="LOCAL"/>
       <updated>1694849794307</updated>
     </task>
     <task id="LOCAL-00011" summary="edit his and course">
       <created>1694942301738</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00011"/>
+      <option name="presentableId" value="LOCAL-00011"/>
+      <option name="project" value="LOCAL"/>
       <updated>1694942301739</updated>
     </task>
     <task id="LOCAL-00012" summary="edit news and alumni">
       <created>1695041775688</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00012"/>
+      <option name="presentableId" value="LOCAL-00012"/>
+      <option name="project" value="LOCAL"/>
       <updated>1695041775688</updated>
     </task>
     <task id="LOCAL-00013" summary="update">
       <created>1695058648787</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00013"/>
+      <option name="presentableId" value="LOCAL-00013"/>
+      <option name="project" value="LOCAL"/>
       <updated>1695058648787</updated>
     </task>
     <task id="LOCAL-00014" summary="update">
       <created>1695123121506</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00014"/>
+      <option name="presentableId" value="LOCAL-00014"/>
+      <option name="project" value="LOCAL"/>
       <updated>1695123121506</updated>
     </task>
     <task id="LOCAL-00015" summary="create list_img(news)">
       <created>1695139153864</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00015"/>
+      <option name="presentableId" value="LOCAL-00015"/>
+      <option name="project" value="LOCAL"/>
       <updated>1695139153864</updated>
     </task>
     <task id="LOCAL-00016" summary="ตกแต่ง1">
       <created>1695319575116</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00016"/>
+      <option name="presentableId" value="LOCAL-00016"/>
+      <option name="project" value="LOCAL"/>
       <updated>1695319575116</updated>
     </task>
     <task id="LOCAL-00017" summary="นับ1">
       <created>1695529240124</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00017"/>
+      <option name="presentableId" value="LOCAL-00017"/>
+      <option name="project" value="LOCAL"/>
       <updated>1695529240124</updated>
     </task>
     <task id="LOCAL-00018" summary="นับ2">
       <created>1695665221784</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00018"/>
+      <option name="presentableId" value="LOCAL-00018"/>
+      <option name="project" value="LOCAL"/>
       <updated>1695665221784</updated>
     </task>
     <task id="LOCAL-00019" summary="นับ3(ใหม่ อันเก่าผิด)">
       <created>1695876061716</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00019"/>
+      <option name="presentableId" value="LOCAL-00019"/>
+      <option name="project" value="LOCAL"/>
       <updated>1695876061717</updated>
     </task>
     <task id="LOCAL-00020" summary="ลบรูปภาพในข่าว">
       <created>1696152960171</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
+      <option name="number" value="00020"/>
+      <option name="presentableId" value="LOCAL-00020"/>
+      <option name="project" value="LOCAL"/>
       <updated>1696152960171</updated>
     </task>
-    <task id="LOCAL-00021" summary="นับ1ใหม่">
-      <created>1696659694187</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1696659694187</updated>
-    </task>
-    <task id="LOCAL-00022" summary="1">
-      <created>1696659828214</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1696659828214</updated>
-    </task>
-    <task id="LOCAL-00023" summary="1">
-      <created>1696659932485</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1696659932485</updated>
-    </task>
-    <task id="LOCAL-00024" summary="2">
-      <created>1697026163484</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1697026163484</updated>
-    </task>
-    <task id="LOCAL-00025" summary="3 ได้เพิ่มรูปเดียวแล้ว และ join ตารางmton(ไม่รู้ว่าถูกไหม)">
-      <created>1697129074589</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1697129074589</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
-    <servers />
+    <option name="localTasksCounter" value="21"/>
+    <servers/>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+    <option name="version" value="3"/>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create controller" />
-    <MESSAGE value="controller" />
-    <MESSAGE value="update edit reh" />
-    <MESSAGE value="update edit" />
-    <MESSAGE value="update css" />
-    <MESSAGE value="update okay" />
-    <MESSAGE value="commit" />
-    <MESSAGE value="edit his and course" />
-    <MESSAGE value="edit news and alumni" />
-    <MESSAGE value="update" />
-    <MESSAGE value="create list_img(news)" />
-    <MESSAGE value="ตกแต่ง1" />
-    <MESSAGE value="นับ1" />
-    <MESSAGE value="นับ2" />
-    <MESSAGE value="นับ3" />
-    <MESSAGE value="นับ3(ใหม่ อันเก่ผิด)" />
-    <MESSAGE value="นับ3(ใหม่ อันเก่าผิด)" />
-    <MESSAGE value="ลบรูปภาพในข่าว" />
-    <MESSAGE value="นับ1ใหม่" />
-    <MESSAGE value="ใหม่" />
-    <MESSAGE value="1" />
-    <MESSAGE value="2" />
-    <MESSAGE value="3 ได้เพิ่มรูปเดียวแล้ว join ตารางmton(ไม่รู้ว่าถูกไหม)" />
-    <MESSAGE value="3 ได้เพิ่มรูปเดียวแล้ว และ join ตารางmton(ไม่รู้ว่าถูกไหม)" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 ได้เพิ่มรูปเดียวแล้ว และ join ตารางmton(ไม่รู้ว่าถูกไหม)" />
+    <MESSAGE value="create controller"/>
+    <MESSAGE value="controller"/>
+    <MESSAGE value="update edit reh"/>
+    <MESSAGE value="update edit"/>
+    <MESSAGE value="update css"/>
+    <MESSAGE value="update okay"/>
+    <MESSAGE value="commit"/>
+    <MESSAGE value="edit his and course"/>
+    <MESSAGE value="edit news and alumni"/>
+    <MESSAGE value="update"/>
+    <MESSAGE value="create list_img(news)"/>
+    <MESSAGE value="ตกแต่ง1"/>
+    <MESSAGE value="นับ1"/>
+    <MESSAGE value="นับ2"/>
+    <MESSAGE value="นับ3"/>
+    <MESSAGE value="นับ3(ใหม่ อันเก่ผิด)"/>
+    <MESSAGE value="นับ3(ใหม่ อันเก่าผิด)"/>
+    <MESSAGE value="ลบรูปภาพในข่าว"/>
+    <option name="LAST_COMMIT_MESSAGE" value="ลบรูปภาพในข่าว"/>
   </component>
 </project>
