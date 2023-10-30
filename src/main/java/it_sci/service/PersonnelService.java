@@ -2,16 +2,13 @@ package it_sci.service;
 
 import it_sci.model.*;
 
-import javax.transaction.Transactional;
-import javax.validation.Valid;
 import java.util.List;
+import java.util.Set;
 
 public interface PersonnelService {
     List<Personnel> getPersonnel();
 
     Personnel getPersonnelById(long personnelId);
-
-    Academic_Ranks getAcademicRankById(long acId);
 
     List<Award> getAward(long awardId);
 
@@ -21,7 +18,8 @@ public interface PersonnelService {
 
     List<Research_grant> getResearchGrant(long RGid);
 
-    List<Academic_Ranks> getAcademicRanks();
+    List<Project_consulting> getProjectconsulting(long PC);
+
 
     void SavePersonnel(Personnel personnel);
     void SavePersonnelEducation(Education_histiry education_histiry);
@@ -31,6 +29,8 @@ public interface PersonnelService {
     void  SavePersonnelAward(Award award);
 
     void  SavePersonnelWork(Work_experience work_experience);
+
+    void SaveProjectconsulting(Project_consulting project_consulting);
 
     void updatePersonnel(Personnel personnel);
 
@@ -42,6 +42,8 @@ public interface PersonnelService {
 
     void updateResearch_grant(Research_grant research_grant);
 
+    void  updateProject_consulting(Project_consulting project_consulting);
+
 
     void removePersonnelEducation(long id);
 
@@ -50,4 +52,16 @@ public interface PersonnelService {
     void  removePersonnelAward(long id);
 
     void  removePersonnelWork(long id);
+
+    void  removeProjectconsulting(long id);
+
+    void savePersonnelAcademicRanks(long personnelId, Set<Academic_Ranks> academicRanks);
+    Set<Academic_Ranks> getAcademicRanksForPersonnel(long personnelId);
+
+    void addAcademic_RanksToPersonnel(long personnelid, long id);
+
+    void removeAcademic_RanksToPersonnel(long personnelid, long id);
+
+    List<Personnel> getPersonnelDoesNotHaveAcademic_Ranks(long id);
+
 }

@@ -13,7 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -71,12 +70,14 @@ public class AlumniController {
         String firstname = allReqParams.get("firstname");
         String lastname = allReqParams.get("lastname");
         String graduationyear = allReqParams.get("year");
+        String generation = allReqParams.get("generation");
         String position = allReqParams.get("position");
         String company = allReqParams.get("company");
         String phone = allReqParams.get("phone");
         String email = allReqParams.get("email");
         String expertise = allReqParams.get("expertise");
         String award = allReqParams.get("award");
+        String prefix = allReqParams.get("prefix");
 
         String imageFileName = null;
 
@@ -102,7 +103,7 @@ public class AlumniController {
             position = otherPosition;
         }
 
-        Alumni alumni = new Alumni(id, firstname, lastname, graduationyear, position, company, phone, email, imageFileName, expertise, award);
+        Alumni alumni = new Alumni(id, firstname, lastname, graduationyear,generation, position, company, phone, email, imageFileName, expertise, award,prefix);
         alumniService.SaveAlumni(alumni);
         return "redirect:/alumni/list_alumni_manage";
     }
@@ -121,62 +122,80 @@ public class AlumniController {
         return "JSP/Alumni/edit_alumni";
     }
 
-
     @PostMapping(path = "/{id}/edit/save")
-    public String saveEditAlumni(@RequestParam Map<String, String> allReqParams, @PathVariable String id) throws ParseException {
+    public String saveEditAlumni(@RequestParam Map<String, String> allReqParams, @PathVariable String id, @RequestParam("newImageFile") MultipartFile newImageFile) throws ParseException, IOException {
         Alumni alumni = alumniService.getAlumni(id);
+
         if (alumni != null) {
             alumni.setId(allReqParams.get("alumni_id"));
             alumni.setFirstname(allReqParams.get("firstname"));
             alumni.setLastname(allReqParams.get("lastname"));
             alumni.setGraduationyear(allReqParams.get("year"));
-            String position = allReqParams.get("position"); // รับค่า position จาก allReqParams
+            alumni.setGeneration(allReqParams.get("generation"));
+            String position = allReqParams.get("position");
             alumni.setPosition(position);
             alumni.setCompany(allReqParams.get("company"));
             alumni.setPhone(allReqParams.get("phone"));
             alumni.setEmail(allReqParams.get("email"));
-            alumni.setImage(allReqParams.get("image"));
             alumni.setExpertise(allReqParams.get("expertise"));
             alumni.setAward(allReqParams.get("award"));
+            alumni.setPrefix(allReqParams.get("prefix"));
 
-
-            // ตรวจสอบค่า position ว่าเป็น "อื่นๆ" หรือไม่
+            // Check if position is "อื่นๆ"
             if ("อื่นๆ".equals(position)) {
-                String otherPosition = allReqParams.get("otherPosition"); // รับค่า otherPosition จาก allReqParams
+                String otherPosition = allReqParams.get("otherPosition");
                 alumni.setPosition(otherPosition);
+            }
+
+            // Handle new image upload
+            if (!newImageFile.isEmpty()) {
+                String originalFilename = newImageFile.getOriginalFilename();
+                String fileExtension = originalFilename.substring(originalFilename.lastIndexOf('.'));
+                String newFileName = UUID.randomUUID().toString() + fileExtension;
+
+                String uploadDirectory = PathImg.path_Img + "/alumni/";
+                Path filePath = Paths.get(uploadDirectory, newFileName);
+
+                try {
+                    Files.write(filePath, newImageFile.getBytes());
+
+                    // Delete old image file
+                    String oldImageFileName = alumni.getImage();
+                    Path oldImageFilePath = Paths.get(uploadDirectory, oldImageFileName);
+                    Files.delete(oldImageFilePath);
+
+                    // Update alumni with the new image file name
+                    alumni.setImage(newFileName);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
 
             alumniService.EditAlumni(alumni);
         }
+
         return "redirect:/alumni/list_alumni_manage";
     }
 
 
+
     @Transactional
     @GetMapping("/{id}/delete")
-    public String isRemoveAlumni(@PathVariable("id") String id) {
-        alumniService.removeAlumni(id);
-//        Alumni alumni = alumniService.getAlumni(id);
+    public String isRemoveAlumni(@PathVariable("id") String id) throws IOException {
+        Alumni alumni = alumniService.getAlumni(id);
 
-//        if (alumni != null) {
-//            alumniService.removeAlumni(id);
-//            // ลบไฟล์รูปภาพที่เกี่ยวข้อง
-//            String uploadDirectory = PathImg.path_Img + "/alumni/";
-//            File directory = new File(uploadDirectory);
-//
-//            if (directory.exists()) {
-//                // ดึงรายชื่อไฟล์ในไดเรกทอรี
-//                File[] files = directory.listFiles();
-//
-//                if (files != null) {
-//                    for (File file : files) {
-//                        if (file.isFile()) {
-//                            file.delete();
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        if (alumni != null) {
+            // ลบไฟล์รูปภาพ (ถ้ามี)
+            String imageFileName = alumni.getImage();
+            if (imageFileName != null) {
+                String uploadDirectory = PathImg.path_Img + "/alumni/";
+                Path imageFilePath = Paths.get(uploadDirectory, imageFileName);
+                Files.delete(imageFilePath);
+            }
+
+            // ลบข้อมูล Alumni ในฐานข้อมูล
+            alumniService.removeAlumni(id);
+        }
 
         return "redirect:/alumni/list_alumni_manage";
     }

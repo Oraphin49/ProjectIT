@@ -85,15 +85,26 @@
 <div class="container">
     <form action="${pageContext.request.contextPath}/alumni/save" method="POST" onsubmit="return validateForm();"  enctype="multipart/form-data">
         <div class="form-group row">
-            <div class="col-md-6">
+            <div class="col-md-6" >
                 <label for="alumni_id">รหัสนักศึกษา:</label>
                 <input type="text" id="alumni_id" name="alumni_id" class="form-control">
             </div>
             <div class="col-md-6">
-                <div class="form-group">
-                    <label for="year">ปีที่จบการศึกษา:</label>
-                    <input type="text" id="year" name="year" class="form-control">
-                </div>
+                <label for="year">ปีที่จบการศึกษา:</label>
+                <input type="text" id="year" name="year" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="generation">ไอทีรุ่นที่:</label>
+                <input type="text" id="generation" name="generation" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <select name="prefix" id="prefix" class="prefix" style="width: 100%;height: 35px;margin-top: 25px;font-family: 'Kanit';" >
+                    <option value="นาย">นาย</option>
+                    <option value="นาง">นาง</option>
+                    <option value="นางสาว">นางสาว</option>
+                </select>
             </div>
         </div>
         <div class="form-group row">
@@ -199,6 +210,19 @@
         var year = document.getElementById("year").value;
         if (year.trim() === "") {
             alert("กรุณากรอกปีที่จบการศึกษา");
+            return false;
+        } else if (!/^\d+$/.test(year)) {
+            alert("ปีการศึกษาที่จบต้องประกอบด้วยตัวเลขเท่านั้น");
+            return false;
+        }
+
+        // เช็ครุ่นที่ //
+        var generation = document.getElementById("generation").value;
+        if (generation.trim() === "") {
+            alert("กรุณากรอกรุ่นที่");
+            return false;
+        } else if (!/^\d+$/.test(generation)) {
+            alert("รุ่นที่ต้องประกอบด้วยตัวเลขเท่านั้น");
             return false;
         }
 

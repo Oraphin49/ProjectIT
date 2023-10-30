@@ -83,19 +83,30 @@
 <h3>แก้ไขข้อมูลศิษย์เก่า</h3>
 <br><br>
 <div class="container">
-    <form action="${pageContext.request.contextPath}/alumni/${alumni.id}/edit/save" method="POST" onsubmit="return validateForm();">
+    <form action="${pageContext.request.contextPath}/alumni/${alumni.id}/edit/save" method="POST" onsubmit="return validateForm();" enctype="multipart/form-data">
       <div class="form-group row">
-        <div class="col-md-6">
+        <div class="col-md-6" >
           <label for="alumni_id">รหัสนักศึกษา:</label>
           <input type="text" id="alumni_id" name="alumni_id" class="form-control" value="${alumni.id}">
         </div>
         <div class="col-md-6">
-          <div class="form-group">
-            <label for="year">ปีที่จบการศึกษา:</label>
-            <input type="text" id="year" name="year" class="form-control" value="${alumni.graduationyear}">
-          </div>
+          <label for="year">ปีที่จบการศึกษา:</label>
+          <input type="text" id="year" name="year" class="form-control" value="${alumni.graduationyear}">
         </div>
       </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="generation">ไอทีรุ่นที่:</label>
+                <input type="text" id="generation" name="generation" class="form-control" value="${alumni.generation}">
+            </div>
+          <div class="col-md-6" >
+            <select name="prefix" id="prefix" class="prefix" style="width: 100%;height: 35px;margin-top: 25px;font-family: 'Kanit';" th:value="คำนำหน้า" >
+              <option value="นาย " ${alumni.prefix == 'นาย' ?  'selected' : ''}>นาย</option>
+              <option value="นาง" ${alumni.prefix == 'นาง' ?  'selected' : ''}>นาง</option>
+              <option value="นางสาว" ${alumni.prefix == 'นางสาว' ?  'selected' : ''}>นางสาว</option>
+            </select>
+        </div>
+        </div>
       <div class="form-group row">
         <div class="col-md-6">
           <label for="firstname">ชื่อจริง:</label>
@@ -139,10 +150,13 @@
           <input type="email" id="email" name="email" class="form-control" value="${alumni.email}">
         </div>
       </div>
-      <!-- เพิ่มสไตล์ CSS สำหรับรูปภาพ -->
       <div class="form-group">
-        <label for="image">รูปภาพ:</label>
-        <input type="text" id="image" name="image" class="form-control" value="${alumni.image}">
+        <%--@declare id="currentimage"--%><label for="currentImage">รูปภาพปัจจุบัน:</label>
+        <img src="${pageContext.request.contextPath}/assets/image/alumni/${alumni.image}" alt="Current Image" width="200">
+      </div>
+      <div class="form-group">
+        <label for="newImageFile">อัปโหลดรูปภาพใหม่ (ถ้าต้องการ):</label>
+        <input type="file" id="newImageFile" name="newImageFile">
       </div>
       <div class="form-group">
         <label for="expertise">ความเชี่ยวชาญ:</label>
@@ -163,7 +177,6 @@
           </div>
         </div>
       </div>
-
     </form>
   </div>
 </div>
@@ -216,6 +229,18 @@
     var year = document.getElementById("year").value;
     if (year.trim() === "") {
       alert("กรุณากรอกปีที่จบการศึกษา");
+      return false;
+    }else if (!/^\d+$/.test(year)) {
+      alert("ปีการศึกษาที่จบต้องประกอบด้วยตัวเลขเท่านั้น");
+      return false;
+    }
+
+    var generation = document.getElementById("generation").value;
+    if (generation.trim() === "") {
+      alert("กรุณากรอกรุ่นที่");
+      return false;
+    }else if (!/^\d+$/.test(generation)) {
+      alert("รุ่นที่ต้องประกอบด้วยตัวเลขเท่านั้น");
       return false;
     }
 

@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 @Controller
 @RequestMapping("/news")
@@ -37,26 +38,38 @@ public class NewsController {
 
     @GetMapping("/list_news")
     public String listNews(Model model) {
-//        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
         model.addAttribute("list_news",newsService.getNews());
         return "JSP/News/list_news";
-    }
-    @GetMapping("/news")
-    public String shoeNews(Model model) {
-        //model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
-        //model.addAttribute("list_alumni",alumniService.getAlumni());
-        return "JSP/News";
     }
 
     @GetMapping("/{id}/view_news_detail")
     public String ShowNewsDetail(@PathVariable("id") Long id, Model model) {
         News news = newsService.getNews(id);
-        // ดึงข้อมูลรูปภาพและเก็บไว้ใน List
-        List<String> newFileNames = new ArrayList<>();
+
+        List<String> newFileNames = getImagesFromDirectory(id);
+
         model.addAttribute("news_detail", news);
-        model.addAttribute("imageNames", newFileNames);
+        model.addAttribute("newsImage", newFileNames);
+
         return "JSP/News/View_News_Detail";
     }
+
+    private List<String> getImagesFromDirectory(Long newsId) {
+        List<String> imageFiles = new ArrayList<>();
+        String uploadDirectory = PathImg.path_Img + "/news/" + newsId;
+
+        try (Stream<Path> paths = Files.walk(Paths.get(uploadDirectory))) {
+            paths.filter(Files::isRegularFile)
+                    .map(Path::getFileName)
+                    .map(Path::toString)
+                    .forEach(imageFiles::add);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return imageFiles;
+    }
+
 
 
     @GetMapping("/list_news_manage")
@@ -140,8 +153,6 @@ public class NewsController {
     @GetMapping("/{id}/update")
     public String isEditNews( @Valid @PathVariable("id") Long id, Model model) {
         News news = newsService.getNews(id);
-//        model.addAttribute("title", "แก้ไข" + title);
-//        model.addAttribute("categories", categoryService.getCategories());
         model.addAttribute("news", news);
         return "JSP/News/edit_news";
     }

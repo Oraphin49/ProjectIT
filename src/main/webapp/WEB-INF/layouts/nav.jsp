@@ -7,7 +7,8 @@
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- เพิ่มไลบรารี Font Awesome -->
     <style>
@@ -18,7 +19,7 @@
         /*    color: #fff;}*/
         /* ปรับแต่งสไตล์ของลิงก์ */
         .top-nav li a {
-            color: #aa1818;
+            color: #ffffff;
             padding-top: 5px;
             position: absolute;
             top: 0;
@@ -28,14 +29,14 @@
             font-size: 13px;
             text-decoration: none;
             font-family: 'Kanit', sans-serif;
-            background-color: rgba(239, 235, 233, 0.93);
+            background-color: rgba(62, 69, 122, 100);
         }
 
         .top-nav li {
             background: none;
             float: left;
             left: 10px;
-            border-bottom: 2px solid #a41212;
+            border-bottom: 2px solid #FFFFFF;
             font-size: 10px;
             height: 32px;
             padding-top: 8px;
@@ -43,7 +44,7 @@
             text-align: center;
             width: 12.5%;
             font-family: 'Kanit', sans-serif;
-            background-color: #ffffff;
+            background-color: rgba(62, 69, 122, 100);
 
             list-style-type: none;
             list-style-image: none;
@@ -52,7 +53,7 @@
         /* เปลี่ยนสีของลิงก์เมื่อ hover */
         .top-nav li a:hover {
             color: rgb(255, 255, 255);
-            background-color: rgb(218, 37, 37);
+            background-color: rgb(42, 48, 108);
         }
 
         /* ปรับแต่งสไตล์ของเมนูแบบหลายระดับ */
@@ -71,7 +72,7 @@
 
         .top-nav .submenu li {
             display: block;
-            background-color: #a41212;
+            background-color: rgba(62, 69, 122, 100);
             width: 150px;
             font-family: 'Kanit', sans-serif;
         }
@@ -82,11 +83,11 @@
             width: 100%;
             margin-top: 5px;
             font-size: 12px;
-            background-color: #aa1919;
+            background-color: rgba(62, 69, 122, 100);
         }
         .top-nav .submenu li a:hover {
             color: #ffffff;
-            background-color: #670c0c;
+            background-color: rgb(42, 48, 108);
         }
 
     </style>
@@ -104,8 +105,7 @@
             <a href="${pageContext.request.contextPath}/history"><i class="fas fa-info-circle"></i> เกี่ยวกับเรา</a>
             <ul class="submenu">
                 <li><a href="${pageContext.request.contextPath}/history">ประวัติความเป็นมา</a></li>
-                <li><a href="${pageContext.request.contextPath}/course">ข้อมูลหลักสูตรปี60</a></li>
-                <li><a href="${pageContext.request.contextPath}/course65">ข้อมูลหลักสูตรปี65</a></li>
+                <li><a href="${pageContext.request.contextPath}/course">ข้อมูลหลักสูตร</a></li>
 <%--                <li><a href="${pageContext.request.contextPath}/plan">แผนการเรียน</a></li>--%>
             </ul>
         </li>

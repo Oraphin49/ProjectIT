@@ -5,9 +5,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Set;
 
 @Repository
 public class PersonnelDaoImpl implements PersonnelDao {
@@ -29,6 +31,7 @@ public class PersonnelDaoImpl implements PersonnelDao {
         Personnel personnel = session.get(Personnel.class, personnelId);
         return personnel;
     }
+
 
     @Override
     public List<Award> getAward(long id) {
@@ -66,21 +69,14 @@ public class PersonnelDaoImpl implements PersonnelDao {
         return research_grant;
     }
 
-    @Override
-    public List<Academic_Ranks> getAcademicRanks() {
-        Session session = sessionFactory.getCurrentSession();
-        Query<Academic_Ranks> query = session.createQuery("FROM Academic_Ranks", Academic_Ranks.class);
-        List<Academic_Ranks> academic_ranks = query.getResultList();
-        return academic_ranks;
-    }
 
     @Override
-    public Academic_Ranks getAcademicRankById(long acId) {
+    public List<Project_consulting> getProjectconsulting(long id) {
         Session session = sessionFactory.getCurrentSession();
-        Academic_Ranks academic_ranks = session.get(Academic_Ranks.class, acId);
-        return academic_ranks;
+        Query<Project_consulting> query = session.createQuery("FROM Project_consulting ", Project_consulting.class);
+        List<Project_consulting> project_consultings = query.getResultList();
+        return project_consultings;
     }
-
     @Override
     public void SavePersonnel(Personnel personnel) {
         Session session = sessionFactory.getCurrentSession();
@@ -110,6 +106,12 @@ public class PersonnelDaoImpl implements PersonnelDao {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(work_experience);
 
+    }
+
+    @Override
+    public void SaveProjectconsulting(Project_consulting project_consulting) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(project_consulting);
     }
 
 
@@ -151,6 +153,15 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
+    public void removeProjectconsulting(long id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Project_consulting> query = session.createQuery("FROM Project_consulting a WHERE a.id =: aId", Project_consulting.class);
+        query.setParameter("aId",id);
+        Project_consulting project_consulting = query.getSingleResult();
+        session.remove(project_consulting);
+    }
+
+    @Override
     public void updatePersonnel(Personnel personnel) {
         Session session = sessionFactory.getCurrentSession();
         session.update(personnel);
@@ -182,10 +193,42 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
+    public void updateProject_consulting(Project_consulting project_consulting) {
+        Session session = sessionFactory.getCurrentSession();
+        session.update(project_consulting);
+    }
+
+    @Override
     public long getLatestId() {
         Session session = sessionFactory.getCurrentSession();
         Query<Long> query = session.createQuery("SELECT COUNT(p) FROM Personnel p", Long.class);
         return query.getSingleResult();
     }
+
+    public void savePersonnelAcademicRanks(Personnel personnel, Set<Academic_Ranks> academicRanks) {
+        Session session = sessionFactory.getCurrentSession();
+        personnel.setAcademicRank(academicRanks);
+        session.saveOrUpdate(personnel);
+    }
+
+    @Override
+    public Set<Academic_Ranks> getAcademicRanksForPersonnel(long personnelId) {
+        Session session = sessionFactory.getCurrentSession();
+        Personnel personnel = session.get(Personnel.class, personnelId);
+        return personnel.getAcademicRank();
+    }
+
+    @Override
+    public List<Personnel> getPersonnelDoesNotHaveAcademic_Ranks(long id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Personnel> query = session.createQuery("select p.personnel from Academic_Ranks p where p.id=:id");
+        query.setParameter("id", id);
+        List<Personnel> personnelList1 = query.getResultList();
+        query = session.createQuery("from Personnel");
+        List<Personnel> personnelList2 = query.getResultList();
+        personnelList2.removeAll(personnelList1);
+        return personnelList2;
+    }
+
 
 }

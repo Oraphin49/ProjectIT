@@ -3,76 +3,12 @@
 <html>
 <head>
     <title>List news</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
+
     <style>
-        .card {
-            width: 250px;
-            height: 350px;
-            margin: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            background-color: #fbe9e7;
-        }
-
-        .card-text {
-            color: black;
-            font-family: "Kanit";
-            font-size: 14px;
-            margin-top: -5px;
-            display: inline-block;
-        }
-
-        .card img {
-            transition: .5s;
-        }
-
-        .card:hover img {
-            transform: scale(1.02);
-        }
-
-        .card-body {
-            display: inline-block;
-            height: 100px; /* กำหนดความสูงของเนื้อหาข่าว เช่น 100px */
-            margin-left: 12px;
-        }
-        .read-more-link {
-            position: relative;
-            display: inline-block;
-            text-decoration: none;
-            color: #000; /* สีของข้อความ */
-            font-weight: 500; /* ความหนาของข้อความ */
-        }
-
-        .read-more-link i.fa-arrow-right {
-            margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
-            transition: margin-left 0.3s ease-in-out;
-            opacity: 0; /* เริ่มต้นซ่อนลูกศร */
-        }
-        .read-more-link i.fa-arrow-left {
-            margin-left: 5px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศร */
-            transition: margin-left 0.3s ease-in-out;
-            opacity: 0; /* เริ่มต้นซ่อนลูกศร */
-        }
-
-        .read-more-link:hover i.fa-arrow-right {
-            margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
-            opacity: 1; /* แสดงลูกศรเมื่อ hover */
-        }
-        .read-more-link:hover i.fa-arrow-left {
-            margin-left: 10px; /* ระยะห่างระหว่างข้อความ "Read More" กับลูกศรเมื่อ hover */
-            opacity: 1; /* แสดงลูกศรเมื่อ hover */
-        }
-
-        .top_content {
-            margin-top: 30px;
-        }
-
         #searchInput {
             background-position: 10px 12px;
             background-repeat: no-repeat;
@@ -82,107 +18,83 @@
             border: 1px solid #ddd;
             margin-bottom: 12px;
             font-family: Kanit;
-            float: left;
-            margin-left: 500px;
         }
 
-        .block_news {
-            width: 250px;
-            height: 400px;
-            display: none; /* เริ่มต้นซ่อนทุกข่าว */
-            margin: 20px;
+        .card {
+            min-height: 405px;
         }
 
-        /* CSS สำหรับปุ่มเปลี่ยนหน้า */
-        .pagination {
-            text-align: center;
-            margin-top: 45px;
+        .btn-primary {
+            border: 1px solid #ab1212;
+            background-color: #aa1818;
         }
 
-        a i.fa-arrow-left,
-        a i.fa-arrow-right {
-            font-size: 18px;
-            vertical-align: middle;
-            margin-right: 15px;
-            margin-left: 15px;
-            color: #AA1818;
+        .col-md-3 {
+            transition: transform 0.3s;
+            min-height: 250px;
         }
 
-        /* CSS เมื่อโฮเวอร์ลูกศร */
-        a:hover i.fa-arrow-left,
-        a:hover i.fa-arrow-right {
-            color: #771111; /* เปลี่ยนสีของลูกศรเมื่อโฮเวอร์ */
+        .col-md-3:hover {
+            transform: scale(1.02);
         }
 
-        .card:hover {
-            transform: scale(1.03);
-            box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
-        }
     </style>
 </head>
 <body>
 <nav class="gtco-nav" role="navigation">
     <div class="gtco-container">
-        <div class="row"  style="display: block">
+        <div class="row" style="display: block">
             <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
         </div>
     </div>
 </nav>
-    <br><br><br>
-    <div class="top_content">
-        <div>
-            <h2 style="color: #a41212; font-family: Kanit;margin-top: 105px;" align="center">ข่าวสารและกิจกรรม</h2>
-            <br>
-            <div>
-                <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="Search for names.."
-                       title="Type in a name">
-            </div>
-
-            <c:forEach var="news" items="${list_news}">
-                <div class="block_news" data-name="${news.newsname} ${news.date} ${news.category}">
-                    <div class="card">
-                        <h3 class="card2" align="center" style="font-family: Kanit; color: #ff5e5e">${news.category}</h3>
-                        <div class="overflow-hidden" align="center">
-                            <img class="img-fluid" style="width: 85%; height: auto;" src="${pageContext.request.contextPath}/assets/image/news11.jpg">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title" style="font-family: Kanit; margin-top: 5px; margin-bottom: 10px">${news.newsname}</h5>
-                            <p class="card-text">${news.date}</p>
-                        </div>
-                        <div style="font-family: Kanit;"align="center">
-                            <a class="fw-medium read-more-link" href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail" style="color: #AA1818;font-weight: bold;">
-                                ดูเพิ่มเติม
-                                <i class="fa fa-arrow-right ms-2"></i>
-                            </a>
-                            </a>
-                        </div>
+<br>
+<div class="container" style="margin-top: 155px">
+    <h2 class="text-center mt-3" style="color: #000000; font-family: Kanit; font-weight: bold">ข่าวสารและกิจกรรม</h2>
+    <br>
+    <div align="center">
+        <input type="text" id="searchInput" class="form-control mb-4" onkeyup="search()"
+               placeholder="Search for names.." title="Type in a name">
+    </div>
+    <br><br>
+    <div class="row">
+        <c:forEach var="news" items="${list_news}">
+            <div class="col-md-3" data-name="${news.date} ${news.category} ${news.newsname}">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="${pageContext.request.contextPath}/assets/image/news11.jpg"
+                         alt="News Image">
+                    <div class="card-body">
+                        <span class="bg-primary text-white p-1" style="font-family: Kanit;">${news.category}</span>
+                        <h6 class="card-title mt-3" style="font-family: Kanit;">${news.newsname}</h6>
+                        <small class="card-text">${news.date}</small>
+                        <br>
+                        <small><a href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail">กดเพื่อดูเพิ่มเติม</a></small>
                     </div>
                 </div>
-            </c:forEach>
-        </div>
+            </div>
+        </c:forEach>
+    </div>
+    <!-- ปุ่ม "ก่อนหน้า" และ "ถัดไป" -->
+    <div class="pagination mt-3">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a href="#" onclick="prevPage()" class="page-link" aria-label="ก่อนหน้า">
+                    <span aria-hidden="true">&laquo; ก่อนหน้า</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a href="#" onclick="nextPage()" class="page-link" aria-label="ถัดไป">
+                    <span aria-hidden="true">ถัดไป &raquo;</span>
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
-<br>
-<!-- ปุ่มเปลี่ยนหน้า -->
-<div class="pagination">
-    <!-- ปุ่ม "ก่อนหน้า" -->
-    <a href="#" onclick="prevPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
-        <i class="fa fa-arrow-left"></i> ก่อนหน้า
-    </a>
-
-    <!-- ปุ่ม "ถัดไป" -->
-    <a href="#" onclick="nextPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
-        ถัดไป <i class="fa fa-arrow-right"></i>
-    </a>
-</div>
-<br><br>
-<div>
-    <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
-</div>
-</body>
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script>
-    var newsList = document.querySelectorAll(".block_news");
-    var itemsPerPage = 24; // จำนวนข่าวที่แสดงในแต่ละหน้า
+    var newsList = document.querySelectorAll(".col-md-3");
+    var itemsPerPage = 4; // จำนวนข่าวที่แสดงในแต่ละหน้า
     var currentPage = 1; // หน้าปัจจุบัน
 
     // ฟังก์ชันเพื่อไปหน้าถัดไป
@@ -200,7 +112,6 @@
             changePage(currentPage);
         }
     }
-
 
     // ฟังก์ชันเปลี่ยนหน้า
     function changePage(page) {
@@ -227,7 +138,7 @@
 
     function search() {
         var input = document.getElementById("searchInput").value.toLowerCase();
-        var blocks = document.getElementsByClassName("block_news");
+        var blocks = document.getElementsByClassName("col-md-3");
 
         for (var i = 0; i < blocks.length; i++) {
             var block = blocks[i];
@@ -235,12 +146,12 @@
 
             if (text.includes(input)) {
                 block.style.display = "inline-block"; // แสดงองค์ประกอบเมื่อตรง
-                block.classList.remove("prevent-hover-transform"); // ลบคลาสเพื่อให้เคลื่อนที่ธรรมดา
             } else {
                 block.style.display = "none"; // ซ่อนองค์ประกอบเมื่อไม่ตรง
-                block.classList.add("prevent-hover-transform"); // เพิ่มคลาสเพื่อป้องกันการเคลื่อนที่
             }
         }
     }
 </script>
+<jsp:include page="/WEB-INF/layouts/footer.jsp"/>
+</body>
 </html>

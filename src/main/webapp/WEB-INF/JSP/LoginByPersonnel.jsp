@@ -7,9 +7,20 @@
   <meta charset="UTF-8">
   <title>${title}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
   <link href="${pageContext.request.contextPath}/assets/css/Login.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+<style>
+  .top-nav li{
+    font-family: Kanit;
+    list-style-type: none;
+    list-style-image: none;
+    background-color: rgba(62, 69, 122, 100);
+    border-bottom: 2px solid  rgba(62, 69, 122, 100);;
+  }
+</style>
 </head>
 <body bgcolor="#fffff1" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%,rgba(255, 255, 255, 0.6) 100%), url('https://itsci.mju.ac.th/itsci/assets/img/banner4.png');background-position: center;background-size: cover;background-repeat: no-repeat; ">
 <img src="${pageContext.request.contextPath}/assets/image/LOGOIT1.png" width="320px" alt="Image">

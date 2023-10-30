@@ -38,7 +38,7 @@
         }
 
         .header {
-            background-color:  #ff4b4b;
+            background-color: #282727;
             color: #fff;
             text-align: center;
             padding: 20px 0;
@@ -59,8 +59,8 @@
         }
 
         .profile-picture img {
-            width: 215px;
-            height: 250px;
+            width: 260px;
+            height: 280px;
             object-fit: cover;
             border-radius: 10%;
             border: 2px solid #fff;
@@ -146,17 +146,19 @@
 <br><br><br><br><br><br><br>
 <div class="container">
     <div class="header bg-dark text-white">
-        <h1>${alumni_detail.firstname} ${alumni_detail.lastname}</h1>
+        <h1>${alumni_detail.prefix}${alumni_detail.firstname} ${alumni_detail.lastname}</h1>
     </div>
 
     <div class="content2 mt-4">
-        <h3 class="card-text">ข้อมูลส่วนตัว</h3>
+        <h3 class="card-text"><i class="fas fa-user me-2"></i> ข้อมูลส่วนตัว</h3>
         <p class="card-text"><strong>รหัสนักศึกษา :</strong> ${alumni_detail.id}</p>
+        <p class="card-text"><strong>ไอทีรุ่นที่ :</strong> ${alumni_detail.generation}</p>
         <p class="card-text"><strong>ปีที่จบการศึกษา :</strong> ${alumni_detail.graduationyear}</p>
-        <p class="card-text"><img src="${pageContext.request.contextPath}/assets/image/telephone-call%20(1).png" width="20px" class="me-2"> <strong>เบอร์โทร :</strong> ${alumni_detail.phone}</p>
-        <p class="card-text"><img src="${pageContext.request.contextPath}/assets/image/employee%20(1).png" width="20px" class="me-2"> <strong>ตำแหน่ง :</strong> ${alumni_detail.position}</p>
-        <p class="card-text"><img src="${pageContext.request.contextPath}/assets/image/office-building%20(1).png" width="20px" class="me-2"> <strong>บริษัท :</strong> ${alumni_detail.company}</p>
-        <p class="card-text"><img src="${pageContext.request.contextPath}/assets/image/email%20(2).png" width="20px" class="me-2"> <strong>อีเมล :</strong> ${alumni_detail.email}</p>
+        <p class="card-text"><i class="fas fa-phone-alt me-2"></i> <strong>เบอร์โทร :</strong> ${alumni_detail.phone}</p>
+        <p class="card-text"><i class="fas fa-user-tie me-2"></i> <strong>ตำแหน่ง :</strong> ${alumni_detail.position}</p>
+        <p class="card-text"><i class="fas fa-building me-2"></i> <strong>บริษัท :</strong> ${alumni_detail.company}</p>
+        <p class="card-text"><i class="fas fa-envelope me-2"></i> <strong>อีเมล :</strong> ${alumni_detail.email}</p>
+
     </div>
 
     <div class="profile-picture mt-4">

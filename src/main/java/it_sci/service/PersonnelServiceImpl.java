@@ -1,18 +1,22 @@
 package it_sci.service;
 
+import it_sci.dao.AcademicranksDao;
 import it_sci.dao.PersonnelDao;
 import it_sci.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import javax.validation.Valid;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class PersonnelServiceImpl implements PersonnelService {
     @Autowired
     private PersonnelDao personnelDao;
+
+    @Autowired
+    private AcademicranksDao academicranksDao;
 
     @Override
     @Transactional
@@ -52,16 +56,9 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
-    public List<Academic_Ranks> getAcademicRanks() {
-        return personnelDao.getAcademicRanks();
-    }
+    public List<Project_consulting> getProjectconsulting(long PC) { return personnelDao.getProjectconsulting(PC);}
 
 
-    @Override
-    @Transactional
-    public Academic_Ranks getAcademicRankById(long acId) {
-        return personnelDao.getAcademicRankById(acId);
-    }
 
     @Override
     @Transactional
@@ -99,6 +96,13 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
+    public void SaveProjectconsulting(Project_consulting project_consulting) {
+        personnelDao.SaveProjectconsulting(project_consulting);
+
+    }
+
+    @Override
+    @Transactional
     public void updatePersonnel(Personnel personnel ) {
         personnelDao.updatePersonnel(personnel);
     }
@@ -130,6 +134,13 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
+    public void updateProject_consulting(Project_consulting project_consulting) {
+        personnelDao.updateProject_consulting(project_consulting);
+
+    }
+
+    @Override
+    @Transactional
     public void removePersonnelEducation(long id) {
         personnelDao.removePersonnelEducation(id);
     }
@@ -148,6 +159,49 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     }
 
+    @Override
+    @Transactional
+    public void removeProjectconsulting(long id) { personnelDao.removeProjectconsulting(id);
+
+    }
+
+
+    @Override
+    @Transactional
+    public void savePersonnelAcademicRanks(long personnelId, Set<Academic_Ranks> academicRanks) {
+        Personnel personnel = personnelDao.getPersonnelById(personnelId);
+        personnelDao.savePersonnelAcademicRanks(personnel, academicRanks);
+    }
+
+    @Override
+    @Transactional
+    public Set<Academic_Ranks> getAcademicRanksForPersonnel(long personnelId) {
+        return personnelDao.getAcademicRanksForPersonnel(personnelId);
+    }
+
+    @Override
+    @Transactional
+    public void addAcademic_RanksToPersonnel(long personnelid, long id) {
+        Academic_Ranks academic_ranks = academicranksDao.getAcademic_Ranks(id);
+        Personnel personnel = personnelDao.getPersonnelById(id);
+        personnel.getAcademicRank().add(academic_ranks);
+        personnelDao.SavePersonnel(personnel);
+    }
+
+    @Override
+    @Transactional
+    public void removeAcademic_RanksToPersonnel(long personnelid, long id) {
+        Academic_Ranks academic_ranks = academicranksDao.getAcademic_Ranks(id);
+        Personnel personnel = personnelDao.getPersonnelById(id);
+        personnel.getAcademicRank().add(academic_ranks);
+        personnelDao.SavePersonnel(personnel);
+    }
+
+    @Override
+    @Transactional
+    public List<Personnel> getPersonnelDoesNotHaveAcademic_Ranks(long id) {
+        return personnelDao.getPersonnelDoesNotHaveAcademic_Ranks(id);
+    }
 
 }
 

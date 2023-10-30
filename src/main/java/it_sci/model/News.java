@@ -104,9 +104,9 @@ public class News {
     public List<String> getNewsImage() {
         return newsImage;
     }
-
     public void setNewsImage(List<String> newsImage) {
         this.newsImage = newsImage;
     }
+
 
 }

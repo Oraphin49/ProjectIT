@@ -13,6 +13,8 @@
         font-family: Kanit;
         list-style-type: none;
         list-style-image: none;
+        background-color: rgba(62, 69, 122, 100);
+        border-bottom: 2px solid  rgba(62, 69, 122, 100);;
     }
 </style>
 </head>

@@ -1,5 +1,7 @@
 package it_sci.model;
 
+import org.springframework.beans.MutablePropertyValues;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,9 +16,13 @@ public class Academic_Ranks {
     @Column(name = "academicranksname",nullable = false,length = 50)
     private String name;
 
-    @ManyToMany(mappedBy = "academicRank")
+    @ManyToMany (fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @JoinTable(
+            name = "personnel_academic_ranks",
+            joinColumns = @JoinColumn(name = "academicranksid"),
+            inverseJoinColumns = @JoinColumn(name = "personnelid")
+    )
     private Set<Personnel> personnel = new HashSet<>();
-
 
     public long getId() {
         return id;
@@ -34,5 +40,11 @@ public class Academic_Ranks {
         this.name = name;
     }
 
+    public Set<Personnel> getPersonnel() {
+        return personnel;
+    }
 
+    public void setPersonnel(Set<Personnel> personnel) {
+        this.personnel = personnel;
+    }
 }

@@ -94,14 +94,14 @@
 </nav>
 <br><br><br>
 <div class="header1" style="margin-top: 100px">
-    <h2 style="color: #aa1919; font-family: Kanit">บุคลากรของหลักสูตร</h2>
+    <h2 style="color: #000000; font-family: Kanit;font-weight: bold">บุคลากรของหลักสูตร</h2>
 </div>
 <div class="container">
     <div class="row">
         <c:forEach items="${list_personnel}" var="personnel">
             <div class="col-md-4 mb-4">
                 <div class="card personnel-card">
-                    <img class="card-img-top" src="${pageContext.request.contextPath}/assets/image/${personnel.image}" alt="${personnel.firstname} ${personnel.lastname}">
+                    <img class="card-img-top" src="${pageContext.request.contextPath}/assets/image/personnel/${personnel.image}" alt="${personnel.firstname} ${personnel.lastname}">
                     <div class="card-body">
                         <p style="color: #111111; font-family: Kanit; font-size: 18px; font-weight: bold" class="card-title">${personnel.position} ${personnel.firstname} ${personnel.lastname}</p>
                         <a href="${pageContext.request.contextPath}/personnel/${personnel.id}/view_personnel_detail" class="btn btn-primary"><i class="bi bi-arrow-right-circle-fill"></i> ดูเพิ่มเติม</a>

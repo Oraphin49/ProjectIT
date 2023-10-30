@@ -2,288 +2,216 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>รายชื่อศิษย์เก่า</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
-  <!-- Theme style  -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>รายชื่อศิษย์เก่า</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
 
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body {
-      background-color: #ffffff; /* เปลี่ยนสีพื้นหลังของหน้าเว็บ */
-    }
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    header h1 {
-      color: white;
-      font-size: 24px;
-      font-weight: bold;
-    }
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
 
-    .list-item {
-      list-style: none;
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-top: 50px;
-    }
+    <style>
+        #searchInput {
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 60%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            font-family: Kanit;
+            /*float: right;*/
+            /*margin-right: 70px;*/
+        }
 
-    .list-item:hover {
-      background-color: #ede7f6;
-      border: 1px solid #ccc; /* เปลี่ยนสีขอบ */
-      transition: background-color 0.3s;
-    }
+        .card {
+            border-radius: 10px;
+            height: 100%;
+            background-image: url('${pageContext.request.contextPath}/assets/image/Poster.png');
+            background-size: cover;
+            background-position: center;
+        }
 
-    .card {
-      background-color: #fde0dc;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-    }
+        .card-title {
+            font-family: "Kanit";
+            color: #000000;
+        }
 
-    .card-text {
-      color: black;
-      font-family: "Kanit";
-    }
-
-    .bp {
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      height: 240px;
-      width: 350px;
-      margin: 20px;
-    }
-
-    .alum_img {
-      display: inline-block;
-      margin-right: 30px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .card-body {
-      display: inline-block;
-    }
-
-    .button1 {
-      background-color: #CD3333;
-      color: white;
-      border: 2px solid #771111;
-      border-radius: 5px;
-      font-family: Kanit;
-      font-size: 16px;
-      margin: 4px 2px;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .button1:hover {
-      background-color: #771111;
-      color: white;
-    }
-
-    .top_content {
-      margin-top: 30px;
-    }
-
-    #searchInput {
-      background-position: 10px 12px;
-      background-repeat: no-repeat;
-      width: 60%;
-      font-size: 16px;
-      padding: 12px 20px 12px 40px;
-      border: 1px solid #ddd;
-      margin-bottom: 12px;
-      font-family: Kanit;
-      float: left;
-      margin-left: 40%;
-    }
-
-    .block_alumni {
-      display: inline-block;
-      margin-left: 15px;
-    }
-
-    /* CSS สำหรับปุ่มเปลี่ยนหน้า */
-    .pagination {
-      text-align: center;
-      margin-top: 65px;
-    }
-
-    /* CSS สำหรับลูกศรในปุ่ม "ก่อนหน้า" และ "ถัดไป" */
-    a i.fa-arrow-left,
-    a i.fa-arrow-right {
-      font-size: 18px;
-      vertical-align: middle;
-      margin-right: 15px;
-      margin-left: 15px;
-      color: #AA1818;
-    }
-
-    /* CSS เมื่อโฮเวอร์ลูกศร */
-    a:hover i.fa-arrow-left,
-    a:hover i.fa-arrow-right {
-      color: #771111;
-    }
-    .read-more-link i.fa-arrow-right {
-      margin-left: 5px;
-      transition: margin-left 0.3s ease-in-out;
-      opacity: 0; /* เริ่มต้นซ่อนลูกศร */
-    }
-    .read-more-link i.fa-arrow-left {
-      margin-left: 5px;
-      transition: margin-left 0.3s ease-in-out;
-      opacity: 0; /* เริ่มต้นซ่อนลูกศร */
-    }
-
-    .read-more-link:hover i.fa-arrow-right {
-      margin-left: 10px;
-      opacity: 1; /* แสดงลูกศรเมื่อ hover */
-    }
-    .read-more-link:hover i.fa-arrow-left {
-      margin-left: 10px;
-      opacity: 1; /* แสดงลูกศรเมื่อ hover */
-    }
+        .card-text {
+            font-family: "Kanit";
+            font-size: 14px;
+            color: #000000;
+        }
 
 
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
-    }
-  </style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        .card.mb-4 {
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .card.mb-4:hover {
+            transform: translateX(10px);
+            opacity: 0.8;
+        }
+        .card.mb-4 {
+            animation: slideIn 1s forwards;
+        }
+
+        .card.mb-4.hover-transform {
+            animation: slideOut 1s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
 <nav class="gtco-nav" role="navigation">
-  <div class="gtco-container">
-    <div class="row"  style="display: block">
-      <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+    <div class="gtco-container">
+        <div class="row" style="display: block">
+            <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+        </div>
     </div>
-  </div>
 </nav>
 <br><br><br><br>
 <div class="top_content">
-  <div>
-    <h2 style="color: #a41212 ;margin-top: 75px; font-family: Kanit" align="center" >ข้อมูลศิษย์เก่า</h2>
-    <br>
     <div>
-      <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="ค้นหาชื่อ.." title="Search for names..">
-    </div>
-    <c:forEach var="alumni" items="${list_alumni}">
-      <div class="block_alumni list-item" data-name="${alumni.id} ${alumni.firstname} ${alumni.position} ${alumni.company}">
-        <div class="bp" align="center" style="display: inline-block;">
-          <div class="card">
-            <div class="alum_img">
-              <img style="width: 100px; height: 120px; object-fit: cover;" src="${pageContext.request.contextPath}/assets/image/alumni/${alumni.image}">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title" style="font-family: Kanit; color: #ec2727">${alumni.id}</h3>
-              <p class="card-text">${alumni.firstname} ${alumni.lastname}</p>
-              <p class="card-text">ตำแหน่ง : ${alumni.position}</p>
-              <p class="card-text">บริษัท : ${alumni.company}</p>
-            </div>
-            <div style="font-family: Kanit;"align="center">
-              <a class="fw-medium read-more-link" href="${pageContext.request.contextPath}/alumni/${alumni.id}/view_alumni_detail" style="color: #AA1818;font-weight: bold;text-decoration:none">
-                ดูเพิ่มเติม
-                <i class="fa fa-arrow-right ms-2"></i>
-              </a>
-              </a>
-            </div>
-          </div>
+        <h2 style="color: #000000 ;margin-top: 75px; font-family: Kanit; font-weight: bold" align="center">ข้อมูลศิษย์เก่า</h2>
+        <br>
+        <div align="center">
+            <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="ค้นหา.." title="Search for names..">
         </div>
-      </div>
-    </c:forEach>
-  </div>
-</div>
-</div>
-<div class="pagination">
-  <!-- ปุ่ม "ก่อนหน้า" -->
-  <a href="#" onclick="prevPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
-    <i class="fa fa-arrow-left"></i> ก่อนหน้า
-  </a>
-
-  <!-- ปุ่ม "ถัดไป" -->
-  <a href="#" onclick="nextPage()" style="text-decoration: none;font-family: Kanit;color: #000" class="fw-medium read-more-link">
-    ถัดไป <i class="fa fa-arrow-right"></i>
-  </a>
+        <br><br><br>
+        <div class="container">
+            <div class="row">
+                <c:forEach var="alumni" items="${list_alumni}">
+                        <div class="card mb-4" onclick="window.location='${pageContext.request.contextPath}/alumni/${alumni.id}/view_alumni_detail'" data-name="${alumni.id} ${alumni.firstname} ${alumni.position} ${alumni.company}">
+                            <img src="${pageContext.request.contextPath}/assets/image/alumni/${alumni.image}" class="card-img-top" style="width: 50%; margin: 30px 80px 0; height: 50%">
+                            <div class="card-body" align="center">
+                                <h6 class="card-title">${alumni.prefix}${alumni.firstname} ${alumni.lastname}</h6>
+                                <small class="card-text" style="margin: 5px 0;">ไอทีรุ่น : ${alumni.generation}</small>
+                                <small class="card-text" style="margin: 5px 0;">รหัสนักศึกษา: ${alumni.id}</small>
+                                <br>
+                                <p class="card-text" style="margin: 5px 0;">ตำแหน่ง : ${alumni.position}</p>
+                                <p class="card-text" style="margin: 5px 0;">บริษัท : ${alumni.company}</p>
+                            </div>
+                        </div>
+                </c:forEach>
+            </div>
+        </div>
+    </div>
+    <div class="pagination mt-3" align="center" style="margin-left: 50px">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a href="#" onclick="prevPage()" class="page-link" aria-label="ก่อนหน้า">
+                    <span aria-hidden="true">&laquo; ก่อนหน้า</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a href="#" onclick="nextPage()" class="page-link" aria-label="ถัดไป">
+                    <span aria-hidden="true">ถัดไป &raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
 <br><br>
 <div>
-  <jsp:include page="/WEB-INF/layouts/footer.jsp" />
+    <jsp:include page="/WEB-INF/layouts/footer.jsp" />
 </div>
 <script>
-  var alumniList = document.querySelectorAll(".block_alumni");
-  var itemsPerPage = 30; // จำนวนที่แสดงในแต่ละหน้า
-  var currentPage = 1; // หน้าปัจจุบัน
+    var alumniList = document.querySelectorAll(".card.mb-4");
+    var itemsPerPage = 30;
+    var currentPage = 1;
 
-  // ฟังก์ชันเพื่อไปหน้าถัดไป
-  function nextPage() {
-    if (currentPage < 10) { // 10 คือจำนวนหน้าทั้งหมด
-      currentPage++;
-      changePage(currentPage);
+    function nextPage() {
+        if (currentPage < 10) {
+            currentPage++;
+            changePage(currentPage);
+        }
     }
-  }
 
-  // ฟังก์ชันเพื่อกลับหน้าก่อนหน้า
-  function prevPage() {
-    if (currentPage > 1) {
-      currentPage--;
-      changePage(currentPage);
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            changePage(currentPage);
+        }
     }
-  }
 
-  // ฟังก์ชันเปลี่ยนหน้า
-  function changePage(page) {
-    currentPage = page;
-    showAlumni();
-  }
-
-  // ฟังก์ชันแสดงข่าวในหน้าปัจจุบัน
-  function showAlumni() {
-    for (var i = 0; i < alumniList.length; i++) {
-      var block = alumniList[i];
-      var pageNumber = Math.ceil((i + 1) / itemsPerPage);
-
-      if (pageNumber === currentPage) {
-        block.style.display = "inline-block";
-      } else {
-        block.style.display = "none";
-      }
+    function changePage(page) {
+        currentPage = page;
+        showAlumni();
     }
-  }
 
-  // เรียกใช้ฟังก์ชันแสดงข่าวในหน้าปัจจุบันเมื่อโหลดหน้าเว็บ
-  window.addEventListener("load", showAlumni);
+    function showAlumni() {
+        for (var i = 0; i < alumniList.length; i++) {
+            var block = alumniList[i];
+            var pageNumber = Math.ceil((i + 1) / itemsPerPage);
 
-  function search() {
-    var input = document.getElementById("searchInput").value.toLowerCase();
-    var blocks = document.getElementsByClassName("block_alumni");
-
-    for (var i = 0; i < blocks.length; i++) {
-      var block = blocks[i];
-      var text = block.getAttribute("data-name").toLowerCase();
-
-      if (text.includes(input)) {
-        block.style.display = "inline-block"; // แสดงองค์ประกอบเมื่อตรง
-      } else {
-        block.style.display = "none"; // ซ่อนองค์ประกอบเมื่อไม่ตรง
-      }
+            if (pageNumber === currentPage) {
+                block.style.display = "inline-block";
+            } else {
+                block.style.display = "none";
+            }
+        }
     }
-  }
+
+    window.addEventListener("load", showAlumni);
+
+    function search() {
+        var input = document.getElementById("searchInput").value.toLowerCase();
+        var blocks = document.getElementsByClassName("card mb-4");
+
+        for (var i = 0; i < blocks.length; i++) {
+            var block = blocks[i];
+            var text = block.getAttribute("data-name").toLowerCase();
+
+            if (text.includes(input)) {
+                block.style.display = "inline-block"; // แสดงองค์ประกอบเมื่อตรง
+                block.classList.remove("prevent-hover-transform"); // ลบคลาสเพื่อให้เคลื่อนที่ธรรมดา
+            } else {
+                block.style.display = "none"; // ซ่อนองค์ประกอบเมื่อไม่ตรง
+                block.classList.add("prevent-hover-transform"); // เพิ่มคลาสเพื่อป้องกันการเคลื่อนที่
+            }
+        }
+    }
 
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-

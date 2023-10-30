@@ -21,6 +21,8 @@ public class Alumni {
 
     @Column(name = "graduationyear",nullable = false,length = 4)
     private String graduationyear;
+    @Column(name = "generation",nullable = false,length = 4)
+    private String  generation;
 
     @Column(name = "position",nullable = false,length = 50)
     private String position;
@@ -43,14 +45,18 @@ public class Alumni {
     @Column(name = "award",nullable = false,length = 300)
     private String award;
 
+    @Column(name = "prefix",nullable = false,length = 300)
+    private String prefix;
+
 
     public Alumni () {}
 
-    public Alumni(String id, String firstname, String lastname, String graduationyear, String position, String company, String phone, String email, String image, String expertise, String award) {
+    public Alumni(String id, String firstname, String lastname, String graduationyear, String generation, String position, String company, String phone, String email, String image, String expertise, String award, String prefix) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.graduationyear = graduationyear;
+        this.generation = generation;
         this.position = position;
         this.company = company;
         this.phone = phone;
@@ -58,6 +64,7 @@ public class Alumni {
         this.image = image;
         this.expertise = expertise;
         this.award = award;
+        this.prefix = prefix;
     }
 
     public String getId() {
@@ -147,5 +154,19 @@ public class Alumni {
         this.company = company;
     }
 
+    public String getGeneration() {
+        return generation;
+    }
 
+    public void setGeneration(String generation) {
+        this.generation = generation;
+    }
+
+    public String getPrefix() {
+        return prefix;
+    }
+
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
+    }
 }

@@ -29,7 +29,7 @@
 </nav>
     <br><br><br>
 <div class="alum_img" align="center" style="margin-top: 100px">
-    <img style="width: 85%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" src="${pageContext.request.contextPath}/assets/image/2.png">
+    <img style="width: 85%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" src="${pageContext.request.contextPath}/assets/image/banner4.png">
 </div>
 
         <br><br>

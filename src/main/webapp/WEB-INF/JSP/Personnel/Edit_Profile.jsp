@@ -3,13 +3,61 @@
 <html>
 <head>
     <title>Edit Profile</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังของหน้าเว็บ */
+        }
+
+        .card {
+            border: 1px solid #ccc; /* เปลี่ยนสีกรอบของการ์ด */
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงาในการ์ด */
+        }
+
+        .card p {
+            font-size: 18px; /* เปลี่ยนขนาดตัวอักษรของข้อความในการ์ด */
+            color: #333; /* เปลี่ยนสีข้อความ */
+            font-family: Kanit;
+        }
+
+        #fistname, #lastname {
+            font-family: Kanit;
+        }
+
+        #description {
+            font-family: Kanit;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* เปลี่ยนสีพื้นหลังของปุ่ม */
+            color: #fff; /* เปลี่ยนสีข้อความบนปุ่ม */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อโฮเวอร์ */
+        }
+    </style>
 </head>
     <%
     Personnel personnel = (Personnel) session.getAttribute("personnel");
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>${personnel_detail.firstname} ${personnel_detail.lastname}</title>
@@ -25,7 +73,7 @@
 <body>
 <nav class="gtco-nav" role="navigation">
     <div class="gtco-container">
-        <div class="row"  style="display: block">
+        <div class="row" style="display: block">
             <jsp:include page="/WEB-INF/JSP/Personnel/nav_personnel.jsp"/>
         </div>
     </div>
@@ -33,46 +81,56 @@
 <br><br><br><br><br>
 <div id="container" style="margin-top: 80px">
     <div id="profile">
-        <form action="${pageContext.request.contextPath}/personnel//${personnel_detail.id}/edit/save" method="POST">
-            <label for="image">รูปภาพ:</label>
-            <input type="text" id="image" name="image" class="form-control" value="${personnel_detail.image}">
-        <p id="name">
-            <p id="ar">ตำแหน่งทาวิชาการ:</p>
-                    <select name="ar_id" id="ar_id">
-                        <c:forEach items="${academic_ranks_detail}" var="academic_ranks">
-                            <c:choose>
-                                <c:when test="${academic_ranks.id eq personnel_detail.academic_ranks.id}">
-                                    <option value="${academic_ranks.id}" selected>${academic_ranks.name}</option>
-                                </c:when>
-                                <c:otherwise>
-                                    <option value="${academic_ranks.id}">${academic_ranks.name}</option>
-                                </c:otherwise>
-                            </c:choose>
-                        </c:forEach>
-                    </select>
+        <form action="${pageContext.request.contextPath}/personnel/${personnel_detail.id}/edit/save" method="POST"
+              enctype="multipart/form-data">
+            <div class="form-group">
+                <%--@declare id="currentimage"--%><label for="currentImage">รูปภาพปัจจุบัน:</label>
+                <img src="${pageContext.request.contextPath}/assets/image/personnel/${personnel_detail.image}"
+                     alt="Current Image" width="200">
+            </div>
+            <div class="form-group">
+                <label for="newImageFile">อัปโหลดรูปภาพใหม่ (ถ้าต้องการ):</label>
+                <input type="file" id="newImageFile" name="newImageFile">
+            </div>
+            <label for="scolarlink">สิ่งพิมพ์</label>
+            <input type="text" id="scolarlink" name="scolarlink" value="${personnel_detail.scolarlink}">
             <p id="fist">ชื่อ:</p>
             <input type="text" id="fistname" name="firstname" value="${personnel_detail.firstname}">
             <p id="last">นามสกุล:</p>
             <input type="text" id="lastname" name="lastname" value="${personnel_detail.lastname}">
             <p id="descriptions">รายละเอียด:</p>
             <input type="text" id="description" name="description" value="${personnel_detail.description}">
-        <hr width="100%">
-        <div id="about">
-            <p style="display:inline;">ข้อมูล</p>
-            <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
-        </div>
+            <hr width="100%">
+            <div id="about">
+                <p style="display:inline;">ข้อมูล</p>
+                <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
+            </div>
             <p id="year-graduation">อีเมล์:</p>
             <input type="email" id="email" name="email" value="${personnel_detail.email}"><br></p>
-        <p id="telephone">เบอร์โทร</p><br>
+            <p id="telephone">เบอร์โทร</p><br>
             <input type="text" id="phone" name="phone" value="${personnel_detail.phone}"></p>
-        <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
-        <p><input type="text" id="expertise" name="expertise" value="${personnel_detail.expertise}"></p>
+            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
+            <p><input type="text" id="expertise" name="expertise" value="${personnel_detail.expertise}"></p>
             <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ตำแหน่ง</p>
             <p><input type="text" id="position" name="position" value="${personnel_detail.position}"></p>
+            <label for="selectedAcademicRanks">เลือกตำแหน่งวิชาการ:</label>
+            <select id="selectedAcademicRanks" name="selectedAcademicRanks" multiple>
+                <c:forEach items="${academicRanks}" var="rank">
+                    <c:choose>
+                        <c:when test="${rank.id eq personnel_detail.id}">
+                            <option value="${rank.id}" selected>${rank.name}</option>
+                        </c:when>
+                        <c:otherwise>
+                            <option value="${rank.id}">${rank.name}</option>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+            </select>
             <input type="submit" value="บันทึก" class="btn btn-primary">
         </form>
     </div>
     <div id="info-cards">
+
         <div class="card">
             <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการศึกษา</p>
             <ul>
@@ -80,10 +138,12 @@
                     <li>${ehd.firstname} ${ehd.major} ${ehd.university} ${ehd.country} ${ehd.educationyear}
                         <input type="button" value="ลบ"
                                onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${ehd.id}/delete'; return false; }"
-                               class="cancel-button"/></li><br>
+                               class="cancel-button"/></li>
+                    <br>
                 </c:forEach>
                 <hr>
-                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_education_add" method="POST" onsubmit="return validateEducationForm()">
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_education_add"
+                      method="POST" onsubmit="return validateEducationForm()">
                     <table>
                         <tr>
                             <td>ระดับการศึกษา : <input name="education_name" id="education_name"></td>
@@ -106,21 +166,23 @@
             <ul>
                 <c:forEach var="rgd" items="${research_grant_detail}">
                     <li>${rgd.researchgrantname} ${rgd.researchgrantyear}
-<%--                    <p><input type="text" id="grantname" name="grantname" value=" ${rgd.researchgrantname}"><br></p>--%>
-<%--                    <p><input type="text" id="grantyear" name="grantyear" value=" ${rgd.researchgrantyear}"><br></p>--%>
-                    <input type="button" value="ลบ"
-                           onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${rgd.id}/remove'; return false; }"
-                           class="cancel-button"/></li><br>
+                            <%--                    <p><input type="text" id="grantname" name="grantname" value=" ${rgd.researchgrantname}"><br></p>--%>
+                            <%--                    <p><input type="text" id="grantyear" name="grantyear" value=" ${rgd.researchgrantyear}"><br></p>--%>
+                        <input type="button" value="ลบ"
+                               onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${rgd.id}/remove'; return false; }"
+                               class="cancel-button"/></li>
+                    <br>
 
                 </c:forEach>
                 <hr>
-                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_research_add" method="POST"  onsubmit="return validateResearchForm()">
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_research_add"
+                      method="POST" onsubmit="return validateResearchForm()">
                     <table>
                         <tr>
                             <td>ชื่อทุน : <input name="research_name" id="research_name"></td>
                             <td>ปีที่ได้รับทุน : <input name="research_year" id="research_year"></td>
                         </tr>
-                            <td><input type="submit" value="เพิ่ม"></td>
+                        <td><input type="submit" value="เพิ่ม"></td>
                         </tr>
                     </table>
                 </form>
@@ -131,15 +193,16 @@
             <ul>
                 <c:forEach var="award" items="${award_detail}">
                     <li>${award.name} ,${award.year}</li>
-<%--                    <p><input type="text" id="award_name" name="award_name" value=" ${award.name}"><br></p>--%>
-<%--                    <p><input type="text" id="year" name="year" value=" ${award.year}"><br></p>--%>
+                    <%--                    <p><input type="text" id="award_name" name="award_name" value=" ${award.name}"><br></p>--%>
+                    <%--                    <p><input type="text" id="year" name="year" value=" ${award.year}"><br></p>--%>
                     <input type="button" value="ลบ"
                            onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${award.id}/remove_award'; return false; }"
                            class="cancel-button"/></li><br>
 
                 </c:forEach>
                 <hr>
-                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_award_add" method="POST">
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_award_add"
+                      method="POST">
                     <table>
                         <tr>
                             <td>ชื่อผลงาน : <input name="award_name" id="award_name"></td>
@@ -152,21 +215,48 @@
             </ul>
         </div>
         <div class="card">
-            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการทำงาน</p>
+            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;การบริการสังคม</p>
             <ul>
                 <c:forEach var="work" items="${work_experience_detail}">
-                    <li>${work.workexperiencename} ${work.workexperienceyear}
+                    <li>${work.workexperiencename}
                         <input type="button" value="ลบ"
                                onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${work.id}/remove_work'; return false; }"
-                               class="cancel-button"/></li><br>
+                               class="cancel-button"/></li>
+                    <br>
 
                 </c:forEach>
                 <hr>
-                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_work_add" method="POST" >
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_work_add"
+                      method="POST">
                     <table>
                         <tr>
-                            <td>ชื่อสถานที่ : <input name="work_name" id="work_name"></td>
-                            <td>ปีที่เข้าทำงาน : <input name="work_year" id="work_year"></td>
+                            <td>ชื่อ : <input name="work_name" id="work_name"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="เพิ่ม"></td>
+                        </tr>
+                    </table>
+                </form>
+            </ul>
+        </div>
+        <div class="card">
+            <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงานที่ปรึกษา</p>
+            <ul>
+                <c:forEach var="pro" items="${project_consultings_detail}">
+                    <li>${pro.name} ${pro.year}
+                        <input type="button" value="ลบ"
+                               onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${pro.id}/remove_Pro'; return false; }"
+                               class="cancel-button"/></li>
+                    <br>
+
+                </c:forEach>
+                <hr>
+                <form action="${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/save_Pro_add"
+                      method="POST">
+                    <table>
+                        <tr>
+                            <td>ชื่อโครงงาน : <input name="pro_name" id="pro_name"></td>
+                            <td>ปีที่เป็นที่ปรึกษา : <input name="pro_year" id="pro_year"></td>
                         </tr>
                         <tr>
                             <td><input type="submit" value="เพิ่ม"></td>
@@ -238,7 +328,6 @@
 </script>
 
 
-
 <script>
     ///////////////////////////////////////script ทุนวิจัย /////////////////////////////////////////////////////
     function validateResearchForm() {
@@ -261,7 +350,6 @@
 </script>
 
 
-
 <script>
     ///////////////////////////////////////script ผลงาน/////////////////////////////////////////////////////
     function validateAwardForm() {
@@ -270,18 +358,23 @@
         var awardName = document.getElementById("award_name").value;
         if (awardName === "") {
             alert("กรุณากรอกชื่อผลงาน");
-            return  false;
+            return false;
         }
 
         //เช็คปี
         var awardYear = document.getElementById("award_year").value;
         if (awardYear === "") {
             alert("กรุณากรอกปีที่ได้รับรางวัล");
-            return  false;
+            return false;
         }
 
         return true;
     }
+</script>
+<script>
+    $(document).ready(function () {
+        $('#selectedAcademicRanks').multiselect();
+    });
 </script>
 
 

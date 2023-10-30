@@ -12,6 +12,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
     <style>
+        #searchInput {
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 40%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            font-family: Kanit;
+            margin-right: 50px;
+            float: right;
+
+        }
         *, *::before, *::after {
             box-sizing: border-box;
         }
@@ -60,18 +73,6 @@
             color: #111111;
             font-family: Kanit;
             font-size: 16px;
-        }
-        #searchInput {
-            background-position: 10px 12px;
-            background-repeat: no-repeat;
-            width: 40%;
-            font-size: 16px;
-            padding: 12px 20px 12px 40px;
-            border: 1px solid #ddd;
-            margin-bottom: 12px;
-            font-family: Kanit;
-            float: left;
-            margin-left: 500px;
         }
         /* CSS สำหรับปุ่มเปลี่ยนหน้า */
         .pagination {
@@ -133,8 +134,8 @@
 <div>
     <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="Search for names.." title="Type in a name">
 </div>
-<br>
-<a href="${pageContext.request.contextPath}/news/create_news"><button style="width: 80px; float: right; margin-right: 230px; background-color: #FFFFFF">
+<br><br>
+<a href="${pageContext.request.contextPath}/news/create_news"><button style="width: 80px; float: right; margin-right: -600px; background-color: #FFFFFF;margin-top: 15px">
     <img src="${pageContext.request.contextPath}/assets/image/bookmark-plus.png" style="width: 30px; "></button></a>
 <br><br><br>
 <c:forEach var="news" items="${list_manage_news}">

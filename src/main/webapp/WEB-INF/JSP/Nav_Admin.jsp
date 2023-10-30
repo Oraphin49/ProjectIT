@@ -15,8 +15,8 @@
 
     <style>
         .top-nav li{
-            background: #aa1818;
-            border-bottom: 4px solid #aa1919;
+            background-color: rgba(62, 69, 122, 100);
+            border-bottom: 4px solid   rgba(62, 69, 122, 100);;
             float: left;
             font-size: 10px;
             height: 30px;

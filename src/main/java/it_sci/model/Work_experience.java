@@ -18,17 +18,14 @@ public class Work_experience {
     @Column(name="workexperiencename",nullable = false,length = 45)
     private String workexperiencename;
 
-    @Column(name="workexperienceyear",nullable = false,length = 4)
-    private String workexperienceyear;
 
     @ManyToOne
     @JoinColumn(name = "personnel_personnelid")
     private Personnel personnel;
 
 
-    public Work_experience(String workexperiencename, String workexperienceyear, Personnel personnel) {
+    public Work_experience(String workexperiencename, Personnel personnel) {
         this.workexperiencename = workexperiencename;
-        this.workexperienceyear = workexperienceyear;
         this.personnel = personnel;
     }
 
@@ -46,14 +43,6 @@ public class Work_experience {
 
     public void setWorkexperiencename(String workexperiencename) {
         this.workexperiencename = workexperiencename;
-    }
-
-    public String getWorkexperienceyear() {
-        return workexperienceyear;
-    }
-
-    public void setWorkexperienceyear(String workexperienceyear) {
-        this.workexperienceyear = workexperienceyear;
     }
 
     public Personnel getPersonnel() {

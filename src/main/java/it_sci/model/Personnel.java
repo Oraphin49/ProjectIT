@@ -46,7 +46,7 @@ public class Personnel {
     private String Password;
 
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinTable(
             name = "personnel_academic_ranks",
             joinColumns = @JoinColumn(name = "personnelid"),
@@ -168,7 +168,12 @@ public class Personnel {
         return academicRank;
     }
 
+
+
     public void setAcademicRank(Set<Academic_Ranks> academicRank) {
         this.academicRank = academicRank;
     }
+
+
 }
+

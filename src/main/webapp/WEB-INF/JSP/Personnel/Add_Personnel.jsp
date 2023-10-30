@@ -7,6 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <style>
+        /* เราเพิ่มสไตล์สำหรับเลือกตำแหน่งวิชาการที่ต้องการปรับแต่ง */
+        #academicRanks {
+            width: 100%; /* ทำให้เลือกตำแหน่งเต็มขนาดคอลัมน์ */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            height: 150px; /* ระบุความสูงของกล่องเลือกตำแหน่ง */
+        }
+
+        #academicRanks option {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin: 5px;
+        }
+
+        /* เราเพิ่มสไตล์สำหรับปุ่ม "บันทึก" */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+            margin-top: 10px; /* ระยะห่างด้านบนของปุ่ม "บันทึก" */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* เราเพิ่มสไตล์สำหรับปุ่ม "ยกเลิก" */
+        .custom-button {
+            background-color: #ccc;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out;
+            margin-top: 10px; /* ระยะห่างด้านบนของปุ่ม "ยกเลิก" */
+        }
+
+        .custom-button:hover {
+            background-color: #999;
+        }
+
         body {
             font-family: Kanit;
             margin: 0;
@@ -50,7 +98,7 @@
             height: 35px;
         }
 
-        .custom-form input[type="submit"]{
+        .custom-form input[type="submit"] {
             background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
@@ -60,7 +108,7 @@
             transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
         }
 
-        .custom-form input[type="submit"]:hover{
+        .custom-form input[type="submit"]:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
         }
@@ -96,19 +144,20 @@
 <body>
 <nav class="gtco-nav" role="navigation">
     <div class="gtco-container">
-        <div class="row"  style="display: block">
+        <div class="row" style="display: block">
             <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
         </div>
     </div>
 </nav>
 <br><br><br><br><br><br><br>
 <h2>เพิ่มบุคลการ</h2>
-<form:form method="POST" action="${pageContext.request.contextPath}/personnel/save_personnnel" name="form" id="form" class="custom-form" enctype="multipart/form-data"  onsubmit="return validateForm()">
+<form:form method="POST" action="${pageContext.request.contextPath}/personnel/save_personnnel" name="form" id="form"
+           class="custom-form" enctype="multipart/form-data" onsubmit="return validateForm()">
     <div id="profile">
         <div class="row">
             <div class="column">
-                <label for="image">รูป</label>
-                <input type="text" name="image" id="image">
+                <label for="imageFile">รูปภาพ:</label>
+                <input type="file" id="imageFile" name="imageFile" accept="image/*" class="form-control" required>
             </div>
         </div>
         <div class="row">
@@ -118,7 +167,7 @@
             </div>
             <div class="column">
                 <label for="lastname">นามสกุล</label>
-                <input type="text" id="lastname" name="lastname" >
+                <input type="text" id="lastname" name="lastname">
             </div>
         </div>
         <div class="row">
@@ -128,7 +177,7 @@
             </div>
             <div class="column">
                 <label for="scolarlink">สิ่งพิมพ์</label>
-                <input type="text" id="scolarlink" name="scolarlink" >
+                <input type="text" id="scolarlink" name="scolarlink">
             </div>
         </div>
         <div class="row">
@@ -158,13 +207,15 @@
             </div>
         </div>
         <div class="row">
-            <div class="column">
-                <label for="ar_id">ตำแหน่งทางวิชาการ</label>
-                <select name="ar_id" id="ar_id">
-                    <c:forEach items="${ar_detail}" var="ar">
-                        <option value="${ar.id}">${ar.name}</option>
-                    </c:forEach>
-                </select>
+            <div class="row">
+                <div class="column">
+                    <label for="academicRanks">ตำแหน่งวิชาการ:</label>
+                    <select multiple="multiple" id="academicRanks" name="selectedAcademicRanks">
+                        <c:forEach items="${academicRanks}" var="academicRank">
+                            <option value="${academicRank.id}">${academicRank.name}</option>
+                        </c:forEach>
+                    </select>
+                </div>
             </div>
         </div>
         <div class="button-group">
@@ -177,18 +228,26 @@
 <script>
     function validateForm() {
         // เว้นไว้ก่อน
-        var image = document.getElementById("image").value;
-        if (image === "") {
-            alert("กรุณากรอกข้อมูลรูป");
-            return false; // ยกเลิกการส่งฟอร์ม
-        }
+        var imageFile = document.getElementById("imageFile");
+        var allowedTypes = ["image/jpeg", "image/png", "image/gif"];
+        var maxFileSize = 5 * 1024 * 1024; // 5MB
 
-        //เว้นไว้ก่อน
-        var id = document.getElementById("id").value;
-        if (id === "") {
-            alert("กรุณากรอกรหัส");
+        if (imageFile.files.length === 0) {
+            alert("กรุณาเลือกไฟล์รูปภาพ");
             return false;
         }
+
+        var file = imageFile.files[0];
+        if (!allowedTypes.includes(file.type)) {
+            alert("ชนิดของไฟล์รูปภาพไม่ถูกต้อง");
+            return false;
+        }
+
+        if (file.size > maxFileSize) {
+            alert("ขนาดของไฟล์รูปภาพใหญ่เกินไป (สูงสุด 5MB)");
+            return false;
+        }
+
 
         //เช็คชื่อจริง //
         var firstname = document.getElementById("firstname").value;
@@ -230,14 +289,14 @@
         if (scolarlink.trim() === "") {
             alert("กรุณากรอก scolarlink");
             return false;
-        }else if (/^\s|\s$|\s{1,}/.test(scolarlink)) {
+        } else if (/^\s|\s$|\s{1,}/.test(scolarlink)) {
             alert("ไม่ควรมีช่องว่างระหว่างตัวอักษรใน scolarlink เนื่องจากเก็บเป็น http");
             return false;
         }
 
         //เช็คเบอร์โทร //
         var phone = document.getElementById("phone").value;
-        var TelTH = /^(06|08|09|8)[0-9]{1}-?[0-9]{3}-?[0-9]{4}$/; // รองรับขีด (-) หรือไม่ก็ได้
+        var TelTH = /^(06|08|09|8)[0-9]{1}-?[0-9]{3}-?[0-9]{5}$/; // รองรับขีด (-) หรือไม่ก็ได้
         if (phone.trim() === "") {
             alert("กรุณากรอกเบอร์โทร");
             return false;
@@ -279,12 +338,6 @@
             return false;
         }
 
-
-        var ar_id = document.getElementById("ar_id").value;
-        if (ar_id === "0") {
-            alert("กรุณาเลือกตำแหน่งทางวิชาการ");
-            return false;
-        }
 
         return true;
     }
