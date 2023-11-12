@@ -2,132 +2,141 @@
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <form:form action="${pageContext.request.contextPath}/logout" method="POST" name="frmLogout"></form:form>
-
-<!DOCTYPE html >
-<html lang="en" >
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- เพิ่มไลบรารี Font Awesome -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
     <style>
-        *, ::after, ::before {
-            box-sizing: border-box;
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #FFFFFF;
+            font-family: Kanit;
+            font-size: 19px;
         }
-        /*.gtco-nav ul li a:hover, .gtco-nav ul li a:focus, .gtco-nav ul li a:active {*/
-        /*    color: #fff;}*/
-        /* ปรับแต่งสไตล์ของลิงก์ */
-        .top-nav li a {
+
+        .navbar-expand-lg .navbar-nav .nav-link {
+
+            padding-right: 0.2rem;
+            padding-left: 0.2rem;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #ffdd00;
+        }
+
+        .bg-light {
+            background-color: #aa1818 !important;
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .1);
+        }
+
+        .nav-item {
+            margin-right: 10px;
+        }
+
+        .nav-link {
             color: #ffffff;
-            padding-top: 5px;
-            position: absolute;
-            top: 0;
-            left: -20px;
-            width: 100%;
-            height: 100%;
-            font-size: 13px;
-            text-decoration: none;
-            font-family: 'Kanit', sans-serif;
-            background-color: rgba(62, 69, 122, 100);
+            font-family: Kanit;
+            font-size: 16px;
         }
 
-        .top-nav li {
-            background: none;
-            float: left;
-            left: 10px;
-            border-bottom: 2px solid #FFFFFF;
-            font-size: 10px;
-            height: 32px;
-            padding-top: 8px;
-            position: relative;
-            text-align: center;
-            width: 12.5%;
-            font-family: 'Kanit', sans-serif;
-            background-color: rgba(62, 69, 122, 100);
-
-            list-style-type: none;
-            list-style-image: none;
+        .navbar {
+            background-color: #aa1818;
+            padding-bottom: 30px;
         }
 
-        /* เปลี่ยนสีของลิงก์เมื่อ hover */
-        .top-nav li a:hover {
-            color: rgb(255, 255, 255);
-            background-color: rgb(42, 48, 108);
+        .navbar-brand img {
+            margin-left: 30px;
+            max-width: 250px;
         }
 
-        /* ปรับแต่งสไตล์ของเมนูแบบหลายระดับ */
-        .top-nav .submenu {
-            margin-top: 0px;
-            display: none;
+        .dropdown-menu {
+            background-color: #831212;
         }
 
-        .top-nav li:hover .submenu {
-            display: block;
-            width: 150px;
-            position: absolute;
-            top: 100%;
-            left: 0;
-        }
-
-        .top-nav .submenu li {
-            display: block;
-            background-color: rgba(62, 69, 122, 100);
-            width: 150px;
-            font-family: 'Kanit', sans-serif;
-        }
-
-        .top-nav .submenu li a {
-            padding: 2px;
+        .gtco-nav a {
+            padding: 0px 0px;
             color: #ffffff;
-            width: 100%;
-            margin-top: 5px;
-            font-size: 12px;
-            background-color: rgba(62, 69, 122, 100);
+            font-family: Kanit;
         }
-        .top-nav .submenu li a:hover {
-            color: #ffffff;
-            background-color: rgb(42, 48, 108);
-        }
-
     </style>
 </head>
-<body >
-<nav class="navbar-b">
-    <div class="navbar navbar-default navbar-static-top" style="background-color: #FFFFFF">
-        <div class="navbar-header" >
-            <a class="navbar-brand"  > <img src="${pageContext.request.contextPath}/assets/image/LOGOIT.png" class="hidden-xs" alt="" width="250px" style="margin-left: 30px;"></a>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" style="white-space: nowrap;">
+            <img src="${pageContext.request.contextPath}/assets/image/Oraphin_LogoIT.png" class="hidden-xs" alt=""
+                 style="margin-left: 0px; max-width: 300px;">
+        </a>
+
+        <!-- ปุ่มเมนูบนมือถือ -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- เมนู -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}">หน้าหลัก</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="${pageContext.request.contextPath}/history"
+                       id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" style="white-space: nowrap;">
+                        เกี่ยวกับเรา
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/history">ประวัติความเป็นมา</a>
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/course">ข้อมูลหลักสูตร</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/news/list_news">ข่าวสารและกิจกรรม</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="${pageContext.request.contextPath}/alumni/list_alumni"
+                       role="button" data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" style="white-space: nowrap;">
+                        ข้อมูลศิษย์เก่า
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/alumni/list_alumni" >ข้อมูลศิษย์เก่า</a>
+                        <a class="dropdown-item" href="https://itsci.mju.ac.th/coopedu2/" target="_blank">จัดส่งรายงานสหกิจ</a>
+                        <a class="dropdown-item" href="#" target="_blank">ฐานข้อมูลโครงงานสารสนเทศ</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/personnel/list_personnel">บุคลากร</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/faq">FAQ</a>
+                </li>
+<%--                <li class="nav-item">--%>
+<%--                    <a class="nav-link" href="${pageContext.request.contextPath}/contact">ช่องทางติดต่อ</a>--%>
+<%--                </li>--%>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="${pageContext.request.contextPath}" role="button"
+                       data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" style="white-space: nowrap;">
+                        เข้าสู่ระบบ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: #FFFFFF;">
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/login/LoginByPersonnel">บุคลากร</a>
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/login/LoginByAdmin">ผู้ดูแลระบบ</a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <ul class="top-nav" style="background-color: #FFFFFF; margin-top: 0px">
-        <li><a href="${pageContext.request.contextPath}"><i class="fas fa-home"></i> หน้าหลัก</a></li>
-        <li>
-            <a href="${pageContext.request.contextPath}/history"><i class="fas fa-info-circle"></i> เกี่ยวกับเรา</a>
-            <ul class="submenu">
-                <li><a href="${pageContext.request.contextPath}/history">ประวัติความเป็นมา</a></li>
-                <li><a href="${pageContext.request.contextPath}/course">ข้อมูลหลักสูตร</a></li>
-<%--                <li><a href="${pageContext.request.contextPath}/plan">แผนการเรียน</a></li>--%>
-            </ul>
-        </li>
-        <li><a href="${pageContext.request.contextPath}/news/list_news"><i class="fas fa-newspaper"></i> ข่าวสารและกิจกรรม</a></li>
-        <li><a href="${pageContext.request.contextPath}/alumni/list_alumni"><i class="fas fa-graduation-cap"></i> นักศึกษา</a>
-            <ul class="submenu">
-                <li><a href="${pageContext.request.contextPath}/alumni/list_alumni">ข้อมูลศิษย์เก่า</a></li>
-                <li><a href="https://itsci.mju.ac.th/coopedu2/"><i class="fas fa-file-alt"></i> จัดส่งรายงานสหกิจ</a></li>
-                <li><a href="${pageContext.request.contextPath}/project"> ฐานข้อมูลโครงงานสารสนเทศ</a></li>
-            </ul>
-        </li>
-        <li><a href="${pageContext.request.contextPath}/personnel/list_personnel"><i class="fas fa-users"></i> บุคลากร</a></li>
-        <li><a href="${pageContext.request.contextPath}/faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
-        <li><a href="${pageContext.request.contextPath}/contact"><i class="fas fa-envelope"></i> ช่องทางการติดต่อ</a></li>
-        <li>
-            <a href="${pageContext.request.contextPath}" style="text-decoration: none;"><i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ</a>
-            <ul class="submenu">
-                <li><a href="${pageContext.request.contextPath}/login/LoginByPersonnel">บุคลากร</a></li>
-                <li><a href="${pageContext.request.contextPath}/login/LoginByAdmin">ผู้ดูแลระบบ</a></li>
-            </ul>
-        </li>
-    </ul>
 </nav>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

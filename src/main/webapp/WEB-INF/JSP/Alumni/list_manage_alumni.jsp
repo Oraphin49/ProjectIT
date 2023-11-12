@@ -1,3 +1,5 @@
+<%@ page import="it_sci.model.Admin" %>
+<%@ page import="it_sci.model.Personnel" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
@@ -23,8 +25,7 @@
             border: 1px solid #ddd;
             margin-bottom: 12px;
             font-family: Kanit;
-            float: right;
-            margin-right: 50px;
+            margin-left: 25%;
         }
 
         *, *::before, *::after {
@@ -89,18 +90,44 @@
 
     </style>
 </head>
+<%
+    Personnel personnel = (Personnel) session.getAttribute("personnel");
+    Admin admin = (Admin) session.getAttribute("admin");
+    String flag = "";
+    if (personnel != null) {
+        flag = "personnel";
+    } else if (admin != null) {
+        flag = "admin";
+    } else {
+        flag = "null";
+    }
+%>
+<c:set var="flag" value="<%=flag%>"/>
 <body>
 <nav class="gtco-nav" role="navigation">
     <div class="gtco-container">
         <div class="row" style="display: block">
-            <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+            <c:choose>
+                <c:when test="${flag.equals('admin')}">
+                    <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+                </c:when>
+                <c:otherwise>
+                    <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+                </c:otherwise>
+            </c:choose>
         </div>
     </div>
 </nav>
 <br><br><br><br><br><br><br>
+<c:choose>
+    <c:when test=""></c:when>
+    <c:otherwise></c:otherwise>
+</c:choose>
+<c:choose>
+    <c:when test="${flag.equals('admin')}">
 <div class="top_content" >
     <div align="center">
-        <h2 style="color: #a41212; font-size: 30px;font-family: Kanit;">จัดการข้อมูลศิษย์เก่า</h2>
+        <h2 style="color: #a41212; font-size: 30px;font-family: Kanit; font-weight: bold">จัดการข้อมูลศิษย์เก่า</h2>
         <br>
     </div>
     <div>
@@ -109,11 +136,11 @@
     </div>
     <div>
         <a href="${pageContext.request.contextPath}/alumni/do_addAlumni">
-            <button style="width: 80px; float: right; margin-right:-630px; background-color: #FFFFFF;margin-bottom: 10px;margin-top: 65px;">
+            <button style="width: 80px; margin-left: 85% ; background-color: #FFFFFF;margin-bottom: 10px;margin-top: 65px;">
                 <img src="${pageContext.request.contextPath}/assets/image/bookmark-plus.png" style="width: 30px; ">
             </button>
         </a>
-        <br><br><br><br><br>
+        <br>
     </div>
 </div>
 <table align="center" class="list_manage" style="margin-top: 30px">
@@ -166,6 +193,15 @@
 <footer>
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </footer>
+</c:when>
+<c:otherwise>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 align="center" style="font-family: Kanit">คุณไม่มีสิทธิ์ในหน้านี้</h3>
+</c:otherwise>
+</c:choose>
 </body>
 
 

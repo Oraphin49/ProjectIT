@@ -1,34 +1,30 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!doctype html>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
-    <!-- Meta -->
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ประวัติความเป็นมา</title>
-    <meta name="description" content="">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="img/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/home/css/style.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/nav-gtco.css" rel="stylesheet">
 
     <!-- The compiled CSS file -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/history/css/production.css">
 
-    <!-- Web fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-
-    <!-- favicon.ico. Place these in the root directory. -->
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link href="${pageContext.request.contextPath}/assets/css/nav-gtco.css" rel="stylesheet">
-
 </head>
-
 <body class="has-animations">
 <nav class="gtco-nav" role="navigation">
     <div class="gtco-container">
@@ -68,7 +64,7 @@
                 การสร้างภาพเคลื่อนไหวและมัลติมีเดียเช่นเดียวกับสาขาเทคโนโลยีสารสนเทศของสถาบันอื่นๆ *</p>
         </div>
         <!-- Teepees -->
-        <div class="grid-column span-half pt3 pb3 mobile-m order-4">
+        <div class="grid-column span-half pt3 pb3 mobile-m order-4" >
             <h3 style="font-family: Kanit">ปรัชญาการศึกษาของหลักสูตร</h3>
             <p style="font-size: 16px;font-family: Kanit;color: #111111">ผลิตบัณฑิตที่มีความรู้ ความสามารถ และทักษะการเรียนรู้ตลอดชีวิตในการปฏิบัติงานทางด้านเทคโนโลยีให้สามารถออกแบบ พัฒนา และ ทดสอบซอฟต์แวร์ ที่สนับสนุนการใช้งานในองค์กร
                 และสามารถนำความรู้ ไปประยุกต์ใช้ได้อย่างเหมาะสมอีกทั้งยังมีความสามารถในการสื่อสารและทำงานเป็นทีมโดยมีจรรยาบรรณในวิชาชีพด้านเทคโนโลยีสารสนเทศ”</p>
@@ -101,13 +97,11 @@
 
 <!-- Scroll reveal -->
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-<!-- The compiled JavaScript file -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/css/history/js/production.js"></script>
-
 </body>
 <footer>
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </footer>
 </html>
-

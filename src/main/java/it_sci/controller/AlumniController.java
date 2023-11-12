@@ -11,6 +11,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.io.IOException;
@@ -18,32 +19,36 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.ParseException;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @Controller
 @RequestMapping("/alumni")
 public class AlumniController {
     @Autowired
     private AlumniService alumniService;
+
     @GetMapping("/list_alumni")
     public String listAlumni(Model model) {
-//        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
-        model.addAttribute("list_alumni",alumniService.getAlumnis());
+        Map<String, List<Alumni>> generations = new HashMap<>();
+        List<Alumni> alumniList = alumniService.getAlumnis();
+        for (Alumni alumni : alumniList) {
+            String generation = alumni.getGeneration();
+            if (!generations.containsKey(generation)) {
+                generations.put(generation, new ArrayList<>());
+            }
+            generations.get(generation).add(alumni);
+        }
+        List<Map.Entry<String, List<Alumni>>> sortedGenerations = new ArrayList<>(generations.entrySet());
+        Collections.sort(sortedGenerations, (o1, o2) -> o1.getKey().compareTo(o2.getKey()));
+        model.addAttribute("generations", sortedGenerations);
+        model.addAttribute("list_alumni", alumniList);
         return "JSP/Alumni/list_alumni";
     }
-    @GetMapping("/news")
-    public String shoeNews(Model model) {
-//        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
-        //model.addAttribute("list_alumni",alumniService.getAlumni());
-        return "JSP/News";
-    }
+
 
     @GetMapping("/{id}/view_alumni_detail")
     public String ShowAlumniDetail(@PathVariable("id") String id, Model model) {
-       Alumni alumni = alumniService.getAlumni(id);
-//        model.addAttribute("title", title + " - รายการสินค้า");
-//        model.addAttribute("shop", shop);
+        Alumni alumni = alumniService.getAlumni(id);
         model.addAttribute("alumni_detail", alumni);
         return "JSP/Alumni/View_alumni_detail";
     }
@@ -51,19 +56,21 @@ public class AlumniController {
     @GetMapping("/list_alumni_manage")
     public String listAlumnis(Model model) {
 //        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
-        model.addAttribute("list_manage_alumni",alumniService.getAlumnis());
+        model.addAttribute("list_manage_alumni", alumniService.getAlumnis());
         return "JSP/Alumni/list_manage_alumni";
     }
 
     @GetMapping("/do_addAlumni")
-    public String do_addAlumni(Model model){
+    public String do_addAlumni(Model model) {
         model.addAttribute("alumni", new Alumni());
         return "JSP/Alumni/add_alumni";
     }
+
     @PostMapping(path = "/save")
     public String saveAlumniForm(
             @RequestParam Map<String, String> allReqParams,
             @RequestParam(name = "otherPosition", required = false) String otherPosition,
+            HttpServletRequest request,
             @RequestParam(name = "imageFile") MultipartFile imageFile
     ) throws ParseException, IOException {
         String id = allReqParams.get("alumni_id");
@@ -79,6 +86,7 @@ public class AlumniController {
         String award = allReqParams.get("award");
         String prefix = allReqParams.get("prefix");
 
+
         String imageFileName = null;
 
         if (!imageFile.isEmpty()) {
@@ -90,12 +98,13 @@ public class AlumniController {
 
             // บันทึกไฟล์รูปภาพลงในโฟลเดอร์หรือเก็บในฐานข้อมูลแบบ String
             // เราใช้ตัวอย่างนี้เพื่อบันทึกลงในโฟลเดอร์ (เป็นตัวอย่างเท่านั้น)
-            String uploadDirectory = PathImg.path_Img + "/alumni/";
+            String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//alumni//";
             Path filePath = Paths.get(uploadDirectory, newFileName);
             Files.write(filePath, imageFile.getBytes());
 
             imageFileName = newFileName;
         }
+
 
         // ตรวจสอบค่า position ว่าเป็น "อื่นๆ" หรือไม่
         if ("อื่นๆ".equals(position)) {
@@ -103,7 +112,7 @@ public class AlumniController {
             position = otherPosition;
         }
 
-        Alumni alumni = new Alumni(id, firstname, lastname, graduationyear,generation, position, company, phone, email, imageFileName, expertise, award,prefix);
+        Alumni alumni = new Alumni(id, firstname, lastname, graduationyear, generation, position, company, phone, email, imageFileName, expertise, award, prefix);
         alumniService.SaveAlumni(alumni);
         return "redirect:/alumni/list_alumni_manage";
     }
@@ -123,7 +132,11 @@ public class AlumniController {
     }
 
     @PostMapping(path = "/{id}/edit/save")
-    public String saveEditAlumni(@RequestParam Map<String, String> allReqParams, @PathVariable String id, @RequestParam("newImageFile") MultipartFile newImageFile) throws ParseException, IOException {
+    public String saveEditAlumni(@RequestParam Map<String, String> allReqParams,
+                                 @PathVariable String id,
+                                 HttpServletRequest request,
+                                 @RequestParam("newImageFile") MultipartFile newImageFile)
+            throws ParseException, IOException {
         Alumni alumni = alumniService.getAlumni(id);
 
         if (alumni != null) {
@@ -153,7 +166,8 @@ public class AlumniController {
                 String fileExtension = originalFilename.substring(originalFilename.lastIndexOf('.'));
                 String newFileName = UUID.randomUUID().toString() + fileExtension;
 
-                String uploadDirectory = PathImg.path_Img + "/alumni/";
+                String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//alumni//";
+
                 Path filePath = Paths.get(uploadDirectory, newFileName);
 
                 try {
@@ -178,17 +192,16 @@ public class AlumniController {
     }
 
 
-
     @Transactional
     @GetMapping("/{id}/delete")
-    public String isRemoveAlumni(@PathVariable("id") String id) throws IOException {
+    public String isRemoveAlumni(HttpServletRequest request,@PathVariable("id") String id) throws IOException {
         Alumni alumni = alumniService.getAlumni(id);
 
         if (alumni != null) {
             // ลบไฟล์รูปภาพ (ถ้ามี)
             String imageFileName = alumni.getImage();
             if (imageFileName != null) {
-                String uploadDirectory = PathImg.path_Img + "/alumni/";
+                String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//alumni//";
                 Path imageFilePath = Paths.get(uploadDirectory, imageFileName);
                 Files.delete(imageFilePath);
             }

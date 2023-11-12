@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -54,7 +55,7 @@ public class PersonnelController {
 
 
     @GetMapping("/add_personnel")
-    public String addPersonnel(Model model) {
+    public String get_addPersonnel(Model model) {
         List<Academic_Ranks> academicRanks = academicranksService.getAcademic_Ranks();
         model.addAttribute("academicRanks", academicRanks);
         return "JSP/Personnel/Add_Personnel";
@@ -62,14 +63,16 @@ public class PersonnelController {
 
 
     @PostMapping("/save_personnnel")
-    public String saveAddPersonnel(@RequestParam Map<String, String> allReqParams,
+    public String do_addPersonnel(@RequestParam Map<String, String> allReqParams,
                                    @RequestParam(name = "imageFile") MultipartFile imageFile,
+                                   HttpServletRequest request,
                                    @RequestParam("selectedAcademicRanks") List<Long> academicRankIds)
             throws ParseException, IOException {
         // รับข้อมูลจากแบบฟอร์ม
         String firstname = allReqParams.get("firstname");
         String lastname = allReqParams.get("lastname");
         String position = allReqParams.get("position");
+        String status = allReqParams.get("status");
         String phone = allReqParams.get("phone");
         String image = allReqParams.get("image");
         String scolarlink = allReqParams.get("scolarlink");
@@ -88,13 +91,14 @@ public class PersonnelController {
             String fileExtension = originalFilename.substring(originalFilename.lastIndexOf('.'));
             String newFileName = UUID.randomUUID().toString() + fileExtension;
 
-            String uploadDirectory = PathImg.path_Img + "/personnel/";
+            String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//personnel//";
+
             Path filePath = Paths.get(uploadDirectory, newFileName);
             Files.write(filePath, imageFile.getBytes());
 
             imageFileName = newFileName;
         }
-        Personnel personnel = new Personnel(firstname, lastname, position, phone, imageFileName, scolarlink, description, experitse, email, password);
+        Personnel personnel = new Personnel(firstname, lastname, position, status, phone, imageFileName, scolarlink, description, experitse, email, password);
 
         personnelService.SavePersonnel(personnel);
 
@@ -111,7 +115,7 @@ public class PersonnelController {
 
 
     @GetMapping("/{id}/edit_personnel_detail")
-    public String ShowFormEditPersonnelDetail(@PathVariable("id") long id, Model model) {
+    public String getProfile(@PathVariable("id") long id, Model model) {
         Personnel personnel = personnelService.getPersonnelById(id);
         List<Award> award = personnelService.getAward(id);
         List<Work_experience> work_experience = personnelService.getWorkexperience(id);
@@ -132,8 +136,9 @@ public class PersonnelController {
     }
 
     @PostMapping(path = "/{p_id}/edit/save")
-    public String saveEditProfile(@RequestParam Map<String, String> allReqParams, @PathVariable long p_id,
+    public String update_Profile(@RequestParam Map<String, String> allReqParams, @PathVariable long p_id,
                                   @RequestParam("newImageFile") MultipartFile newImageFile,
+                                  HttpServletRequest request,
                                   @RequestParam("selectedAcademicRanks") List<Long> academicRankIds)
             throws ParseException {
         Personnel personnel = personnelService.getPersonnelById(p_id);
@@ -141,6 +146,7 @@ public class PersonnelController {
             personnel.setFirstname(allReqParams.get("firstname"));
             personnel.setLastname(allReqParams.get("lastname"));
             personnel.setPosition(allReqParams.get("position"));
+            personnel.setStatus(allReqParams.get("status"));
             personnel.setPhone(allReqParams.get("phone"));
             personnel.setScolarlink(allReqParams.get("scolarlink"));
             personnel.setDescription(allReqParams.get("description"));
@@ -154,7 +160,8 @@ public class PersonnelController {
                 String fileExtension = originalFilename.substring(originalFilename.lastIndexOf('.'));
                 String newFileName = UUID.randomUUID().toString() + fileExtension;
 
-                String uploadDirectory = PathImg.path_Img + "/personnel/";
+                String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//personnel//";
+
                 Path filePath = Paths.get(uploadDirectory, newFileName);
 
                 try {
@@ -190,13 +197,13 @@ public class PersonnelController {
     public String saveAddPersonal(@RequestParam Map<String, String> allReqParams,
                                   @PathVariable long p_id) throws ParseException {
 //        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String education_name = allReqParams.get("education_name");
+        String degreename = allReqParams.get("degreename");
         String major_name = allReqParams.get("major_name");
         String university_name = allReqParams.get("university_name");
         String country_name = allReqParams.get("country_name");
         String educationyear = allReqParams.get("educationyear");
         Personnel personnel = personnelService.getPersonnelById(p_id);
-        Education_histiry education_histiry = new Education_histiry(education_name, major_name, university_name, educationyear, country_name, personnel);
+        Education_histiry education_histiry = new Education_histiry(degreename, major_name, university_name, educationyear, country_name, personnel);
         personnelService.SavePersonnelEducation(education_histiry);
         return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
     }
@@ -242,25 +249,27 @@ public class PersonnelController {
         return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
     }
 
-    @PostMapping(path = "/{p_id}/save_Pro_add")
-    public String saveAddPersonnelPro(@RequestParam Map<String, String> allReqParams, @PathVariable long p_id) throws ParseException {
+    @PostMapping(path = "/{p_id}/save_pro_add")
+    public String saveAddPersonalPro(@RequestParam Map<String, String> allReqParams,
+                                  @PathVariable long p_id) throws ParseException {
         String pro_name = allReqParams.get("pro_name");
         String pro_year = allReqParams.get("pro_year");
         Personnel personnel = personnelService.getPersonnelById(p_id);
-        Project_consulting project_consulting = new Project_consulting(pro_name, pro_year, personnel);
+        Project_consulting project_consulting = new Project_consulting(pro_name,pro_year,personnel);
         personnelService.SaveProjectconsulting(project_consulting);
         return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
     }
 
-    @GetMapping("/{p_id}/{id}/remove_Pro")
+    @GetMapping("/{p_id}/{id}/remove_pro")
     public String removePersonnelPro(@PathVariable("id") long id,
-                                     @PathVariable String p_id) {
+                                           @PathVariable String p_id) {
         personnelService.removeProjectconsulting(id);
         return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
     }
 
     @PostMapping(path = "/{p_id}/save_work_add")
-    public String saveAddPersonnelWork(@RequestParam Map<String, String> allReqParams, @PathVariable long p_id) throws ParseException {
+    public String saveAddPersonnelWork(@RequestParam Map<String, String> allReqParams,
+                                       @PathVariable long p_id) throws ParseException {
         String work_name = allReqParams.get("work_name");
         Personnel personnel = personnelService.getPersonnelById(p_id);
         Work_experience work_experience = new Work_experience(work_name, personnel);

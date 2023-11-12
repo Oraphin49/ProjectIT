@@ -1,38 +1,26 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Information Technology</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
     <title>${personnel_detail.firstname} ${personnel_detail.lastname}</title>
     <link href="${pageContext.request.contextPath}/assets/css/view_personnel.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/assets/css/nav-gtco.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <meta name="description" content="Free HTML5 Website Template by gettemplates.co"/>
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/animate.css">
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/icomoon.css">
-    <!-- Themify Icons-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/themify-icons.css">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/bootstrap.css">
-    <!-- Theme style  -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/home/style.css">
-
-    <!-- Modernizr JS -->
-    <script src="${pageContext.request.contextPath}/assets/js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-    <script src="${pageContext.request.contextPath}/assets/js/respond.min.js"></script>
-    <![endif]-->
+    <link href="${pageContext.request.contextPath}/assets/css/home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/home/css/style.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/nav-gtco.css" rel="stylesheet">
     <style>
         *, ::after, ::before {
             box-sizing: border-box;
@@ -40,7 +28,6 @@
 
 
         body {
-            background-color: #f0f0f0;
             font-family: 'Kanit', sans-serif;
         }
 
@@ -54,11 +41,12 @@
         }
 
         #about {
-            background-color: #f0f0f0;
+            background-color: #f6f2dd;
         }
-        #profile{
-            background-color: #fff;
-            box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+
+        #profile {
+            background-color: #fff3e1;
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .1);
             flex: 20%;
             display: block;
             position: relative;
@@ -67,12 +55,13 @@
             height: 100%;
             padding: 15px;
         }
-        .card{
-            box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+
+        .cards {
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .1);
             overflow-x: hidden;
             margin-bottom: 30px;
             padding: 15px 30px 30px 30px;
-            background-color: #e3e3e3;
+            background-color: #e9ecef;
         }
     </style>
 </head>
@@ -116,66 +105,73 @@
         <p id="fax"><i class="fas fa-fax stroke-transparent"></i>&nbsp;<strong>โทรสาร</strong><br>(+66) 053-873900</p>
     </div>
     <div id="info-cards">
-        <div class="card">
-            <p style="color: #AA1818"><i class="fa fa-certificate stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ตำแหน่งทางวิชาการ </p>
+        <div class="cards">
+            <p style="color: #AA1818"><i class="fa fa-certificate stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ตำแหน่งบริหาร
+            </p>
             <ul>
                 <c:forEach items="${academicRanks}" var="academicRank">
                     <li><span class="bi bi-dot bi-dot-lg"></span>${academicRank.name}</li>
                 </c:forEach>
             </ul>
         </div>
-        <div class="card">
+        <div class="cards">
             <p style="color: #AA1818"><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการศึกษา
             </p>
             <ul>
                 <c:forEach var="ehd" items="${education_history_detail}">
-                    <p style="color: #111111"><i class="fas fa-graduation-cap stroke-transparent"></i><strong>&nbsp;&nbsp;&nbsp;${ehd.firstname}</strong>
+                    <p style="color: #111111"><i class="fas fa-graduation-cap stroke-transparent"></i><strong>&nbsp;&nbsp;&nbsp;${ehd.degreename}</strong>
                         &nbsp;&nbsp;&nbsp;${ehd.major} ,${ehd.university} ,${ehd.country},${ehd.educationyear}<br></p>
                 </c:forEach>
 
             </ul>
         </div>
-        <div class="card">
+        <div class="cards">
             <p style="color: #AA1818"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
             <ul>
                 <p style="color: #111111">${personnel_detail.expertise}</p>
             </ul>
         </div>
-        <div class="card">
+        <div class="cards">
             <p style="color: #AA1818"><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงาน</p>
             <ul>
                 <c:forEach var="award" items="${award_detail}">
-                    <p style="color: #111111"><span class="bi bi-dot bi-dot-lg"></span> ${award.name},${award.year}<br></p>
+                    <p style="color: #111111"><span class="bi bi-dot bi-dot-lg"></span> ${award.name},${award.year}<br>
+                    </p>
                 </c:forEach>
             </ul>
         </div>
-        <div class="card">
-            <p style="color: #AA1818" id="education"><i class="fab fa-google stroke-transparent"></i>&nbsp;&nbsp;&nbsp;สิ่งพิมพ์</p>
+        <div class="cards">
+            <p style="color: #AA1818" id="education" ><i class="fab fa-google stroke-transparent" ></i>&nbsp;&nbsp;&nbsp;สิ่งพิมพ์
+            </p>
             <ul>
-                <p style="color: #111111"><a href="${personnel_detail.scolarlink}">Google Scholar Link</a></p>
+                <p style="color: #111111"><a href="${personnel_detail.scolarlink}" target="_blank">Google Scholar Link</a></p>
             </ul>
         </div>
-        <div class="card">
-            <p style="color: #AA1818"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;งานบริการวิชาการ</p>
+        <div class="cards">
+            <p style="color: #AA1818"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;งานบริการวิชาการ
+            </p>
             <ul>
                 <c:forEach var="work" items="${work_experiences_detail}">
-                    <p style="color: #111111"><span class="bi bi-dot bi-dot-lg"></span>${work.workexperiencename} <br></p>
+                    <p style="color: #111111"><span class="bi bi-dot bi-dot-lg"></span>${work.workexperiencename} <br>
+                    </p>
                 </c:forEach>
             </ul>
         </div>
-        <div class="card">
+        <div class="cards">
             <p style="color: #AA1818"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ทุนวิจัย</p>
             <ul>
                 <c:forEach var="rgd" items="${research_grant_detail}">
-                    <p style="color: #111111"><span class="bi bi-dot bi-dot-lg"></span>${rgd.researchgrantname} , ${rgd.researchgrantyear}<br></p>
+                    <p style="color: #111111"><span class="bi bi-dot bi-dot-lg"></span>${rgd.researchgrantname}
+                        , ${rgd.researchgrantyear}<br></p>
                 </c:forEach>
             </ul>
         </div>
-        <div class="card">
+        <div class="cards">
             <p style="color: #AA1818"><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงานที่ปรึกษา</p>
             <ul>
                 <c:forEach var="procon" items="${project_consultings_detail}">
-                    <p style="color: #111111"><span class="bi bi-dot bi-dot-lg"></span> ${procon.name},${procon.year}<br></p>
+                    <p style="color: #111111"><span
+                            class="bi bi-dot bi-dot-lg"></span> ${procon.name},${procon.year}<br></p>
                 </c:forEach>
             </ul>
         </div>
@@ -187,5 +183,3 @@
 <script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
 </body>
 </html>
-
-

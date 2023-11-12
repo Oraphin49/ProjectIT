@@ -20,5 +20,4 @@ public interface AcademicranksService {
 
     List<Academic_Ranks> getAcademic_RanksDoesNotHavePersonnel(long id);
 
-
 }

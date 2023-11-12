@@ -1,3 +1,5 @@
+<%@ page import="it_sci.model.Personnel" %>
+<%@ page import="it_sci.model.Admin" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -21,8 +23,7 @@
             border: 1px solid #ddd;
             margin-bottom: 12px;
             font-family: Kanit;
-            margin-right: 50px;
-            float: right;
+          margin-left: 25%;
 
         }
         *, *::before, *::after {
@@ -120,28 +121,54 @@
         }
     </style>
 </head>
+<%
+    Personnel personnel = (Personnel) session.getAttribute("personnel");
+    Admin admin = (Admin) session.getAttribute("admin");
+    String flag = "";
+    if (personnel != null) {
+        flag = "personnel";
+    } else if (admin != null) {
+        flag = "admin";
+    } else {
+        flag = "null";
+    }
+%>
+<c:set var="flag" value="<%=flag%>"/>
 <body>
 <nav class="gtco-nav" role="navigation">
     <div class="gtco-container">
         <div class="row"  style="display: block">
-            <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+            <c:choose>
+                <c:when test="${flag.equals('admin')}">
+                    <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+                </c:when>
+                <c:otherwise>
+                    <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+                </c:otherwise>
+            </c:choose>
         </div>
     </div>
 </nav>
 <br><br><br><br><br><br>
-<h2 align="center" style="color: #aa1818">รายการข่าว</h2>
+<c:choose>
+    <c:when test=""></c:when>
+    <c:otherwise></c:otherwise>
+</c:choose>
+<c:choose>
+    <c:when test="${flag.equals('admin')}">
+<h2 align="center" style="color: #aa1818;font-weight: bold;font-family: Kanit">รายการข่าว</h2>
 <br>
 <div>
     <input type="text" id="searchInput" style="width: 50%" onkeyup="search()" placeholder="Search for names.." title="Type in a name">
 </div>
-<br><br>
-<a href="${pageContext.request.contextPath}/news/create_news"><button style="width: 80px; float: right; margin-right: -600px; background-color: #FFFFFF;margin-top: 15px">
+<br>
+<a href="${pageContext.request.contextPath}/news/create_news"><button style="width: 80px; margin-left: 75%; background-color: #FFFFFF;margin-top: 15px">
     <img src="${pageContext.request.contextPath}/assets/image/bookmark-plus.png" style="width: 30px; "></button></a>
 <br><br><br>
 <c:forEach var="news" items="${list_manage_news}">
     <div class="block_manage_news" data-name="${news.newsname} ${news.category} ${news.date}" style="display: block">
         <div class="news-container" >
-            <img class="news-image" src="${pageContext.request.contextPath}/assets/image/news1.jpg">
+            <img class="news-image" src="${pageContext.request.contextPath}/assets/image/news/${news.id}/${news.newsImage[0]}">
             <div class="news-details" >
                 <h2 class="news-title">${news.newsname}</h2>
                 <p class="news-category">หมวดหมู่: ${news.category}</p>
@@ -168,11 +195,19 @@
     </a>
 </div>
 <br><br>
+    </c:when>
+    <c:otherwise>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 align="center" style="font-family: Kanit">คุณไม่มีสิทธิ์ในหน้านี้</h3>
+    </c:otherwise>
+</c:choose>
 </body>
 <footer>
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </footer>
-
 <script>
     ///////////////////////////เช็คก่อนหน้าและถัดไป///////////////////////////////////////////
     var newsListmanage = document.querySelectorAll(".block_manage_news");

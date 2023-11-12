@@ -16,7 +16,7 @@ public class Academic_Ranks {
     @Column(name = "academicranksname",nullable = false,length = 50)
     private String name;
 
-    @ManyToMany (fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @ManyToMany (fetch = FetchType.EAGER)
     @JoinTable(
             name = "personnel_academic_ranks",
             joinColumns = @JoinColumn(name = "academicranksid"),

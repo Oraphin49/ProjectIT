@@ -25,13 +25,6 @@ public class Project_consulting {
     @JoinColumn(name = "personnel_personnelid")
     private Personnel personnel;
 
-    public Project_consulting(long id, String name, String year, Personnel personnel) {
-        this.id = id;
-        this.name = name;
-        this.year = year;
-        this.personnel = personnel;
-    }
-
     public Project_consulting() {
 
     }

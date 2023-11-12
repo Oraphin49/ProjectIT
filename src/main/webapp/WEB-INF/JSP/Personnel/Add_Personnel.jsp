@@ -1,19 +1,21 @@
+<%@ page import="it_sci.model.Personnel" %>
+<%@ page import="it_sci.model.Admin" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <title>เพิ่มข้อมูลบุคลากร</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
     <style>
-        /* เราเพิ่มสไตล์สำหรับเลือกตำแหน่งวิชาการที่ต้องการปรับแต่ง */
         #academicRanks {
-            width: 100%; /* ทำให้เลือกตำแหน่งเต็มขนาดคอลัมน์ */
+            width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 3px;
-            height: 150px; /* ระบุความสูงของกล่องเลือกตำแหน่ง */
+            height: 150px;
         }
 
         #academicRanks option {
@@ -69,7 +71,7 @@
         }
 
         .custom-form {
-            max-width: 600px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 20px;
             border: 1px solid #ddd;
@@ -141,26 +143,60 @@
         }
     </style>
 </head>
+<%
+    Personnel personnel = (Personnel) session.getAttribute("personnel");
+    Admin admin = (Admin) session.getAttribute("admin");
+    String flag = "";
+    if (personnel != null) {
+        flag = "personnel";
+    } else if (admin != null) {
+        flag = "admin";
+    } else {
+        flag = "null";
+    }
+%>
+<c:set var="flag" value="<%=flag%>"/>
 <body>
 <nav class="gtco-nav" role="navigation">
     <div class="gtco-container">
         <div class="row" style="display: block">
-            <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+            <c:choose>
+                <c:when test="${flag.equals('admin')}">
+                    <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+                </c:when>
+                <c:otherwise>
+                    <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+                </c:otherwise>
+            </c:choose>
         </div>
     </div>
 </nav>
-<br><br><br><br><br><br><br>
-<h2>เพิ่มบุคลการ</h2>
+<br><br><br><br><br><br>
+<c:choose>
+    <c:when test=""></c:when>
+    <c:otherwise></c:otherwise>
+</c:choose>
+<c:choose>
+    <c:when test="${flag.equals('admin')}">
+<h2 style="font-family: Kanit; font-weight: bold">เพิ่มบุคลาการ</h2>
+<br>
 <form:form method="POST" action="${pageContext.request.contextPath}/personnel/save_personnnel" name="form" id="form"
            class="custom-form" enctype="multipart/form-data" onsubmit="return validateForm()">
     <div id="profile">
         <div class="row">
             <div class="column">
                 <label for="imageFile">รูปภาพ:</label>
-                <input type="file" id="imageFile" name="imageFile" accept="image/*" class="form-control" required>
+                <input type="file" id="imageFile" name="imageFile" accept="image/*" required>
+                <br>
+                <small style="font-family: Kanit;color: #757575">กรุณาเลือกไฟล์รูปภาพที่มีนามสกุลไฟล์เป็น.png , jpg ,
+                    jpeg</small>
             </div>
         </div>
         <div class="row">
+            <div class="column">
+                <label for="position">ตำแหน่งวิชาการ</label>
+                <input type="text" id="position" name="position">
+            </div>
             <div class="column">
                 <label for="firstname">ชื่อ</label>
                 <input type="text" id="firstname" name="firstname">
@@ -172,8 +208,8 @@
         </div>
         <div class="row">
             <div class="column">
-                <label for="position">ตำแหน่ง</label>
-                <input type="text" id="position" name="position">
+                <label for="status">สถานะ</label>
+                <input type="text" id="status" name="status">
             </div>
             <div class="column">
                 <label for="scolarlink">สิ่งพิมพ์</label>
@@ -185,6 +221,8 @@
                 <label for="phone">เบอร์โทร</label>
                 <input type="text" id="phone" name="phone">
             </div>
+        </div>
+        <div class="row">
             <div class="column">
                 <label for="description">คำอธิบาย</label>
                 <textarea id="description" name="description"></textarea>
@@ -209,14 +247,15 @@
         <div class="row">
             <div class="row">
                 <div class="column">
-                    <label for="academicRanks">ตำแหน่งวิชาการ:</label>
-                    <select multiple="multiple" id="academicRanks" name="selectedAcademicRanks">
-                        <c:forEach items="${academicRanks}" var="academicRank">
-                            <option value="${academicRank.id}">${academicRank.name}</option>
-                        </c:forEach>
-                    </select>
+                    <%--@declare id="academicranks"--%><label for="academicRanks" style="font-family: Kanit">ตำแหน่งบริหาร:</label><br>
+                    <c:forEach items="${academicRanks}" var="academicRank">
+                        <label style="font-family: Kanit">
+                            <input type="checkbox" name="selectedAcademicRanks" value="${academicRank.id}">&nbsp;${academicRank.name}
+                        </label><br>
+                    </c:forEach>
                 </div>
             </div>
+
         </div>
         <div class="button-group">
             <input type="submit" value="บันทึก">
@@ -224,10 +263,19 @@
         </div>
     </div>
 </form:form>
+    </c:when>
+    <c:otherwise>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 align="center" style="font-family: Kanit">คุณไม่มีสิทธิ์ในหน้านี้</h3>
+    </c:otherwise>
+</c:choose>
 </body>
 <script>
     function validateForm() {
-        // เว้นไว้ก่อน
+        // image
         var imageFile = document.getElementById("imageFile");
         var allowedTypes = ["image/jpeg", "image/png", "image/gif"];
         var maxFileSize = 5 * 1024 * 1024; // 5MB
@@ -294,15 +342,27 @@
             return false;
         }
 
-        //เช็คเบอร์โทร //
+       // เช็คเบอร์โทร //
+
         var phone = document.getElementById("phone").value;
-        var TelTH = /^(06|08|09|8)[0-9]{1}-?[0-9]{3}-?[0-9]{5}$/; // รองรับขีด (-) หรือไม่ก็ได้
+        var TelTH = /^(06|08|09|8)-?[0-9]{3}-?[0-9]{5}$/; // รองรับขีด (-)
         if (phone.trim() === "") {
             alert("กรุณากรอกเบอร์โทร");
             return false;
-        } else if (!phone.match(TelTH)) {
+        } else if (!TelTH.test(phone)) {
             alert("คุณกรอกเบอร์โทรให้ถูกต้องไม่ถูกต้อง กรุณากรอกใหม่");
             document.getElementById("phone").value = "";
+            return false;
+        }
+
+        //เช็คสถานะ//
+        var status = document.getElementById("status").value;
+        if (status.trim() === "") {
+            alert("กรุณากรอกสถานะ");
+            return false;
+        } else if (!/^[ก-๙]+(\s[ก-๙]+)*$/.test(status) || status.length < 2 || status.length > 50) {
+            alert("สถานะต้องเป็นภาษาไทยเท่านั้นและมีความยาวระหว่าง 2 ถึง 50 ตัวอักษรและมีช่องว่างระหว่างตัวอักษรได้ไม่เกิน 1 ช่อง");
+            document.getElementById("status").value = "";
             return false;
         }
 
@@ -335,6 +395,12 @@
         var password = document.getElementById("password").value;
         if (password === "") {
             alert("กรุณากรอกรหัสผ่าน");
+            return false;
+        }
+
+        var selectedAcademicRanks = document.querySelectorAll('input[name="selectedAcademicRanks"]:checked');
+        if (selectedAcademicRanks.length === 0) {
+            alert("กรุณาเลือกอย่างน้อยหนึ่งตำแหน่งวิชาการ");
             return false;
         }
 

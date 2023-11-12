@@ -14,8 +14,8 @@ public class Education_histiry {
     @GenericGenerator(name = "increment", strategy = "increment")
     private long id;
 
-    @Column(name = "educationname",nullable = false,length = 50)
-    private String firstname;
+    @Column(name = "degreename",nullable = false,length = 50)
+    private String degreename;
 
     @Column(name = "major",nullable = false,length = 50)
     private String major;
@@ -37,8 +37,8 @@ public class Education_histiry {
 
     }
 
-    public Education_histiry(String firstname, String major, String university, String educationyear, String country, Personnel personnel) {
-        this.firstname = firstname;
+    public Education_histiry(String degreename, String major, String university, String educationyear, String country, Personnel personnel) {
+        this.degreename = degreename;
         this.major = major;
         this.university = university;
         this.educationyear = educationyear;
@@ -54,12 +54,12 @@ public class Education_histiry {
         this.id = id;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getDegreename() {
+        return degreename;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setDegreename(String degreename) {
+        this.degreename = degreename;
     }
 
     public String getMajor() {

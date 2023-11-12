@@ -1,4 +1,5 @@
 package it_sci.controller;
+
 import it_sci.model.News;
 import it_sci.service.NewsService;
 import it_sci.util.PathImg;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.io.File;
@@ -37,16 +39,23 @@ public class NewsController {
     private SessionFactory sessionFactory;
 
     @GetMapping("/list_news")
-    public String listNews(Model model) {
-        model.addAttribute("list_news",newsService.getNews());
+    public String listNews(Model model,HttpServletRequest request) {
+        List<News> newsList = newsService.getNews();
+
+        for (News news : newsList) {
+            List<String> imageFiles = getImagesFromDirectory(news.getId(),request);
+            news.setNewsImage(imageFiles);
+        }
+
+        model.addAttribute("list_news", newsList);
         return "JSP/News/list_news";
     }
 
     @GetMapping("/{id}/view_news_detail")
-    public String ShowNewsDetail(@PathVariable("id") Long id, Model model) {
+    public String ShowNewsDetail(@PathVariable("id") Long id, Model model,HttpServletRequest request) {
         News news = newsService.getNews(id);
 
-        List<String> newFileNames = getImagesFromDirectory(id);
+        List<String> newFileNames = getImagesFromDirectory(id,request);
 
         model.addAttribute("news_detail", news);
         model.addAttribute("newsImage", newFileNames);
@@ -54,9 +63,10 @@ public class NewsController {
         return "JSP/News/View_News_Detail";
     }
 
-    private List<String> getImagesFromDirectory(Long newsId) {
+    private List<String> getImagesFromDirectory(Long newsId,HttpServletRequest request) {
         List<String> imageFiles = new ArrayList<>();
-        String uploadDirectory = PathImg.path_Img + "/news/" + newsId;
+        String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//news//"+ newsId +"//";
+
 
         try (Stream<Path> paths = Files.walk(Paths.get(uploadDirectory))) {
             paths.filter(Files::isRegularFile)
@@ -71,23 +81,27 @@ public class NewsController {
     }
 
 
-
     @GetMapping("/list_news_manage")
-    public String listNew(Model model) {
-//        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
-        model.addAttribute("list_manage_news",newsService.getNews());
+    public String listNew(Model model,HttpServletRequest request) {
+        List<News> newsList = newsService.getNews();
+        for (News news : newsList) {
+            List<String> imageFiles = getImagesFromDirectory(news.getId(),request);
+            news.setNewsImage(imageFiles);
+        }
+        model.addAttribute("list_manage_news",newsList);
         return "JSP/News/list_manage_news";
     }
 
     @GetMapping("/create_news")
-    public String do_addNews(Model model){
+    public String do_addNews(Model model) {
         model.addAttribute("news", new News());
         return "JSP/News/add_news";
     }
 
     @Transactional
     @PostMapping("/save")
-    public String processForm(@RequestParam Map<String, String> allReqParams, @RequestParam("imageFiles") MultipartFile[] imageFiles) throws IOException {
+    public String processForm(@RequestParam Map<String, String> allReqParams,
+                              HttpServletRequest request, @RequestParam("imageFiles") MultipartFile[] imageFiles) throws IOException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String newsname = allReqParams.get("news_name");
         Date sysDate = new Date();
@@ -101,7 +115,9 @@ public class NewsController {
 
         for (MultipartFile imageFile : imageFiles) {
             if (!imageFile.isEmpty()) {
-                String uploadDirectory = PathImg.path_Img + "/news/" + (latestId + 1);
+//                String uploadDirectory = PathImg.path_Img + "/news/" + (latestId + 1);
+                String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//news//"+ (latestId + 1)+"//";
+
 
                 Path directoryPath = Paths.get(uploadDirectory);
                 Files.createDirectories(directoryPath);
@@ -151,7 +167,7 @@ public class NewsController {
     }
 
     @GetMapping("/{id}/update")
-    public String isEditNews( @Valid @PathVariable("id") Long id, Model model) {
+    public String isEditNews(@Valid @PathVariable("id") Long id, Model model) {
         News news = newsService.getNews(id);
         model.addAttribute("news", news);
         return "JSP/News/edit_news";
@@ -159,6 +175,7 @@ public class NewsController {
 
     @PostMapping(path = "/{id}/edit/save")
     public String processForm(@PathVariable Long id, @RequestParam Map<String, String> allReqParams,
+                              HttpServletRequest request,
                               @RequestParam("imageFile") MultipartFile[] imageFiles) throws IOException {
         News news = newsService.getNews(id);
         if (news != null) {
@@ -171,11 +188,14 @@ public class NewsController {
             newsService.EditNews(news);
 
             // ลบไฟล์รูปเก่า
-            String oldUploadDirectory = PathImg.path_Img + "/news/" + id;
+//            String oldUploadDirectory = PathImg.path_Img + "/news/" + id;
+            String oldUploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//news//"+ id +"//";
+
             FileUtils.deleteDirectory(new File(oldUploadDirectory));
 
             // กำหนดเส้นทางของไดเรกทอรีใหม่
-            String uploadDirectory = PathImg.path_Img + "/news/" + id;
+//            String uploadDirectory = PathImg.path_Img + "/news/" + id;
+            String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//news//"+ id +"//";
 
             int count = 1;
             List<String> newFileNames = new ArrayList<>(); // To store the new file names
@@ -213,7 +233,7 @@ public class NewsController {
 
     @Transactional
     @GetMapping("/{id}/delete")
-    public String deleteNews(@PathVariable Long id) {
+    public String deleteNews(@PathVariable Long id,HttpServletRequest request) {
         // ดึงข้อมูลข่าวที่ต้องการลบจากฐานข้อมูล
         News news = newsService.getNews(id);
 
@@ -221,7 +241,10 @@ public class NewsController {
             newsService.removeNews(id);
 
             // ลบไดเรกทอรีรูปภาพที่เกี่ยวข้อง
-            String uploadDirectory = PathImg.path_Img + "/news/" + id;
+//            String uploadDirectory = PathImg.path_Img + "/news/" + id;
+            String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//news//"+ id +"//";
+
+
             File directory = new File(uploadDirectory);
             if (directory.exists()) {
                 try {

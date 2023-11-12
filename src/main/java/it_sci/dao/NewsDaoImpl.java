@@ -18,7 +18,8 @@ public class NewsDaoImpl  implements NewsDao{
     @Override
     public List<News> getNews() {
         Session session = sessionFactory.getCurrentSession();
-        Query<News> query = session.createQuery("FROM News ", News.class);
+        String hql = "FROM News n ORDER BY n.date DESC";
+        Query<News> query = session.createQuery(hql, News.class);
         List<News> news = query.getResultList();
         return news;
     }

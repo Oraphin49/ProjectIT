@@ -1,17 +1,24 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${alumni_detail.id}</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
-    <!-- เพิ่มลิงก์ CSS ของ Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Information Technology</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="img/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/home/css/style.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/nav-gtco.css" rel="stylesheet">
     <style>
         /* Reset CSS */
         * {
@@ -28,13 +35,13 @@
             padding: 0;
         }
 
-        .container {
+        .container-cn {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
         .header {
@@ -132,6 +139,9 @@
             display: table;
             clear: both;
         }
+        .rounded-circle {
+            border-radius: 10%!important;
+        }
     </style>
 
 </head>
@@ -144,13 +154,13 @@
     </div>
 </nav>
 <br><br><br><br><br><br><br>
-<div class="container">
+<div class="container-cn">
     <div class="header bg-dark text-white">
-        <h1>${alumni_detail.prefix}${alumni_detail.firstname} ${alumni_detail.lastname}</h1>
+        <h1 style="color: #FFFFFF;font-family: Kanit">${alumni_detail.prefix}${alumni_detail.firstname} ${alumni_detail.lastname}</h1>
     </div>
 
     <div class="content2 mt-4">
-        <h3 class="card-text"><i class="fas fa-user me-2"></i> ข้อมูลส่วนตัว</h3>
+        <h3 class="card-text" style="font-weight: bold"><i class="fas fa-user me-2"></i> ข้อมูลส่วนตัว</h3>
         <p class="card-text"><strong>รหัสนักศึกษา :</strong> ${alumni_detail.id}</p>
         <p class="card-text"><strong>ไอทีรุ่นที่ :</strong> ${alumni_detail.generation}</p>
         <p class="card-text"><strong>ปีที่จบการศึกษา :</strong> ${alumni_detail.graduationyear}</p>
@@ -184,9 +194,10 @@
 <!-- เพิ่มลิงก์ JavaScript ของ Bootstrap หลังจาก jQuery -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<br>
-<footer>
+<footer style="margin-top: 100px">
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </footer>
 </html>

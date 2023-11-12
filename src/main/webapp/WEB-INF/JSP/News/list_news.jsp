@@ -1,12 +1,25 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>List news</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nav-gtco.css">
+    <meta charset="utf-8">
+    <title>Information Technology</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/home/css/style.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/css/nav-gtco.css" rel="stylesheet">
 
     <style>
         #searchInput {
@@ -28,7 +41,9 @@
             border: 1px solid #ab1212;
             background-color: #aa1818;
         }
-
+        .bg-primary {
+            background-color: #dc3545 !important;
+        }
         .col-md-3 {
             transition: transform 0.3s;
             min-height: 250px;
@@ -37,7 +52,11 @@
         .col-md-3:hover {
             transform: scale(1.02);
         }
-
+        .card-img-top{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -54,20 +73,19 @@
     <br>
     <div align="center">
         <input type="text" id="searchInput" class="form-control mb-4" onkeyup="search()"
-               placeholder="Search for names.." title="Type in a name">
+               placeholder="สามารถค้นหา ชื่อข่าว หมวดหมู่ หรือ วันที่ ..." title="Type in a name">
     </div>
     <br><br>
     <div class="row">
         <c:forEach var="news" items="${list_news}">
             <div class="col-md-3" data-name="${news.date} ${news.category} ${news.newsname}">
                 <div class="card mb-4">
-                    <img class="card-img-top" src="${pageContext.request.contextPath}/assets/image/news11.jpg"
+                    <img  class="card-img-top" src="${pageContext.request.contextPath}/assets/image/news/${news.id}/${news.newsImage[0]}"
                          alt="News Image">
                     <div class="card-body">
                         <span class="bg-primary text-white p-1" style="font-family: Kanit;">${news.category}</span>
                         <h6 class="card-title mt-3" style="font-family: Kanit;">${news.newsname}</h6>
-                        <small class="card-text">${news.date}</small>
-                        <br>
+                        <small class="card-text"> <fmt:formatDate value="${news.date}" pattern="dd MMM yyyy" /></small>
                         <small><a href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail">กดเพื่อดูเพิ่มเติม</a></small>
                     </div>
                 </div>
@@ -94,7 +112,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script>
     var newsList = document.querySelectorAll(".col-md-3");
-    var itemsPerPage = 4; // จำนวนข่าวที่แสดงในแต่ละหน้า
+    var itemsPerPage = 40; // จำนวนข่าวที่แสดงในแต่ละหน้า
     var currentPage = 1; // หน้าปัจจุบัน
 
     // ฟังก์ชันเพื่อไปหน้าถัดไป
@@ -152,6 +170,10 @@
         }
     }
 </script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/css/home/js/main.js"></script>
 <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
 </body>
 </html>

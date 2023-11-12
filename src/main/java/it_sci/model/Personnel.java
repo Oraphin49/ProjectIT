@@ -24,6 +24,10 @@ public class Personnel {
     @Column(name="position",nullable = false,length = 50)
     private String position;
 
+    @Column(name="status",nullable = false,length = 50)
+    private String status;
+
+
     @Column(name = "phone",nullable = false,length = 10)
     private String phone;
 
@@ -46,7 +50,7 @@ public class Personnel {
     private String Password;
 
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "personnel_academic_ranks",
             joinColumns = @JoinColumn(name = "personnelid"),
@@ -62,17 +66,19 @@ public class Personnel {
         this.firstname = firstname;
     }
 
-    public Personnel(String firstname, String lastname, String position, String phone, String image, String scolarlink, String description, String expertise, String email, String password) {
+    public Personnel( String firstname, String lastname, String position,String status, String phone, String image, String scolarlink, String description, String expertise, String email, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.position = position;
+        this.status = status;
         this.phone = phone;
         this.image = image;
         this.scolarlink = scolarlink;
         this.description = description;
         this.expertise = expertise;
         this.email = email;
-        Password = password;
+        this.Password = password;
+
     }
 
 
@@ -106,6 +112,14 @@ public class Personnel {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getPhone() {
@@ -167,7 +181,6 @@ public class Personnel {
     public Set<Academic_Ranks> getAcademicRank() {
         return academicRank;
     }
-
 
 
     public void setAcademicRank(Set<Academic_Ranks> academicRank) {

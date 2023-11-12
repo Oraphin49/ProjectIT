@@ -10,197 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="เหลือตกแต่ง">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/AcademicranksDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/AcademicranksDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Project_consulting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AcademicranksService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AcademicranksServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/history/css/production.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/history/js/production.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/animate/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/animate/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/counterup/counterup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/easing/easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/easing/easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/isotope/isotope.pkgd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/isotope/isotope.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/lightbox/css/lightbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/lightbox/css/lightbox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/lightbox/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/lightbox/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/lightbox/images/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/lightbox/images/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/lightbox/js/lightbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/lightbox/js/lightbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/lightbox/links.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/assets/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/assets/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/assets/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/assets/owl.theme.default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/assets/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/assets/owl.theme.green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/assets/owl.theme.green.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/assets/owl.video.play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/owlcarousel/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/waypoints/links.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/waypoints/waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/wow/wow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/lib/wow/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_accordion.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_button-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_close.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_containers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_dropdown.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_helpers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_images.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_nav.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_navbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_offcanvas.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_popover.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_progress.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_root.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_spinners.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_toasts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_tooltip.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_transitions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_type.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/bootstrap-grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/bootstrap-reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/bootstrap-utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/forms/_floating-labels.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/forms/_form-check.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/forms/_form-control.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/forms/_form-range.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/forms/_form-select.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/forms/_form-text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/forms/_input-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/forms/_labels.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/forms/_validation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/helpers/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/helpers/_colored-links.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/helpers/_position.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/helpers/_ratio.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/helpers/_stretched-link.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/helpers/_text-truncation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/helpers/_visually-hidden.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_box-shadow.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_breakpoints.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_caret.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_color-scheme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_container.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_deprecate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_gradients.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_image.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_lists.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_reset-text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_resize.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_table-variants.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_text-truncate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/mixins/_visually-hidden.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/utilities/_api.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/scss/bootstrap/scss/vendor/_rfs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/colors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/version/food.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/version/garden.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/version/marketing.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/css/version/tech.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/animate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/food-map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/garden-map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/masonry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/listnewses/js/tether.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/P3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/Poster.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/Poster1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/Poster2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/2ca6b194-e3f4-4065-a42d-e2e362b801e5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/57b54abe-3e54-400d-bbee-9198251b226a.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/99256a23-ec19-4439-822a-5a713944ced4.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/b4b3c6e3-249e-4b9a-b078-e4a8b953a36d.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/h1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_3_0001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_3_0002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0004.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0005.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0004.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0005.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0006.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/personnel/7443b25a-3997-4ff8-8ba1-9e4af687bb77.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/personnel/cb8110a0-f898-4c19-8547-3e0bb7753166.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/personnel/d93e5fa9-a2c1-43a8-a03f-c08d8c4085ed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AlumniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AlumniController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/WebHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/WebHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Academic_Ranks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Academic_Ranks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Alumni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Alumni.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/News.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Education_histiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Education_histiry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Personnel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Personnel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/PersonnelAcademicRank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Work_experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Work_experience.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/util/PathImg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/util/PathImg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Project_consulting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Project_consulting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/AcademicranksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AcademicranksService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" afterDir="false" />
@@ -208,12 +31,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course65.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course65.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Nav_Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Nav_Admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" afterDir="false" />
@@ -221,64 +45,43 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Plan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Plan.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/flexslider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/icomoon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/magnific-popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/owl.theme.default.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/themify-icons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/list_manage_alumni.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/list_manage_alumni.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/list_manage_news.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/list_manage_news.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/view_personnel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/view_personnel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/viewnewsdetaail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/viewnewsdetaail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/0d183af6-7dd9-437e-a5ac-d09aa3cc2026.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/9d552b90-47de-42fd-96d5-ce7b518473cf.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/banner3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/banner3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/2/IMG_2_0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/2/IMG_2_0002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0001.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/2/IMG_2_0003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/2/IMG_2_0004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/2/IMG_2_0005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/2/IMG_2_0006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/2/IMG_2_0007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/2/IMG_2_0008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_03_0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_03_0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_03_0003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_03_0004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_04_0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_04_0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_04_0003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_04_0004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_04_0005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_04_0006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_04_0007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_04_0008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/edit_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/edit_profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/P3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/Poster.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/Poster2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/Poster2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/2ca6b194-e3f4-4065-a42d-e2e362b801e5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/57b54abe-3e54-400d-bbee-9198251b226a.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/99256a23-ec19-4439-822a-5a713944ced4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/b4b3c6e3-249e-4b9a-b078-e4a8b953a36d.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/banner2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/banner2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_3_0001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_3_0002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0005.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0001.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.countTo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.easing.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.flexslider-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.magnific-popup.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.stellar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.waypoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/magnific-popup-options.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/modernizr-2.6.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/respond.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0002.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0003.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0003.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0004.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0004.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0005.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0005.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0006.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0006.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/personnel/7443b25a-3997-4ff8-8ba1-9e4af687bb77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/personnel/cb8110a0-f898-4c19-8547-3e0bb7753166.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/personnel/d93e5fa9-a2c1-43a8-a03f-c08d8c4085ed.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -661,7 +464,54 @@
       <workItem from="1698637587492" duration="3901000" />
       <workItem from="1698641808691" duration="4063000" />
       <workItem from="1698649494978" duration="632000" />
-      <workItem from="1698650146749" duration="1300000" />
+      <workItem from="1698650146749" duration="10387000" />
+      <workItem from="1698685714040" duration="1106000" />
+      <workItem from="1698686858737" duration="2650000" />
+      <workItem from="1698724971872" duration="4985000" />
+      <workItem from="1698735679234" duration="7262000" />
+      <workItem from="1698764624039" duration="11318000" />
+      <workItem from="1698806998511" duration="3754000" />
+      <workItem from="1698816882019" duration="3232000" />
+      <workItem from="1698820704896" duration="2659000" />
+      <workItem from="1698842320822" duration="6210000" />
+      <workItem from="1698851434764" duration="5139000" />
+      <workItem from="1698857050231" duration="1082000" />
+      <workItem from="1698858153990" duration="4473000" />
+      <workItem from="1698862672086" duration="5829000" />
+      <workItem from="1698868591925" duration="2333000" />
+      <workItem from="1698928161689" duration="23044000" />
+      <workItem from="1698957632267" duration="1144000" />
+      <workItem from="1698978058666" duration="5023000" />
+      <workItem from="1698993134679" duration="1227000" />
+      <workItem from="1699072434798" duration="6586000" />
+      <workItem from="1699086694373" duration="5573000" />
+      <workItem from="1699092318787" duration="8440000" />
+      <workItem from="1699100987725" duration="7845000" />
+      <workItem from="1699108914481" duration="7347000" />
+      <workItem from="1699118067172" duration="4003000" />
+      <workItem from="1699122895400" duration="8526000" />
+      <workItem from="1699156397870" duration="25606000" />
+      <workItem from="1699209262877" duration="3589000" />
+      <workItem from="1699264251092" duration="6165000" />
+      <workItem from="1699281657601" duration="2569000" />
+      <workItem from="1699285206871" duration="831000" />
+      <workItem from="1699293544400" duration="1823000" />
+      <workItem from="1699345116229" duration="18142000" />
+      <workItem from="1699382575482" duration="755000" />
+      <workItem from="1699384075464" duration="250000" />
+      <workItem from="1699413255287" duration="7971000" />
+      <workItem from="1699524979651" duration="1339000" />
+      <workItem from="1699526347896" duration="1020000" />
+      <workItem from="1699527438695" duration="7421000" />
+      <workItem from="1699603299849" duration="5295000" />
+      <workItem from="1699608756481" duration="1002000" />
+      <workItem from="1699617611905" duration="3109000" />
+      <workItem from="1699625781481" duration="1004000" />
+      <workItem from="1699671808298" duration="6310000" />
+      <workItem from="1699680596524" duration="9472000" />
+      <workItem from="1699698461191" duration="2756000" />
+      <workItem from="1699708421497" duration="5787000" />
+      <workItem from="1699773583149" duration="252000" />
     </task>
     <task id="LOCAL-00001" summary="create controller">
       <created>1693579426903</created>
@@ -810,7 +660,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697344585180</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="เหลือตกแต่ง">
+      <created>1698651540845</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1698651540845</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

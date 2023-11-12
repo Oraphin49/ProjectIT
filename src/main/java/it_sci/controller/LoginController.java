@@ -20,6 +20,7 @@ class LoginController {
 
     @Autowired
     private UserService userService;
+
     @GetMapping("/LoginByAdmin")
     public String loginPageByAdmin(Model model) {
         model.addAttribute("title", "ลงชื่อเข้าสู่ระบบสำหรับผู้ดูแลระบบ");
@@ -34,48 +35,57 @@ class LoginController {
 
     @GetMapping("/access-denied")
     public String showAccess(Model model) {
-//        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบสำหรับผู้ดูแลระบบ");
         return "/JSP/access-denied";
     }
 
     @PostMapping("/doLoginByAdmin")
-    public String doLoginByAdmin(@RequestParam Map<String , String> map, Model model, HttpSession session){
+    public String doLoginByAdmin(@RequestParam Map<String, String> map, Model model, HttpSession session) {
         String email = map.get("username");
         String password = map.get("password");
-        Admin admin = userService.loginAdmin(email,password);
+        Admin admin = userService.loginAdmin(email, password);
 
-        if (admin !=null){
-            session.setAttribute("admin",admin);
+        if (admin != null) {
+            session.setAttribute("admin", admin);
             session.setMaxInactiveInterval(60 * 5);
-            return  "redirect:/";
-        }else {
-            model.addAttribute("loginfailed",true);
+            return "redirect:/";
+        } else {
+            model.addAttribute("loginfailed", true);
             return "redirect:/login/access-denied";
         }
 
     }
 
     @PostMapping("/doLoginByPersonnel")
-    public String doLoginByPersonnel(@RequestParam Map<String , String> map, Model model, HttpSession session){
+    public String doLoginByPersonnel(@RequestParam Map<String, String> map, Model model, HttpSession session) {
         String email = map.get("username");
         String password = map.get("password");
-        Personnel personnel = userService.loginPersonnel(email,password);
+        Personnel personnel = userService.loginPersonnel(email, password);
 
-        if (personnel !=null){
-            session.setAttribute("personnel",personnel);
+        if (personnel != null) {
+            session.setAttribute("personnel", personnel);
             session.setMaxInactiveInterval(60 * 5);
-            return  "redirect:/";
-        }else {
-            model.addAttribute("loginfailed",true);
+            return "redirect:/";
+        } else {
+            model.addAttribute("loginfailed", true);
             return "redirect:/login/access-denied";
         }
 
     }
 
     @RequestMapping("/doLogout")
-    public String doLogout (HttpSession session){
-        session.setAttribute("admin",null);
-        session.setAttribute("personnel",null);
+    public String doLogout(HttpSession session) {
+        session.setAttribute("admin", null);
+        session.setAttribute("personnel", null);
         return "redirect:/";
     }
+
+//    @RequestMapping("/driver-list")
+//    public String driverPage(Model model, HttpSession session) {
+//        if (session.getAttribute("admin") != null) {
+//            model.addAttribute("driversPack", driverService.getDrivers());
+//            return "admin/list-driver";
+//        } else {
+//            return "Guest-user/loginAdmin";
+//        }
+//    }
 }

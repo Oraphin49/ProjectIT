@@ -1,4 +1,7 @@
+<%@ page import="it_sci.model.Personnel" %>
+<%@ page import="it_sci.model.Admin" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -56,24 +59,51 @@
         }
     </style>
 </head>
+<%
+    Personnel personnel = (Personnel) session.getAttribute("personnel");
+    Admin admin = (Admin) session.getAttribute("admin");
+    String flag = "";
+    if (personnel != null) {
+        flag = "personnel";
+    } else if (admin != null) {
+        flag = "admin";
+    } else {
+        flag = "null";
+    }
+%>
+<c:set var="flag" value="<%=flag%>"/>
 <body>
     <nav class="gtco-nav" role="navigation">
         <div class="gtco-container">
             <div class="row"  style="display: block">
-                <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+                <c:choose>
+                    <c:when test="${flag.equals('admin')}">
+                        <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+                    </c:when>
+                    <c:otherwise>
+                        <jsp:include page="/WEB-INF/layouts/nav.jsp"/>
+                    </c:otherwise>
+                </c:choose>
             </div>
         </div>
     </nav>
     <br><br><br><br><br><br><br>
+<c:choose>
+    <c:when test=""></c:when>
+    <c:otherwise></c:otherwise>
+</c:choose>
+<c:choose>
+    <c:when test="${flag.equals('admin')}">
     <div align="center">
         <b style="font-size: 28px; font-family: Kanit; color: #a41212">เพิ่มข้อมูลข่าว</b>
     </div>
     <br><br>
     <form action="${pageContext.request.contextPath}/news/save" method="POST" onsubmit="return validateForm()"
           enctype="multipart/form-data">
-        <div class="news-form" style="width: 70%; margin-left: 15%">
+        <div class="news-form" style="width: 50%; margin-left: 25%">
             <label type="text">ชื่อข่าว:</label>
             <input type="text" name="news_name" id="news_name">
+            <label type="text">หมวดหมู่</label>
             <select name="news_category" id="news_category" class="news_category" style=" width: 100%;
     padding: 10px;
     margin: 5px 0;
@@ -89,14 +119,24 @@
             <label type="text">แหล่งที่มา:</label>
             <input type="text" name="linkpage" id="linkpage">
             <br><br>
-            <input type="file" name="imageFiles" accept="image/*" multiple id="imageFile">
-            <br><br><br> <!-- ใช้ 'files' แทน 'file' และเพิ่ม 'multiple' เพื่ออัปโหลดหลายไฟล์ -->
+            <input type="file" name="imageFiles" accept="image/*" multiple id="imageFile"><br>
+            <small style="font-family: Kanit;color: #464646">กรุณาเลือกไฟล์รูปภาพที่มีนามสกุลไฟล์เป็น.png , jpg , jpeg และสามารถเลือกรูปได้ไม่เกิน8รูป</small>
+            <br><br>
             <div class="button-group">
                 <input type="submit" value="บันทึก">
                 <a href="${pageContext.request.contextPath}/news/list_news_manage" class="cancel-link custom-button">ยกเลิก</a>
             </div>
         </div>
     </form>
+    </c:when>
+    <c:otherwise>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 align="center" style="font-family: Kanit">คุณไม่มีสิทธิ์ในหน้านี้</h3>
+    </c:otherwise>
+</c:choose>
 </body>
 <div class="f">
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>
@@ -123,18 +163,19 @@
         }
 
         //เช็ค แหล่งที่มา
-        var linkpage = document.getElementById("linkpage").value;
-        if (linkpage.trim() === "") {
+        var url = document.getElementById("linkpage").value;
+        var urlPattern = /^(https?:\/\/)?([\w\d]+\.)?[\w\d]+\.\w{2,}(\/.*)?$/;
+        if (url.trim() === "") {
             alert("กรุณากรอกแหล่งที่มา");
             return false;
-        }else if (/^\s|\s$|\s{1,}/.test(linkpage)) {
-            alert("ไม่ควรมีช่องว่างระหว่างตัวอักษรในแหล่งที่มา");
+        } else if (!urlPattern.test(url)) {
+            alert("รูปแบบของ URL ไม่ถูกต้อง");
             document.getElementById("linkpage").value = "";
             return false;
         }
 
-        // เช็ครูปภาพ
 
+        // เช็ครูปภาพ
         // ตรวจสอบว่ามีไฟล์รูปภาพถูกเลือกหรือไม่
         var imageFiles = document.getElementById("imageFile").files;
         if (imageFiles.length === 0) {
@@ -148,7 +189,6 @@
             alert("คุณสามารถอัปโหลดได้เพียง 8 รูปเท่านั้น");
             return false;
         }
-// ตรวจสอบขนาดของไฟล์รูปภาพ
         for (var i = 0; i < imageFiles.length; i++) {
             var imageSize = imageFiles[i].size; // ขนาดไฟล์ในไบต์
             var maxSizeInBytes = 1024 * 1024; // 1 MB (แก้ไขตามที่คุณต้องการ)

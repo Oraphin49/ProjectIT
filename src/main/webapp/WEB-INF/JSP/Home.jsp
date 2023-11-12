@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,9 +39,14 @@
     <link href="${pageContext.request.contextPath}/assets/css/nav-gtco.css" rel="stylesheet">
 
     <style>
+        .g-5, .gx-5 {
+            --bs-gutter-x: 5rem;
+        }
+
         .equal-height-card .gtco-text {
             padding: 10px;
         }
+
         #visitorCount {
             font-size: 24px;
             color: #007BFF;
@@ -49,6 +55,7 @@
             border: 2px solid #007BFF; /* เพิ่มกรอบด้วยการกำหนด border */
             border-radius: 10px; /* เพิ่มขอบมนวังกลม */
         }
+
         .equal-height-card {
             display: flex;
             flex-direction: column;
@@ -74,6 +81,33 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
+        .btn.btn-primary,
+        .btn.btn-secondary {
+            color: #FFFFFF;
+            background-color: rgb(170, 24, 24);
+            border-color: #aa1818;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn.btn-primary:hover,
+        .btn.btn-secondary:hover {
+            color: #ffffff;
+            background-color: #670c0c;
+        }
+
+        .bg-primary {
+            background-color: #17a2b8 !important;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        .card-text{
+            color: #111111;
+            font-family: Kanit;
+            font-size: 20px;
+            margin-left: 15%;
+        }
     </style>
 </head>
 
@@ -93,108 +127,77 @@
         </div>
     </div>
 </nav>
-<br><br><br>
 <!-- Carousel Start -->
-<div class="container-fluid p-0 pb-5">
+<div class="container-fluid p-0 pb-5" style="margin-top: 46px;">
     <div class="owl-carousel header-carousel position-relative">
         <div class="owl-carousel-item position-relative" style="margin-top: 68px">
-            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/banner1.png">
+            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/banners.png">
         </div>
         <div class="owl-carousel-item position-relative" style="margin-top: 68px">
-            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/banner2.png">
+            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/Banner2.png">
         </div>
-        <div class="owl-carousel-item position-relative" style="margin-top: 68px">
-            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/BannerITSCI.png">
-        </div>
+        <%--        <div class="owl-carousel-item position-relative" style="margin-top: 68px">--%>
+        <%--            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/BannerITSCI.png">--%>
+        <%--        </div>--%>
     </div>
 </div>
 <!-- Carousel End -->
 
 <!--start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" style="width: 100%">
     <div class="container">
         <div class="row g-5">
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s" style="background-color: #8a2be27d;">
-                <a href="${pageContext.request.contextPath}/alumni/list_alumni">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light"
-                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-user-check fa-2x text-primary"></i>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s" style="background-color: #6cccde;">
+                <a href="${pageContext.request.contextPath}/course" style=" text-decoration: none;">
+                    <div class="d-flex align-items-center justify-content-between mb-2" style="margin-top: 10px;">
+                        <div class="d-flex align-items-center justify-content-center"
+                             style="width: 60px; height: 60px; background-color: transparent;">
+                            <i class="fa fa-book fa-2x" style="color: #000;"></i> <!-- เปลี่ยนสีไอคอนเป็นสีดำ -->
                         </div>
-                        <h1 class="display-1 text-light mb-0">01</h1>
+                        <h6 style="font-family: Kanit; font-weight: bold">หลักสูตร 4 ปี 120 หน่วยกิต</h6>
                     </div>
-                    <h5 style="font-family: Kanit">ดูข้อมูลศิษย์เก่า</h5>
+                    <h5 style="font-family: Kanit">ข้อมูลหลักสูตรปี60และปี65</h5>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s" style="background-color: #5f9ea08c;">
-                <a href="https://itsci.mju.ac.th/ITCAMP/">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light"
-                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-cog fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">02</h1>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s" style="background-color:  #ffcd05;">
+                <a href="${pageContext.request.contextPath}/alumni/list_alumni" style=" text-decoration: none;">
+                    <div class= "d-flex align-items-center justify-content-between mb-2" style="margin-top: 10px;">
+                    <div class="d-flex align-items-center justify-content-center "
+                         style="width: 60px; height: 60px; background-color: transparent;">
+                        <i class="fa fa-graduation-cap fa-2x" style="color: #000;"></i> <!-- เปลี่ยนสีไอคอนเป็นสีดำ -->
                     </div>
-                    <h5 style="font-family: Kanit">สมัครค่าย ITCamp</h5>
-                </a>
+                    <h6 style="font-family: Kanit;font-weight: bold">ร้อยละ 97 มีงานทำตรงสาย</h6>
             </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s" style="background-color: #deb88787;">
-                <a href="${pageContext.request.contextPath}/course">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light"
-                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-drafting-compass fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">03</h1>
+            <h5 style="font-family: Kanit">ดูข้อมูลศิษ์เก่า</h5>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s" style="background-color: #91918a;">
+            <a href="https://itsci.mju.ac.th/ITCAMP/" style=" text-decoration: none;" target="_blank">
+                <div class="d-flex align-items-center justify-content-between mb-2" style="margin-top: 10px;">
+                    <div class="d-flex align-items-center justify-content-center "
+                         style="width: 60px; height: 60px;background-color: transparent;">
+                        <i class="fa fa-tasks fa-2x" style="color: #000;"></i> <!-- เปลี่ยนสีไอคอนเป็นสีดำ -->
                     </div>
-                    <h5
-                            style="font-family: Kanit">ข้อมูลหลักสูตรปี60และปี65</h5>
-                </a>
-            </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s" style="background-color: #ff7f50b3">
-                <a href="${pageContext.request.contextPath}/personnel/list_personnel">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light"
-                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-users fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">04</h1>
+                    <h6 style="font-family: Kanit; color: #FFFFFF;font-weight: bold"> สำหรับน้องๆ ม.ปลายและปวช.</h6>
+                </div>
+                <h5 style="font-family: Kanit; color: #FFFFFF">สมัครค่าย ITCamp</h5>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s" style="background-color:  #cc3a27">
+            <a href="${pageContext.request.contextPath}/personnel/list_personnel" style=" text-decoration: none;">
+                <div class="d-flex align-items-center justify-content-between mb-2" style="margin-top: 10px;">
+                    <div class="d-flex align-items-center justify-content-center "
+                         style="width: 60px; height: 60px;background-color: transparent;">
+                        <i class="fa fa-chalkboard-teacher fa-2x" style="color: #000;"></i> <!-- เปลี่ยนสีไอคอนเป็นสีดำ -->
                     </div>
-                    <h5 style="font-family: Kanit">ดูข้อมูลบุคลากร</h5>
-                </a>
-            </div>
+                    <h6 style="font-family: Kanit; color: #FFFFFF;font-weight: bold"> 7 บุคลากรที่มีความเชี่ยวชาญ</h6>
+                </div>
+                <h5 style="font-family: Kanit;color: #FFFFFF">ดูข้อมูลบุคลากร</h5>
+            </a>
         </div>
     </div>
 </div>
-
-<!-- Feature Start -->
-
-<!-- About Start -->
-<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-    <div class="container about px-lg-0">
-        <div class="row g-0 mx-lg-0" style="background-color: #d7d5d5;border-radius: 20px">
-            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100"
-                         src="${pageContext.request.contextPath}/assets/image/Poster1.png" style="object-fit: cover;">
-                </div>
-            </div>
-            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s" >
-                <div class="p-lg-5 pe-lg-0" style="margin-left: 50px">
-                    <div class="section-title text-start">
-                        <h2  style="font-family: Kanit">การรับสมัคร</h2>
-                    </div><br>
-                    <h5 style="font-family: Kanit">ศึกษาต่อในสาขาเทคโนโลสารสนเทศ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้</h5>
-                    <p class="mb-4 pb-2"><a href="https://admissions.mju.ac.th" style="font-family: Kanit">สมัครได้ที่
-                        https://admissions.mju.ac.th</a></p>
-                    <a href="https://sciencebase.mju.ac.th/tcas/d5.html"
-                       class="btn btn-primary py-3 px-5">ดูเพิ่มเติม</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-<!-- About End -->
 
 
 <!-- Service Start -->
@@ -202,25 +205,28 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="section-title text-center">
-            <h2 style="font-family: Kanit">ข่าวสารและกิจกิรรม</h2>
+            <h2 style="font-family: Kanit;font-weight: bold">ข่าวสารและกิจกรรม</h2>
         </div>
         <br>
         <div class="row g-4">
             <c:forEach var="news" items="${newsList}">
                 <div class="col-md-6 col-lg-3">
                     <a href="${pageContext.request.contextPath}/news/${news.id}/view_news_detail"
-                       class="gtco-card-item has-text equal-height-card animated fadeIn">
+                       class="gtco-card-item has-text equal-height-card animated fadeIn"
+                       style=" text-decoration: none;">
                         <figure>
                             <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="${pageContext.request.contextPath}/assets/image/news11.jpg" alt="Image"
-                                 class="img-responsive">
+                            <img src="${pageContext.request.contextPath}/assets/image/news/${news.id}/${news.newsImage[0]}"
+                                 alt="Image"
+                                 class="img-responsive" style="  width: 100%;height: 250px;object-fit: cover;">
                         </figure>
-                        <div class="gtco-text text-left" >
+                        <div class="gtco-text text-left">
                             <span class="bg-primary text-white p-1" style="font-family: Kanit;">${news.category}</span>
-                           <br><br>
+                            <br><br>
                             <h6 style="font-family: Kanit">${news.newsname}</h6>
-                            <p class="gtco-category" style="font-family: Kanit;color: #111111">${news.date}</p>
-                            <p style="font-family: Kanit; color: #2f2f2f">ดูเพิ่มเติม...</p>
+                            <small class="gtco-category" style="font-family: Kanit;color: #111111"><fmt:formatDate
+                                    value="${news.date}" pattern="dd MMM yyyy"/></small>
+                            <small style="font-family: Kanit; color: #ab1212">ดูเพิ่มเติม...</small>
                         </div>
                     </a>
                 </div>
@@ -231,12 +237,35 @@
             <a href="${pageContext.request.contextPath}/news/list_news" class="btn btn-primary py-3 px-5"
                style="font-family: Kanit">ดูเพิ่มเติม</a>
         </div>
-        <div align="center">
-            <div style="margin-top: 50px; font-weight: bold">ยอดผู้เข้าชมเว็บไซต์: <span id="visitorCount">0</span></div>
-        </div>
     </div>
 </div>
 <!-- Service End -->
+<div class="container-fluid overflow-hidden my-5 px-lg-0" style="width: 95%;">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0" style="background-color: #fff2cb; border-radius: 20px">
+            <div style="float: left; width: 50%;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.7906482501267!2d99.01053601531153!3d18.896366462503607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3cb54b7f9f2b%3A0xbed41f24ed04a2ca!2z4Lit4Liy4LiE4Liy4Lij4LmA4Liq4Liy4Lin4Lij4Lix4LiIIOC4meC4tOC4leC4ouC4p-C4o-C4o-C4mOC4meC4sCDguKHguKvguLLguKfguLTguJfguKLguLLguKXguLHguKLguYHguKHguYjguYLguIjguYk!5e0!3m2!1sth!2sth!4v1619566633232!5m2!1sth!2sth" width="100%" height="300" style="border: 0;" allowfullscreen=""></iframe>
+            </div>
+            <div class="con" style="float: right; width: 50%; margin-top: 5%;" >
+                <p class="card-text">
+                    <img src="${pageContext.request.contextPath}/assets/image/office-building%20(1).png" width="20px">
+                    หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ<br>
+                    คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ <br>
+                    63 หมู่ 4 ตำบลหนองหาร อำเภาสันทราย จังหวัดเชียงใหม่ 50290
+                </p>
+                <p class="card-text"><img src="${pageContext.request.contextPath}/assets/image/telephone-call%20(1).png" width="20px"> เบอร์โทร: 053-873900</p>
+                <p class="card-text"><img src="${pageContext.request.contextPath}/assets/image/email%20(2).png" width="20px"> อีเมล: itscimju2545@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+<div align="center">
+    <div style="margin-top: 50px; font-weight: bold;font-family: Kanit">ยอดผู้เข้าชมเว็บไซต์: <span id="visitorCount">0</span>
+    </div>
+</div>
+<br>
+
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
@@ -276,8 +305,6 @@
     document.getElementById('visitorCount').textContent = visitorCount; // หรือ
     // document.querySelector('.visitor-count').textContent = visitorCount;
 </script>
-
-
 </body>
 <footer>
     <jsp:include page="/WEB-INF/layouts/footer.jsp"/>

@@ -36,26 +36,26 @@ public class PersonnelDaoImpl implements PersonnelDao {
     @Override
     public List<Award> getAward(long id) {
         Session session = sessionFactory.getCurrentSession();
-        Query<Award> query = session.createQuery("FROM Award a WHERE a.personnel.id =: aId", Award.class);
-        query.setParameter("aId",id);
-        List<Award> award = query.getResultList();
-        return award;
+        Query<Award> query = session.createQuery("FROM Award a WHERE a.personnel.id = :aId ORDER BY a.id DESC", Award.class);
+        query.setParameter("aId", id);
+        List<Award> awards = query.getResultList();
+        return awards;
     }
 
     @Override
     public List<Work_experience> getWorkexperience(long id) {
         Session session = sessionFactory.getCurrentSession();
-        Query<Work_experience> query = session.createQuery("FROM Work_experience a WHERE a.personnel.id =: aId", Work_experience.class);
-        query.setParameter("aId",id);
+        Query<Work_experience> query = session.createQuery("FROM Work_experience a WHERE a.personnel.id = :aId ORDER BY a.id DESC", Work_experience.class);
+        query.setParameter("aId", id);
         List<Work_experience> work_experiences = query.getResultList();
-        return work_experiences ;
+        return work_experiences;
     }
 
     @Override
     public List<Education_histiry> getEducationHistiry(long id) {
         Session session = sessionFactory.getCurrentSession();
-        Query<Education_histiry> query = session.createQuery("FROM Education_histiry a WHERE a.personnel.id =: aId", Education_histiry.class);
-        query.setParameter("aId",id);
+        Query<Education_histiry> query = session.createQuery("FROM Education_histiry a WHERE a.personnel.id = :aId ORDER BY a.id DESC", Education_histiry.class);
+        query.setParameter("aId", id);
         List<Education_histiry> education_histiry = query.getResultList();
         return education_histiry;
     }
@@ -63,20 +63,21 @@ public class PersonnelDaoImpl implements PersonnelDao {
     @Override
     public List<Research_grant> getResearchGrant(long id) {
         Session session = sessionFactory.getCurrentSession();
-        Query<Research_grant> query = session.createQuery("FROM Research_grant a WHERE a.personnel.id =: aId", Research_grant.class);
-        query.setParameter("aId",id);
+        Query<Research_grant> query = session.createQuery("FROM Research_grant a WHERE a.personnel.id = :aId ORDER BY a.id DESC", Research_grant.class);
+        query.setParameter("aId", id);
         List<Research_grant> research_grant = query.getResultList();
         return research_grant;
     }
 
-
     @Override
     public List<Project_consulting> getProjectconsulting(long id) {
         Session session = sessionFactory.getCurrentSession();
-        Query<Project_consulting> query = session.createQuery("FROM Project_consulting ", Project_consulting.class);
+        Query<Project_consulting> query = session.createQuery("FROM Project_consulting a WHERE a.personnel.id = :aId ORDER BY a.id DESC", Project_consulting.class);
+        query.setParameter("aId", id);
         List<Project_consulting> project_consultings = query.getResultList();
         return project_consultings;
     }
+
     @Override
     public void SavePersonnel(Personnel personnel) {
         Session session = sessionFactory.getCurrentSession();

@@ -2,12 +2,20 @@ package it_sci.controller;
 
 import it_sci.model.News;
 import it_sci.service.NewsService;
+import it_sci.util.PathImg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 @Controller
 public class WebHomeController {
@@ -20,11 +28,33 @@ public class WebHomeController {
     }
 
     @RequestMapping("/")
-    public String showHome(Model model) {
-        List<News> newsList = newsService.getNews();  // ดึงข้อมูลข่าวจาก Service
+    public String showHome(Model model,HttpServletRequest request) {
+
+
+        List<News> newsList = newsService.getNews();
+        for (News news : newsList) {
+            List<String> imageFiles = getImagesFromDirectory(news.getId(),request);
+            news.setNewsImage(imageFiles);
+        }
         List<News> limitedNewsList = newsList.subList(0, Math.min(newsList.size(), 8));  // กรองข้อมูลเหลือเพียง 8 ข่าว
         model.addAttribute("newsList", limitedNewsList);  // ส่งข้อมูลไปยังหน้า JSP
         return "JSP/Home";
+    }
+
+    private List<String> getImagesFromDirectory(Long newsId,HttpServletRequest request) {
+        List<String> imageFiles = new ArrayList<>();
+        String uploadDirectory = request.getSession().getServletContext().getRealPath("/") + "//assets//image//news//"+ newsId +"//";
+
+        try (Stream<Path> paths = Files.walk(Paths.get(uploadDirectory))) {
+            paths.filter(Files::isRegularFile)
+                    .map(Path::getFileName)
+                    .map(Path::toString)
+                    .forEach(imageFiles::add);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return imageFiles;
     }
 
 
