@@ -22,14 +22,14 @@ public interface PersonnelDao {
 
     List<Project_consulting> getProjectconsulting(long id);
 
-    void SavePersonnel(Personnel personnel);
+    void savePersonnel(Personnel personnel);
 
-    void SavePersonnelEducation(Education_histiry education_histiry);
-    void SavePersonnelResearch(Research_grant research_grant);
-    void  SavePersonnelAward(Award award);
-    void SavePersonnelWork(Work_experience work_experience);
+    void savePersonnelEducation(Education_histiry education_histiry);
+    void savePersonnelResearch(Research_grant research_grant);
+    void  savePersonnelAward(Award award);
+    void savePersonnelWork(Work_experience work_experience);
 
-    void SaveProjectconsulting(Project_consulting project_consulting);
+    void saveProjectconsulting(Project_consulting project_consulting);
     void removePersonnelEducation(long id);
 
     void removePersonnelResearch(long id);

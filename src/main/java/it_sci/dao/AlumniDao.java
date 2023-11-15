@@ -9,11 +9,11 @@ public interface AlumniDao {
 
     Alumni getAlumni(String id);
 
-    void SaveAlumni(Alumni alumni);
+    void saveAlumni(Alumni alumni);
 
     long getLatestId();
 
-    void EditAlumni(Alumni alumni);
+    void editAlumni(Alumni alumni);
 
     void removeAlumni(String id);
 

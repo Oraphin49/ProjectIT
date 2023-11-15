@@ -32,7 +32,7 @@ public class NewsDaoImpl  implements NewsDao{
     }
 
     @Override
-    public void SaveNews(News news) {
+    public void saveNews(News news) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(news);
     }
@@ -53,7 +53,7 @@ public class NewsDaoImpl  implements NewsDao{
     }
 
     @Override
-    public void EditNews(News news) {
+    public void editNews(News news) {
         Session session = sessionFactory.getCurrentSession();
         session.update(news);
     }

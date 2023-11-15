@@ -62,42 +62,42 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     @Transactional
-    public void SavePersonnel(Personnel personnel) {
+    public void savePersonnel(Personnel personnel) {
         long id = personnelDao.getLatestId();
         //alumni.setId(generateLatestId(id + 1));
-        personnelDao.SavePersonnel(personnel);
+        personnelDao.savePersonnel(personnel);
     }
 
     @Override
     @Transactional
-    public void SavePersonnelEducation(Education_histiry education_histiry) {
-        personnelDao.SavePersonnelEducation(education_histiry);
+    public void savePersonnelEducation(Education_histiry education_histiry) {
+        personnelDao.savePersonnelEducation(education_histiry);
     }
 
     @Override
     @Transactional
-    public void SavePersonnelResearch(Research_grant research_grant) {
-        personnelDao.SavePersonnelResearch(research_grant);
+    public void savePersonnelResearch(Research_grant research_grant) {
+        personnelDao.savePersonnelResearch(research_grant);
     }
 
     @Override
     @Transactional
-    public void SavePersonnelAward(Award award) {
-        personnelDao.SavePersonnelAward(award);
-
-    }
-
-    @Override
-    @Transactional
-    public void SavePersonnelWork(Work_experience work_experience) {
-        personnelDao.SavePersonnelWork(work_experience);
+    public void savePersonnelAward(Award award) {
+        personnelDao.savePersonnelAward(award);
 
     }
 
     @Override
     @Transactional
-    public void SaveProjectconsulting(Project_consulting project_consulting) {
-        personnelDao.SaveProjectconsulting(project_consulting);
+    public void savePersonnelWork(Work_experience work_experience) {
+        personnelDao.savePersonnelWork(work_experience);
+
+    }
+
+    @Override
+    @Transactional
+    public void saveProjectconsulting(Project_consulting project_consulting) {
+        personnelDao.saveProjectconsulting(project_consulting);
 
     }
 
@@ -185,7 +185,7 @@ public class PersonnelServiceImpl implements PersonnelService {
         Academic_Ranks academic_ranks = academicranksDao.getAcademic_Ranks(id);
         Personnel personnel = personnelDao.getPersonnelById(id);
         personnel.getAcademicRank().add(academic_ranks);
-        personnelDao.SavePersonnel(personnel);
+        personnelDao.savePersonnel(personnel);
     }
 
     @Override
@@ -194,7 +194,7 @@ public class PersonnelServiceImpl implements PersonnelService {
         Academic_Ranks academic_ranks = academicranksDao.getAcademic_Ranks(id);
         Personnel personnel = personnelDao.getPersonnelById(id);
         personnel.getAcademicRank().add(academic_ranks);
-        personnelDao.SavePersonnel(personnel);
+        personnelDao.savePersonnel(personnel);
     }
 
     @Override

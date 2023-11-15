@@ -24,23 +24,19 @@ public class Personnel {
     @Column(name="position",nullable = false,length = 50)
     private String position;
 
-    @Column(name="status",nullable = false,length = 50)
-    private String status;
-
-
     @Column(name = "phone",nullable = false,length = 10)
     private String phone;
 
     @Column(name="image",nullable = false,length = 45)
     private String image;
 
-    @Column(name="scolarlink",nullable = false,length = 45)
+    @Column(name="scolarlink",length = 45)
     private String scolarlink;
 
-    @Column(name="description",nullable = false,length = 500)
+    @Column(name="description",length = 500)
     private String description;
 
-    @Column(name="expertise",nullable = false,length = 500)
+    @Column(name="expertise",length = 500)
     private String expertise;
 
     @Column(name="email",nullable = false,length = 60)
@@ -66,11 +62,10 @@ public class Personnel {
         this.firstname = firstname;
     }
 
-    public Personnel( String firstname, String lastname, String position,String status, String phone, String image, String scolarlink, String description, String expertise, String email, String password) {
+    public Personnel( String firstname, String lastname, String position, String phone, String image, String scolarlink, String description, String expertise, String email, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.position = position;
-        this.status = status;
         this.phone = phone;
         this.image = image;
         this.scolarlink = scolarlink;
@@ -114,13 +109,6 @@ public class Personnel {
         this.position = position;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 
     public String getPhone() {
         return phone;

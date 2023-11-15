@@ -127,8 +127,8 @@
                         เข้าสู่ระบบ
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: #FFFFFF;">
-                        <a class="dropdown-item" href="${pageContext.request.contextPath}/login/LoginByPersonnel">บุคลากร</a>
-                        <a class="dropdown-item" href="${pageContext.request.contextPath}/login/LoginByAdmin">ผู้ดูแลระบบ</a>
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/login/loginByPersonnel">บุคลากร</a>
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/login/loginByAdmin">ผู้ดูแลระบบ</a>
                     </div>
                 </li>
             </ul>

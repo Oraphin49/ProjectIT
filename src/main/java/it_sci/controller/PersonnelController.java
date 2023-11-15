@@ -3,7 +3,6 @@ package it_sci.controller;
 import it_sci.model.*;
 import it_sci.service.AcademicranksService;
 import it_sci.service.PersonnelService;
-import it_sci.util.PathImg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,10 +28,24 @@ public class PersonnelController {
 
     @GetMapping("/list_personnel")
     public String listPersonnel(Model model) {
-//        model.addAttribute("title", "ลงชื่อเข้าสู่ระบบ");
-        model.addAttribute("list_personnel", personnelService.getPersonnel());
-        return "JSP/Personnel/list_Personnel";
+        // ดึงข้อมูลบุคลากรทั้งหมด
+        List<Personnel> personnelList = personnelService.getPersonnel();
+
+        // ตรวจสอบว่ามีบุคลากรอย่างน้อย 1 คน
+        if (!personnelList.isEmpty()) {
+            // สำหรับวัตถุบุคลากรแรก
+            Personnel firstPersonnel = personnelList.get(0);
+            // ดึงข้อมูลตำแหน่งวิชาการของบุคลากรแรก
+            Set<Academic_Ranks> academicRanks = firstPersonnel.getAcademicRank();
+
+            // นำข้อมูลที่ดึงได้เก็บไว้ใน Model
+            model.addAttribute("academicRanks", academicRanks);
+            model.addAttribute("list_personnel", personnelList);
+        }
+
+        return "JSP/Personnel/list_personnel";
     }
+
 
     @GetMapping("/{id}/view_personnel_detail")
     public String ShowPersonnelDetail(@PathVariable("id") long id, Model model) {
@@ -50,7 +63,7 @@ public class PersonnelController {
         model.addAttribute("education_history_detail", education_histiry);
         model.addAttribute("research_grant_detail", research_grant);
         model.addAttribute("project_consultings_detail", project_consultings);
-        return "JSP/Personnel/View_personnel";
+        return "JSP/Personnel/view_personnel";
     }
 
 
@@ -58,7 +71,7 @@ public class PersonnelController {
     public String get_addPersonnel(Model model) {
         List<Academic_Ranks> academicRanks = academicranksService.getAcademic_Ranks();
         model.addAttribute("academicRanks", academicRanks);
-        return "JSP/Personnel/Add_Personnel";
+        return "JSP/Personnel/add_personnel";
     }
 
 
@@ -72,7 +85,6 @@ public class PersonnelController {
         String firstname = allReqParams.get("firstname");
         String lastname = allReqParams.get("lastname");
         String position = allReqParams.get("position");
-        String status = allReqParams.get("status");
         String phone = allReqParams.get("phone");
         String image = allReqParams.get("image");
         String scolarlink = allReqParams.get("scolarlink");
@@ -98,9 +110,9 @@ public class PersonnelController {
 
             imageFileName = newFileName;
         }
-        Personnel personnel = new Personnel(firstname, lastname, position, status, phone, imageFileName, scolarlink, description, experitse, email, password);
+        Personnel personnel = new Personnel(firstname, lastname, position, phone, imageFileName, scolarlink, description, experitse, email, password);
 
-        personnelService.SavePersonnel(personnel);
+        personnelService.savePersonnel(personnel);
 
         // บันทึกการกำหนดตำแหน่งวิชาการ
         Set<Academic_Ranks> selectedAcademicRanks = new HashSet<>();
@@ -132,7 +144,7 @@ public class PersonnelController {
         model.addAttribute("education_history_detail", education_histiry);
         model.addAttribute("research_grant_detail", research_grant);
         model.addAttribute("project_consultings_detail", project_consultings);
-        return "JSP/Personnel/Edit_Profile";
+        return "JSP/Personnel/edit_profile";
     }
 
     @PostMapping(path = "/{p_id}/edit/save")
@@ -146,7 +158,6 @@ public class PersonnelController {
             personnel.setFirstname(allReqParams.get("firstname"));
             personnel.setLastname(allReqParams.get("lastname"));
             personnel.setPosition(allReqParams.get("position"));
-            personnel.setStatus(allReqParams.get("status"));
             personnel.setPhone(allReqParams.get("phone"));
             personnel.setScolarlink(allReqParams.get("scolarlink"));
             personnel.setDescription(allReqParams.get("description"));
@@ -204,7 +215,7 @@ public class PersonnelController {
         String educationyear = allReqParams.get("educationyear");
         Personnel personnel = personnelService.getPersonnelById(p_id);
         Education_histiry education_histiry = new Education_histiry(degreename, major_name, university_name, educationyear, country_name, personnel);
-        personnelService.SavePersonnelEducation(education_histiry);
+        personnelService.savePersonnelEducation(education_histiry);
         return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
     }
 
@@ -221,7 +232,7 @@ public class PersonnelController {
         String research_year = allReqParams.get("research_year");
         Personnel personnel = personnelService.getPersonnelById(p_id);
         Research_grant research_grant = new Research_grant(research_name, research_year, personnel);
-        personnelService.SavePersonnelResearch(research_grant);
+        personnelService.savePersonnelResearch(research_grant);
         return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
     }
 
@@ -238,7 +249,7 @@ public class PersonnelController {
         String award_year = allReqParams.get("award_year");
         Personnel personnel = personnelService.getPersonnelById(p_id);
         Award award = new Award(award_name, award_year, personnel);
-        personnelService.SavePersonnelAward(award);
+        personnelService.savePersonnelAward(award);
         return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
     }
 
@@ -256,7 +267,7 @@ public class PersonnelController {
         String pro_year = allReqParams.get("pro_year");
         Personnel personnel = personnelService.getPersonnelById(p_id);
         Project_consulting project_consulting = new Project_consulting(pro_name,pro_year,personnel);
-        personnelService.SaveProjectconsulting(project_consulting);
+        personnelService.saveProjectconsulting(project_consulting);
         return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
     }
 
@@ -273,7 +284,7 @@ public class PersonnelController {
         String work_name = allReqParams.get("work_name");
         Personnel personnel = personnelService.getPersonnelById(p_id);
         Work_experience work_experience = new Work_experience(work_name, personnel);
-        personnelService.SavePersonnelWork(work_experience);
+        personnelService.savePersonnelWork(work_experience);
         return "redirect:/personnel/" + p_id + "/edit_personnel_detail";
     }
 

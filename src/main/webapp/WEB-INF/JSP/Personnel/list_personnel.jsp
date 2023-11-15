@@ -95,8 +95,12 @@
                 <div class="card personnel-card">
                     <img class="card-img-top" src="${pageContext.request.contextPath}/assets/image/personnel/${personnel.image}" alt="${personnel.firstname} ${personnel.lastname}">
                     <div class="card-body">
-                        <p style="color: #111111; font-family: Kanit; font-size: 18px; font-weight: bold" class="card-title">${personnel.position} ${personnel.firstname} ${personnel.lastname}</p>
-                        <small style="font-family: Kanit;">${personnel.status}</small>
+                        <p style="color: #111111; font-family: Kanit; font-size: 17px; font-weight: bold" class="card-title">${personnel.position} ${personnel.firstname} ${personnel.lastname}</p>
+
+                            <c:forEach var="academicRank" items="${academicRanks}">
+                        <small style="font-family: Kanit">${academicRank.name} </small>
+                            </c:forEach>
+
                         <br><br>
                         <a href="${pageContext.request.contextPath}/personnel/${personnel.id}/view_personnel_detail" class="btn btn-primary"><i class="bi bi-arrow-right-circle-fill"></i> ดูเพิ่มเติม</a>
                     </div>

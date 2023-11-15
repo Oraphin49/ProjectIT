@@ -21,16 +21,16 @@ class LoginController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/LoginByAdmin")
+    @GetMapping("/loginByAdmin")
     public String loginPageByAdmin(Model model) {
         model.addAttribute("title", "ลงชื่อเข้าสู่ระบบสำหรับผู้ดูแลระบบ");
-        return "/JSP/LoginByAdmin";
+        return "/JSP/loginByAdmin";
     }
 
-    @GetMapping("/LoginByPersonnel")
+    @GetMapping("/loginByPersonnel")
     public String loginPageByPersonnel(Model model) {
         model.addAttribute("title", "ลงชื่อเข้าสู่ระบบสำหรับบุคลากร");
-        return "/JSP/LoginByPersonnel";
+        return "/JSP/loginByPersonnel";
     }
 
     @GetMapping("/access-denied")

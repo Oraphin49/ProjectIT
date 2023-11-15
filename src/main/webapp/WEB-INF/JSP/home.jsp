@@ -39,6 +39,7 @@
     <link href="${pageContext.request.contextPath}/assets/css/nav-gtco.css" rel="stylesheet">
 
     <style>
+
         .g-5, .gx-5 {
             --bs-gutter-x: 5rem;
         }
@@ -134,7 +135,7 @@
             <img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/banners.png">
         </div>
         <div class="owl-carousel-item position-relative" style="margin-top: 68px">
-            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/Banner2.png">
+          <a href="https://admissions.mju.ac.th/www/"><img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/Ban1.png" target="_blank"></a>
         </div>
         <%--        <div class="owl-carousel-item position-relative" style="margin-top: 68px">--%>
         <%--            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/image/BannerITSCI.png">--%>
@@ -156,7 +157,7 @@
                         </div>
                         <h6 style="font-family: Kanit; font-weight: bold">หลักสูตร 4 ปี 120 หน่วยกิต</h6>
                     </div>
-                    <h5 style="font-family: Kanit">ข้อมูลหลักสูตรปี60และปี65</h5>
+                    <h5 style="font-family: Kanit">ข้อมูลหลักสูตร วท.บ. เทคโนโลยีสารสนเทศ</h5>
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s" style="background-color:  #ffcd05;">
@@ -168,7 +169,7 @@
                     </div>
                     <h6 style="font-family: Kanit;font-weight: bold">ร้อยละ 97 มีงานทำตรงสาย</h6>
             </div>
-            <h5 style="font-family: Kanit">ดูข้อมูลศิษ์เก่า</h5>
+            <h5 style="font-family: Kanit">ดูข้อมูลศิษย์เก่า</h5>
             </a>
         </div>
         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s" style="background-color: #91918a;">
@@ -178,9 +179,9 @@
                          style="width: 60px; height: 60px;background-color: transparent;">
                         <i class="fa fa-tasks fa-2x" style="color: #000;"></i> <!-- เปลี่ยนสีไอคอนเป็นสีดำ -->
                     </div>
-                    <h6 style="font-family: Kanit; color: #FFFFFF;font-weight: bold"> สำหรับน้องๆ ม.ปลายและปวช.</h6>
+                    <h6 style="font-family: Kanit; color: #FFFFFF;font-weight: bold"> สำหรับน้อง ๆ ม.ปลาย และปวช.</h6>
                 </div>
-                <h5 style="font-family: Kanit; color: #FFFFFF">สมัครค่าย ITCamp</h5>
+                <h5 style="font-family: Kanit; color: #FFFFFF">สมัครค่าย ITCAMP</h5>
             </a>
         </div>
         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s" style="background-color:  #cc3a27">
@@ -190,7 +191,7 @@
                          style="width: 60px; height: 60px;background-color: transparent;">
                         <i class="fa fa-chalkboard-teacher fa-2x" style="color: #000;"></i> <!-- เปลี่ยนสีไอคอนเป็นสีดำ -->
                     </div>
-                    <h6 style="font-family: Kanit; color: #FFFFFF;font-weight: bold"> 7 บุคลากรที่มีความเชี่ยวชาญ</h6>
+                    <h6 style="font-family: Kanit; color: #FFFFFF;font-weight: bold"> 6 บุคลากรที่มีความเชี่ยวชาญ</h6>
                 </div>
                 <h5 style="font-family: Kanit;color: #FFFFFF">ดูข้อมูลบุคลากร</h5>
             </a>

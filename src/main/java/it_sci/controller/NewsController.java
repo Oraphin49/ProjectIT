@@ -2,7 +2,6 @@ package it_sci.controller;
 
 import it_sci.model.News;
 import it_sci.service.NewsService;
-import it_sci.util.PathImg;
 import org.apache.commons.io.FileUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -60,7 +59,7 @@ public class NewsController {
         model.addAttribute("news_detail", news);
         model.addAttribute("newsImage", newFileNames);
 
-        return "JSP/News/View_News_Detail";
+        return "JSP/News/view_news_detail";
     }
 
     private List<String> getImagesFromDirectory(Long newsId,HttpServletRequest request) {
@@ -148,7 +147,7 @@ public class NewsController {
         News mergedNews = (News) session.merge(news);
 
         // Save the news data to the database
-//         newsService.SaveNews(news);
+//         newsService.saveNews(news);
         return "redirect:/news/list_news_manage";
     }
 
@@ -185,7 +184,7 @@ public class NewsController {
             news.setLinkpage(allReqParams.get("linkpage"));
 
             // บันทึกการแก้ไขข้อมูลข่าว
-            newsService.EditNews(news);
+            newsService.editNews(news);
 
             // ลบไฟล์รูปเก่า
 //            String oldUploadDirectory = PathImg.path_Img + "/news/" + id;
@@ -225,7 +224,7 @@ public class NewsController {
             // อัปเดตรายชื่อไฟล์รูปภาพใหม่
             news.setNewsImage(newFileNames);
             // บันทึกการเปลี่ยนแปลงของไฟล์รูปภาพ
-            newsService.EditNews(news);
+            newsService.editNews(news);
         }
 
         return "redirect:/news/list_news_manage";

@@ -9,79 +9,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="เหลือตกแต่ง">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="d451ca62-7f14-40b9-9980-82094a7f5a14" name="Changes" comment="final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/AlumniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/AlumniController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/NewsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/PersonnelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/controller/WebHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/controller/WebHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/AcademicranksDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/AcademicranksDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/AcademicranksDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/AcademicranksDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/AlumniDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/AlumniDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/AlumniDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/AlumniDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/NewsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/dao/PersonnelDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Academic_Ranks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Academic_Ranks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Education_histiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Education_histiry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Personnel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Personnel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/model/Project_consulting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/model/Project_consulting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/AcademicranksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AcademicranksService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/AcademicranksServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AcademicranksServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/AlumniService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AlumniService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/AlumniServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/AlumniServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/NewsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it_sci/service/PersonnelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/persistence.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistence.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/View_alumni_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/view_alumni_detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/add_alumni.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/edit_alumni.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_alumni.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Alumni/list_manage_alumni.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Nav_Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Nav_Admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Contact.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/course.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Course65.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginByAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginByPersonnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginByPersonnel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Nav_Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/nav_admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/View_News_Detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/view_news_detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/add_news.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/edit_news.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_manage_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/News/list_news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/nav_personnel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Add_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/add_personnel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/Edit_Profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/edit_profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/View_personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/view_personnel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_Personnel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Personnel/list_personnel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Plan.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/check.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/edit_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/edit_profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/home/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/home/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/P3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/Poster.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/Poster2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/Poster2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/2ca6b194-e3f4-4065-a42d-e2e362b801e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/57b54abe-3e54-400d-bbee-9198251b226a.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/99256a23-ec19-4439-822a-5a713944ced4.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/alumni/b4b3c6e3-249e-4b9a-b078-e4a8b953a36d.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/banner2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/banner2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/1/IMG_1_0008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_3_0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/3/IMG_3_0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/4/IMG_4_0005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0001.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0002.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0003.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0003.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0004.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0004.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0005.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0005.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0006.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/image/news/5/IMG_05_0006.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/personnel/7443b25a-3997-4ff8-8ba1-9e4af687bb77.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/personnel/cb8110a0-f898-4c19-8547-3e0bb7753166.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/personnel/d93e5fa9-a2c1-43a8-a03f-c08d8c4085ed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/image/banner.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,28 +119,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/IdeaProjects/ProjectIT/src/main/webapp/assets/css/lisenews&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;9e727fdd3aec8274f46685441900280d&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Asus/IdeaProjects/ProjectIT/src/main/webapp/assets/css/lisenews",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "service.view.auto.scroll.to.source": "true",
+    "spring.configuration.checksum": "9e727fdd3aec8274f46685441900280d",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="it_sci.dao" />
@@ -512,6 +489,20 @@
       <workItem from="1699698461191" duration="2756000" />
       <workItem from="1699708421497" duration="5787000" />
       <workItem from="1699773583149" duration="252000" />
+      <workItem from="1699783417493" duration="248000" />
+      <workItem from="1699783719046" duration="2496000" />
+      <workItem from="1699808737244" duration="4709000" />
+      <workItem from="1699817004461" duration="1339000" />
+      <workItem from="1699845272641" duration="6969000" />
+      <workItem from="1699889626649" duration="1959000" />
+      <workItem from="1699891674929" duration="2567000" />
+      <workItem from="1699894282929" duration="1686000" />
+      <workItem from="1699896194283" duration="2774000" />
+      <workItem from="1699898999919" duration="5185000" />
+      <workItem from="1699905076843" duration="593000" />
+      <workItem from="1699905880703" duration="629000" />
+      <workItem from="1699934248620" duration="3579000" />
+      <workItem from="1699937880378" duration="8929000" />
     </task>
     <task id="LOCAL-00001" summary="create controller">
       <created>1693579426903</created>
@@ -667,7 +658,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698651540845</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="final">
+      <created>1699783527600</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699783527600</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,6 +703,7 @@
     <MESSAGE value="ลบรูปภาพในข่าว" />
     <MESSAGE value="1111" />
     <MESSAGE value="เหลือตกแต่ง" />
-    <option name="LAST_COMMIT_MESSAGE" value="เหลือตกแต่ง" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
 </project>

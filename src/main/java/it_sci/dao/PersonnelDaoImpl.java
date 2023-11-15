@@ -79,38 +79,38 @@ public class PersonnelDaoImpl implements PersonnelDao {
     }
 
     @Override
-    public void SavePersonnel(Personnel personnel) {
+    public void savePersonnel(Personnel personnel) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(personnel);
     }
 
     @Override
-    public void SavePersonnelEducation(Education_histiry education_histiry) {
+    public void savePersonnelEducation(Education_histiry education_histiry) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(education_histiry);
     }
 
     @Override
-    public void SavePersonnelResearch(Research_grant research_grant) {
+    public void savePersonnelResearch(Research_grant research_grant) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(research_grant);
     }
 
     @Override
-    public void SavePersonnelAward(Award award) {
+    public void savePersonnelAward(Award award) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(award);
     }
 
     @Override
-    public void SavePersonnelWork(Work_experience work_experience) {
+    public void savePersonnelWork(Work_experience work_experience) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(work_experience);
 
     }
 
     @Override
-    public void SaveProjectconsulting(Project_consulting project_consulting) {
+    public void saveProjectconsulting(Project_consulting project_consulting) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(project_consulting);
     }

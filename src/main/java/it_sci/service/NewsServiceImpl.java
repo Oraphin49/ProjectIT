@@ -28,10 +28,10 @@ public class NewsServiceImpl implements NewsService {
 
     @Override
     @Transactional
-    public void SaveNews(News news) {
+    public void saveNews(News news) {
         long id = newsDao.getLatestId();
 //        news.setId(generateLatestId(id + 1));
-        newsDao.SaveNews(news);
+        newsDao.saveNews(news);
     }
 
     public String generateLatestId (long id) {
@@ -44,8 +44,8 @@ public class NewsServiceImpl implements NewsService {
 
     @Override
     @Transactional
-    public void EditNews(News news) {
-        newsDao.EditNews(news);
+    public void editNews(News news) {
+        newsDao.editNews(news);
     }
 
     @Override

@@ -21,16 +21,16 @@ public interface PersonnelService {
     List<Project_consulting> getProjectconsulting(long PC);
 
 
-    void SavePersonnel(Personnel personnel);
-    void SavePersonnelEducation(Education_histiry education_histiry);
+    void savePersonnel(Personnel personnel);
+    void savePersonnelEducation(Education_histiry education_histiry);
 
-    void SavePersonnelResearch(Research_grant research_grant);
+    void savePersonnelResearch(Research_grant research_grant);
 
-    void  SavePersonnelAward(Award award);
+    void  savePersonnelAward(Award award);
 
-    void  SavePersonnelWork(Work_experience work_experience);
+    void  savePersonnelWork(Work_experience work_experience);
 
-    void SaveProjectconsulting(Project_consulting project_consulting);
+    void saveProjectconsulting(Project_consulting project_consulting);
 
     void updatePersonnel(Personnel personnel);
 

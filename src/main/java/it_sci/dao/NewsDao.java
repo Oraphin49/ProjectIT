@@ -9,8 +9,8 @@ public interface NewsDao {
 
     News getNews(Long id);
 
-    void SaveNews(News news);
-    void EditNews(News news);
+    void saveNews(News news);
+    void editNews(News news);
 
     long getLatestId();
 

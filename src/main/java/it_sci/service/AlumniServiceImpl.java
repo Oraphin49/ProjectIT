@@ -28,16 +28,16 @@ public class AlumniServiceImpl  implements AlumniService {
 
     @Override
     @Transactional
-    public void SaveAlumni(Alumni alumni) {
+    public void saveAlumni(Alumni alumni) {
 //        long id = alumniDao.getLatestId();
         //alumni.setId(generateLatestId(id + 1));
-        alumniDao.SaveAlumni(alumni);
+        alumniDao.saveAlumni(alumni);
     }
 
     @Override
     @Transactional
-    public void EditAlumni(Alumni alumni) {
-        alumniDao.EditAlumni(alumni);
+    public void editAlumni(Alumni alumni) {
+        alumniDao.editAlumni(alumni);
     }
 
     @Override

@@ -19,7 +19,7 @@
 <c:set var="user" value="<%=user%>"></c:set>
 <c:choose>
   <c:when test="${user.equals('admin')}">
-    <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+    <jsp:include page="/WEB-INF/JSP/nav_admin.jsp"/>
   </c:when>
   <c:when test="${user.equals('personnel')}">
     <jsp:include page="/WEB-INF/JSP/Personnel/nav_personnel.jsp"/>

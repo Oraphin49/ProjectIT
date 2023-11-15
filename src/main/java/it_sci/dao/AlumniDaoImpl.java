@@ -30,7 +30,7 @@ public class AlumniDaoImpl implements AlumniDao {
     }
 
     @Override
-    public void SaveAlumni(Alumni alumni) {
+    public void saveAlumni(Alumni alumni) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(alumni);
     }
@@ -43,7 +43,7 @@ public class AlumniDaoImpl implements AlumniDao {
     }
 
     @Override
-    public void EditAlumni(Alumni alumni) {
+    public void editAlumni(Alumni alumni) {
         Session session = sessionFactory.getCurrentSession();
         session.update(alumni);
     }

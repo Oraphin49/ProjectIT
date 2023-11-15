@@ -34,13 +34,13 @@ public class AcademicranksDaoImpl implements AcademicranksDao {
 
 
     @Override
-    public void SaveAcademicRanks(Academic_Ranks academic_ranks) {
+    public void saveAcademicRanks(Academic_Ranks academic_ranks) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(academic_ranks);
     }
 
     @Override
-    public void UpdateAcademicRanks(Academic_Ranks academic_ranks) {
+    public void updateAcademicRanks(Academic_Ranks academic_ranks) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(academic_ranks);
     }

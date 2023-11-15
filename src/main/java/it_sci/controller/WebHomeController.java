@@ -2,7 +2,6 @@ package it_sci.controller;
 
 import it_sci.model.News;
 import it_sci.service.NewsService;
-import it_sci.util.PathImg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,7 +37,7 @@ public class WebHomeController {
         }
         List<News> limitedNewsList = newsList.subList(0, Math.min(newsList.size(), 8));  // กรองข้อมูลเหลือเพียง 8 ข่าว
         model.addAttribute("newsList", limitedNewsList);  // ส่งข้อมูลไปยังหน้า JSP
-        return "JSP/Home";
+        return "JSP/home";
     }
 
     private List<String> getImagesFromDirectory(Long newsId,HttpServletRequest request) {
@@ -60,7 +59,7 @@ public class WebHomeController {
 
     @RequestMapping("/course")
     public String showCourse() {
-        return "JSP/Course";
+        return "JSP/course";
     }
 
     @RequestMapping("/course65")

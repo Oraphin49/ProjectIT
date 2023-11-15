@@ -10,9 +10,9 @@ public interface AlumniService {
 
     Alumni getAlumni(String alumniId);
 
-    void SaveAlumni(Alumni alumni);
+    void saveAlumni(Alumni alumni);
 
-    void EditAlumni(Alumni alumni);
+    void editAlumni(Alumni alumni);
 
     void removeAlumni(String id);
 

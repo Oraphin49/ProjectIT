@@ -147,41 +147,55 @@
         <div id="container" style="margin-top: 80px">
             <div id="profile">
                 <form action="${pageContext.request.contextPath}/personnel/${personnel_detail.id}/edit/save"
-                      onsubmit="return validateForm()" method="POST"
-                      enctype="multipart/form-data"><%--@declare id="selectedacademicranks"--%>
-                    <div class="form-group">
-                            <%--@declare id="currentimage"--%><label for="currentImage">รูปภาพปัจจุบัน:</label>
+                      onsubmit="return validatePersonnelForm()" method="POST" enctype="multipart/form-data">
+
+                    <%--@declare id="selectedacademicranks"--%><div class="form-group">
+                        <%--@declare id="currentimage"--%><label for="currentImage">รูปภาพปัจจุบัน:</label>
                         <img src="${pageContext.request.contextPath}/assets/image/personnel/${personnel_detail.image}"
                              alt="Current Image" width="200">
                     </div>
+
                     <div class="form-group">
                         <label for="newImageFile">อัปโหลดรูปภาพใหม่ (ถ้าต้องการ):</label>
                         <input type="file" id="newImageFile" name="newImageFile">
                     </div>
-                    <label for="scolarlink">สิ่งพิมพ์</label>
+
+                    <label for="scolarlink">การตีพิมพ์เผยแพร่ทางวิชาการ</label>
                     <input type="text" id="scolarlink" name="scolarlink" value="${personnel_detail.scolarlink}">
-                    <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ตำแหน่งวิชาการ</p>
-                    <p><input type="text" id="position" name="position" value="${personnel_detail.position}"></p>
+
+                    <label for="position">ตำแหน่งวิชาการ</label>
+                    <select id="position" name="position" class="position" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 3px; font-family: Kanit;">
+                        <option value="ศาสตราจารย์" ${personnel_detail.position == 'ศาสตราจารย์' ? 'selected' : ''}>ศาสตราจารย์</option>
+                        <option value="รองศาสตราจารย์" ${personnel_detail.position == 'รองศาสตราจารย์' ? 'selected' : ''}>รองศาสตราจารย์</option>
+                        <option value="ผู้ช่วยศาสตราจารย์" ${personnel_detail.position == 'ผู้ช่วยศาสตราจารย์' ? 'selected' : ''}>ผู้ช่วยศาสตราจารย์</option>
+                        <option value="อาจารย์" ${personnel_detail.position == 'อาจารย์' ? 'selected' : ''}>อาจารย์</option>
+                    </select>
+
                     <p>ชื่อ:</p>
-                    <input type="text" id="fistname" name="firstname" value="${personnel_detail.firstname}">
+                    <input type="text" id="firstname" name="firstname" value="${personnel_detail.firstname}">
+
                     <p>นามสกุล:</p>
                     <input type="text" id="lastname" name="lastname" value="${personnel_detail.lastname}">
-                    <p>สถานะ:</p>
-                    <input type="text" id="status" name="status" value="${personnel_detail.status}">
-                    <p>รายละเอียด:</p>
-                    <textarea type="text" id="description" name="description" >${personnel_detail.description}</textarea>
+
+                    <p>ประวัติโดยย่อ :</p>
+                    <textarea type="text" id="description" name="description">${personnel_detail.description}</textarea>
+
                     <hr width="100%">
+
                     <div id="about">
                         <p style="display:inline;">ข้อมูล</p>
                         <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
                     </div>
+
                     <p>อีเมล์:</p>
                     <input type="email" id="email" name="email" value="${personnel_detail.email}"><br></p>
+
                     <p>เบอร์โทร</p><br>
-                    <input type="text" id="phone" name="phone" value="${personnel_detail.phone}"></p>
+                    <input type="text" id="phone" name="phone" value="${personnel_detail.phone}">
+
                     <p><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
-                    <p><textarea type="text" id="expertise" name="expertise" >${personnel_detail.expertise}</textarea>
-                    </p>
+                    <p><textarea type="text" id="expertise" name="expertise">${personnel_detail.expertise}</textarea></p>
+
                     <label for="selectedAcademicRanks">ตำแหน่งบริหาร </label>
                     <c:forEach var="academicRank" items="${academicRanks}">
                         <c:set var="isChecked" value="false"/>
@@ -287,16 +301,16 @@
                           method="POST" onsubmit="return validateResearchForm()">
                         <table>
                             <tr>
-                                <td>ชื่อทุน : <textarea name="research_name" id="research_name"></textarea></td>
-                                <td>ปีที่ได้รับทุน : <input name="research_year" id="research_year"></td>
-                                <td><input type="submit" value="เพิ่ม" style="width: 200%;margin-top: 50%;"></td>
+                                <td style="width: 50%">ชื่อทุน : <textarea name="research_name" id="research_name"></textarea></td>
+                                <td>ปีที่ได้รับทุน : <input name="research_year" id="research_year" style="width: 40%"></td>
+                                <td><input type="submit" value="เพิ่ม" style="width: 200%;"></td>
                             </tr>
                         </table>
                     </form>
                 </div>
 
                 <div class="card">
-                    <p><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงาน</p>
+                    <p><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงานที่ได้รับรางวัล</p>
                     <table>
                         <thead>
                         <tr>
@@ -312,8 +326,7 @@
                                 <td>${award.year}</td>
                                 <td>
                                     <input type="button" value="ลบ"
-                                           onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${award.id}/remove_award'; return false; }"
-                                           class="cancel-button"/>
+                                           onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${award.id}/remove_award'; return false; }" class="cancel-button"/>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -324,9 +337,9 @@
                           method="POST" onsubmit="return validateAwardForm()" >
                         <table>
                             <tr>
-                                <td>ชื่อผลงาน : <textarea name="award_name" id="award_name"></textarea></td>
-                                <td>ปีที่ได้รับ : <input name="award_year" id="award_year"></td>
-                                <td><input type="submit" value="เพิ่ม" style="width: 200%;margin-top: 50%;"></td>
+                                <td style="width: 50%">ชื่อผลงาน : <textarea name="award_name" id="award_name" ></textarea></td>
+                                <td>ปีที่ได้รับ : <input name="award_year" id="award_year" style="width: 40%"></td>
+                                <td><input type="submit" value="เพิ่ม" style="width: 200%;"></td>
                             </tr>
                         </table>
                     </form>
@@ -347,8 +360,7 @@
                                 <td>${work.workexperiencename}</td>
                                 <td>
                                     <input type="button" value="ลบ"
-                                           onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${work.id}/remove_work'; return false; }"
-                                           class="cancel-button"/>
+                                           onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${work.id}/remove_work'; return false; }" class="cancel-button"/>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -359,8 +371,8 @@
                           method="POST" onsubmit="return validateWorkForm()">
                         <table>
                             <tr>
-                                <td>ชื่อ : <textarea name="work_name" id="work_name"></textarea></td>
-                                <td><input type="submit" value="เพิ่ม" style="width: 200%;margin-top: 50%;"></td>
+                                <td style="width: 50%">ชื่อ :<textarea name="work_name" id="work_name"></textarea></td>
+                                <td><input type="submit" value="เพิ่ม"></td>
                             </tr>
                         </table>
                     </form>
@@ -383,8 +395,7 @@
                                 <td>${procon.year}</td>
                                 <td>
                                     <input type="button" value="ลบ"
-                                           onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${procon.id}/remove_pro'; return false; }"
-                                           class="cancel-button"/>
+                                           onclick="if((confirm('คุณแน่ใจหรือว่าต้องการลบ?'))) { window.location.href='${pageContext.request.contextPath}/personnel/<%=personnel.getId()%>/${procon.id}/remove_pro'; return false; }" class="cancel-button"/>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -395,9 +406,9 @@
                           method="POST" onsubmit="return validateProForm()">
                         <table>
                             <tr>
-                                <td>ชื่อโครงงาน : <input name="pro_name" id="pro_name"></td>
-                                <td>ปีที่เป็นที่ปรึกษา : <input name="pro_year" id="pro_year"></td>
-                                <td><input type="submit" value="เพิ่ม" style="width: 200%;margin-top: 50%;"></td>
+                                <td style="width: 50%">ชื่อโครงงาน : <input name="pro_name" id="pro_name"></td>
+                                <td>ปีที่เป็นที่ปรึกษา : <input name="pro_year" id="pro_year" style="width: 40%"></td>
+                                <td><input type="submit" value="เพิ่ม" style="width: 200%;"></td>
                             </tr>
                         </table>
                     </form>
@@ -417,32 +428,128 @@
 
 </body>
 <script>
-    function PersonnelForm() {
-        var firstName = document.getElementById("firstname").value;
-        var lastName = document.getElementById("lastname").value;
-        var email = document.getElementById("email").value;
+    function validatePersonnelForm() {
+        // image
+        var imageFile = document.getElementById("imageFile");
+        var allowedTypes = ["image/jpeg", "image/png", "image/gif"];
+        var maxFileSize = 5 * 1024 * 1024; // 5MB
 
-        // ตรวจสอบค่าว่าง
-        if (firstName.trim() === "") {
-            alert("กรุณากรอกชื่อ");
+        if (imageFile.files.length === 0) {
+            alert("กรุณาเลือกไฟล์รูปภาพ");
             return false;
         }
 
-        if (lastName.trim() === "") {
+        var file = imageFile.files[0];
+        if (!allowedTypes.includes(file.type)) {
+            alert("ชนิดของไฟล์รูปภาพไม่ถูกต้อง");
+            return false;
+        }
+
+        if (file.size > maxFileSize) {
+            alert("ขนาดของไฟล์รูปภาพใหญ่เกินไป (สูงสุด 5MB)");
+            return false;
+        }
+
+
+        //เช็คชื่อจริง //
+        var firstname = document.getElementById("firstname").value;
+        if (firstname.trim() === "") {
+            alert("กรุณากรอกชื่อจริง");
+            return false;
+        } else if (!/^[ก-๙]+(\s[ก-๙]+)*$/.test(firstname) || firstname.length < 2 || firstname.length > 50) {
+            alert("ชื่อจริงต้องเป็นภาษาไทยเท่านั้นและมีความยาวระหว่าง 2 ถึง 50 ตัวอักษร และมีช่องว่างระหว่างตัวอักษรได้ไม่เกิน 1 ช่อง");
+            document.getElementById("firstname").value = "";
+            return false;
+        }
+
+        //เช็คนามสกุล //
+        var lastname = document.getElementById("lastname").value;
+        if (lastname.trim() === "") {
             alert("กรุณากรอกนามสกุล");
             return false;
+        } else if (!/^[ก-๙]+(\s[ก-๙]+)*$/.test(lastname) || lastname.length < 2 || lastname.length > 50) {
+            alert("นามสกุลต้องเป็นภาษาไทยเท่านั้นและมีความยาวระหว่าง 2 ถึง 50 ตัวอักษร และมีช่องว่างระหว่างตัวอักษรได้ไม่เกิน 1 ช่อง");
+            document.getElementById("lastname").value = "";
+            return false;
         }
 
+        //เช็คตำแหน่ง //
+        var position = document.getElementById("position").value;
+        var thaiRegex = /^[ก-๏เ-๙\s]+$/;
+
+        if (position === "") {
+            alert("กรุณากรอกตำแหน่ง");
+            return false;
+        } else if (!thaiRegex.test(position) || position.length < 2 || position.length > 50) {
+            alert("ตำแหน่งต้องเป็นภาษาไทยและมีขนาดระหว่าง 2 ถึง 50 ตัวอักษร");
+            return false;
+        }
+
+
+        //เช็คสิ่งพิมพ์ //
+        var scolarlink = document.getElementById("scolarlink").value;
+        if (scolarlink.trim() === "") {
+            alert("กรุณากรอก scolarlink");
+            return false;
+        } else if (/^\s|\s$|\s{1,}/.test(scolarlink)) {
+            alert("ไม่ควรมีช่องว่างระหว่างตัวอักษรใน scolarlink เนื่องจากเก็บเป็น http");
+            return false;
+        }
+
+        // เช็คเบอร์โทร //
+
+        var phone = document.getElementById("phone").value;
+        var TelTH = /^(06|08|09|8)-?[0-9]{3}-?[0-9]{5}$/; // รองรับขีด (-)
+        if (phone.trim() === "") {
+            alert("กรุณากรอกเบอร์โทร");
+            return false;
+        } else if (!TelTH.test(phone)) {
+            alert("คุณกรอกเบอร์โทรให้ถูกต้องไม่ถูกต้อง กรุณากรอกใหม่");
+            document.getElementById("phone").value = "";
+            return false;
+        }
+
+        //เช็คคำบรรยาย //
+        var description = document.getElementById("description").value;
+        if (description === "") {
+            alert("กรุณากรอกคำอธิบาย");
+            return false;
+        }
+        // เช็คความชำนาญ //
+        var experitise = document.getElementById("experitise").value;
+        if (experitise === "") {
+            alert("กรุณากรอกความชำนาญ");
+            return false;
+        }
+
+        //เช็คอีเมล์ //
+        var email = document.getElementById("email").value;
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         if (email.trim() === "") {
             alert("กรุณากรอกอีเมล์");
+            return false;
+        } else if (!email.match(emailRegex)) {
+            alert("กรุณากรอกอีเมล์ให้ถูกต้อง");
+            document.getElementById("email").value = "";
+            return false;
+        }
+
+        //เว้นไว้ก่อน
+        var password = document.getElementById("password").value;
+        if (password === "") {
+            alert("กรุณากรอกรหัสผ่าน");
+            return false;
+        }
+
+        var selectedAcademicRanks = document.querySelectorAll('input[name="selectedAcademicRanks"]:checked');
+        if (selectedAcademicRanks.length === 0) {
+            alert("กรุณาเลือกอย่างน้อยหนึ่งตำแหน่งวิชาการ");
             return false;
         }
 
         return true;
     }
 </script>
-
-
 <script>
     ///////////////////////////////////////script การศึกษา/////////////////////////////////////////////////////
     function validateEducationForm() {

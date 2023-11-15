@@ -39,6 +39,10 @@
         #name {
             color: #AA1818;
         }
+        #name {
+            font-size: 20px !important;
+            line-height: 20px !important;
+        }
 
         #about {
             background-color: #f6f2dd;
@@ -83,7 +87,7 @@
         </div>
         <br>
         <p id="name"
-           style="color: #000000">${personnel_detail.position} ${personnel_detail.firstname} ${personnel_detail.lastname}</p>
+           style="color: #000000;">${personnel_detail.position} ${personnel_detail.firstname} ${personnel_detail.lastname}</p>
         <p id="designation"><br><span id="college"> ${personnel_detail.description}</span></p>
         <hr width="100%">
         <div id="about">
@@ -105,17 +109,17 @@
         <p id="fax"><i class="fas fa-fax stroke-transparent"></i>&nbsp;<strong>โทรสาร</strong><br>(+66) 053-873900</p>
     </div>
     <div id="info-cards">
+<%--        <div class="cards">--%>
+<%--            <p style="color: #AA1818"><i class="fa fa-certificate stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ตำแหน่งบริหาร--%>
+<%--            </p>--%>
+<%--            <ul>--%>
+<%--                <c:forEach items="${academicRanks}" var="academicRank">--%>
+<%--                    <li><span class="bi bi-dot bi-dot-lg"></span>${academicRank.name}</li>--%>
+<%--                </c:forEach>--%>
+<%--            </ul>--%>
+<%--        </div>--%>
         <div class="cards">
-            <p style="color: #AA1818"><i class="fa fa-certificate stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ตำแหน่งบริหาร
-            </p>
-            <ul>
-                <c:forEach items="${academicRanks}" var="academicRank">
-                    <li><span class="bi bi-dot bi-dot-lg"></span>${academicRank.name}</li>
-                </c:forEach>
-            </ul>
-        </div>
-        <div class="cards">
-            <p style="color: #AA1818"><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการศึกษา
+            <p style="color: #AA1818;font-weight: bold"><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ประวัติการศึกษา
             </p>
             <ul>
                 <c:forEach var="ehd" items="${education_history_detail}">
@@ -126,13 +130,13 @@
             </ul>
         </div>
         <div class="cards">
-            <p style="color: #AA1818"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
+            <p style="color: #AA1818;font-weight: bold"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ความชำนาญ</p>
             <ul>
                 <p style="color: #111111">${personnel_detail.expertise}</p>
             </ul>
         </div>
         <div class="cards">
-            <p style="color: #AA1818"><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงาน</p>
+            <p style="color: #AA1818;font-weight: bold"><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงานที่ได้รับรางวัล</p>
             <ul>
                 <c:forEach var="award" items="${award_detail}">
                     <p style="color: #111111"><span class="bi bi-dot bi-dot-lg"></span> ${award.name},${award.year}<br>
@@ -141,14 +145,14 @@
             </ul>
         </div>
         <div class="cards">
-            <p style="color: #AA1818" id="education" ><i class="fab fa-google stroke-transparent" ></i>&nbsp;&nbsp;&nbsp;สิ่งพิมพ์
+            <p style="color: #AA1818;font-size: 15px;font-weight: bold" id="education" ><i class="fab fa-google stroke-transparent" ></i>&nbsp;&nbsp;&nbsp;การตีพิมพ์เผยแพร่ทางวิชาการ
             </p>
             <ul>
                 <p style="color: #111111"><a href="${personnel_detail.scolarlink}" target="_blank">Google Scholar Link</a></p>
             </ul>
         </div>
         <div class="cards">
-            <p style="color: #AA1818"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;งานบริการวิชาการ
+            <p style="color: #AA1818;font-weight: bold"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;งานบริการวิชาการ
             </p>
             <ul>
                 <c:forEach var="work" items="${work_experiences_detail}">
@@ -158,7 +162,7 @@
             </ul>
         </div>
         <div class="cards">
-            <p style="color: #AA1818"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ทุนวิจัย</p>
+            <p style="color: #AA1818;font-weight: bold"><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ทุนวิจัย</p>
             <ul>
                 <c:forEach var="rgd" items="${research_grant_detail}">
                     <p style="color: #111111"><span class="bi bi-dot bi-dot-lg"></span>${rgd.researchgrantname}
@@ -167,7 +171,7 @@
             </ul>
         </div>
         <div class="cards">
-            <p style="color: #AA1818"><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงานที่ปรึกษา</p>
+            <p style="color: #AA1818;font-weight: bold"><i class="fas fa-award stroke-transparent"></i>&nbsp;&nbsp;&nbsp;ผลงานที่ปรึกษา</p>
             <ul>
                 <c:forEach var="procon" items="${project_consultings_detail}">
                     <p style="color: #111111"><span

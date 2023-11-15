@@ -36,16 +36,16 @@ public class AcademicranksServiceImpl implements AcademicranksService{
 
     @Override
     @Transactional
-    public void SaveAcademicRanks(Academic_Ranks academic_ranks) {
+    public void saveAcademicRanks(Academic_Ranks academic_ranks) {
         long id = academicranksDao.getLatestId();
-        academicranksDao.SaveAcademicRanks(academic_ranks);
+        academicranksDao.saveAcademicRanks(academic_ranks);
 
     }
 
     @Override
     @Transactional
-    public void UpdateAcademicRanks(Academic_Ranks academic_ranks) {
-        academicranksDao.UpdateAcademicRanks(academic_ranks);
+    public void updateAcademicRanks(Academic_Ranks academic_ranks) {
+        academicranksDao.updateAcademicRanks(academic_ranks);
 
     }
 
@@ -55,7 +55,7 @@ public class AcademicranksServiceImpl implements AcademicranksService{
         Personnel personnel = personnelDao.getPersonnelById(id);
         Academic_Ranks academic_ranks = academicranksDao.getAcademic_Ranks(id);
         academic_ranks.getPersonnel().add(personnel);
-        academicranksDao.SaveAcademicRanks(academic_ranks);
+        academicranksDao.saveAcademicRanks(academic_ranks);
     }
 
     @Override
@@ -64,7 +64,7 @@ public class AcademicranksServiceImpl implements AcademicranksService{
         Personnel personnel = personnelDao.getPersonnelById(id);
         Academic_Ranks academic_ranks = academicranksDao.getAcademic_Ranks(id);
         academic_ranks.getPersonnel().add(personnel);
-        academicranksDao.SaveAcademicRanks(academic_ranks);
+        academicranksDao.saveAcademicRanks(academic_ranks);
     }
 
     @Override

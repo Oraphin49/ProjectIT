@@ -10,9 +10,9 @@ public interface AcademicranksDao {
 
     List<Academic_Ranks> getAcademic_Ranks();
     Academic_Ranks getAcademic_Ranks(long id);
-    void SaveAcademicRanks(Academic_Ranks academic_ranks);
+    void saveAcademicRanks(Academic_Ranks academic_ranks);
 
-    void UpdateAcademicRanks(Academic_Ranks academic_ranks);
+    void updateAcademicRanks(Academic_Ranks academic_ranks);
 
     long getLatestId();
 

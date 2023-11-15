@@ -2,7 +2,6 @@ package it_sci.controller;
 
 import it_sci.model.Alumni;
 import it_sci.service.AlumniService;
-import it_sci.util.PathImg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
@@ -47,10 +46,10 @@ public class AlumniController {
 
 
     @GetMapping("/{id}/view_alumni_detail")
-    public String ShowAlumniDetail(@PathVariable("id") String id, Model model) {
+    public String showAlumniDetail(@PathVariable("id") String id, Model model) {
         Alumni alumni = alumniService.getAlumni(id);
         model.addAttribute("alumni_detail", alumni);
-        return "JSP/Alumni/View_alumni_detail";
+        return "JSP/Alumni/view_alumni_detail";
     }
 
     @GetMapping("/list_alumni_manage")
@@ -113,7 +112,7 @@ public class AlumniController {
         }
 
         Alumni alumni = new Alumni(id, firstname, lastname, graduationyear, generation, position, company, phone, email, imageFileName, expertise, award, prefix);
-        alumniService.SaveAlumni(alumni);
+        alumniService.saveAlumni(alumni);
         return "redirect:/alumni/list_alumni_manage";
     }
 
@@ -185,7 +184,7 @@ public class AlumniController {
                 }
             }
 
-            alumniService.EditAlumni(alumni);
+            alumniService.editAlumni(alumni);
         }
 
         return "redirect:/alumni/list_alumni_manage";

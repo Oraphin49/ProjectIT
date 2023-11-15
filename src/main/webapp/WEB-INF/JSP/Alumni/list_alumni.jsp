@@ -203,7 +203,19 @@
                 block.style.display = "none";
             }
         }
+
+        // แสดงหรือซ่อน h3 ตามเงื่อนไข
+        var generations = document.querySelectorAll("h3");
+        generations.forEach(function (generation, index) {
+            var genPageNumber = Math.ceil((index + 1) / itemsPerPage);
+            if (genPageNumber === currentPage) {
+                generation.style.display = "block";
+            } else {
+                generation.style.display = "none";
+            }
+        });
     }
+
 
     window.addEventListener("load", showAlumni);
 
@@ -241,14 +253,6 @@
             alumni.style.backgroundImage = "url('${pageContext.request.contextPath}/assets/image/CongetR.png')";
         } else {
             alumni.style.backgroundImage = "url('${pageContext.request.contextPath}/assets/image/CongetG.png')";
-        }
-
-        var pageNumber = Math.ceil((i + 1) / itemsPerPage);
-
-        if (pageNumber === currentPage) {
-            alumni.style.display = "inline-block";
-        } else {qqq
-            alumni.style.display = "none";
         }
     }
 </script>

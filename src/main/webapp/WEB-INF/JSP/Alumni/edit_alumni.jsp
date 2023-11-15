@@ -93,7 +93,7 @@
         <div class="row" style="display: block">
             <c:choose>
                 <c:when test="${flag.equals('admin')}">
-                    <jsp:include page="/WEB-INF/JSP/Nav_Admin.jsp"/>
+                    <jsp:include page="/WEB-INF/JSP/nav_admin.jsp"/>
                 </c:when>
                 <c:otherwise>
                     <jsp:include page="/WEB-INF/layouts/nav.jsp"/>

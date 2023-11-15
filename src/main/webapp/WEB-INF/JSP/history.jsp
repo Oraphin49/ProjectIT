@@ -9,7 +9,6 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="img/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +23,23 @@
     <!-- The compiled CSS file -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/history/css/production.css">
 
+    <!-- Additional styles for a more elegant look -->
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f8f9fa; /* Light gray background color */
+        }
+
+
+        section {
+            background-color: #fff; /* White background color for sections */
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px; /* Rounded corners for sections */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+        }
+
+    </style>
 </head>
 <body class="has-animations">
 <nav class="gtco-nav" role="navigation">

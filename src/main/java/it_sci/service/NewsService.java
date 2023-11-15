@@ -12,9 +12,9 @@ public interface NewsService {
 
     News getNews(Long newsID);
 
-    void SaveNews(News news);
+    void saveNews(News news);
 
-    void EditNews(News news);
+    void editNews(News news);
 
     void removeNews(Long id);
     long max_id();
